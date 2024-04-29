@@ -2,7 +2,7 @@
 
 Welcome to Next Animated Portfolio! This project is aimed at creating a dynamic and visually appealing portfolio website using Next.js with animations.
 
-[![Portfolio Screenshot](./screenshot.png)](https://pradipchaudhary.com.np/)
+[![Portfolio Screenshot](https://i.pinimg.com/736x/c7/73/75/c77375da8d28fbd4e0db824cac725bb9.jpg)](https://pradipchaudhary.com.np/)
 
 ## Features
 
