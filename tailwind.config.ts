@@ -11,6 +11,7 @@ export default {
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
+                lineColor: "#112044", // Define your custom color here
             },
             fontSize: {
                 lg: "1rem", // Change text-lg to 1rem
