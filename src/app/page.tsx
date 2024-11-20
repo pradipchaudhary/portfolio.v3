@@ -3,6 +3,7 @@
 import Experience from "@/components/Experience";
 import Header from "@/components/Header";
 import Intro from "@/components/Intro";
+import Skills from "@/components/Skills";
 // import LanguagesAndTools from "@/components/LanguagesAndTools";
 
 export default function Home() {
@@ -14,14 +15,8 @@ export default function Home() {
             {/* Scrollable Content */}
             <main className="flex-1 h-full overflow-y-scroll scroll-hidden p-5 pl-14 text-slate-500 py-20">
                 <Intro />
-                {/* <LanguagesAndTools /> */}
                 <Experience />
-                <div className=" mt-4">
-                    <p>
-                        Feel free to reach out if you have any exciting projects
-                        or collaboration opportunities!
-                    </p>
-                </div>
+                <Skills />
             </main>
         </div>
     );

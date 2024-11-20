@@ -3,86 +3,112 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Heartbeat Animation</title>
+        <title>Improved Sticky Sidebar Layout</title>
         <style>
-            body {
-                background: #111115;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
+            /* Reset and box-sizing */
+            * {
                 margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
 
-            .heart {
-                font-size: 6em;
-                position: relative;
+            /* Full height for html and body */
+            html,
+            body {
+                height: 100%;
+                overflow: hidden; /* Prevent page scrolling */
+                font-family: Arial, sans-serif;
+                background-color: #0f172a;
+                color: #efefef;
             }
 
-            .heartbeat {
-                position: relative;
-                z-index: 1;
-                animation: beat 2s ease-in-out infinite;
-                color: #ff3366;
+            /* Container styling */
+            .container {
+                display: flex;
+                height: 100vh; /* Full height of the viewport */
+                max-width: 1080px; /* Maximum width */
+                margin: 0 auto; /* Center horizontally */
             }
 
-            .heartecho {
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                animation: echo 2s ease-in-out infinite;
-                color: #ff3366;
+            /* Left Sidebar */
+            .left {
+                width: 300px; /* Fixed width */
+                position: relative; /* Sticky positioning */
+                top: 0; /* Stick to the top */
+                height: 100vh; /* Full height of the viewport */
+                padding: 20px;
+                background-color: #1e293b; /* Sidebar background color */
+                overflow-y: auto; /* Allow scrolling if content overflows */
             }
 
-            @keyframes beat {
-                0% {
-                    transform: scale(1);
-                    color: #ff3366;
-                }
-                14% {
-                    transform: scale(0.9);
-                }
-                28% {
-                    transform: scale(1.1);
-                }
-                42% {
-                    transform: scale(1);
-                }
-                100% {
-                    transform: scale(1);
-                }
+            /* Right Content Section */
+            .right {
+                flex: 1; /* Occupy remaining space */
+                height: 100vh; /* Full height of the viewport */
+                overflow-y: auto; /* Enable vertical scrolling */
+                padding: 20px;
             }
 
-            @keyframes echo {
-                0% {
-                    opacity: 0.4;
-                    transform: scale(1);
-                }
-                14% {
-                    opacity: 0.35;
-                    transform: scale(0.85);
-                }
-                28% {
-                    opacity: 0.3;
-                    transform: scale(1.2);
-                }
-                42% {
-                    opacity: 0.2;
-                    transform: scale(1.5);
-                }
-                100% {
-                    opacity: 0;
-                    transform: scale(3);
-                }
+            /* Scrollbar styling for modern browsers */
+            .left::-webkit-scrollbar,
+            .right::-webkit-scrollbar {
+                width: 8px; /* Width of the scrollbar */
+            }
+
+            .left::-webkit-scrollbar-thumb,
+            .right::-webkit-scrollbar-thumb {
+                background: #4299e1; /* Scrollbar color */
+                border-radius: 4px; /* Rounded corners */
+            }
+
+            .left::-webkit-scrollbar-track,
+            .right::-webkit-scrollbar-track {
+                background: #1e293b; /* Scrollbar track color */
+            }
+
+            /* Content Placeholder */
+            .content {
+                height: 2000px; /* Example tall content for scrolling */
+            }
+
+            /* Heading Styles */
+            h2 {
+                margin-bottom: 1rem;
+            }
+
+            p {
+                margin-bottom: 0.5rem;
+                line-height: 1.6;
             }
         </style>
     </head>
     <body>
-        <div class="heart">
-            <div class="heartbeat">❤️</div>
-            <div class="heartecho">❤️</div>
+        <div class="container">
+            <!-- Sticky Sidebar -->
+            <aside class="left">
+                <h2>Sticky Sidebar</h2>
+                <p>
+                    This sidebar remains visible as you scroll the main content
+                    area.
+                </p>
+                <p>Add more content here to see its scroll behavior.</p>
+            </aside>
+
+            <!-- Scrollable Main Content -->
+            <main class="right">
+                <h2>Scrollable Content</h2>
+                <div class="content">
+                    <p>
+                        This is the scrollable content area. The sidebar on the
+                        left remains sticky, while this section scrolls
+                        independently.
+                    </p>
+                    <p>
+                        Add more text here or adjust the content height to see
+                        the scroll effect.
+                    </p>
+                </div>
+            </main>
         </div>
     </body>
 </html>

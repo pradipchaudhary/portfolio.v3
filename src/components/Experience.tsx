@@ -137,7 +137,7 @@ const Experience: React.FC = () => {
 
     return (
         <section className="py-7 my-4">
-            <h2 className="text-2xl font-bold mb-8">
+            <h2 className="text-2xl font-bold text-gray-400 mb-8">
                 💼 Professional Experience
             </h2>
 

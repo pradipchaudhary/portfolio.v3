@@ -44,7 +44,7 @@ export default function Intro() {
                         React Developer
                     </Link>
                 </strong>
-                , my expertise lies in creating
+                , my expertise lies in creating{" "}
                 <strong className="font-semibold">
                     seamless and responsive UIs
                 </strong>
