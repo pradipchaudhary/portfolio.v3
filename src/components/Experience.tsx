@@ -7,7 +7,7 @@ interface ListItemProps {
 
 const ListItem: React.FC<ListItemProps> = ({ text }) => {
     return (
-        <li className="flex items-start text-base text-slate-600 leading-6 group rounded-lg transition duration-300">
+        <li className="flex items-start text-base leading-6 group rounded-lg transition duration-300">
             <span className="mr-1 mt-0.5 flex items-center justify-center w-5 h-5">
                 <svg
                     width={14}
@@ -34,7 +34,7 @@ const ListItem: React.FC<ListItemProps> = ({ text }) => {
                     </defs>
                 </svg>
             </span>
-            <span className="flex-1 text-slate-500  transition duration-300 text-sm hover:text-slate-400">
+            <span className="flex-1  transition duration-300 text-sm hover:text-slate-400">
                 {text}
             </span>
         </li>
@@ -59,24 +59,24 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
     responsibilities,
 }) => {
     return (
-        <div className="mb-8 my-10 flex items-start relative">
+        <div className="mb-2 pt-12 flex items-start relative">
             {/* Circle for Timeline Marker */}
 
-            <div className="flex justify-center items-center bg-[#111115] left-[-5px]">
+            <div className="flex justify-center items-center bg-[#111115] left-[-5px] top-2">
                 <div className="relative">
-                    <div className="w-[.65rem] h-[.65rem] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full absolute top-[.2rem] left-[-6px] transform animate-beat"></div>
-                    <div className="w-[.65rem] h-[.65rem] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full absolute top-[.2rem] left-[-6px] transform animate-echo"></div>
+                    <div className="w-[.75rem] h-[.75rem] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full absolute top-[.4rem] left-[-7px] transform animate-beat"></div>
+                    <div className="w-[.75rem] h-[.75rem] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full absolute top-[.4rem] left-[-7px] transform animate-echo"></div>
                 </div>
             </div>
 
-            <div className="ml-8">
+            <div className="ml-7">
                 <div className="flex items-center mb-1">
                     <h3 className="text-lg font-semibold text-gray-100">
                         {title}
                     </h3>
                     <span className="text-sm text-gray-400 ml-4">{period}</span>
                 </div>
-                <p className="text-base text-gray-200 mb-3">
+                <p className="text-base text-[#6743CD] mb-3">
                     <strong className="font-medium">{company}</strong> -{" "}
                     {description}
                 </p>
@@ -136,15 +136,13 @@ const Experience: React.FC = () => {
     ];
 
     return (
-        <section className="py-7 my-4">
-            <h2 className="text-2xl font-bold text-gray-400 mb-8">
-                💼 Professional Experience
-            </h2>
+        <section id="experience" className="py-7 my-4">
+            <h2 className="text-2xl font-bold text-gray-400">💼 Experience</h2>
 
             {/* Timeline */}
             <div className="relative pl-4">
                 {/* Vertical Line on Left Side */}
-                <div className="absolute left-[.9rem] w-[0.15rem] bg-lineColor h-full"></div>
+                <div className="absolute left-[.9rem] w-[0.13rem] bg-[#4b2f9663] h-full"></div>
 
                 {/* Map over experiences */}
                 {experiences.map((exp, index) => (
