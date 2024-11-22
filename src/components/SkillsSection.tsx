@@ -8,7 +8,7 @@ interface SkillProps {
 const SkillsSection: React.FC<SkillProps> = ({ title, skills }) => {
     return (
         <div className="mb-10 ml-10">
-            <h3 className="text-xl font-bold text-slate-400 mb-6 pb-2 tracking-wide">
+            <h3 className="text-xl font-bold text-gray-200 mb-6 pb-2">
                 {title}
             </h3>
 
@@ -16,7 +16,7 @@ const SkillsSection: React.FC<SkillProps> = ({ title, skills }) => {
                 {skills.map((skill, index) => (
                     <li
                         key={index}
-                        className="group relative border-[1.5px] border-dashed border-[#25396ccf] text-[#4299e1] rounded-full text-xs font-medium leading-5 px-4 py-2 shadow-sm transition-all duration-300 hover:border-[#4299e1] hover:text-[#4299e1] hover:shadow-lg hover:pl-[2.15rem] cursor-pointer"
+                        className="group relative border-[1.5px] border-dashed border-[#25396ccf] text-[#4299e1] rounded-full text-xs font-medium leading-5 px-4 py-2 shadow-sm transition-all duration-300 hover:border-[#3d89c7] hover:text-[#6743CD] hover:shadow-sm hover:pl-[2.15rem] cursor-pointer"
                     >
                         {/* Animation Divs, shown only on hover */}
                         <div className="absolute left-5 top-2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
