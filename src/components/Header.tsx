@@ -77,18 +77,18 @@ const menuItem = [
         name: "Introduction",
         link: "/",
     },
-    {
-        name: "Projects",
-        link: "/projects",
-    },
-    {
-        name: "Blog",
-        link: "/blog",
-    },
-    {
-        name: "Contact",
-        link: "/contact",
-    },
+    // {
+    //     name: "Projects",
+    //     link: "/projects",
+    // },
+    // {
+    //     name: "Blog",
+    //     link: "/blog",
+    // },
+    // {
+    //     name: "Contact",
+    //     link: "/contact",
+    // },
 ];
 export default function Header() {
     return (

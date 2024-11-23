@@ -57,7 +57,7 @@ const Skills: React.FC = () => {
         "Docker",
         "Gatsby",
         "Storybook",
-        "Java",
+        "JavaScript",
         "C++",
         "Node CMS (Strapi & Storyblok)",
         "Serverless",

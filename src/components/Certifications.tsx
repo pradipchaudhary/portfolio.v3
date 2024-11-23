@@ -7,22 +7,39 @@ interface CertificationItem {
 
 const certificationsData: CertificationItem[] = [
     {
+        year: "2024",
+        certifications: [
+            "Completed the 'Complete Full Stack Web Development – MERN Stack' course at Deerwalk Training Center.",
+            "Graduated from the 'Full Stack Next.js Bootcamp' organized by Jobsnipper.",
+            "Successfully completed the 'Custom WordPress Theme Development Bootcamp' hosted by Jobsnipper.",
+        ],
+    },
+    {
         year: "2020",
         certifications: [
-            "Passed JavaScript LinkedIn Assessment & listed on top 15% of total users.",
-            "Passed PHP LinkedIn Assessment & listed on top 5% of total users.",
-            "Scored 92 / 100 in JavaScript code verification in Hacker Rank.",
+            "Achieved top 15% ranking in the JavaScript LinkedIn Assessment.",
+            "Ranked in the top 5% of participants in the PHP LinkedIn Assessment.",
+            "Scored 92/100 in the JavaScript Code Verification on HackerRank.",
         ],
     },
     {
         year: "2019",
         certifications: [
-            "JavaScript Expert Verified by Pluralsight IQ with 212 score.",
-            "CSS Expert Verified by Pluralsight IQ with 218 score.",
+            "Earned 'JavaScript Expert' status with a score of 212 on Pluralsight IQ.",
+            "Achieved 'CSS Expert' verification with a score of 218 on Pluralsight IQ.",
+        ],
+    },
+    {
+        year: "2018",
+        certifications: ["Awarded HTML and CSS Certification from Cernter."],
+    },
+    {
+        year: "2013 - 2016",
+        certifications: [
+            "Diploma in Computer Engineering, accredited by CTEVT (Council for Technical Education and Vocational Training).",
         ],
     },
 ];
-
 const Certifications: React.FC = () => {
     return (
         <section id="certifications" className="py-10">
