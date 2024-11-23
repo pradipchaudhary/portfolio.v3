@@ -72,6 +72,24 @@ const socialIcons = [
     },
 ];
 
+const menuItem = [
+    {
+        name: "Introduction",
+        link: "/",
+    },
+    {
+        name: "Projects",
+        link: "/projects",
+    },
+    {
+        name: "Blog",
+        link: "/blog",
+    },
+    {
+        name: "Contact",
+        link: "/contact",
+    },
+];
 export default function Header() {
     return (
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 px-4">
@@ -92,15 +110,15 @@ export default function Header() {
                     aria-label="In-page jump links"
                 >
                     <ul className="space-y-2">
-                        {["About", "Experience", "Projects"].map((section) => (
-                            <li key={section}>
+                        {menuItem.map((menu) => (
+                            <li key={menu.name}>
                                 <a
-                                    href={`#${section.toLowerCase()}`}
+                                    href={`${menu.link.toLowerCase()}`}
                                     className="group flex items-center py-2"
                                 >
                                     <span className="nav-indicator mr-3 h-px w-3 bg-slate-600 transition-all group-hover:w-4 group-hover:bg-[#6743CD] motion-reduce:transition-none"></span>
                                     <span className="nav-text text-xs font-bold uppercase tracking-tight group-hover:text-[#6743CD]">
-                                        {section}
+                                        {menu.name}
                                     </span>
                                 </a>
                             </li>

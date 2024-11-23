@@ -25,22 +25,38 @@ const certificationsData: CertificationItem[] = [
 
 const Certifications: React.FC = () => {
     return (
-        <section className="px-4 py-8 bg-gray-900 text-gray-200 rounded-md">
-            <h4 className="text-xl font-bold mb-6">Certifications:</h4>
-            {certificationsData.map((item, index) => (
-                <div key={index} className="mb-4">
-                    <h6 className="text-lg font-semibold text-teal-400 mb-2">
-                        <strong>{item.year}:</strong>
-                    </h6>
-                    <ul className="list-disc ml-6 space-y-2">
-                        {item.certifications.map((certification, certIndex) => (
-                            <li key={certIndex} className="text-sm">
-                                {certification}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            ))}
+        <section id="certifications" className="py-10">
+            <h2 className="text-2xl font-bold text-gray-400">
+                📜 Certifications
+            </h2>
+            <div className="relative border-l border-gray-600 pl-6 ml-4 pt-10">
+                {certificationsData.map((item, index) => (
+                    <div
+                        key={index}
+                        className={`mb-8 relative fade-up fade-up-delayed-${index}`}
+                    >
+                        {/* Timeline Bullet */}
+                        <div className="w-[.75rem] h-[.75rem] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full absolute top-[.4rem] left-[-1.94rem] transform animate-beat"></div>
+                        <div className="w-[.75rem] h-[.75rem] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full absolute top-[.4rem] left-[-1.94rem] transform animate-echo"></div>
+
+                        {/* Year */}
+                        <h6 className="text-lg font-semibold text-gray-300 mb-4">
+                            {item.year}
+                        </h6>
+
+                        {/* Certifications */}
+                        <ul className="list-disc ml-6 space-y-2">
+                            {item.certifications.map(
+                                (certification, certIndex) => (
+                                    <li key={certIndex} className="text-sm">
+                                        {certification}
+                                    </li>
+                                )
+                            )}
+                        </ul>
+                    </div>
+                ))}
+            </div>
         </section>
     );
 };

@@ -7,7 +7,7 @@ interface ListItemProps {
 
 const ListItem: React.FC<ListItemProps> = ({ text }) => {
     return (
-        <li className="flex items-start text-base leading-6 group rounded-lg transition duration-300">
+        <li className="flex items-start text-base leading-6 group rounded-lg transition duration-300 ">
             <span className="mr-1 mt-0.5 flex items-center justify-center w-5 h-5">
                 <svg
                     width={14}
@@ -59,7 +59,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
     responsibilities,
 }) => {
     return (
-        <div className="mb-2 pt-12 flex items-start relative">
+        <div className="mb-2 pt-12 flex items-start relative fade-up">
             {/* Circle for Timeline Marker */}
 
             <div className="flex justify-center items-center bg-[#111115] left-[-5px] top-2">
@@ -71,7 +71,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 
             <div className="ml-7">
                 <div className="flex items-center mb-1">
-                    <h3 className="text-lg font-semibold text-gray-100">
+                    <h3 className="text-lg font-semibold text-gray-300">
                         {title}
                     </h3>
                     <span className="text-sm text-gray-400 ml-4">{period}</span>
@@ -136,8 +136,8 @@ const Experience: React.FC = () => {
     ];
 
     return (
-        <section id="experience" className="py-7 my-4">
-            <h2 className="text-2xl font-bold text-gray-400">💼 Experience</h2>
+        <section id="experience" className="py-7 my-4 ">
+            <h2 className="text-2xl font-bold text-gray-400 ">💼 Experience</h2>
 
             {/* Timeline */}
             <div className="relative pl-4">

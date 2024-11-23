@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function AboutMe() {
     return (
-        <section id="about" className="">
-            <h1 className="text-2xl font-bold mb-4">
+        <section id="introduction" className="fade-up">
+            <h1 className="text-2xl font-bold mb-4 fade-up">
                 Hi there,
                 <Image
                     src="/images/wave.webp"
@@ -16,7 +16,7 @@ export default function AboutMe() {
                 />
             </h1>
             {/* p1 */}
-            <p className="text-lg">
+            <p className="text-lg fade-up">
                 I&apos;m an enthusiastic{" "}
                 <Link
                     href="https://reactjs.org/"
@@ -31,7 +31,7 @@ export default function AboutMe() {
                 transforming complex concepts into seamless digital solutions.
             </p>
             {/* p2 */}
-            <p className="text-lg my-4">
+            <p className="text-lg my-4 fade-up">
                 As a{" "}
                 <strong>
                     Full-Time{" "}
@@ -103,7 +103,7 @@ export default function AboutMe() {
                 that meet client needs.
             </p>
             {/* p3 */}
-            <p className="text-lg my-4">
+            <p className="text-lg my-4 fade-up">
                 My proficiency in modern web technologies, including{" "}
                 <Link
                     href="https://bulma.io/"
