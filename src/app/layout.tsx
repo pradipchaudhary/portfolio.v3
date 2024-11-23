@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -18,7 +19,6 @@ export const metadata: Metadata = {
         "Pradip Chaudhary is a professional Full Stack Developer specializing in building responsive, high-performance web applications using modern technologies like React, Next.js, Node.js, and Tailwind CSS. Explore my portfolio for cutting-edge web development solutions.",
     keywords:
         "Pradip Chaudhary, Full Stack Developer, Web Development, React, Next.js, Node.js, JavaScript, Tailwind CSS, Frontend Development, Backend Development, Web Applications, SEO Expert",
-    author: "Pradip Chaudhary",
     robots: "index, follow",
 
     // Open Graph Metadata for social media sharing (Facebook, LinkedIn, etc.)
@@ -47,35 +47,6 @@ export const metadata: Metadata = {
         title: "Pradip Chaudhary - Full Stack Developer Portfolio",
         description:
             "Explore Pradip Chaudhary's professional portfolio, showcasing web development projects with expertise in React, Next.js, Node.js, and more.",
-        image: "https://pradipchaudhary.com.np/og-image.jpg", // Use the correct URL for the image
-    },
-
-    // Structured Data for better SEO (JSON-LD)
-    structuredData: {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        name: "Pradip Chaudhary",
-        jobTitle: "Full Stack Developer",
-        url: "https://pradipchaudhary.com.np/",
-        image: "https://pradipchaudhary.com.np/profile-image.jpg", // Replace with your profile image
-        sameAs: [
-            "https://www.linkedin.com/in/pradipchaudhary/",
-            "https://github.com/pradipchaudhary",
-            "https://twitter.com/pradipchaudhary",
-        ],
-        contactPoint: {
-            "@type": "ContactPoint",
-            contactType: "Customer Service",
-            areaServed: "NP",
-            availableLanguage: "English",
-            telephone: "+977-123-456-7890", // Your contact number
-        },
-        address: {
-            "@type": "PostalAddress",
-            streetAddress: "Kathmandu, Nepal", // Your location
-            addressLocality: "Kathmandu",
-            addressCountry: "NP",
-        },
     },
 };
 export default function RootLayout({
@@ -85,10 +56,55 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+                <link rel="icon" href="/favicon.ico" />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="32x32"
+                    href="/favicon-32x32.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="16x16"
+                    href="/favicon-16x16.png"
+                />
+                <meta name="theme-color" content="#2d3748" />
+                {/* Meta Tags for Favicons */}
+                <meta
+                    name="apple-mobile-web-app-title"
+                    content="Pradip Chaudhary Portfolio"
+                />
+                <meta
+                    name="application-name"
+                    content="Pradip Chaudhary Portfolio"
+                />
+                <link rel="apple-touch-icon" href="/favicon-32x32.png" />
+                <meta name="msapplication-TileColor" content="#2d3748" />
+                <meta
+                    name="msapplication-TileImage"
+                    content="/favicon-32x32.png"
+                />
+            </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 leading-relaxed text-slate-400  selection:bg-teal-300 selection:text-teal-900`}
             >
-                {children}
+                <div className="relative group/spotlight">
+                    {/* Main Content Container */}
+                    <div className="mx-auto min-h-screen max-w-6xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+                        <div className="lg:flex lg:justify-between lg:gap-6">
+                            {/* Header Section */}
+                            <Header />
+                            <main
+                                id="content"
+                                className="pt-24 lg:w-full lg:py-24 lg:pl-10 lg:pr-1"
+                            >
+                                {children}
+                            </main>
+                        </div>
+                    </div>
+                </div>
             </body>
         </html>
     );

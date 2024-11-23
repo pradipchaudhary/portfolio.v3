@@ -7,7 +7,7 @@ interface ListItemProps {
 
 const ListItem: React.FC<ListItemProps> = ({ text }) => {
     return (
-        <li className="flex items-start text-base leading-6 group rounded-lg transition duration-300">
+        <li className="flex items-start text-base leading-6 group rounded-lg transition duration-300 ">
             <span className="mr-1 mt-0.5 flex items-center justify-center w-5 h-5">
                 <svg
                     width={14}
@@ -59,7 +59,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
     responsibilities,
 }) => {
     return (
-        <div className="mb-2 pt-12 flex items-start relative">
+        <div className="mb-2 pt-12 flex items-start relative fade-up">
             {/* Circle for Timeline Marker */}
 
             <div className="flex justify-center items-center bg-[#111115] left-[-5px] top-2">
@@ -71,7 +71,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 
             <div className="ml-7">
                 <div className="flex items-center mb-1">
-                    <h3 className="text-lg font-semibold text-gray-100">
+                    <h3 className="text-lg font-semibold text-gray-300">
                         {title}
                     </h3>
                     <span className="text-sm text-gray-400 ml-4">{period}</span>
@@ -95,12 +95,25 @@ const Experience: React.FC = () => {
     // Experience data array
     const experiences = [
         {
+            title: "Associate Founder",
+            company: "Plus2note",
+            period: "Aug 2021 - Apr 2024",
+            description: "AI startup revolutionizing intelligent solutions.",
+            responsibilities: [
+                "Spearheaded the development of AI-driven web platforms using React, Node.js, and MongoDB, delivering scalable and user-centric solutions.",
+                "Integrated advanced machine learning models into applications, driving automation and enhancing user engagement.",
+                "Optimized system performance, achieving up to 50% faster load times and ensuring scalability for high traffic demands.",
+                "Led cross-functional collaboration to innovate and launch impactful AI-powered products.",
+            ],
+            markerColor: "bg-teal-400",
+        },
+        {
             title: "Full Stack Developer",
-            company: "Company XYZ",
-            period: "Jan 2023 - Present",
+            company: "Sarathi Technosoft Pvt. Ltd",
+            period: "Aug 2021 - Apr 2024",
             description: "A leading web solutions provider.",
             responsibilities: [
-                "Built and maintained dynamic web applications using React, Node.js, and MongoDB.",
+                "Built and maintained dynamic web applications using React, Node.js, and MongoDB or MySQL.",
                 "Collaborated with cross-functional teams to design and implement new features.",
                 "Implemented RESTful APIs and integrated with third-party services.",
                 "Optimized front-end performance and enhanced user experience across devices.",
@@ -108,10 +121,10 @@ const Experience: React.FC = () => {
             markerColor: "bg-teal-400",
         },
         {
-            title: "React Developer",
-            company: "Company ABC",
-            period: "Jun 2021 - Dec 2022",
-            description: "A startup focused on SaaS products.",
+            title: "Frontend Engineer ",
+            company: "Softbenz Infosys",
+            period: "Sep 2020 - Jul 2021",
+            description: "Software Company",
             responsibilities: [
                 "Developed single-page applications (SPAs) using React.js and Redux.",
                 "Created responsive and accessible UI components with Tailwind CSS.",
@@ -122,12 +135,12 @@ const Experience: React.FC = () => {
         },
         {
             title: "Junior Frontend Developer",
-            company: "Startup Innovations",
-            period: "Aug 2019 - May 2021",
-            description: "Focused on mobile-first web design.",
+            company: "Purwanchal Digital Media Technologies Pvt. Ltd.",
+            period: "Feb 2016 - May 2021",
+            description: "",
             responsibilities: [
                 "Developed responsive websites with HTML5, CSS3, and JavaScript.",
-                "Collaborated with senior developers to implement features using React.js.",
+                "Collaborated with senior developers to implement features using PHP.",
                 "Optimized websites for performance, SEO, and accessibility standards.",
                 "Maintained and updated websites, ensuring they were secure and up to date.",
             ],
@@ -136,8 +149,8 @@ const Experience: React.FC = () => {
     ];
 
     return (
-        <section id="experience" className="py-7 my-4">
-            <h2 className="text-2xl font-bold text-gray-400">💼 Experience</h2>
+        <section id="experience" className="py-7 my-4 ">
+            <h2 className="text-2xl font-bold text-gray-400 ">💼 Experience</h2>
 
             {/* Timeline */}
             <div className="relative pl-4">

@@ -7,40 +7,73 @@ interface CertificationItem {
 
 const certificationsData: CertificationItem[] = [
     {
+        year: "2024",
+        certifications: [
+            "Completed the 'Complete Full Stack Web Development – MERN Stack' course at Deerwalk Training Center.",
+            "Graduated from the 'Full Stack Next.js Bootcamp' organized by Jobsnipper.",
+            "Successfully completed the 'Custom WordPress Theme Development Bootcamp' hosted by Jobsnipper.",
+        ],
+    },
+    {
         year: "2020",
         certifications: [
-            "Passed JavaScript LinkedIn Assessment & listed on top 15% of total users.",
-            "Passed PHP LinkedIn Assessment & listed on top 5% of total users.",
-            "Scored 92 / 100 in JavaScript code verification in Hacker Rank.",
+            "Achieved top 15% ranking in the JavaScript LinkedIn Assessment.",
+            "Ranked in the top 5% of participants in the PHP LinkedIn Assessment.",
+            "Scored 92/100 in the JavaScript Code Verification on HackerRank.",
         ],
     },
     {
         year: "2019",
         certifications: [
-            "JavaScript Expert Verified by Pluralsight IQ with 212 score.",
-            "CSS Expert Verified by Pluralsight IQ with 218 score.",
+            "Earned 'JavaScript Expert' status with a score of 212 on Pluralsight IQ.",
+            "Achieved 'CSS Expert' verification with a score of 218 on Pluralsight IQ.",
+        ],
+    },
+    {
+        year: "2018",
+        certifications: ["Awarded HTML and CSS Certification from Cernter."],
+    },
+    {
+        year: "2016",
+        certifications: [
+            "Diploma in Computer Engineering, accredited by CTEVT (Council for Technical Education and Vocational Training).",
         ],
     },
 ];
-
 const Certifications: React.FC = () => {
     return (
-        <section className="px-4 py-8 bg-gray-900 text-gray-200 rounded-md">
-            <h4 className="text-xl font-bold mb-6">Certifications:</h4>
-            {certificationsData.map((item, index) => (
-                <div key={index} className="mb-4">
-                    <h6 className="text-lg font-semibold text-teal-400 mb-2">
-                        <strong>{item.year}:</strong>
-                    </h6>
-                    <ul className="list-disc ml-6 space-y-2">
-                        {item.certifications.map((certification, certIndex) => (
-                            <li key={certIndex} className="text-sm">
-                                {certification}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            ))}
+        <section id="certifications" className="py-10">
+            <h2 className="text-2xl font-bold text-gray-400">
+                📜 Certifications
+            </h2>
+            <div className="relative border-l border-gray-600 pl-6 ml-4 pt-10">
+                {certificationsData.map((item, index) => (
+                    <div
+                        key={index}
+                        className={`mb-8 relative fade-up fade-up-delayed-${index}`}
+                    >
+                        {/* Timeline Bullet */}
+                        <div className="w-[.75rem] h-[.75rem] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full absolute top-[.4rem] left-[-1.94rem] transform animate-beat"></div>
+                        <div className="w-[.75rem] h-[.75rem] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full absolute top-[.4rem] left-[-1.94rem] transform animate-echo"></div>
+
+                        {/* Year */}
+                        <h6 className="text-lg font-semibold text-gray-300 mb-4">
+                            {item.year}
+                        </h6>
+
+                        {/* Certifications */}
+                        <ul className="list-disc ml-6 space-y-2">
+                            {item.certifications.map(
+                                (certification, certIndex) => (
+                                    <li key={certIndex} className="text-sm">
+                                        {certification}
+                                    </li>
+                                )
+                            )}
+                        </ul>
+                    </div>
+                ))}
+            </div>
         </section>
     );
 };

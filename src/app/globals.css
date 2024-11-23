@@ -77,3 +77,84 @@ body {
         animation: echo 2.5s ease-out infinite;
     }
 }
+
+/* ============ */
+/* Keyframes for timeline animation */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animate-beat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Tailwind custom utilities for animations */
+@layer utilities {
+    .animate-beat {
+        animation: animate-beat 1s infinite ease-in-out;
+    }
+
+    .fade-up {
+        animation: fade-up 0.8s ease-out forwards;
+    }
+}
+
+/* Keyframes for fade-up animation */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse animation for the timeline bullets */
+@keyframes animate-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@layer utilities {
+    .animate-pulse {
+        animation: animate-pulse 1.5s infinite ease-in-out;
+    }
+
+    .fade-up {
+        animation: fade-up 0.8s ease-out forwards;
+    }
+
+    .fade-up-delayed-0 {
+        animation-delay: 0.2s;
+    }
+
+    .fade-up-delayed-1 {
+        animation-delay: 0.4s;
+    }
+
+    /* Add more delays for subsequent items */
+}
