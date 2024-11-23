@@ -34,7 +34,7 @@ const certificationsData: CertificationItem[] = [
         certifications: ["Awarded HTML and CSS Certification from Cernter."],
     },
     {
-        year: "2013 - 2016",
+        year: "2016",
         certifications: [
             "Diploma in Computer Engineering, accredited by CTEVT (Council for Technical Education and Vocational Training).",
         ],

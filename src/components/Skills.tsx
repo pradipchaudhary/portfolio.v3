@@ -22,7 +22,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ title, skills }) => {
                 {skills.map((skill, index) => (
                     <div
                         key={index}
-                        className={`text-sm relative fade-up fade-up-delayed-${index} hover:cursor-move hover:text-[#6743CD]`}
+                        className={`text-sm relative fade-up fade-up-delayed-${index} hover:cursor-pointer hover:text-[#6743CD]`}
                     >
                         {/* Nested Bullet */}
                         <div className="w-[.5rem] h-[.5rem] bg-gradient-to-r from-purple-500 to-blue-500 rounded-full absolute top-[.2rem] left-[-1.2rem]"></div>
