@@ -88,9 +88,9 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900 leading-relaxed text-slate-400  selection:bg-teal-300 selection:text-teal-900`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased leading-relaxed text-slate-400 `}
             >
-                <div className="relative group/spotlight">
+                <div className="relative">
                     {/* Main Content Container */}
                     <div className="mx-auto min-h-screen max-w-6xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
                         <div className="lg:flex lg:justify-between lg:gap-6">
