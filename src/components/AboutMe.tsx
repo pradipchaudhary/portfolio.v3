@@ -4,7 +4,10 @@ import Link from "next/link";
 export default function AboutMe() {
     return (
         <section id="introduction" className="fade-up">
-            <h1 className="text-2xl font-bold mb-4 fade-up">Hi there, 👋</h1>
+            <h1 className="text-2xl font-bold mb-4 fade-up">
+                Hi there, <span className="wave  text-white">👋</span>
+            </h1>
+
             {/* p1 */}
             <p className="text-lg fade-up">
                 I&apos;m an enthusiastic{" "}
