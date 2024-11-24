@@ -76,7 +76,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
                     </h3>
                     <span className="text-sm text-gray-400 ml-4">{period}</span>
                 </div>
-                <p className="text-base text-[#6743CD] mb-3">
+                <p className="text-base text-[#8176a1] mb-3">
                     <strong className="font-medium">{company}</strong> -{" "}
                     {description}
                 </p>
@@ -97,6 +97,7 @@ const Experience: React.FC = () => {
         {
             title: "Associate Founder",
             company: "Plus2note",
+            companyUrl: "https://www.plus2note.com",
             period: "Aug 2021 - Apr 2024",
             description: "AI startup revolutionizing intelligent solutions.",
             responsibilities: [
@@ -110,6 +111,7 @@ const Experience: React.FC = () => {
         {
             title: "Full Stack Developer",
             company: "Sarathi Technosoft Pvt. Ltd",
+            companyUrl: "https://www.sarathitechnosoft.com",
             period: "Aug 2021 - Apr 2024",
             description: "A leading web solutions provider.",
             responsibilities: [
@@ -123,6 +125,7 @@ const Experience: React.FC = () => {
         {
             title: "Frontend Engineer ",
             company: "Softbenz Infosys",
+            companyUrl: "https://softbenz.com",
             period: "Sep 2020 - Jul 2021",
             description: "Software Company",
             responsibilities: [
@@ -136,6 +139,7 @@ const Experience: React.FC = () => {
         {
             title: "Junior Frontend Developer",
             company: "Purwanchal Digital Media Technologies Pvt. Ltd.",
+            companyUrl: "https://www.purwanchaldigital.com",
             period: "Feb 2016 - May 2021",
             description: "",
             responsibilities: [

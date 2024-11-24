@@ -22,16 +22,17 @@ const certificationsData: CertificationItem[] = [
             "Scored 92/100 in the JavaScript Code Verification on HackerRank.",
         ],
     },
+
     {
-        year: "2019",
+        year: "2018",
+        certifications: ["HTML and CSS Certification from TemplateMonster.com"],
+    },
+    {
+        year: "2017",
         certifications: [
             "Earned 'JavaScript Expert' status with a score of 212 on Pluralsight IQ.",
             "Achieved 'CSS Expert' verification with a score of 218 on Pluralsight IQ.",
         ],
-    },
-    {
-        year: "2018",
-        certifications: ["Awarded HTML and CSS Certification from Cernter."],
     },
     {
         year: "2016",
