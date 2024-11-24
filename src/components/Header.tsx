@@ -126,23 +126,42 @@ export default function Header() {
                     </ul>
                 </nav>
             </div>
+
+            {/* Resume */}
+
             {/* Social Media Links */}
-            <ul
-                className="mt-8 ml-1 flex items-center"
-                aria-label="Social media"
-            >
-                {socialIcons.map((social) => (
-                    <li key={social.label} className="mr-5 shrink-0 text-xs">
-                        <a
-                            href={social.href}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label={`${social.label} (opens in a new tab)`}
-                            className="block hover:text-slate-200"
-                            title={social.label}
+            <div>
+                <div>
+                    <p className="text-sm text-[#6f49d8]">
+                        Your next great hire awaits:{" "}
+                        <Link
+                            href={"/resume.pdf"}
+                            className=" underline text-[#885ff8] hover:text-[#784eeb]"
                         >
-                            <span className="sr-only">{social.label}</span>
-                            {/* <Image
+                            {" "}
+                            click here.
+                        </Link>
+                    </p>
+                </div>
+                <ul
+                    className="mt-4 ml-1 flex items-center"
+                    aria-label="Social media"
+                >
+                    {socialIcons.map((social) => (
+                        <li
+                            key={social.label}
+                            className="mr-5 shrink-0 text-xs"
+                        >
+                            <a
+                                href={social.href}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                aria-label={`${social.label} (opens in a new tab)`}
+                                className="block hover:text-slate-200"
+                                title={social.label}
+                            >
+                                <span className="sr-only">{social.label}</span>
+                                {/* <Image
                                 src={`/icons/${social.icon}.svg`}
                                 alt={social.label}
                                 className="h-6 w-6"
@@ -150,11 +169,12 @@ export default function Header() {
                                 height={24}
                                 aria-hidden="true"
                             /> */}
-                            {social.icon}
-                        </a>
-                    </li>
-                ))}
-            </ul>
+                                {social.icon}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </header>
     );
 }

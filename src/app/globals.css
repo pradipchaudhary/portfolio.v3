@@ -6,6 +6,7 @@
     --background: #0f172a;
     --foreground: #d8d8d8;
 }
+/* 202124 */
 /* 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -18,7 +19,7 @@ body {
     color: var(--foreground);
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
-    background: radial-gradient(circle at center, #1f325e, #0f172a);
+    /* background: radial-gradient(circle at center, #1f325e, #0f172a); */
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 }
