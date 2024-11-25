@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 
+// Define custom fonts with localFont utility
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
     variable: "--font-geist-sans",
@@ -13,6 +14,8 @@ const geistMono = localFont({
     variable: "--font-geist-mono",
     weight: "100 900",
 });
+
+// Metadata for SEO and social sharing
 export const metadata: Metadata = {
     title: "Pradip Chaudhary - Full Stack Developer & Web Development Expert",
     description:
@@ -21,16 +24,15 @@ export const metadata: Metadata = {
         "Pradip Chaudhary, Full Stack Developer, Web Development, React, Next.js, Node.js, JavaScript, Tailwind CSS, Frontend Development, Backend Development, Web Applications, SEO Expert",
     robots: "index, follow",
 
-    // Open Graph Metadata for social media sharing (Facebook, LinkedIn, etc.)
     openGraph: {
         title: "Pradip Chaudhary - Full Stack Developer Portfolio",
         description:
             "Explore the portfolio of Pradip Chaudhary, a Full Stack Developer specializing in React, Next.js, Node.js, and more. Offering cutting-edge solutions for modern web development.",
-        url: "https://pradipchaudhary.com.np/", // Make sure this is the correct URL
+        url: "https://pradipchaudhary.com.np/",
         siteName: "Pradip Chaudhary's Portfolio",
         images: [
             {
-                url: "https://pradipchaudhary.com.np/og-image.jpg", // Replace with your own image URL
+                url: "https://pradipchaudhary.com.np/og-image.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Pradip Chaudhary Portfolio Image",
@@ -39,25 +41,27 @@ export const metadata: Metadata = {
         type: "website",
     },
 
-    // Twitter Card Metadata
     twitter: {
-        card: "summary_large_image", // Use a large image for better visibility
-        site: "@PradipChaudhary", // Twitter handle for your site
-        creator: "@PradipChaudhary", // Your Twitter handle
+        card: "summary_large_image",
+        site: "@PradipChaudhary",
+        creator: "@PradipChaudhary",
         title: "Pradip Chaudhary - Full Stack Developer Portfolio",
         description:
             "Explore Pradip Chaudhary's professional portfolio, showcasing web development projects with expertise in React, Next.js, Node.js, and more.",
     },
 };
+
+// RootLayout Component
 export default function RootLayout({
     children,
-}: Readonly<{
+}: {
     children: React.ReactNode;
-}>) {
+}) {
     return (
         <html lang="en">
             <head>
-                <link rel="icon" href="/favicon.ico" />
+                {/* Favicon and App Metadata */}
+                <link rel="icon" href="/favicon.ico" sizes="any" />
                 <link
                     rel="icon"
                     type="image/png"
@@ -71,7 +75,6 @@ export default function RootLayout({
                     href="/favicon-16x16.png"
                 />
                 <meta name="theme-color" content="#2d3748" />
-                {/* Meta Tags for Favicons */}
                 <meta
                     name="apple-mobile-web-app-title"
                     content="Pradip Chaudhary Portfolio"
@@ -88,7 +91,7 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased leading-relaxed text-slate-400 `}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased leading-relaxed text-slate-400`}
             >
                 <div className="relative">
                     {/* Main Content Container */}
