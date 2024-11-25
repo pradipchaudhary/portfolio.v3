@@ -6,39 +6,22 @@
     --background: #0f172a;
     --foreground: #d8d8d8;
 }
-/* 202124 */
-/* 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
-} */
 
 body {
     color: var(--foreground);
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
-    /* background: radial-gradient(circle at center, #1f325e, #0f172a); */
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 }
 
-/* Hide scrollbar while keeping scroll functionality */
-.scroll-hidden {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-}
-
-.scroll-hidden::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
-}
+/* Keyframes */
 @keyframes beat {
     0% {
         transform: scale(1);
     }
     25% {
-        transform: scale(1.05); /* Slightly smaller scaling */
+        transform: scale(1.05);
     }
     50% {
         transform: scale(0.95);
@@ -55,11 +38,11 @@ body {
     0% {
         opacity: 0.7;
         transform: scale(1);
-        box-shadow: 0 0 5px rgba(66, 153, 225, 0.6); /* Smaller glow effect */
+        box-shadow: 0 0 5px rgba(66, 153, 225, 0.6);
     }
     50% {
         opacity: 0.4;
-        transform: scale(2); /* Reduced scaling */
+        transform: scale(2);
         box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
     }
     100% {
@@ -68,7 +51,48 @@ body {
     }
 }
 
-/* Tailwind Custom Animations */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Tailwind Custom Utilities */
 @layer utilities {
     .animate-beat {
         animation: beat 1.5s ease-in-out infinite;
@@ -77,76 +101,13 @@ body {
     .animate-echo {
         animation: echo 2.5s ease-out infinite;
     }
-}
-
-/* ============ */
-/* Keyframes for timeline animation */
-@keyframes fade-up {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes animate-beat {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Tailwind custom utilities for animations */
-@layer utilities {
-    .animate-beat {
-        animation: animate-beat 1s infinite ease-in-out;
-    }
 
     .fade-up {
         animation: fade-up 0.8s ease-out forwards;
     }
-}
 
-/* Keyframes for fade-up animation */
-@keyframes fade-up {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Pulse animation for the timeline bullets */
-@keyframes animate-pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@layer utilities {
     .animate-pulse {
-        animation: animate-pulse 1.5s infinite ease-in-out;
-    }
-
-    .fade-up {
-        animation: fade-up 0.8s ease-out forwards;
+        animation: pulse 1.5s infinite ease-in-out;
     }
 
     .fade-up-delayed-0 {
@@ -157,5 +118,8 @@ body {
         animation-delay: 0.4s;
     }
 
-    /* Add more delays for subsequent items */
+    .wave {
+        display: inline-block;
+        animation: wave 1.5s infinite;
+    }
 }

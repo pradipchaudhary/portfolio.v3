@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const socialIcons = [
     {
@@ -91,15 +92,36 @@ const menuItem = [
     // },
 ];
 export default function Header() {
+    const [animationState, setAnimationState] = useState("typing");
+
+    useEffect(() => {
+        // Set up animation cycle with delay and hold
+        const animationCycle = setInterval(() => {
+            if (animationState === "typing") {
+                setAnimationState("hold"); // Move to the hold state after typing
+            } else if (animationState === "hold") {
+                setAnimationState("reverse"); // Move to reverse after hold
+            } else if (animationState === "reverse") {
+                setAnimationState("typing"); // Restart the animation
+            }
+        }, 16000); // Change state every 16 seconds (3s typing + 10s hold + 3s reverse)
+
+        return () => clearInterval(animationCycle); // Clean up on unmount
+    }, [animationState]);
+
     return (
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 px-4">
             <div>
-                <h1 className="text-3xl font-bold tracking-tight text-slate-300 sm:text-5xl">
+                <h1 className="text-3xl font-bold tracking-tight text-slate-300 sm:text-5xl ">
                     <Link href="/">Pradip Chaudhary</Link>
                 </h1>
-                <h2 className="mt-3 text-lg font-medium tracking-tight text-[#6f49d8] sm:text-xl">
+
+                <h2
+                    className={`mt-3 text-lg font-medium tracking-tight text-[#6f49d8] sm:text-xl typing-animation ${animationState}`}
+                >
                     Front End Engineer
                 </h2>
+
                 <p className="mt-4 max-w-xs leading-normal">
                     I build accessible, pixel-perfect digital experiences for
                     the web.
