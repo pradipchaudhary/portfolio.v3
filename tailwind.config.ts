@@ -2,19 +2,32 @@ import type { Config } from "tailwindcss";
 
 export default {
     content: [
-        "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
         extend: {
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
-                lineColor: "#112044", // Define your custom color here
             },
-            fontSize: {
-                lg: "1rem", // Change text-lg to 1rem
+            fontFamily: {
+                custom: ["SignatureFont", "sans-serif"],
+            },
+            typography: {
+                DEFAULT: {
+                    css: {
+                        body: {
+                            backgroundColor: "#1e40af", // Tailwind blue-900
+                            color: "#ffffff",
+                        },
+                        p: {
+                            color: "#4e6f9f", // Tailwind gray-700
+                            fontSize: ".9rem", // Tailwind text-lg
+                        },
+                    },
+                },
             },
         },
     },
