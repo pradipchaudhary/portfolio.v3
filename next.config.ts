@@ -2,14 +2,19 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
     /* config options here */
-    output: "export",
-    images: {
-        remotePatterns: [
+    // reactStrictMode: false,
+    async redirects() {
+        return [
             {
-                protocol: "https",
-                hostname: "**",
+                source: "/admin",
+                destination: "/admin/dashboard",
+                permanent: true, // Use `true` for 301 redirect or `false` for 302 redirect
             },
-        ],
+        ];
+    },
+
+    images: {
+        domains: ["res.cloudinary.com"],
     },
 };
 
