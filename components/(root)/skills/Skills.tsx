@@ -25,6 +25,7 @@ const Skills: React.FC = () => {
         { name: "CI/CD" },
         { name: "Docker" },
         { name: "Github Action" },
+        { name: "OpenAPI" },
     ];
 
     return (
