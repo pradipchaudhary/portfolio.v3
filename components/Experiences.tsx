@@ -32,10 +32,11 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
     responsibilities,
 }) => {
     return (
-        <div className="relative pt-[2.97rem] pl-8 before:absolute before:left-0 before:top-0 before:h-full before:w-[2px] before:bg-[#6f49d8]/20">
+        <div className="relative pt-[2.97rem] pl-8 before:absolute before:left-0 before:top-0 before:h-full before:w-[1px] before:bg-[#6f49d8]/20">
             {/* Timeline Dot */}
             <div className="absolute left-[-5.5px] top-[4rem] sm:top-[3.55rem] h-3 w-3">
-                <div className="h-full w-full rounded-full bg-[#6f49d8] ring-[6px] ring-[#6f49d8]/10" />
+                <div className="h-full w-full rounded-full bg-[#6f49d8] ring-[6px] ring-[#6f49d8]/10 after:animate-ping" />
+                <div className="h-full w-full rounded-full bg-[#6f49d8] ring-[6px] ring-[#6f49d8]/10 animate-ping absolute -top-[0px]" />
             </div>
 
             <div className="space-y-4">
@@ -119,7 +120,7 @@ const Experience: React.FC = () => {
         <section className="py-16 " id="experience">
             <div className="space-y-1 relative max-h-full ">
                 <svg
-                    className="absolute left-2 top-9"
+                    className="absolute left-[0.46rem] top-9 rounded-full"
                     width="2"
                     height="900"
                     viewBox="0 0 2 905"
@@ -130,21 +131,15 @@ const Experience: React.FC = () => {
                         className="path"
                         d="M1 0V1085"
                         stroke="#6f49d8"
-                        stroke-width="8"
+                        stroke-width="10"
                         fill="none"
                     />
                 </svg>
 
                 <div className="space-y-2 pb-6">
-                    <h2 className="text-4xl sm:text-5xl font-bold">
-                        <span className="bg-gradient-to-b from-[#8c95e4] to-[#292450]/80 text-transparent bg-clip-text  tracking-tight ml-0.5">
-                            {" "}
-                            Experience{" "}
-                        </span>
+                    <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-b from-[#8c95e4] to-[#292450]/80 text-transparent bg-clip-text  tracking-tight ml-0.5">
+                        Experience
                     </h2>
-                    {/* <p className="text-xs sm:text-sm text-slate-500 ml-12 -mt-2">
-                        My professional journey and roles
-                    </p> */}
                 </div>
 
                 <div

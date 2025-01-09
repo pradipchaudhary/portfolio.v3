@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Stars from "@/components/Stars";
+import Footer from "@/components/Footer";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -27,7 +28,10 @@ const layout = ({ children }: { children: React.ReactNode }) => {
                     {/* Header  */}
                     <Header />
 
-                    <main className=" w-full pt-20">{children}</main>
+                    <main className=" w-full pt-20">
+                        {children}
+                        <Footer />
+                    </main>
                 </div>
             </div>
         </div>

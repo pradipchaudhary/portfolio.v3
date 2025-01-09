@@ -3,7 +3,7 @@
 export default function AboutMe() {
     return (
         <section id="about" aria-label="About Pradip Chaudhary" className="">
-            <h1 className="text-4xl bg-gradient-to-b from-[#8c95e4] to-[#292450]/90 text-transparent bg-clip-text  tracking-tight font-semibold ">
+            <h1 className="text-4xl bg-gradient-to-b from-[#8c95e4] to-[#292450]/90 text-transparent bg-clip-text  tracking-tight font-semibold mt-2">
                 Hello,
             </h1>
             <p className="text-custom-text my-4">

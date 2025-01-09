@@ -44,23 +44,43 @@ const certificationsData: CertificationItem[] = [
 
 const Certifications: React.FC = () => {
     return (
-        <section id="certifications" className="py-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-400">
-                📜 Certifications
+        <section
+            id="certifications"
+            className="py-10 relative overflow-y-hidden"
+        >
+            <h2 className="text-4xl sm:text-5xl font-semibold bg-gradient-to-b from-[#8c95e4] to-[#292450]/80 text-transparent bg-clip-text  tracking-tight">
+                Certifications
             </h2>
-            <div className="relative border-l border-gray-600 pl-6 ml-[1.4rem] pt-10">
+            <div className=" border-l border-[#262050]  pl-6 ml-[1rem] pt-8 ">
+                <svg
+                    className="absolute left-[0.94rem] top-9 "
+                    width="2"
+                    height="900"
+                    viewBox="0 0 2 905"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        className="path"
+                        d="M1 0V1085"
+                        stroke="#6f49d8"
+                        stroke-width="8"
+                        fill="none"
+                    />
+                </svg>
                 {certificationsData.map((item, index) => (
                     <div
                         key={index}
-                        className={`mb-8 relative fade-up fade-up-delayed-${index}`}
+                        className={`mb-10 relative fade-up fade-up-delayed-${index}`}
                     >
                         {/* Timeline Bullet */}
                         <div className="absolute left-[-31.5px] top-[.25rem] sm:top-[.55rem] h-3 w-3">
-                            <div className="h-full w-full rounded-full bg-[#6f49d8] ring-[6px] ring-[#6f49d8]/10" />
+                            <div className="h-full w-full rounded-full bg-[#6f49d8] ring-[6px] ring-[#6f49d8]/10 after:animate-ping" />
+                            <div className="h-full w-full rounded-full bg-[#6f49d8] ring-[6px] ring-[#6f49d8]/10 animate-ping absolute -top-[0px]" />
                         </div>
 
                         {/* Year */}
-                        <h6 className="text-lg sm:text-xl font-bold text-slate-500 mb-2">
+                        <h6 className="text-lg sm:text-xl font-bold mb-2">
                             {item.year}
                         </h6>
 
@@ -70,11 +90,9 @@ const Certifications: React.FC = () => {
                                 (certification, certIndex) => (
                                     <li
                                         key={certIndex}
-                                        className="flex items-start gap-2 mb-2 text-xs sm:text-sm text-slate-500 leading-relaxed group-hover:text-slate-400"
+                                        className="flex items-start gap-2 mb-2 text-xs sm:text-sm  leading-relaxed "
                                     >
-                                        <span className="text-slate-500">
-                                            #
-                                        </span>
+                                        <span className="">#</span>
                                         <span>{certification}</span>
                                     </li>
                                 )

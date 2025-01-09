@@ -30,14 +30,14 @@ const Skills: React.FC = () => {
 
     return (
         <section className="py-8" id="skills">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-400 mb-6">
-                🛠️ Skills
+            <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-b from-[#8c95e4] to-[#292450]/80 text-transparent bg-clip-text  tracking-tight ">
+                Skills
             </h2>
             <div className="flex flex-wrap gap-4 mt-10 ml-10">
                 {skills.map((skill, index) => (
                     <span
                         key={index}
-                        className="flex items-center cursor-pointer gap-2 px-4 min-w-[80px] py-[.4rem] mb-2 border border-dotted border-[#2b275e] rounded-full text-sm text-slate-500 relative overflow-hidden hover:border-solid hover:animate-border"
+                        className="flex items-center cursor-pointer gap-2 px-4 min-w-[80px] py-[.4rem] mb-2 border border-dotted border-[#2b275e] rounded-full text-sm relative overflow-hidden hover:border-solid hover:animate-border"
                     >
                         <span className="absolute inset-0 border border-transparent transition-all duration-300 ease-linear rounded-full hover:border-[#2b275e]"></span>
                         # {skill.name}
