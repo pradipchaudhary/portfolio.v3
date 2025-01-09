@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { Download } from "lucide-react";
 import DownloadCV from "./DownloadCV";
 const Header = () => {
     // const cvpath = window.querySelector(".cv-path") as HTMLAnchorElement;
@@ -101,11 +100,11 @@ const Header = () => {
                     </Link>
                 </h1>
                 <h2
-                    className={`mt-3 text-lg font-medium text-slate-400 sm:text-xl typing-animation`}
+                    className={`mt-3 text-lg font-medium  sm:text-xl typing-animation`}
                 >
                     Front End Engineer
                 </h2>
-                <p className="mt-4 max-w-xs leading-normal text-slate-400 text-[.9rem]">
+                <p className="mt-4 max-w-xs leading-normal  text-[.9rem]">
                     I build accessible, pixel-perfect digital experiences for
                     the web.
                 </p>
@@ -123,7 +122,7 @@ const Header = () => {
                                     className="group flex items-center py-2"
                                 >
                                     <span className="nav-indicator mr-3 h-px w-3 bg-slate-600 transition-all group-hover:w-4 group-hover:bg-[#6743CD] motion-reduce:transition-none"></span>
-                                    <span className="nav-text text-xs font-bold uppercase text-slate-400 tracking-tight group-hover:text-[#6743CD]">
+                                    <span className="nav-text text-xs font-bold uppercase tracking-tight group-hover:text-[#6743CD]">
                                         {menu.name}
                                     </span>
                                 </a>
@@ -145,7 +144,7 @@ const Header = () => {
                             target="_blank"
                             rel="noreferrer noopener"
                             aria-label={`${social.label} (opens in a new tab)`}
-                            className="block hover:text-slate-200"
+                            className="block text-slate-600 hover:text-slate-500"
                             title={social.label}
                         >
                             <span className="sr-only">{social.label}</span>

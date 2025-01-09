@@ -4,7 +4,7 @@
 
 :root {
     --background: #0f172a;
-    --foreground: #ebebeb;
+    --foreground: #7b74a6;
 }
 
 body {
@@ -39,7 +39,8 @@ body {
 .animated-dotted-path {
     stroke-dasharray: 4 5; /* Creates the dotted effect */
     stroke-dashoffset: 0; /* Starting point of the dash offset */
-    animation: infinite-draw 10s linear infinite; /* Infinite animation */
+    animation: infinite-draw 10s linear infinite;
+    animation-delay: 10s; /* Start the animation 10 seconds after page load */
 }
 
 /* Infinite path animation */
@@ -94,5 +95,26 @@ body {
     }
     100% {
         border-color: #3a4457;
+    }
+}
+.path-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.path {
+    stroke-dasharray: 12 890; /* 10px visible, rest hidden */
+    stroke-dashoffset: 900; /* Start fully hidden at the top */
+    animation: dash 8s linear infinite; /* Duration for one top-to-bottom animation */
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 900; /* Fully hidden at the top */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Fully visible at the bottom */
     }
 }
