@@ -11,6 +11,17 @@ export default {
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
+                // Custom color class
+                "custom-text": "#7b74a6", // Example: Purple shade
+            },
+            animation: {
+                heartbeat: "heartbeat 1.5s ease-in-out infinite",
+            },
+            keyframes: {
+                heartbeat: {
+                    "0%, 100%": { transform: "scale(1)", opacity: "1" },
+                    "50%": { transform: "scale(1.3)", opacity: "0.6" },
+                },
             },
             fontFamily: {
                 custom: ["SignatureFont", "sans-serif"],

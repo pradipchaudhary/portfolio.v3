@@ -4,7 +4,7 @@
 
 :root {
     --background: #0f172a;
-    --foreground: #ebebeb;
+    --foreground: #7b74a6;
 }
 
 body {
@@ -39,7 +39,8 @@ body {
 .animated-dotted-path {
     stroke-dasharray: 4 5; /* Creates the dotted effect */
     stroke-dashoffset: 0; /* Starting point of the dash offset */
-    animation: infinite-draw 10s linear infinite; /* Infinite animation */
+    animation: infinite-draw 10s linear infinite;
+    animation-delay: 10s; /* Start the animation 10 seconds after page load */
 }
 
 /* Infinite path animation */
@@ -95,4 +96,104 @@ body {
     100% {
         border-color: #3a4457;
     }
+}
+.path-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.path {
+    stroke-dasharray: 12 890; /* 10px visible, rest hidden */
+    stroke-dashoffset: 900; /* Start fully hidden at the top */
+    animation: dash 8s linear infinite; /* Duration for one top-to-bottom animation */
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 900; /* Fully hidden at the top */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Fully visible at the bottom */
+    }
+}
+
+/* Blog page content style */
+#blog-content {
+    line-height: 1.6;
+    /* font-family: Arial, sans-serif; */
+    /* background-color: rgb(24, 22, 22); */
+}
+#blog-content p {
+    margin-bottom: 1rem;
+}
+#blog-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#blog-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+#blog-content h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#blog-content h5 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+#blog-content h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+#blog-content ul {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    list-style-type: disc;
+}
+#blog-content ol {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    list-style-type: decimal;
+}
+#blog-content li {
+    margin-bottom: 0.5rem;
+}
+
+#blog-content pre {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: rgba(31, 41, 55, 0.4); /* slate-800 with 40% opacity */
+    border-radius: 4px;
+    overflow-x: auto;
+    border: 1px solid rgba(51, 65, 85, 0.9); /* Slate-700 with 50% opacity */
+    border-radius: 4px; /* Optional: Adds rounded corners */
+    transition: border-color 0.3s ease; /* Smooth transition on hover */
+}
+#blog-content code {
+    font-family: monospace;
+    border-radius: 4px;
+    padding: 0.2rem;
+    text-align: left !important;
+
+    cursor: pointer;
+}
+#blog-content code:hover {
+    border-color: rgba(51, 65, 85, 0.8); /* slate-700 with 80% opacity */
 }
