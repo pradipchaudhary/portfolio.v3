@@ -39,7 +39,14 @@ const Page = () => {
 
     // If data is still loading, show a loading message
     if (loading) {
-        return <div>Loading...</div>;
+        return (
+            <div className="flex items-center justify-center h-64">
+                <div className="flex flex-col items-center space-y-2">
+                    <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-slate-400"></div>
+                    <p className="text-center text-slate-400">Loading...</p>
+                </div>
+            </div>
+        );
     }
 
     // If there was an error fetching data

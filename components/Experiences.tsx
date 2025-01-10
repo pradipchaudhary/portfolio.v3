@@ -131,7 +131,7 @@ const Experience: React.FC = () => {
                         className="path"
                         d="M1 0V1085"
                         stroke="#6f49d8"
-                        stroke-width="10"
+                        strokeWidth="10"
                         fill="none"
                     />
                 </svg>
