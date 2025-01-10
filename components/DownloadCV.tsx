@@ -21,10 +21,10 @@ const DownloadCV = () => {
                 />
             </svg>
 
-            <div className="flex items-center justify-center">
+            <div className="mt-2 -ml-1">
                 <Link
                     href={"/Pradip_Chaudhary.pdf"}
-                    className="-ml-[4.5rem] download-button"
+                    className="download-button -ml-7 hover:text-slate-400"
                 >
                     Download CV
                 </Link>
@@ -34,3 +34,5 @@ const DownloadCV = () => {
 };
 
 export default DownloadCV;
+
+// class="relative h-[45px] w-[138px] max-w-full overflow-hidden border border-dashed border-black rounded-full bg-[rgb(55,21,90)]"

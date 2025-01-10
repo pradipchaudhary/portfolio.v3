@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
             <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-b from-[#8c95e4] to-[#292450]/80 text-transparent bg-clip-text  tracking-tight ">
                 Skills
             </h2>
-            <div className="flex flex-wrap gap-4 mt-10 ml-10">
+            <div className="flex flex-wrap gap-4 mt-10 ">
                 {skills.map((skill, index) => (
                     <span
                         key={index}
