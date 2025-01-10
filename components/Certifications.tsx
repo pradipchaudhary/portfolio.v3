@@ -64,7 +64,7 @@ const Certifications: React.FC = () => {
                         className="path"
                         d="M1 0V1085"
                         stroke="#6f49d8"
-                        stroke-width="8"
+                        strokeWidth="8"
                         fill="none"
                     />
                 </svg>

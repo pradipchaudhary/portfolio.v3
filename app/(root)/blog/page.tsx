@@ -3,18 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-interface BlogPost {
-    id: string;
-    title: string;
-    excerpt: string;
-    date: string;
-    readTime: string;
-    slug: string;
-    thumbnail: string;
-    category?: string;
-    content?: string;
-}
+import { BlogPost } from "@/types";
 
 const POSTS_PER_PAGE = 6;
 

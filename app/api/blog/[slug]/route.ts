@@ -30,13 +30,12 @@ export async function GET(
                 );
             }
         } else {
-            console.log("Invalid or empty slug parameter.");
             return NextResponse.json(
                 { message: "Invalid or empty slug parameter" },
                 { status: 400 }
             );
         }
-    } catch (error) {
+    } catch (error: string | any) {
         return NextResponse.json({ message: error.message }, { status: 500 });
     }
 }

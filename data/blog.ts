@@ -51,20 +51,9 @@ export const blogPosts: BlogPost[] = [
 
         `,
     },
+
     {
         id: "2",
-        title: "Building with Next.js 14",
-        excerpt:
-            "Exploring the new features and improvements in Next.js 14 and how to leverage them.",
-        date: "2024-03-10",
-        readTime: "4 min read",
-        slug: "building-with-nextjs-14",
-        thumbnail: "/blog/nextjs-14.jpg",
-        category: "Next.js",
-        content: "", // Add content if necessary
-    },
-    {
-        id: "3",
         title: "Mastering Tailwind CSS: Advanced Techniques",
         excerpt:
             "Learn advanced Tailwind CSS techniques to build beautiful and maintainable user interfaces.",
