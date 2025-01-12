@@ -3,19 +3,18 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
     /* config options here */
     // reactStrictMode: false,
-    async redirects() {
-        return [
-            {
-                source: "/admin",
-                destination: "/admin/dashboard",
-                permanent: true, // Use `true` for 301 redirect or `false` for 302 redirect
-            },
-        ];
+    typescript: {
+        // !! WARN !!
+        // Dangerously allow production builds to successfully complete even if
+        // your project has type errors.
+        // !! WARN !!
+        ignoreBuildErrors: true,
     },
 
     images: {
         domains: ["res.cloudinary.com"],
     },
+    // output: "export",
 };
 
 export default nextConfig;

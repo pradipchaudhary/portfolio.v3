@@ -21,7 +21,7 @@ const DownloadCV = () => {
                 />
             </svg>
 
-            <div className="mt-2 -ml-1">
+            <div className="hidden md:block mt-2 -ml-1 ">
                 <Link
                     href={"/Pradip_Chaudhary.pdf"}
                     className="download-button -ml-7 hover:text-slate-400"

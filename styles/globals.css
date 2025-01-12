@@ -40,7 +40,7 @@ body {
     stroke-dasharray: 4 5; /* Creates the dotted effect */
     stroke-dashoffset: 0; /* Starting point of the dash offset */
     animation: infinite-draw 10s linear infinite;
-    animation-delay: 10s; /* Start the animation 10 seconds after page load */
+    /* animation-delay: 10s; Start the animation 10 seconds after page load */
 }
 
 /* Infinite path animation */
@@ -108,8 +108,11 @@ body {
 }
 
 .path {
-    stroke-dasharray: 12 890; /* 10px visible, rest hidden */
+    stroke-dasharray: 20 880; /* 10px visible, rest hidden */
     stroke-dashoffset: 900; /* Start fully hidden at the top */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     animation: dash 8s linear infinite; /* Duration for one top-to-bottom animation */
 }
 

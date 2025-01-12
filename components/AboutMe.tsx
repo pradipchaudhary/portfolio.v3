@@ -97,11 +97,19 @@ export default function AboutMe() {
                     className="text-[#8c95e4] underline"
                     target="_blank"
                 >
-                    Tailwind CSS
+                    Tailwind CSS{" "}
                 </Link>
                 ensures that I craft applications that are not only functional
                 but also visually stunning.
             </p>
+            <div className="md:hidden mt-10 ml-8">
+                <Link
+                    href={"/Pradip_Chaudhary.pdf"}
+                    className="download-button -ml-7 hover:text-slate-400 "
+                >
+                    Download CV
+                </Link>
+            </div>
         </section>
     );
 }
