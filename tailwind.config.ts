@@ -22,6 +22,10 @@ export default {
                     "0%, 100%": { transform: "scale(1)", opacity: "1" },
                     "50%": { transform: "scale(1.3)", opacity: "0.6" },
                 },
+                moveBorderLine: {
+                    "0%": { transform: "translateX(0)" },
+                    "100%": { transform: "translateX(100%)" },
+                },
             },
             fontFamily: {
                 custom: ["SignatureFont", "sans-serif"],

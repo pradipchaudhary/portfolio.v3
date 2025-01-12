@@ -12,12 +12,14 @@ export default function ProjectsPage() {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch("/api/projects");
+                const response = await fetch(
+                    "https://portfolio-v3-api-pddz.onrender.com/api/projects"
+                );
                 if (!response.ok) {
                     throw new Error("Failed to fetch projects.");
                 }
                 const data = await response.json();
-                setProjects(data.projects);
+                setProjects(data);
                 setError(null); // Clear any existing errors
             } catch (err) {
                 setError(

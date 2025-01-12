@@ -40,7 +40,7 @@ body {
     stroke-dasharray: 4 5; /* Creates the dotted effect */
     stroke-dashoffset: 0; /* Starting point of the dash offset */
     animation: infinite-draw 10s linear infinite;
-    animation-delay: 10s; /* Start the animation 10 seconds after page load */
+    /* animation-delay: 10s; Start the animation 10 seconds after page load */
 }
 
 /* Infinite path animation */
@@ -57,7 +57,7 @@ body {
 
 .download-button {
     padding: 0.7rem 1.5rem;
-    border: 1px dashed rgba(111, 73, 216, 0.4); /*Border for animation */
+    border: 1px dashed rgb(97 75 158 / 40%); /*Border for animation */
     font-size: 0.875rem;
     border-radius: 9999px;
     background-color: transparent;
@@ -66,6 +66,9 @@ body {
     position: relative;
     font-weight: 200;
     z-index: 1;
+}
+.download-button:hover {
+    border: 1px dashed rgb(97 75 158 / 80%);
 }
 .download-button::before {
     filter: blur(0.5rem);
@@ -105,8 +108,11 @@ body {
 }
 
 .path {
-    stroke-dasharray: 12 890; /* 10px visible, rest hidden */
+    stroke-dasharray: 20 880; /* 10px visible, rest hidden */
     stroke-dashoffset: 900; /* Start fully hidden at the top */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     animation: dash 8s linear infinite; /* Duration for one top-to-bottom animation */
 }
 

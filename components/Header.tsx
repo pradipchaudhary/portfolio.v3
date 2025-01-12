@@ -1,9 +1,7 @@
+"use client";
 import Link from "next/link";
-import React from "react";
 import DownloadCV from "./DownloadCV";
 const Header = () => {
-    // const cvpath = window.querySelector(".cv-path") as HTMLAnchorElement;
-    // console.log("cvpath", cvpath);
     const menuItem = [
         {
             name: "Introduction",
@@ -90,8 +88,9 @@ const Header = () => {
     return (
         <header className="sm:w-full md:w-1/2 lg:w-1/2  lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:min-h-screen  lg:flex-col lg:justify-between lg:py-20 px-4">
             <DownloadCV />
+            {/* text-4xl font-semibold tracking-tight sm:text-5xl */}
             <div>
-                <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl ">
+                <h1 className="text-6xl md:text-5xl font-semibold tracking-tight">
                     <Link
                         href="/"
                         className="bg-gradient-to-b from-[#8c95e4] to-[#292450]/80 text-transparent bg-clip-text"
@@ -110,10 +109,7 @@ const Header = () => {
                 </p>
 
                 {/* Navigation */}
-                <nav
-                    className="hidden mt-16 lg:block"
-                    aria-label="In-page jump links"
-                >
+                <nav className="md:mt-16 mt-6" aria-label="In-page jump links">
                     <ul className="space-y-2">
                         {menuItem.map((menu) => (
                             <li key={menu.name}>
@@ -131,7 +127,6 @@ const Header = () => {
                     </ul>
                 </nav>
             </div>
-
             {/* FOOTER  */}
             <ul
                 className="mt-4 ml-1 flex items-center"
