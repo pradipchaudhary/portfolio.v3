@@ -3,16 +3,16 @@ import { NextResponse } from "next/server";
 
 // Define the BlogPost type based on your Prisma model
 interface BlogPost {
-    id: number;
+    id?: number;
     title: string;
-    excerpt?: string | null;
-    readTime?: string | null;
+    excerpt?: string | " ";
+    readTime?: string;
     slug: string;
-    thumbnail?: string | " ";
+    thumbnail?: string;
     content: string;
-    category?: string | null;
-    createdAt?: string | null;
-    updatedAt?: string | null;
+    category?: string;
+    createdAt?: string;
+    updatedAt?: string;
 }
 
 // Handler for POST requests
