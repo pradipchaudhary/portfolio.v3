@@ -19,13 +19,14 @@ export interface Project {
 }
 
 export interface BlogPost {
-    id: string;
+    id?: number;
     title: string;
-    excerpt: string;
-    date: string;
-    readTime: string;
+    excerpt?: string | " ";
+    readTime?: string;
     slug: string;
-    thumbnail: string;
+    thumbnail?: string;
+    content: string;
     category?: string;
-    content?: string;
+    createdAt?: string;
+    updatedAt?: string;
 }

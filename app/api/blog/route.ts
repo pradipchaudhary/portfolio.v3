@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 interface BlogPost {
     id?: number;
     title: string;
-    excerpt?: string;
+    excerpt?: string | " ";
     readTime?: string;
     slug: string;
     thumbnail?: string;
