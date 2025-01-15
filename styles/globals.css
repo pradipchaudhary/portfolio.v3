@@ -57,7 +57,7 @@ body {
 
 .download-button {
     padding: 0.7rem 1.5rem;
-    border: 1px dashed rgb(97 75 158 / 40%); /*Border for animation */
+    border: 1px dashed rgb(97 75 158 / 30%); /*Border for animation */
     font-size: 0.875rem;
     border-radius: 9999px;
     background-color: transparent;
@@ -66,6 +66,7 @@ body {
     position: relative;
     font-weight: 200;
     z-index: 1;
+    animation: button-border-animation 3s ease-in-out infinite;
 }
 .download-button:hover {
     border: 1px dashed rgb(97 75 158 / 80%);
