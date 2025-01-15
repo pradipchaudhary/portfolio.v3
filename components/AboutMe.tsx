@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { PulseBeams } from "./Animation";
 
 export default function AboutMe() {
     return (

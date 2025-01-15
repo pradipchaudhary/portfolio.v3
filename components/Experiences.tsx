@@ -133,7 +133,7 @@ const Experience: React.FC = () => {
                         stroke="#6f49d8"
                         strokeWidth="12"
                         fill="none"
-                    />
+                    ></path>
                 </svg>
 
                 <div className="space-y-2 pb-6">
