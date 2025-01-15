@@ -3,16 +3,16 @@ import { NextResponse } from "next/server";
 
 // Define the BlogPost type based on your Prisma model
 interface BlogPost {
-    id?: number;
+    id: number;
     title: string;
-    excerpt?: string;
-    readTime?: string;
+    excerpt?: string | null;
+    readTime?: string | null;
     slug: string;
-    thumbnail?: string;
+    thumbnail?: string | " ";
     content: string;
-    category?: string;
-    createdAt?: string;
-    updatedAt?: string;
+    category?: string | null;
+    createdAt?: string | null;
+    updatedAt?: string | null;
 }
 
 // Handler for POST requests
@@ -72,15 +72,25 @@ export async function POST(request: Request) {
             }),
             { status: 201 } // HTTP Status 201: Created
         );
-    } catch (error: any) {
-        // Log the error for debugging
-        console.error("Error creating post:", error);
+    } catch (error: unknown) {
+        // Type the error as unknown to avoid `any`
+        if (error instanceof Error) {
+            // If the error is an instance of Error, handle it
+            console.error("Error creating post:", error.message);
+            return new NextResponse(
+                JSON.stringify({
+                    error: "Internal Server Error",
+                    details: error.message,
+                }),
+                { status: 500 }
+            );
+        }
 
-        // Return a 500 response if an error occurs
+        // If the error type is not known, handle it as a generic internal server error
+        console.error("Unexpected error:", error);
         return new NextResponse(
             JSON.stringify({
                 error: "Internal Server Error",
-                details: error.message || "An unexpected error occurred.",
             }),
             { status: 500 }
         );
@@ -90,18 +100,28 @@ export async function POST(request: Request) {
 }
 
 // Handler for GET requests
-export async function GET(request: Request) {
+export async function GET() {
     try {
         // Fetch all blog posts from the database using Prisma
         const posts = await prisma.blog.findMany();
 
         // Return posts as JSON response
         return NextResponse.json(posts);
-    } catch (error: any) {
-        // Log the error for debugging
-        console.error("Error fetching posts:", error);
+    } catch (error: unknown) {
+        // Type the error as unknown to avoid `any`
+        if (error instanceof Error) {
+            console.error("Error fetching posts:", error.message);
+            return new NextResponse(
+                JSON.stringify({
+                    error: "Internal Server Error",
+                    details: error.message,
+                }),
+                { status: 500 }
+            );
+        }
 
-        // Return a 500 response if an error occurs
+        // If the error type is not known, handle it as a generic internal server error
+        console.error("Unexpected error:", error);
         return new NextResponse(
             JSON.stringify({
                 error: "Internal Server Error",
