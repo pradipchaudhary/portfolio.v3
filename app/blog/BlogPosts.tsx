@@ -20,9 +20,7 @@ const BlogPosts: React.FC<BlogPostsProps> = ({ currentPage, searchQuery }) => {
         const fetchBlogPosts = async () => {
             setLoading(true);
             try {
-                const response = await fetch(
-                    "https://portfolio-v3-api-pddz.onrender.com/api/blogs"
-                );
+                const response = await fetch("/api/blog");
                 const data: BlogPost[] = await response.json();
                 setBlogPosts(data);
             } catch (error) {

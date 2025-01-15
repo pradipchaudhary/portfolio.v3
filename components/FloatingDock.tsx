@@ -25,27 +25,27 @@ const FloatingDockCore = () => {
         {
             title: "Github",
             href: "https://github.com/pradipchaudhary",
-            icon: <FaGithub className="h-full w-full" />,
+            icon: <FaGithub className="h-6  w-6" />,
         },
         {
             title: "Linkedin",
             href: "https://www.linkedin.com/in/pradipchaudhary/",
-            icon: <FaLinkedin />,
+            icon: <FaLinkedin className="h-6  w-6" />,
         },
         {
             title: "Codepen",
             href: "https://codepen.io/pradipchaudhary",
-            icon: <FaCodepen />,
+            icon: <FaCodepen className="h-6  w-6" />,
         },
         {
             title: "Instagram",
             href: "https://instagram.com/pradipchaudhary_01",
-            icon: <FaInstagram />,
+            icon: <FaInstagram className="h-6  w-6" />,
         },
     ];
 
     return (
-        <motion.div className="flex items-center justify-center gap-3 h-16 px-4">
+        <motion.div className="flex items-center justify-center gap-2 h-16 px-4">
             {links.map((link) => (
                 <IconContainer key={link.title} link={link} />
             ))}
@@ -67,7 +67,7 @@ const IconContainer = ({ link }: { link: DockLink }) => {
         >
             <motion.div
                 ref={ref}
-                className="w-8 h-8 flex justify-center items-center rounded-full relative p-1 bg-[#6f49d8]/10  hover:bg-[#6f49d8]/30 transition-colors duration-200 ease-in-out"
+                className=" flex justify-center items-center rounded-full relative p-1  transition-colors duration-200 ease-in-out"
             >
                 <AnimatePresence>
                     {isHovered && (
@@ -75,7 +75,7 @@ const IconContainer = ({ link }: { link: DockLink }) => {
                             initial={{ opacity: 0, y: 10, x: "-42%" }}
                             animate={{ opacity: 1, y: 0, x: "-42%" }}
                             exit={{ opacity: 0, y: 2, x: "-42%" }}
-                            className="absolute text-xs -top-8 inset-x-0 px-2 py-0"
+                            className="absolute text-xs -top-6 inset-x-0 px-2 py-0"
                         >
                             {link.title}
                         </motion.div>
