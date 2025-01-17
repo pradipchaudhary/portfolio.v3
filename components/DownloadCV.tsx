@@ -4,20 +4,19 @@ import React from "react";
 const DownloadCV = () => {
     return (
         <div className="animation-container">
-            {/* SVG Path */}
             <svg
                 className="cv-path"
                 width="154"
-                height="710"
-                viewBox="0 0 154 700"
+                height="750"
+                viewBox="0 0 154 710"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <path
                     className="animated-dotted-path"
-                    d="M51.4157 1C51.4157 1 47.2098 59.6921 51.4157 95.6208C62.863 193.41 140.253 171.043 151.608 250.58C162.964 330.116 103.516 437.079 21.3579 297.204C-60.8001 157.33 132.488 329.832 128.898 430.222C125.751 518.218 53.3734 475.315 38.0567 557.754C28.4812 609.292 38.0567 699 38.0567 699"
-                    stroke="rgba(111, 73, 216, 0.2)"
-                    strokeWidth="1"
+                    d="M51.4157 -52C51.4157 -52 47.2098 13.6712 51.4157 53.8723C62.863 163.29 140.253 138.263 151.608 227.258C162.964 316.252 103.516 435.934 21.3579 279.426C-60.8002 122.919 132.488 315.934 128.898 428.261C125.751 526.721 53.3734 478.716 38.0567 570.958C28.4812 628.625 38.0567 729 38.0567 729"
+                    stroke="#6F49D8"
+                    strokeOpacity="0.2"
                 />
             </svg>
 
@@ -34,5 +33,3 @@ const DownloadCV = () => {
 };
 
 export default DownloadCV;
-
-// class="relative h-[45px] w-[138px] max-w-full overflow-hidden border border-dashed border-black rounded-full bg-[rgb(55,21,90)]"

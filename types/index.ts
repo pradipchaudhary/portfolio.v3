@@ -19,6 +19,7 @@ export interface Project {
 }
 
 export interface BlogPost {
+    _id: string;
     id?: number;
     title: string;
     excerpt?: string | " ";

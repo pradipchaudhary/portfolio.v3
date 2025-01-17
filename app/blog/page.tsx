@@ -1,59 +1,27 @@
-// BlogPage.tsx
+import { BlogPost } from "@/types";
 
-"use client";
+// app/server-component-example/page.jsx
+async function getData() {
+    const res = await fetch("https://pradipchaudhary.com.np/api/post", {
+        next: { revalidate: 60 }, // Revalidates every 60 seconds
+    });
+    if (!res.ok) {
+        throw new Error("Failed to fetch data");
+    }
+    return res.json();
+}
 
-import React, { Suspense, useState } from "react";
-import BlogPosts from "./BlogPosts"; // Import the new BlogPosts component
-import BlogPostSkeleton from "./BlogPostSkeleton"; // Your skeleton loading component
-
-const BlogPage = () => {
-    const [searchQuery, setSearchQuery] = useState<string>("");
-    const [currentPage, setCurrentPage] = useState<number>(1);
+export default async function Page() {
+    const data = await getData();
 
     return (
-        <div className="max-w-3xl mx-auto pb-8 pr-4">
-            {/* Header Section */}
-            <div className="relative mb-12 space-y-6">
-                <div className="space-y-2">
-                    <h1 className="text-4xl bg-gradient-to-b from-[#8c95e4] to-[#292450]/90 text-transparent bg-clip-text  tracking-tight font-semibold mt-2 mb-2">
-                        Blog & Articles
-                    </h1>
-                    <p>
-                        Exploring web development, sharing insights, and
-                        documenting my journey.
-                    </p>
-                </div>
-
-                {/* Search Bar */}
-                <div className="relative max-w-xl">
-                    <input
-                        type="text"
-                        placeholder="Search articles by title, content, or category..."
-                        value={searchQuery}
-                        onChange={(e) => {
-                            setSearchQuery(e.target.value);
-                            setCurrentPage(1);
-                        }}
-                        className="w-full px-4 py-3 bg-slate-800/40 border border-slate-700/50 
-                                   rounded-lg text-slate-200 placeholder-slate-400 
-                                   focus:outline-none focus:border-[#6f49d8]/50 
-                                   focus:ring-2 focus:ring-[#6f49d8]/20 transition-all"
-                    />
-                </div>
-            </div>
-
-            {/* Blog Posts Section */}
-            <Suspense fallback={<BlogPostSkeleton />}>
-                <BlogPosts
-                    currentPage={currentPage}
-                    searchQuery={searchQuery}
-                />
-            </Suspense>
-
-            {/* Pagination */}
-            {/* Pagination logic goes here */}
+        <div>
+            <h1>Server Component Data Fetching</h1>
+            <ul>
+                {data.slice(0, 5).map((post: BlogPost) => (
+                    <li key={post.id}>{post.title}</li>
+                ))}
+            </ul>
         </div>
     );
-};
-
-export default BlogPage;
+}
