@@ -85,7 +85,7 @@ body {
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    animation: dash 3s linear infinite; /* Duration for one top-to-bottom animation */
+    animation: dash 2.6s linear infinite; /* Duration for one top-to-bottom animation */
     animation-fill-mode: forwards;
     border-radius: 50%;
 }
