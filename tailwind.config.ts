@@ -1,6 +1,11 @@
 import type { Config } from "tailwindcss";
 
 export default {
+    images: {
+        remotePatterns: {
+            protocol: "https",
+        }
+    },
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,6 +21,7 @@ export default {
             },
             animation: {
                 heartbeat: "heartbeat 1.5s ease-in-out infinite",
+                'spin-slow': 'spin 2s linear infinite',
             },
             keyframes: {
                 heartbeat: {
