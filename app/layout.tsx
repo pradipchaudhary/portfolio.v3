@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import Stars from "@/components/Stars";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Background from "@/components/Background";
-import PreLoader from "./preloader";
 import { Suspense } from "react";
 import Loading from "./loading";
 import HomeLayout from "@/components/layout/HomeLayout";
+import WelcomeMessage from "@/components/WelcomeMessage";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +26,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <PreLoader />
+                <WelcomeMessage />
                 <Suspense fallback={<Loading />}>
                     <HomeLayout>
                         {children}

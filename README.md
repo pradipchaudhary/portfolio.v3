@@ -4,6 +4,17 @@
 
 Welcome to the repository for my personal portfolio website! This project showcases my professional journey, skills, projects, and achievements. It is designed to be a visually appealing and responsive web application.
 
+Passionate Undergraduate Software Engineer | Innovator at Heart | Problem Solver
+I'm a Undergraduate software engineer that love to write code.
+
+Hello, I’m a passionate software engineer with a drive for solving complex problems and crafting innovative, high-impact solutions.
+
+As a passionate software engineer, I specialize in creating high-performance, user-centric web applications with React. Let’s build something extraordinary together!
+
+As an aspiring software engineer with a deep passion for web development, I specialize in crafting intuitive, high-performance applications that seamlessly blend functionality and user experience. With expertise in modern web technologies, including React, I thrive on turning complex challenges into innovative solutions that drive impact.
+
+Let’s collaborate and build something extraordinary that makes a difference!
+
 ## 🌐 Live Website
 
 [Visit my portfolio](https://pradipchaudhary.com.np/)
@@ -75,3 +86,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## ⭐ Acknowledgements
 
 Special thanks to all the open-source libraries and tools used in this project!
+
+
+resizer.otstatic.com

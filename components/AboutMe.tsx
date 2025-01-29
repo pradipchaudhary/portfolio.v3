@@ -4,11 +4,13 @@ import Link from "next/link";
 
 export default function AboutMe() {
     return (
-        <section id="about" aria-label="About Pradip Chaudhary" className="">
-            <h1 className="text-4xl bg-gradient-to-b from-[#8c95e4] to-[#292450]/90 text-transparent bg-clip-text  tracking-tight font-semibold mt-2">
-                Hi there,
+        <section
+            id="about" aria-label="About Pradip Chaudhary" className="">
+            <h1 className="text-3xl text-custom-text font-semibold mt-2">
+                I&apos;m an Undergraduate software engineer who loves to <span className="text-[#6f49d8]"> write code.</span>
             </h1>
-            <p className="text-custom-text my-4">
+            <p
+                className="text-custom-text my-4">
                 I&apos;m an enthusiastic{" "}
                 <Link
                     href={"https://react.dev/"}

@@ -21,7 +21,7 @@ const BlogPosts: React.FC<BlogPostsProps> = ({ currentPage, searchQuery }) => {
             setLoading(true);
             try {
                 const response = await fetch(
-                    "https://portfolio-v3-api-pddz.onrender.com/api/blogs"
+                    "/api/blog"
                 );
                 const data: BlogPost[] = await response.json();
                 setBlogPosts(data);

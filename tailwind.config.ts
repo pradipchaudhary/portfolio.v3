@@ -17,7 +17,11 @@ export default {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
                 // Custom color class
-                "custom-text": "#7b74a6", // Example: Purple shade
+                "custom-text": "#8890ce", // Example: Purple shade
+                // text-[#8c95e4] 
+            },
+            backgroundImage: {
+                'gradient-to-rb': 'linear-gradient(to right bottom, white 30%, #333)',
             },
             animation: {
                 heartbeat: "heartbeat 1.5s ease-in-out infinite",

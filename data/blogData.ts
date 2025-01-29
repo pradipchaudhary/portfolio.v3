@@ -1,0 +1,32 @@
+export const blogData = [
+    {
+        id: 1,
+        title: "Introduction to Next.js 15",
+        excerpt: "Learn the basics of Next.js 15 and its new features.",
+        readTime: "5 mins",
+        slug: "introduction-to-nextjs-15",
+        thumbnail: "/img/nextjs-15.avif",
+        content: "This is the full content of the blog about Next.js 15...",
+        category: "Web Development",
+        createdAt: "2025-01-01",
+        updatedAt: "2025-01-15",
+    },
+    {
+        id: 2,
+        title: "Understanding React Server Components",
+        excerpt: "A deep dive into React Server Components and how they work.",
+        readTime: "8 mins",
+        slug: "understanding-react-server-components",
+        thumbnail: "/img/react-server.png",
+        content: "This is the full content of the blog about React Server Components...",
+        category: "React",
+        createdAt: "2025-01-10",
+        updatedAt: "2025-01-20",
+    },
+];
+
+
+// Function to fetch a single blog by ID
+export function getBlogById(id) {
+    return blogData.find((blog) => blog.id === parseInt(id, 10)) || null;
+}
