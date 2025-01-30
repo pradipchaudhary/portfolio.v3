@@ -74,20 +74,35 @@ const Experience: React.FC = () => {
     const experiences = [
         {
             title: "Full Stack Developer",
+            company: "Freelancer",
+            companyUrl: "",
+            period: "May 2021 - Present",
+            description: "",
+            responsibilities: [
+                "Developed and deployed full-stack applications for clients worldwide.",
+                "Built and customized WordPress themes and plugins for various businesses.",
+                "Worked with React.js, Next.js, Node.js, and MongoDB to develop web applications.",
+                "Integrated third-party APIs and payment gateways for e-commerce solutions.",
+                "Collaborated with clients to understand project requirements and deliver tailored solutions.",
+            ],
+            markerColor: "bg-teal-500",
+        },
+        {
+            title: "Full Stack Developer",
             company: "Sarathi Technosoft Pvt. Ltd",
             companyUrl: "https://www.sarathitechnosoft.com",
             period: "Aug 2021 - Apr 2024",
             description: "",
             responsibilities: [
-                "Built and maintained dynamic web applications using React, Node.js, and MongoDB or MySQL.",
-                "Collaborated with cross-functional teams to design and implement new features.",
                 "Implemented RESTful APIs and integrated with third-party services.",
                 "Optimized front-end performance and enhanced user experience across devices.",
+                "Collaborated with cross-functional teams to design and implement new features.",
+                "Built and maintained dynamic web applications using React, Node.js, and MongoDB or MySQL.",
             ],
             markerColor: "bg-teal-400",
         },
         {
-            title: "Frontend Engineer ",
+            title: "Web Developer ",
             company: "Softbenz Infosys",
             companyUrl: "https://softbenz.com",
             period: "Sep 2020 - Jul 2021",

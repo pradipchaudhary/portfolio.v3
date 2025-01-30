@@ -4,9 +4,12 @@ import "@/styles/globals.css";
 import { Suspense } from "react";
 import Loading from "./loading";
 import HomeLayout from "@/components/layout/HomeLayout";
-import WelcomeMessage from "@/components/WelcomeMessage";
+import WelcomeMessage from "@/components/ui/WelcomeMessage";
+
 
 const inter = Inter({ subsets: ["latin"] });
+
+
 
 // Metadata for SEO and social sharing
 export const metadata: Metadata = {

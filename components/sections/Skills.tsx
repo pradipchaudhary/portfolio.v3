@@ -19,7 +19,7 @@ const Skills: React.FC = () => {
         { name: "MySQL", icon: "/img/mysql-logo-pure.svg" },
         { name: "PostgreSQL", icon: "/img/postgresql.svg" },
         { name: "Next.js", icon: "/img/next-js.svg" },
-        { name: "Prisma", icon: "/img/prisma-3.svg" },
+        { name: "Prisma", icon: "/img/prisma.svg" },
         { name: "WordPress", icon: "/img/wordpress-icon.svg" },
         { name: "MongoDB", icon: "/img/mongodb-icon-1.svg" },
         { name: "Git", icon: "/img/git-icon.svg" },
@@ -36,22 +36,8 @@ const Skills: React.FC = () => {
             </h2>
             <div className="flex flex-wrap gap-4 mt-10  ml-3">
                 {skills.map((skill, index) => (
-                    <div key={index} className="flex items-center justify-center h-16 w-16 border-2 bg-[#6f49d8]/5  rounded-xl relative rotate-0  cursor-pointer
-    border-[#1a234d]
-    flex-shrink-0
-    hover:scale-[0.98] transition duration-200
-    ">
-                        <div className="h-8 w-8 rounded-md overflow-hidden -rotate-0 opacity-50">
-                            <Image
-                                src={skill.icon}
-                                alt={skill.name}
-                                width={32}
-                                height={32}
-                                className="transition-transform transform hover:scale-110 hover:shadow-lg filter grayscale"
-                            />
-
-
-                        </div>
+                    <div key={index} className="flex items-center justify-center">
+                        <span className="py-1 px-3 bg-[#6f49d8]/10 text-s">{skill.name}</span>
                     </div>
                 ))}
             </div>

@@ -1,7 +1,8 @@
-import AboutMe from "@/components/AboutMe";
-import Certifications from "@/components/Certifications";
-import Experience from "@/components/Experiences";
-import Skills from "@/components/Skills";
+import AboutMe from "@/components/sections/AboutMe";
+import Certifications from "@/components/sections/Certifications";
+import Experience from "@/components/sections/Experiences";
+import Skills from "@/components/sections/Skills";
+
 
 export default function HomePage() {
     return (

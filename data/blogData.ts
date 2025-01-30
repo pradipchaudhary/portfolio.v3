@@ -24,9 +24,3 @@ export const blogData = [
         updatedAt: "2025-01-20",
     },
 ];
-
-
-// Function to fetch a single blog by ID
-export function getBlogById(id) {
-    return blogData.find((blog) => blog.id === parseInt(id, 10)) || null;
-}
