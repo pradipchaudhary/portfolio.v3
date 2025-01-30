@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import FloatingDock from "../ui/FloatingDock";
 import DownloadCV from "./DownloadCV";
 import Navigation from "./Navigation";
