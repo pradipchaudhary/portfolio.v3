@@ -2,13 +2,7 @@
 
 ![Portfolio Banner](/public/projects/portfolio-v3.jpg)
 
-Welcome to the official repository of my personal website: [pradipchaudhary.com.np](https://www.pradipchaudhary.com.np)  
-This site showcases my work, blog posts, and professional skills as a Full Stack Developer and UI/UX Designer.
-
-
 Welcome to the repository for my personal portfolio website! This project showcases my professional journey, skills, projects, and achievements. It is designed to be a visually appealing and responsive web application.
-
-
 
 Passionate Undergraduate Software Engineer | Innovator at Heart | Problem Solver
 I'm a Undergraduate software engineer that love to write code.
