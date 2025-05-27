@@ -109,19 +109,7 @@ Thanks to the open-source community for the tools and frameworks that make moder
 
 ---
 
-```
 
----
-
-### ✅ Optional Additions for Your GitHub Repo:
-
-**Suggested GitHub Description:**
-> Modern personal portfolio built with React, TypeScript, and Tailwind CSS. Showcasing projects, blog posts, and contact info.
-
-**Suggested Topics (Tags):**
-```
-
-portfolio, react, typescript, tailwindcss, personal-website, software-engineer, fullstack-developer, frontend-developer, web-development, pradip-chaudhary
 
 ```
 
