@@ -1,7 +1,7 @@
 
 # 🌐 Pradip Chaudhary – Portfolio Website v3
 
-![Portfolio Banner](/public/projects/portfolio-v3.jpg)
+![Portfolio Banner](banner.jpg)
 
 This repository contains the source code for my personal website, [pradipchaudhary.com.np](https://www.pradipchaudhary.com.np). The site serves as a digital portfolio to showcase my work, technical skills, and professional background as a Full Stack Developer with a focus on modern frontend development.
 
