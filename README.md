@@ -23,13 +23,11 @@ Let’s collaborate and build something extraordinary that makes a difference!
 
 ## 🚀 Features
 
--   **Modern Design**: Built with a clean and minimalistic approach.
--   **Responsive**: Fully optimized for all devices (mobile, tablet, desktop).
--   **Dynamic Content**: Showcases projects, skills, and achievements dynamically.
--   **Interactive UI**: Smooth animations and intuitive navigation.
--   **Fast Performance**: Optimized for speed and SEO.
-
----
+- 🔥 Built with HTML5, CSS3, JavaScript (React/Next.js or similar)
+- 💡 SEO Optimized and Mobile Responsive
+- 🧠 Portfolio of projects with live previews
+- ✍️ Integrated personal blog
+- 📩 Contact form with email integration
 
 ## 📂 Project Structure
 
