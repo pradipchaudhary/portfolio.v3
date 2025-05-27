@@ -84,7 +84,7 @@ Feel free to use or modify it for your own portfolio, with attribution.
 
 ## 🤝 Let's Connect
 
-* 🌐 **Portfolio:** [pradipchaudhary.github.io](https://pradipchaudhary.github.io)
+* 🌐 **Portfolio:** [pradipchaudhary.com.np](https://www.pradipchaudhary.com.np/)
 * 💼 **LinkedIn:** [linkedin.com/in/pradipchaudhary](https://linkedin.com/in/pradipchaudhary)
 * 💻 **GitHub:** [github.com/pradipchaudhary](https://github.com/pradipchaudhary)
 
@@ -106,11 +106,5 @@ Thanks to the open-source community for the tools and frameworks that make moder
 * Framer Motion
 * GitHub Pages
 * FontAwesome & Heroicons
-
----
-
-
-
-```
 
 
