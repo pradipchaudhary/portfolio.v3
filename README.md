@@ -50,16 +50,19 @@ portfolio.v3/
 
 ---
 
+
+
+
 ## 🛠️ Technology Stack
 
-| Category             | Tools / Frameworks                 |
-| -------------------- | ---------------------------------- |
-| **Frontend**         | React.js, TypeScript, Tailwind CSS |
-| **State Management** | React Hooks                        |
-| **Animation**        | Framer Motion                      |
-| **Icons**            | Heroicons, FontAwesome             |
-| **Deployment**       | GitHub Pages                       |
-| **Version Control**  | Git, GitHub                        |
+| Category | Tools / Frameworks |
+| :------------------- | :--------------------------------- |
+| **Frontend** | React.js, TypeScript, Tailwind CSS |
+| **State Management** | React Hooks |
+| **Animation** | Framer Motion |
+| **Icons** | Heroicons, FontAwesome |
+| **Deployment** | **Vercel** |
+| **Version Control** | Git, GitHub |
 
 ---
 
