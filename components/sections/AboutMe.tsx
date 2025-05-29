@@ -6,9 +6,9 @@ export default function AboutMe() {
     return (
         <section
             id="about" aria-label="About Pradip Chaudhary" className="">
-            <h1 className="text-[1.75rem] text-custom-text font-mormal mt-2 leading-9">
-                🙏 I&apos;m an <br />Undergraduate software <br /> engineer who loves to <span className="text-[#6f49d8]"> write code.</span>
-            </h1>
+            <p>
+                🙏 I&apos;m an Undergraduate software  engineer who loves to <span className="text-[#6f49d8]"> write code.</span>
+            </p>
             <p
                 className="text-custom-text my-4">
                 I&apos;m an enthusiastic{" "}

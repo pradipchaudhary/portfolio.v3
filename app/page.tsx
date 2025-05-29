@@ -8,9 +8,9 @@ export default function HomePage() {
     return (
         <>
             <AboutMe />
-            <Experience />
-            <Skills />
-            <Certifications />
+            {/* <Experience /> */}
+            {/* <Skills /> */}
+            {/* <Certifications /> */}
         </>
     );
 }

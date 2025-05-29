@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-    --background: #1a234d;
-    --foreground: #9991d1;
-    --text: #0000;
+    --background: #000000;
+    --foreground: #e1e1e2;
+    --text: #dfdcdc00;
 }
 
 body {
@@ -22,7 +22,6 @@ body {
 /* Container styles */
 .animation-container {
     position: absolute;
-    /* background-color: #0f172a; */
     top: 0;
     left: 50px;
     padding-left: 28px;
@@ -39,14 +38,10 @@ body {
 /* Dotted path animation */
 .animated-dotted-path {
     stroke-dasharray: 4 5;
-    /* Creates the dotted effect */
     stroke-dashoffset: 0;
-    /* Starting point of the dash offset */
     animation: infinite-draw 10s linear infinite;
-    /* animation-delay: 10s; Start the animation 10 seconds after page load */
 }
 
-/* Infinite path animation */
 @keyframes infinite-draw {
     0% {
         stroke-dashoffset: 0;
@@ -54,16 +49,13 @@ body {
 
     100% {
         stroke-dashoffset: -200;
-        /* Negative offset to create continuous movement */
     }
 }
 
 /* Button styles */
-
 .download-button {
     padding: 0.7rem 1.5rem;
-    border: 1px dashed rgb(97 75 158 / 30%);
-    /*Border for animation */
+    border: 1px dashed rgba(97, 75, 158, 0.3);
     font-size: 0.875rem;
     border-radius: 9999px;
     background-color: transparent;
@@ -76,7 +68,7 @@ body {
 }
 
 .download-button:hover {
-    border: 1px dashed rgb(97 75 158 / 50%);
+    border-color: rgba(97, 75, 158, 0.5);
 }
 
 .path-box {
@@ -88,120 +80,97 @@ body {
 
 .path {
     stroke-dasharray: 20 880;
-    /* 10px visible, rest hidden */
     stroke-dashoffset: 900;
-    /* Start fully hidden at the top */
-    border-radius: 50%;
     width: 30px;
     height: 30px;
-    animation: dash 2.6s linear infinite;
-    /* Duration for one top-to-bottom animation */
-    animation-fill-mode: forwards;
     border-radius: 50%;
+    animation: dash 2.6s linear infinite forwards;
 }
 
 @keyframes dash {
     0% {
         stroke-dashoffset: 900;
-        /* Fully hidden at the top */
     }
 
     100% {
         stroke-dashoffset: 0;
-        /* Fully visible at the bottom */
     }
 }
 
 /* Blog page content style */
 #blog-content {
     line-height: 1.6;
-    /* font-family: Arial, sans-serif; */
-    /* background-color: rgb(24, 22, 22); */
 }
 
-#blog-content p {
+#blog-content p,
+#blog-content li {
     margin-bottom: 1rem;
 }
 
-#blog-content h2 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-#blog-content h3 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-#blog-content h4 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-#blog-content h5 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-    font-weight: bold;
-}
-
+#blog-content h2,
+#blog-content h3,
+#blog-content h4,
+#blog-content h5,
 #blog-content h6 {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-    font-size: 0.75rem;
     font-weight: bold;
 }
 
-#blog-content ul {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    list-style-type: disc;
+#blog-content h2 {
+    font-size: 1.5rem;
 }
 
+#blog-content h3 {
+    font-size: 1.25rem;
+}
+
+#blog-content h4 {
+    font-size: 1rem;
+}
+
+#blog-content h5 {
+    font-size: 0.875rem;
+}
+
+#blog-content h6 {
+    font-size: 0.75rem;
+}
+
+#blog-content ul,
 #blog-content ol {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     margin-left: 1rem;
+    list-style-position: outside;
+}
+
+#blog-content ul {
+    list-style-type: disc;
+}
+
+#blog-content ol {
     list-style-type: decimal;
 }
 
-#blog-content li {
-    margin-bottom: 0.5rem;
-}
-
 #blog-content pre {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 1.5rem 0;
     padding: 0.5rem;
     background-color: rgba(31, 41, 55, 0.4);
-    /* slate-800 with 40% opacity */
+    border: 1px solid rgba(51, 65, 85, 0.9);
     border-radius: 4px;
     overflow-x: auto;
-    border: 1px solid rgba(51, 65, 85, 0.9);
-    /* Slate-700 with 50% opacity */
-    border-radius: 4px;
-    /* Optional: Adds rounded corners */
     transition: border-color 0.3s ease;
-    /* Smooth transition on hover */
 }
 
 #blog-content code {
     font-family: monospace;
     border-radius: 4px;
     padding: 0.2rem;
-    text-align: left !important;
-
     cursor: pointer;
+    text-align: left !important;
 }
 
 #blog-content code:hover {
     border-color: rgba(51, 65, 85, 0.8);
-    /* slate-700 with 80% opacity */
 }
