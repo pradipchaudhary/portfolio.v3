@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import SkillIcons from "../common/SkillIcons";
 
 export default function AboutMe() {
     return (
@@ -113,90 +114,7 @@ export default function AboutMe() {
             <blockquote>
                 Let’s build something extraordinary together! 🚀
             </blockquote>
-            <div className="flex py-2">
-                {/* First Icon */}
-                <div className="relative group z-10 hover:z-20">
-                    <a
-                        href="#"
-                        className="w-10 h-10 rounded-full border flex justify-center items-center"
-                    >
-                        {/* Icon 1 */}
-                        <Image
-                            src="/skills-icons/react.svg" // ✅ NO "./"
-                            width={24}                    // Fixed size (e.g., 24x24 px)
-                            height={24}
-                            alt="React Icon"             // ✅ alt is required
-                        />
-                    </a>
-                    <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 
-                    px-2 py-1 bg-gray-800 text-white text-sm rounded 
-                    opacity-0 group-hover:opacity-100 transition-opacity z-50">
-                        Tooltip 1
-                    </div>
-                </div>
-
-                {/* Second Icon */}
-                <div className="relative group -ml-4 z-0 hover:z-20">
-                    <a
-                        href="#"
-                        className="w-10 h-10 rounded-full border flex justify-center items-center"
-                    >
-                        {/* Icon 2 */}
-                        <Image
-                            src="/skills-icons/next.svg" // ✅ NO "./"
-                            width={24}                    // Fixed size (e.g., 24x24 px)
-                            height={24}
-                            alt="React Icon"             // ✅ alt is required
-                        />
-                    </a>
-                    <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 
-                    px-2 py-1 bg-gray-800 text-white text-sm rounded 
-                    opacity-0 group-hover:opacity-100 transition-opacity z-50">
-                        Tooltip 2
-                    </div>
-                </div>
-
-                {/* Third Icon */}
-                <div className="relative group -ml-4 z-0 hover:z-20">
-                    <a
-                        href="#"
-                        className="w-10 h-10 rounded-full border flex justify-center items-center"
-                    >
-                        {/* Icon 3 */}
-                        <Image
-                            src="/skills-icons/node.svg" // ✅ NO "./"
-                            width={24}                    // Fixed size (e.g., 24x24 px)
-                            height={24}
-                            alt="React Icon"             // ✅ alt is required
-                        />
-                    </a>
-                    <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 
-                    px-2 py-1 bg-gray-800 text-white text-sm rounded 
-                    opacity-0 group-hover:opacity-100 transition-opacity z-50">
-                        Tooltip 3
-                    </div>
-                </div>
-                {/* Fourth Icon */}
-                <div className="relative group -ml-4 z-0 hover:z-20">
-                    <a
-                        href="#"
-                        className="w-10 h-10 rounded-full border flex justify-center items-center"
-                    >
-                        {/* Icon 4 */}
-                        <Image
-                            src="/skills-icons/tailwind-css.svg" // ✅ NO "./"
-                            width={24}                    // Fixed size (e.g., 24x24 px)
-                            height={24}
-                            alt="React Icon"             // ✅ alt is required
-                        />
-                    </a>
-                    <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 
-                    px-2 py-1 bg-gray-800 text-white text-sm rounded 
-                    opacity-0 group-hover:opacity-100 transition-opacity z-50">
-                        Tooltip 3
-                    </div>
-                </div>
-            </div>
+            <SkillIcons />
 
 
             <div className="md:hidden mt-10 ml-8">
