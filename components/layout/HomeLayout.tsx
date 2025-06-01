@@ -19,7 +19,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
 
                     <main className=" w-full pt-20">
                         {children}
-                        {/* <Footer /> */}
+                        <Footer />
                     </main>
                 </div>
             </div>
