@@ -17,7 +17,7 @@ export default {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
                 // Custom color class
-                "custom-text": "#8890ce", // Example: Purple shade
+                "custom-text": "#6f6f6f", // Example: Purple shade
                 // text-[#8c95e4] 
             },
             backgroundImage: {
