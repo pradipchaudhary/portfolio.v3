@@ -3,128 +3,121 @@
 import Image from "next/image";
 import Link from "next/link";
 import SkillIcons from "../common/SkillIcons";
+import MobileCVDownload from "../common/MobileCVDownload";
 
 export default function AboutMe() {
     return (
         <section
-            id="about" aria-label="About Pradip Chaudhary" className="">
-            {/* <h2 className="w-5 text-7xl">🙏 </h2> */}
-            <span className="text-5xl">🙏</span>
-            <p>
-                I&apos;m an Undergraduate software  engineer who loves to <span className="text-[#6f49d8]"> write code.</span>
+            id="about"
+            aria-label="About Pradip Chaudhary"
+            className="pt-2"
+        >
+            <p className="text-custom-text text-lg leading-relaxed">
+                <span className="text-4xl">🙏</span>{" "}
+                <span className="text-3xl font-serif">I</span>&apos;m an undergraduate software engineer who loves to{" "}
+                <span className="text-[#6f49d8]">write code.</span>
             </p>
 
-            <p
-                className="text-custom-text my-4">
-
+            <p className="text-custom-text my-4 leading-relaxed">
                 I&apos;m an enthusiastic{" "}
                 <Link
-                    href={"https://react.dev/"}
+                    href="https://react.dev/"
                     target="_blank"
-                    className="text-[#6f49d8] "
+                    className="text-[#6f49d8]"
                 >
                     React Developer
                 </Link>{" "}
-                dedicated to crafting intuitive and dynamic web applications.
-                With expertise in modern web technologies, I excel in
-                transforming complex concepts into seamless digital solutions.
+                dedicated to crafting intuitive and dynamic web applications. With expertise in modern web technologies, I excel in transforming complex concepts into seamless digital solutions.
             </p>
-            <p className="text-custom-text my-4 ">
-                As a Full-Time{" "}
+
+            <p className="text-custom-text my-4 leading-relaxed">
+                As a full-time{" "}
                 <Link
-                    href={"https://react.dev/"}
+                    href="https://react.dev/"
                     target="_blank"
-                    className="text-[#6f49d8] "
+                    className="text-[#6f49d8]"
                 >
                     React Developer
                 </Link>
-                , my expertise lies in creating seamless and responsive UIs and
-                designs into engaging web experiences. Currently, I&apos;m
-                diving deep into{" "}
+                , I specialize in creating seamless and responsive UIs that turn designs into engaging web experiences. Currently, I&apos;m diving deep into{" "}
                 <Link
-                    href={"https://nextjs.org/"}
+                    href="https://nextjs.org/"
                     target="_blank"
-                    className="text-[#6f49d8] "
+                    className="text-[#6f49d8]"
                 >
                     Next.js
                 </Link>{" "}
                 and{" "}
                 <Link
-                    href={"https://www.typescriptlang.org/"}
+                    href="https://www.typescriptlang.org/"
                     target="_blank"
-                    className="text-[#6f49d8] "
+                    className="text-[#6f49d8]"
                 >
                     TypeScript
-                </Link>{" "}
-                , leveraging my skills in{" "}
+                </Link>
+                , leveraging my knowledge in{" "}
                 <Link
-                    href="/https://www.behance.net/galleries/ui-ux/ui-ux"
+                    href="https://www.behance.net/galleries/ui-ux/ui-ux"
                     target="_blank"
-                    className="text-[#6f49d8] "
+                    className="text-[#6f49d8]"
                 >
                     UI/UX Design
                 </Link>{" "}
                 and{" "}
                 <Link
-                    href={"https://moz.com/beginners-guide-to-seo"}
-                    className="text-[#6f49d8] "
+                    href="https://moz.com/beginners-guide-to-seo"
                     target="_blank"
+                    className="text-[#6f49d8]"
                 >
                     SEO
                 </Link>
                 , along with{" "}
                 <Link
-                    href={"https://scrapy.org/"}
-                    className="text-[#6f49d8] "
+                    href="https://scrapy.org/"
                     target="_blank"
+                    className="text-[#6f49d8]"
                 >
                     Web Scraping
                 </Link>
-                , to deliver high-performance solutions that meet client needs.
+                , to deliver high-performance, client-focused solutions.
             </p>
-            <p className="text-custom-text my-4">
+
+            <p className="text-custom-text my-4 leading-relaxed">
                 My proficiency in modern web technologies, including{" "}
                 <Link
                     href="https://bulma.io/"
-                    className="text-[#6f49d8] "
                     target="_blank"
+                    className="text-[#6f49d8]"
                 >
                     Bulma
                 </Link>
                 ,{" "}
                 <Link
                     href="https://getbootstrap.com/"
-                    className="text-[#6f49d8] "
                     target="_blank"
+                    className="text-[#6f49d8]"
                 >
                     Bootstrap
                 </Link>
                 , and{" "}
                 <Link
                     href="https://tailwindcss.com/"
-                    className="text-[#6f49d8] "
                     target="_blank"
+                    className="text-[#6f49d8]"
                 >
-                    Tailwind CSS{" "}
-                </Link>
-                ensures that I craft applications that are not only functional
-                but also visually stunning.
+                    Tailwind CSS
+                </Link>{" "}
+                ensures that I build applications that are both functional and visually appealing.
             </p>
 
-            <blockquote>
+            <blockquote className="text-[#6f6f6f] italic mb-6">
                 Let’s build something extraordinary together! 🚀
             </blockquote>
+
             <SkillIcons />
 
-
-            <div className="md:hidden mt-10 ml-8">
-                <Link
-                    href={"/Pradip_Chaudhary.pdf"}
-                    className="download-button -ml-7 hover:text-slate-400 "
-                >
-                    Download CV
-                </Link>
-            </div>
+            {/* // Replace the old block with: */}
+            <MobileCVDownload />
         </section>
     );
 }
