@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import SkillIcons from "../common/SkillIcons";
 import MobileCVDownload from "../common/MobileCVDownload";
