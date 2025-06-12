@@ -3,6 +3,7 @@
 import Link from "next/link";
 import SkillIcons from "../common/SkillIcons";
 import MobileCVDownload from "../common/MobileCVDownload";
+import Image from "next/image";
 
 export default function AboutMe() {
     return (
@@ -11,11 +12,13 @@ export default function AboutMe() {
             aria-label="About Pradip Chaudhary"
             className="pt-2"
         >
-            <p className="text-custom-text text-lg leading-relaxed">
-                <span className="text-4xl">🙏</span>{" "}
-                <span className="text-3xl font-serif">I</span>&apos;m an undergraduate software engineer who loves to{" "}
-                <span className="text-[#6f49d8]">write code.</span>
-            </p>
+            <div className="flex gap-2">
+                <span className="text-5xl">🙏</span>{" "}
+                <span className="text-custom-text text-lg leading-relaxed">
+                    <span className="text-3xl font-serif">I</span>&apos;m an undergraduate software engineer <br />  who loves to{" "}
+                    <span className="text-[#6f6f6f] font-bold">write code.</span>
+                </span>
+            </div>
 
             <p className="text-custom-text my-4 leading-relaxed">
                 I&apos;m an enthusiastic{" "}
@@ -114,6 +117,18 @@ export default function AboutMe() {
             </blockquote>
 
             <SkillIcons />
+
+            {/* Signature Image */}
+            <div className="mt-10 ">
+                <Image
+                    src="/signature.png"
+                    alt="Signature"
+                    width={180}
+                    height={80}
+                    className="opacity-80"
+                    priority
+                />
+            </div>
 
             {/* // Replace the old block with: */}
             <MobileCVDownload />

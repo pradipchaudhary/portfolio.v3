@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 
-// Skill type with optional icon and proficiency
+// Skill type
 interface Skill {
     name: string;
-    icon: string; // Optional icon for the skill
+    icon: string;
 }
 
 // Main Skills component
@@ -22,23 +22,34 @@ const Skills: React.FC = () => {
         { name: "WordPress", icon: "/img/wordpress-icon.svg" },
         { name: "MongoDB", icon: "/img/mongodb-icon-1.svg" },
         { name: "Git", icon: "/img/git-icon.svg" },
-        // { name: "CI/CD" },
         { name: "Docker", icon: "/img/docker-4.svg" },
-        // { name: "Github Action" },
         { name: "OpenAI", icon: "/img/openai-2.svg" },
     ];
 
     return (
-        <section className="py-8" id="skills">
-            <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-b from-[#8c95e4] to-[#292450]/80 text-transparent bg-clip-text  tracking-tight ">
-                Skills
-            </h2>
-            <div className="flex flex-wrap gap-4 mt-10  ml-3">
-                {skills.map((skill, index) => (
-                    <div key={index} className="flex items-center justify-center">
-                        <span className="py-1 px-3 bg-[#6f49d8]/10 text-s">{skill.name}</span>
-                    </div>
-                ))}
+        <section id="skills" className="py-20">
+            <div className="max-w-5xl mx-auto px-4">
+                <h2 className="text-4xl sm:text-5xl font-extrabold text-center bg-gradient-to-b from-black to-gray-800 text-transparent bg-clip-text tracking-tight">
+                    Skills
+                </h2>
+
+                <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                    {skills.map((skill, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center justify-center bg-purple-100/20 hover:bg-purple-200/40 transition-all p-4 rounded-xl shadow-sm"
+                        >
+                            <img
+                                src={skill.icon}
+                                alt={skill.name}
+                                className="w-10 h-10 mb-2"
+                            />
+                            <span className="text-sm font-medium text-gray-800 text-center">
+                                {skill.name}
+                            </span>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );

@@ -48,7 +48,7 @@ const Certifications: React.FC = () => {
             id="certifications"
             className="py-10 relative overflow-y-hidden"
         >
-            <h2 className="text-4xl sm:text-5xl font-semibold bg-gradient-to-b from-[#8c95e4] to-[#292450]/80 text-transparent bg-clip-text  tracking-tight">
+            <h2 className="text-4xl sm:text-5xl font-semibold bg-gradient-to-b from-black to-gray-800 text-transparent bg-clip-text tracking-tight">
                 Certifications
             </h2>
             <div className=" border-l border-[#262050]  pl-6 ml-[1rem] pt-8 ">
