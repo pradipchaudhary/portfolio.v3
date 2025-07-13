@@ -1,5 +1,5 @@
 
-# 🌐 Pradip Chaudhary – Portfolio Website v3
+# 🌐 Pradip Chaudhary – Portfolio v3
 
 ![Portfolio Banner](banner.jpg)
 
