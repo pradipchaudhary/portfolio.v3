@@ -6,7 +6,7 @@ import SidebarHeader from "./SidebarHeader";
 
 const Sidebar = () => {
     return (
-        <aside className="sm:w-full md:w-1/2 lg:w-1/2  lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:min-h-screen  lg:flex-col lg:justify-between lg:py-20 lg:pb-8 px-4">
+        <aside className="sm:w-full md:w-1/2 lg:w-1/2  lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:min-h-screen  lg:flex-col lg:justify-between lg:py-20 lg:pb-8 px-4 bg-red-50">
             <DownloadCV />
             {/* text-4xl font-semibold tracking-tight sm:text-5xl */}
             <div>

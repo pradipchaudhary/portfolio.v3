@@ -1,5 +1,4 @@
 import React from "react";
-import Stars from "../ui/Stars";
 import Footer from "../common/Footer";
 import Background from "../ui/Background";
 import Sidebar from "../sidebar/Sidebar";
@@ -9,7 +8,6 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="relative min-h-screen w-full">
             {/* Fixed Background */}
             <Background />
-            <Stars />
 
             {/* Main Content */}
             <div className="relative z-10 mx-auto min-h-screen max-w-6xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
@@ -17,7 +15,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
                     {/* Header  */}
                     <Sidebar />
 
-                    <main className=" w-full pt-20">
+                    <main className=" w-full pt-20 pl-5">
                         {children}
                         <Footer />
                     </main>

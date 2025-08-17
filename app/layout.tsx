@@ -4,7 +4,6 @@ import "@/styles/globals.css";
 import { Suspense } from "react";
 import Loading from "./loading";
 import HomeLayout from "@/components/layout/HomeLayout";
-import WelcomeMessage from "@/components/ui/WelcomeMessage";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -55,7 +54,6 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <WelcomeMessage />
                 <Suspense fallback={<Loading />}>
                     <HomeLayout>
                         {children}

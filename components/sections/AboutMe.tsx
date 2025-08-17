@@ -12,18 +12,19 @@ export default function AboutMe() {
             aria-label="About Pradip Chaudhary"
             className="pt-2"
         >
-            <div className="flex gap-2">
-                <span className="text-5xl">🙏</span>{" "}
+            <span className="text-5xl">🙏 Namaste</span>{" "}
+
+            {/* <div className="flex gap-2">
                 <span className="text-custom-text text-lg leading-relaxed">
-                    <span className="text-3xl font-serif">I</span>&apos;m an undergraduate software engineer <br />  who loves to{" "}
+                    <span className="text-3xl font-serif">I</span>&apos;m an undergraduate software engineer  who loves to{" "}
                     <span className="text-[#6f6f6f] font-bold">write code.</span>
                 </span>
-            </div>
-            <p className="text-custom-text text-lg leading-relaxed">
+            </div> */}
+            {/* <p className="text-custom-text text-lg leading-relaxed">
                 <span className="text-4xl">🙏</span>{" "}
                 <span className="text-3xl font-serif">I</span>&apos;m an undergraduate software engineer <br /> who loves to{" "}
                 <span className="text-[#6f49d8]">write code.</span>
-            </p>
+            </p> */}
 
             <p className="text-custom-text my-4 leading-relaxed">
                 I&apos;m an enthusiastic{" "}
