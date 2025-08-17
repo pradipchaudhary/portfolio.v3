@@ -19,6 +19,11 @@ export default function AboutMe() {
                     <span className="text-[#6f6f6f] font-bold">write code.</span>
                 </span>
             </div>
+            <p className="text-custom-text text-lg leading-relaxed">
+                <span className="text-4xl">🙏</span>{" "}
+                <span className="text-3xl font-serif">I</span>&apos;m an undergraduate software engineer <br /> who loves to{" "}
+                <span className="text-[#6f49d8]">write code.</span>
+            </p>
 
             <p className="text-custom-text my-4 leading-relaxed">
                 I&apos;m an enthusiastic{" "}
