@@ -1,6 +1,7 @@
+'use client'
 import { prisma } from "@/lib/prisma";
 
-export default async function ProjectPage() {
+export default async function ProjectCard() {
 
     const projects = await prisma.project.findMany({ orderBy: { createdAt: "desc" } });
     
@@ -12,7 +13,7 @@ export default async function ProjectPage() {
                 <div className="font-medium">{p.title}</div>
                 <div className="text-sm text-gray-500">{p.description}</div>
               </div>
-              <form action={`/api/projects/${p.id}`} method="post">
+              {/* <form action={`/api/projects/${p.id}`} method="post">
                 <button
                   name="_action"
                   value="delete"
@@ -20,7 +21,7 @@ export default async function ProjectPage() {
                 >
                   Delete
                 </button>
-              </form>
+              </form> */}
             </li>
           ))}
         </ul>
