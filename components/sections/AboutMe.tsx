@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import SkillIcons from "../common/SkillIcons";
-import MobileCVDownload from "../common/MobileCVDownload";
 import Image from "next/image";
 
 export default function AboutMe() {
@@ -122,8 +120,6 @@ export default function AboutMe() {
                 Let’s build something extraordinary together! 🚀
             </blockquote>
 
-            <SkillIcons />
-
             {/* Signature Image */}
             <div className="mt-10 ">
                 <Image
@@ -135,9 +131,6 @@ export default function AboutMe() {
                     priority
                 />
             </div>
-
-            {/* // Replace the old block with: */}
-            <MobileCVDownload />
         </section>
     );
 }
