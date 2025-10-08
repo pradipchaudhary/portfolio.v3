@@ -9,10 +9,6 @@ import HomeLayout from "@/components/layout/HomeLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 
-
-
-
-
 // Metadata for SEO and social sharing
 export const metadata: Metadata = {
     title: "Pradip Chaudhary | Full Stack Developer | React, Next.js, Node.js, GraphQL & TypeScript Expert",
