@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "https://yourwebsite.com/og-image.jpg", // REMEMBER TO REPLACE WITH A COMPELLING IMAGE URL (e.g., your headshot, a project screenshot)
+                url: "https://www.pradipchaudhary.com.np/og-image.jpg", // REMEMBER TO REPLACE WITH A COMPELLING IMAGE URL (e.g., your headshot, a project screenshot)
                 width: 1200,
                 height: 630,
                 alt: "Pradip Chaudhary - Full Stack Developer & Web Development Expert",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         site: "@yourtwitterhandle", // REMEMBER TO REPLACE WITH YOUR TWITTER HANDLE
         title: "Pradip Chaudhary | Full Stack Developer | React, Next.js, Node.js, GraphQL & TypeScript Expertise",
         description: "Pradip Chaudhary is an accomplished Full Stack Developer specializing in crafting robust, high-performance web applications with React, Next.js, Node.js, GraphQL, and TypeScript. Explore my portfolio for advanced web development solutions.",
-        images: ["https://yourwebsite.com/twitter-image.jpg"], // Similar to Open Graph image
+        images: ["https://www.pradipchaudhary.com.np/twitter-image.jpg"], // Similar to Open Graph image
     },
 };
 
