@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
         "Pradip Chaudhary is an accomplished Full Stack Developer specializing in crafting robust, high-performance web applications with React, Next.js, Node.js, and modern APIs like GraphQL. Leveraging TypeScript for scalable and maintainable code, I deliver innovative and responsive digital solutions. Explore my portfolio for advanced web development expertise.",
     keywords:
-        "Pradip Chaudhary, Full Stack Developer, Web Development, React Developer, Next.js Developer, Node.js, GraphQL Developer, TypeScript Developer, JavaScript, Tailwind CSS, Frontend Development, Backend Development, Web Applications, Portfolio, Custom Software, API Development, Database Management, Scalable Web Solutions, Modern Web Tech, Digital Transformation",
+        "Pradip Chaudhary, Software Enginner, Nepali Developer, Full Stack Developer, Web Development, React Developer, Next.js Developer, Pradip, pradip, Chaudhary, Node.js, GraphQL Developer, TypeScript Developer, JavaScript, Tailwind CSS, Frontend Development, Backend Development, Web Applications, Portfolio, Custom Software, API Development, Database Management, Scalable Web Solutions, Modern Web Tech, Digital Transformation",
     robots: "index, follow",
     openGraph: {
         title: "Pradip Chaudhary - Full Stack Developer | React, Next.js, Node.js, GraphQL & TypeScript Expertise",

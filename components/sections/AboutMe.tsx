@@ -1,7 +1,11 @@
 "use client";
 
 import Link from "next/link";
+<<<<<<< HEAD
 import { motion } from "framer-motion";
+=======
+import Image from "next/image";
+>>>>>>> b2ed57a8a54c1285dd0dda7cc1c1e25f8173eb51
 
 export default function AboutMe() {
     return (
@@ -111,6 +115,7 @@ export default function AboutMe() {
                     , to deliver modern, high-performance solutions.
                 </p>
 
+<<<<<<< HEAD
                 <p>
                     My toolkit includes modern frameworks and styling libraries such as{" "}
                     <Link
@@ -153,6 +158,19 @@ export default function AboutMe() {
             >
                 “Let’s build something extraordinary together!” 🚀
             </motion.blockquote>
+=======
+            {/* Signature Image */}
+            <div className="mt-10 ">
+                <Image
+                    src="/signature.png"
+                    alt="Signature"
+                    width={180}
+                    height={80}
+                    className="opacity-80"
+                    priority
+                />
+            </div>
+>>>>>>> b2ed57a8a54c1285dd0dda7cc1c1e25f8173eb51
         </section>
     );
 }

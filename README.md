@@ -107,7 +107,8 @@ Thanks to the open-source community for the tools and frameworks that make moder
 * React & TypeScript
 * Tailwind CSS
 * Framer Motion
-* GitHub Pages
+* Vercel
 * FontAwesome & Heroicons
+* Neon
 
 
