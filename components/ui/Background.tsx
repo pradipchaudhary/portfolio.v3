@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> b2ed57a8a54c1285dd0dda7cc1c1e25f8173eb51
 import React from "react";
 
 const Background = () => {
