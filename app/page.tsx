@@ -5,50 +5,49 @@ import Image from "next/image";
 import Link from "next/link";
 
 /**
- * HomePage Component — Clean Professional Portfolio (Compact Fonts)
- * -------------------------------------------------
+ * HomePage Component — Enhanced Professional UI
+ * ----------------------------------------------
  * Features:
- * - Minimalistic light theme
- * - Smaller font sizes for a professional look
- * - Animated avatar
- * - Subtle colors for links and accents
+ * - Balanced vertical spacing
+ * - Improved footer and typography rhythm
+ * - Clean, minimal, and professional design
  */
 export default function HomePage() {
     return (
         <>
+            {/* === ABOUT SECTION === */}
             <section
                 id="about"
                 aria-label="About Pradip Chaudhary"
-                className="max-w-3xl mx-auto pt-20 px-6 text-gray-800"
+                className="max-w-3xl mx-auto pt-20 pb-20 px-6 text-gray-800"
             >
-                {/* === HEADER SECTION === */}
+                {/* === HEADER === */}
                 <motion.div
                     className="text-center mb-14"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, ease: "easeOut" }}
                 >
-                    {/* Avatar */}
                     <Image
                         src="/namaste.png"
                         alt="Pradip Chaudhary"
                         width={120}
                         height={120}
-                        className="rounded-full mx-auto mb-3"
+                        className="rounded-full mx-auto mb-4 shadow-sm "
                     />
 
-                    <h1 className="text-3xl md:text-4xl font-bold mt-4 mb-2 text-gray-900 tracking-tight">
+                    <h1 className="text-3xl md:text-4xl font-bold mt-2 mb-3 text-gray-900 tracking-tight">
                         I’m Pradip Chaudhary
                     </h1>
 
-                    <p className="text-sm md:text-base text-gray-600 mt-2 tracking-wide max-w-xl mx-auto">
+                    <p className="text-sm md:text-base text-gray-600 mt-1 tracking-wide max-w-xl mx-auto">
                         React Developer • UI/UX Enthusiast • SEO & Web Scraping Explorer
                     </p>
 
-                    <div className="w-12 h-1 bg-gray-300 mx-auto mt-4 rounded-full" />
+                    <div className="w-14 h-1 bg-gray-300 mx-auto mt-5 rounded-full" />
                 </motion.div>
 
-                {/* === DESCRIPTION SECTION === */}
+                {/* === DESCRIPTION === */}
                 <motion.div
                     className="space-y-5 leading-relaxed text-sm md:text-base text-gray-700"
                     initial={{ opacity: 0 }}
@@ -66,7 +65,7 @@ export default function HomePage() {
                         <PlainLink href="https://nextjs.org/">Next.js</PlainLink> and{" "}
                         <PlainLink href="https://www.typescriptlang.org/">TypeScript</PlainLink>,
                         while applying clean UI/UX design principles and{" "}
-                        <PlainLink href="https://moz.com/beginners-guide-to-seo">SEO</PlainLink>
+                        <PlainLink href="https://moz.com/beginners-guide-to-seo">SEO</PlainLink>{" "}
                         optimization. I also experiment with{" "}
                         <PlainLink href="https://scrapy.org/">Web Scraping</PlainLink> to build
                         data-driven solutions.
@@ -82,12 +81,23 @@ export default function HomePage() {
                 </motion.div>
             </section>
 
+            {/* === DIVIDER === */}
+            <div className="max-w-3xl mx-auto border-t border-gray-200" />
+
             {/* === FOOTER === */}
-            <footer className="py-8 text-center border-t border-gray-200 mt-16 text-gray-500 text-xs md:text-sm">
-                © {new Date().getFullYear()} <strong>Pradip Chaudhary</strong>. All rights
-                reserved.
-                <br />
-                Crafted with ❤️ using Next.js & Tailwind CSS.
+            <footer className="py-10 text-center text-gray-500 text-xs md:text-sm">
+                <p>
+                    © {new Date().getFullYear()}{" "}
+                    <strong className="font-semibold text-gray-700">
+                        Pradip Chaudhary
+                    </strong>
+                    . All rights reserved.
+                </p>
+                <p className="mt-1">
+                    Crafted with <span className="text-red-500">❤️</span> using{" "}
+                    <PlainLink href="https://nextjs.org/">Next.js</PlainLink> &{" "}
+                    <PlainLink href="https://tailwindcss.com/">Tailwind CSS</PlainLink>.
+                </p>
             </footer>
         </>
     );
@@ -96,15 +106,21 @@ export default function HomePage() {
 /**
  * PlainLink Component
  * -------------------
- * Clean, professional link styling for light theme UI.
+ * Clean, accessible, and consistent link styling.
  */
-function PlainLink({ href, children }: { href: string; children: React.ReactNode }) {
+function PlainLink({
+    href,
+    children,
+}: {
+    href: string;
+    children: React.ReactNode;
+}) {
     return (
         <Link
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-blue-600 hover:text-blue-800 hover:underline"
+            className="font-medium text-blue-600 hover:text-blue-800 hover:underline underline-offset-2 transition-colors duration-150"
         >
             {children}
         </Link>

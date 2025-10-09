@@ -3,44 +3,99 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { Suspense } from "react";
 import Loading from "./loading";
-import HomeLayout from "@/components/layout/HomeLayout";
-
+import Background from "@/components/ui/Background";
 
 const inter = Inter({ subsets: ["latin"] });
 
-
-// Metadata for SEO and social sharing
+// ==============================
+// 🌐 ADVANCED SEO METADATA
+// ==============================
 export const metadata: Metadata = {
-    title: "Pradip Chaudhary | Full Stack Developer | React, Next.js, Node.js, GraphQL & TypeScript Expert",
+    title:
+        "Pradip Chaudhary | Full Stack Developer from Nepal | React, Next.js, Node.js, TypeScript & GraphQL Expert",
     description:
-        "Pradip Chaudhary is an accomplished Full Stack Developer specializing in crafting robust, high-performance web applications with React, Next.js, Node.js, and modern APIs like GraphQL. Leveraging TypeScript for scalable and maintainable code, I deliver innovative and responsive digital solutions. Explore my portfolio for advanced web development expertise.",
+        "I'm Pradip Chaudhary — a Full Stack Developer from Nepal specializing in React, Next.js, Node.js, and TypeScript. I build scalable, high-performance web applications with clean UI/UX, modern APIs, and SEO optimization. Explore my portfolio and learn how I craft digital solutions for global brands.",
     keywords:
-        "Pradip Chaudhary, Software Enginner, Nepali Developer, Full Stack Developer, Web Development, React Developer, Next.js Developer, Pradip, pradip, Chaudhary, Node.js, GraphQL Developer, TypeScript Developer, JavaScript, Tailwind CSS, Frontend Development, Backend Development, Web Applications, Portfolio, Custom Software, API Development, Database Management, Scalable Web Solutions, Modern Web Tech, Digital Transformation",
-    robots: "index, follow",
+        "Pradip Chaudhary, Full Stack Developer Nepal, React Developer, Next.js Developer, Node.js Developer, TypeScript Developer, GraphQL Developer, Frontend Developer, Backend Developer, Software Engineer Nepal, MERN Stack Developer, Web Developer Nepal, SEO Developer, UI UX Engineer, Web App Developer, JavaScript Expert, Tailwind CSS Developer, Remote Developer Nepal, Portfolio Website",
+    authors: [{ name: "Pradip Chaudhary", url: "https://www.pradipchaudhary.com.np" }],
+    creator: "Pradip Chaudhary",
+    publisher: "Pradip Chaudhary",
+    metadataBase: new URL("https://www.pradipchaudhary.com.np"),
+    alternates: {
+        canonical: "https://www.pradipchaudhary.com.np",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        nocache: false,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-snippet": -1,
+            "max-image-preview": "large",
+            "max-video-preview": -1,
+        },
+    },
     openGraph: {
-        title: "Pradip Chaudhary - Full Stack Developer | React, Next.js, Node.js, GraphQL & TypeScript Expertise",
-        description: "Pradip Chaudhary is an accomplished Full Stack Developer specializing in crafting robust, high-performance web applications with React, Next.js, Node.js, GraphQL, and TypeScript. Explore my portfolio for advanced web development solutions.",
-        url: "https://www.pradipchaudhary.com.np/", // REMEMBER TO REPLACE WITH YOUR ACTUAL WEBSITE URL
         type: "website",
+        url: "https://www.pradipchaudhary.com.np",
+        title:
+            "Pradip Chaudhary - Full Stack Developer from Nepal | React, Next.js, Node.js & TypeScript Expert",
+        description:
+            "Explore the portfolio of Pradip Chaudhary, a Full Stack Developer from Nepal specializing in React, Next.js, Node.js, TypeScript, and GraphQL. Passionate about building modern, scalable web applications with strong UI/UX and SEO performance.",
+        siteName: "Pradip Chaudhary Portfolio",
+        locale: "en_US",
         images: [
             {
-                url: "https://www.pradipchaudhary.com.np/og-image.jpg", // REMEMBER TO REPLACE WITH A COMPELLING IMAGE URL (e.g., your headshot, a project screenshot)
+                url: "https://www.pradipchaudhary.com.np/og-image.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Pradip Chaudhary - Full Stack Developer & Web Development Expert",
+                alt: "Pradip Chaudhary - Full Stack Developer from Nepal",
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        site: "@yourtwitterhandle", // REMEMBER TO REPLACE WITH YOUR TWITTER HANDLE
-        title: "Pradip Chaudhary | Full Stack Developer | React, Next.js, Node.js, GraphQL & TypeScript Expertise",
-        description: "Pradip Chaudhary is an accomplished Full Stack Developer specializing in crafting robust, high-performance web applications with React, Next.js, Node.js, GraphQL, and TypeScript. Explore my portfolio for advanced web development solutions.",
-        images: ["https://www.pradipchaudhary.com.np/twitter-image.jpg"], // Similar to Open Graph image
+        site: "@pradipchaudhary", // Replace with your handle if you have one
+        creator: "@pradipchaudhary",
+        title:
+            "Pradip Chaudhary | Full Stack Developer from Nepal | React, Next.js, Node.js, TypeScript & GraphQL Expert",
+        description:
+            "Explore my portfolio — I'm Pradip Chaudhary, a professional Full Stack Developer from Nepal specializing in React, Next.js, Node.js, and TypeScript.",
+        images: ["https://www.pradipchaudhary.com.np/twitter-image.jpg"],
+    },
+    category: "Technology",
+    themeColor: "#0f172a", // Dark navy blue for brand consistency
+    viewport:
+        "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover",
+    verification: {
+        google: "YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE", // add if available
     },
 };
 
-
+// ==============================
+// 🌍 STRUCTURED DATA (JSON-LD)
+// ==============================
+export const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Pradip Chaudhary",
+    url: "https://www.pradipchaudhary.com.np",
+    image: "https://www.pradipchaudhary.com.np/og-image.jpg",
+    jobTitle: "Full Stack Developer",
+    worksFor: {
+        "@type": "Organization",
+        name: "Freelance / Open Source",
+    },
+    sameAs: [
+        "https://github.com/pradipchaudhary",
+        "https://linkedin.com/in/pradipchaudhary",
+        "https://x.com/pradipchaudhary",
+        "https://www.pradipchaudhary.com.np",
+    ],
+    description:
+        "Pradip Chaudhary is a Full Stack Developer from Nepal specializing in React, Next.js, Node.js, and TypeScript — building scalable, SEO-optimized web applications.",
+};
 
 export default function RootLayout({
     children,
@@ -49,13 +104,27 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+            <head>
+                {/* JSON-LD Structured Data for SEO */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+            </head>
             <body className={inter.className}>
                 <Suspense fallback={<Loading />}>
-                    <HomeLayout>
-                        {children}
-                    </HomeLayout>
-                </Suspense>
+                    <div className="relative min-h-screen flex flex-col overflow-hidden bg-[var(--background)] text-[var(--foreground)]">
+                        {/* === Background Layer === */}
+                        <div className="absolute inset-0 -z-10">
+                            <Background />
+                        </div>
 
+                        {/* === Main Content === */}
+                        <main className="flex-grow w-full mx-auto max-w-6xl px-6 py-8 md:px-12 lg:px-24">
+                            {children}
+                        </main>
+                    </div>
+                </Suspense>
             </body>
         </html>
     );

@@ -1,7 +1,7 @@
 
 
 
-![Portfolio Banner](banner.jpg)
+![Portfolio Banner](https://www.pradipchaudhary.com.np/banner.jpg)
 
 This repository contains the source code for my personal website, [pradipchaudhary.com.np](https://www.pradipchaudhary.com.np). The site serves as a digital portfolio to showcase my work, technical skills, and professional background as a Full Stack Developer with a focus on modern frontend development.
 
