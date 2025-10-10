@@ -1,5 +1,5 @@
 
-
+# 🌐 Portfolio v3 – Modern Full Stack Developer Portfolio
 
 ![Portfolio Banner](https://www.pradipchaudhary.com.np/banner.jpg)
 
@@ -78,6 +78,14 @@ This portfolio is built with performance and discoverability in mind:
 
 ---
 
+## 📈 SEO Keywords
+
+`Next.js Portfolio`, `React Developer Portfolio`, `Full Stack Developer Portfolio`,
+`Tailwind CSS Portfolio Template`, `Modern Portfolio Next.js`,
+`Portfolio Website Nepal`, `Pradip Chaudhary Developer`
+
+---
+
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
@@ -112,3 +120,4 @@ Thanks to the open-source community for the tools and frameworks that make moder
 * Neon
 
 
+> Built with ❤️ by [Pradip Chaudhary](https://github.com/pradipchaudhary)
