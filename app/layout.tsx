@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     viewport:
         "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover",
     verification: {
-        google: "YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE", // add if available
+        google: "HiE84E4kBt1bJ-0_dnIXM7FzBGG5xkrRyD58d45O9Hc", // add if available
     },
 };
 

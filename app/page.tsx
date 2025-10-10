@@ -93,11 +93,7 @@ export default function HomePage() {
                     </strong>
                     . All rights reserved.
                 </p>
-                <p className="mt-1">
-                    Crafted with <span className="text-red-500">❤️</span> using{" "}
-                    <PlainLink href="https://nextjs.org/">Next.js</PlainLink> &{" "}
-                    <PlainLink href="https://tailwindcss.com/">Tailwind CSS</PlainLink>.
-                </p>
+
             </footer>
         </>
     );
