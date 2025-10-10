@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description:
         "I'm Pradip Chaudhary — a Full Stack Developer from Nepal specializing in React, Next.js, Node.js, and TypeScript. I build scalable, high-performance web applications with clean UI/UX, modern APIs, and SEO optimization. Explore my portfolio and learn how I craft digital solutions for global brands.",
     keywords:
-        "Pradip Chaudhary, Full Stack Developer Nepal, React Developer, Next.js Developer, Node.js Developer, TypeScript Developer, GraphQL Developer, Frontend Developer, Backend Developer, Software Engineer Nepal, MERN Stack Developer, Web Developer Nepal, SEO Developer, UI UX Engineer, Web App Developer, JavaScript Expert, Tailwind CSS Developer, Remote Developer Nepal, Portfolio Website",
+        "Pradip Chaudhary, Full Stack Developer Nepal, React Developer, Next.js Developer,Full Stack Developer Portfolio using Next.js, React Developer Portfolio Template, Pradip Chaudhary Developer Portfolio, Node.js Developer, TypeScript Developer, GraphQL Developer, Frontend Developer, Backend Developer, Software Engineer Nepal, MERN Stack Developer, Web Developer Nepal, SEO Developer, UI UX Engineer, Web App Developer, JavaScript Expert, Tailwind CSS Developer, Remote Developer Nepal, Portfolio Website",
     authors: [{ name: "Pradip Chaudhary", url: "https://www.pradipchaudhary.com.np" }],
     creator: "Pradip Chaudhary",
     publisher: "Pradip Chaudhary",
