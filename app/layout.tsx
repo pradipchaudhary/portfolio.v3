@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { Suspense } from "react";
 import Loading from "./loading";
 import Background from "@/components/ui/Background";
+import HomeLayout from "@/components/layout/HomeLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -113,18 +114,11 @@ export default function RootLayout({
             </head>
             <body className={inter.className}>
                 <Suspense fallback={<Loading />}>
-                    <div className="relative min-h-screen flex flex-col overflow-hidden bg-[var(--background)] text-[var(--foreground)]">
-                        {/* === Background Layer === */}
-                        <div className="absolute inset-0 -z-10">
-                            <Background />
-                        </div>
-
-                        {/* === Main Content === */}
-                        <main className="flex-grow w-full mx-auto max-w-6xl px-6 py-8 md:px-12 lg:px-24">
-                            {children}
-                        </main>
-                    </div>
+                    <HomeLayout>
+                        {children}
+                    </HomeLayout>
                 </Suspense>
+
             </body>
         </html>
     );
