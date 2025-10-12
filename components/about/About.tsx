@@ -10,11 +10,11 @@ const About = () => {
     <section
       id="about"
       aria-label="About Pradip Chaudhary"
-      className="max-w-3xl mx-auto pt-20 pb-20 px-6 text-gray-800"
+      className="max-w-3xl mx-auto pt-20 pb-20 text-gray-800"
     >
       {/* === INTRO HEADER === */}
       <motion.div
-        className="flex flex-col items-center mb-14"
+        className="flex flex-col items-center mb-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
