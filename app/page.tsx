@@ -1,9 +1,6 @@
 "use client";
 
 import About from "@/components/about/About";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 
 /**
  * HomePage Component — Enhanced Professional UI
