@@ -27,7 +27,7 @@ const About = () => {
             width={80}
             height={80}
           />
-          <span className="text-7xl text-gray-700 font-thin">Namaste</span>
+          <span className="text-7xl text-gray-700 font-thin ">Namaste</span>
         </div>
 
         {/* Developer Intro */}
