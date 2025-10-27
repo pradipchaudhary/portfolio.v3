@@ -4,6 +4,7 @@ import About from "@/components/about/About";
 import Certifications from "@/components/Certifications";
 import Experience from "@/components/experience/Experience";
 import Footer from "@/components/Footer";
+import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 
 /**
@@ -19,7 +20,7 @@ export default function HomePage() {
         <>
             {/* === ABOUT SECTION === */}
             <About />
-
+            <Projects />
             <Experience />
             <Skills />
             <Certifications />

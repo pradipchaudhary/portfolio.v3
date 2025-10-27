@@ -5,40 +5,45 @@ import { Hash } from "lucide-react";
 
 const skills = [
   "JavaScript",
+  "React",
+  "NextJS",
   "TypeScript",
-  "React.js",
-  "Node.js",
+  "NodeJS",
   "PHP",
+  "TailwindCSS",
+  "Redux",
+  "ExpressJS",
+  "MongoDB",
   "MySQL",
   "PostgreSQL",
-  "Next.js",
-  "Prisma",
-  "WordPress",
-  "MongoDB",
+  "REST",
   "Git",
   "Docker",
+  "WordPress",
   "OpenAI",
+  "HTML",
+  "CSS",
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="max-w-3xl mx-auto pt-10 pb-10">
+    <section id="skills" className="max-w-3xl mx-auto py-12">
       {/* Section Title */}
       <h2 className="text-3xl font-bold text-gray-900 mb-6 tracking-tight">
         Skills
       </h2>
 
-      {/* Skills Grid */}
-      <div className="flex flex-wrap gap-3">
+      {/* Skills Tags */}
+      <div className="flex flex-wrap gap-x-1.5 gap-y-2">
         {skills.map((skill, index) => (
           <span
             key={index}
-            className="flex items-center px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium italic shadow-sm hover:bg-gray-200 transition-colors duration-150"
+            className="inline-flex items-center text-[15px] text-gray-600 hover:text-gray-900 
+                     transition-colors duration-200"
           >
-            <Hash className="w-3.5 h-3.5" />
-            {skill}
+            <Hash className="w-3.5 h-3.5 text-gray-400 mr-0.5" />
+            {skill}{index < skills.length - 1 ? "" : ""}
           </span>
-
         ))}
       </div>
     </section>
