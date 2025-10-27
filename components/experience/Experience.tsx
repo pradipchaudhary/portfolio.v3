@@ -47,10 +47,10 @@ const Experience = () => {
             </div>
 
             {/* Company */}
-            <p className="text-gray-700 mb-2 font-medium text-base ">{exp.company}</p>
+            <p className="text-gray-600 mb-2 font-medium text-base">{exp.company}</p>
 
             {/* Description */}
-            <p className="text-gray-600 text-base leading-normal ">
+            <p className="text-gray-700 text-sm">
               {exp.description}
             </p>
           </div>

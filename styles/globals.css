@@ -69,7 +69,7 @@ video {
 }
 
 /* === Link Styles === */
-a {
+/* a {
     color: var(--accent-strong);
     text-decoration: none;
     transition: var(--transition);
@@ -80,7 +80,7 @@ a:hover {
     text-decoration: underline;
     text-decoration-color: var(--accent-hover);
     text-underline-offset: 4px;
-}
+} */
 
 /* === Selection Color === */
 ::selection {
