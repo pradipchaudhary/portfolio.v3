@@ -10,6 +10,15 @@ const inter = Inter({ subsets: ["latin"] });
 // ==============================
 // 🌐 ADVANCED SEO METADATA
 // ==============================
+export const viewport = {
+    themeColor: "#0f172a", // Dark navy blue for brand consistency
+    width: "device-width",
+    initialScale: 1.0,
+    maximumScale: 5.0,
+    userScalable: true,
+    viewportFit: "cover"
+};
+
 export const metadata: Metadata = {
     title:
         "Pradip Chaudhary | Full Stack Developer from Nepal | React, Next.js, Node.js, TypeScript & GraphQL Expert",
@@ -65,9 +74,6 @@ export const metadata: Metadata = {
         images: ["https://www.pradipchaudhary.com.np/twitter-image.jpg"],
     },
     category: "Technology",
-    themeColor: "#0f172a", // Dark navy blue for brand consistency
-    viewport:
-        "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover",
     verification: {
         google: "HiE84E4kBt1bJ-0_dnIXM7FzBGG5xkrRyD58d45O9Hc", // add if available
     },

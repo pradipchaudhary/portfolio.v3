@@ -1,6 +1,6 @@
 import React from "react";
 import Background from "../ui/Background";
-import Sidebar from "../sidebar/Sidebar";
+import Sidebar from "./sidebar/Sidebar";
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return <>
