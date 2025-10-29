@@ -1,9 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
-import PlainLink from "../common/PlainLink";
+import PlainLink from "@/components/common/PlainLink";
 
 const About = () => {
   return (
@@ -13,11 +12,9 @@ const About = () => {
       className="max-w-3xl mx-auto pt-0 mb-10 text-gray-800"
     >
       {/* === INTRO HEADER === */}
-      <motion.div
+      <div
         className="flex flex-col items-start mb-7"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+
       >
         {/* Namaste Image & Text */}
         <div className="flex items-center mb-8 ml-[-20px]">
@@ -45,14 +42,11 @@ const About = () => {
           <PlainLink href="https://tailwindcss.com/">Tailwind CSS</PlainLink> to build clean,
           scalable, and accessible digital products.
         </p>
-      </motion.div>
+      </div>
 
       {/* === DESCRIPTION === */}
-      <motion.div
+      <div
         className="space-y-6 text-base leading-relaxed text-gray-700"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
       >
         <p>
           I’m passionate about transforming ideas into elegant web solutions — combining{" "}
@@ -67,7 +61,7 @@ const About = () => {
           <PlainLink href="https://scrapy.org/">Web Scraping</PlainLink>, and data-driven projects
           that deliver real-world value and insights.
         </p>
-      </motion.div>
+      </div>
     </section>
   );
 };

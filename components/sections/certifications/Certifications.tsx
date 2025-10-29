@@ -43,24 +43,47 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="max-w-3xl mx-auto pt-10 pb-10">
+    <section
+      id="certifications"
+      className="max-w-3xl mx-auto pt-10 pb-10"
+    >
       {/* Section Title */}
-      <h2 className="text-3xl font-bold text-gray-900 mb-6 tracking-tight">
+      <h2
+        className="text-3xl font-bold text-gray-900 mb-6 tracking-tight"
+      >
         Certifications
       </h2>
 
-      <div className="space-y-8">
+      <div
+        className="space-y-8"
+      >
         {certifications.map((cert, idx) => (
-          <div key={idx}>
+          <div
+            key={idx}
+            className="group transition-transform duration-300 "
+          >
             {/* Year */}
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">{cert.year}</h3>
+            <h3
+              className="text-lg font-semibold text-gray-900 mb-2"
+            >
+              {cert.year}
+            </h3>
 
             {/* Certification Items */}
-            <ul className="space-y-1">
+            <ul
+              className="space-y-1"
+            >
               {cert.items.map((item, i) => (
-                <li key={i} className="flex items-start">
-                  <Hash className="w-3.5 h-3.5 text-gray-500 mt-[3px] flex-shrink-0" />
-                  <span className="ml-1 text-gray-700 italic text-sm">{item}</span>
+                <li
+                  key={i}
+                  className="flex items-start group"
+                >
+                  <div className="transition-transform duration-200">
+                    <Hash className="w-3.5 h-3.5 text-gray-500 mt-[3px] flex-shrink-0 italic" />
+                  </div>
+                  <span className="ml-1 text-gray-700 italic text-sm group-hover:text-gray-900 transition-colors duration-200">
+                    {item}
+                  </span>
                 </li>
               ))}
             </ul>

@@ -31,15 +31,25 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="max-w-3xl mx-auto py-6">
+    <section
+      id="experience"
+      className="max-w-3xl mx-auto py-6"
+    >
       {/* Main Section Title */}
-      <h2 className="text-3xl font-bold text-gray-900 mb-5 tracking-tight">
+      <h2
+        className="text-3xl font-bold text-gray-900 mb-5 tracking-tight"
+      >
         Experience
       </h2>
 
-      <div className="space-y-6">
+      <div
+        className="space-y-6"
+      >
         {experiences.map((exp, index) => (
-          <div key={index} className="flex flex-col group hover:bg-gray-50/50 p-2 rounded-xl transition-all duration-300">
+          <div
+            key={index}
+            className="flex flex-col group hover:bg-gray-50/50 p-2 rounded-xl transition-all duration-300"
+          >
             {/* Role & Period */}
             <div className="flex flex-col md:flex-row md:justify-between md:items-center">
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-gray-800">{exp.role}</h3>
