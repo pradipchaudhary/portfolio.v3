@@ -17,14 +17,27 @@ const About = () => {
 
       >
         {/* Namaste Image & Text */}
-        <div className="flex items-center mb-8 ml-[-20px]">
-          <Image
-            src="/namaste.png"
-            alt="Pradip Chaudhary"
-            width={80}
-            height={80}
-          />
-          <span className="text-7xl text-gray-700 font-thin ">Namaste</span>
+        <div className="relative flex items-center mb-7 ml-[10px] p-2.5 transform -rotate-1 transition-all duration-300">
+          {/* Background Effect */}
+          <div className="absolute inset-0 bg-white/90 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.08)] transform rotate-1 hover:rotate-0 transition-all duration-300"></div>
+
+          {/* Content */}
+          <div className="relative flex items-center gap-2">
+            <Image
+              src="/namaste.png"
+              alt="Pradip Chaudhary"
+              width={52}
+              height={52}
+              className="transform hover:scale-110 transition-transform duration-300"
+            />
+            <span className="text-[2.25rem] text-gray-700 font-thin hover:text-gray-900 transition-colors duration-300">
+              Namaste
+            </span>
+          </div>
+
+          {/* Decorative Pin Effect */}
+          <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-gradient-to-br from-red-400 to-red-500 rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.2)] ring-1 ring-red-400/20"></div>
+          <div className="absolute -bottom-1 -left-1 w-2.5 h-2.5 bg-gradient-to-br from-red-400 to-red-500 rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.2)] ring-1 ring-red-400/20"></div>
         </div>
 
         {/* Developer Intro */}
