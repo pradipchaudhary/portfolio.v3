@@ -52,9 +52,8 @@ const Sidebar = () => {
 
           <div className="flex flex-wrap justify-center gap-2">
             {[
-              { label: "home", href: "/" },
-              { label: "about", href: "/#about" },
-              { label: "projects", href: "/projects" },
+              { label: "home", href: "/#about" },
+              { label: "projects", href: "/#projects" },
               { label: "experience", href: "/#experience" },
               { label: "skills", href: "/#skills" },
               { label: "certifications", href: "/#certifications" },
