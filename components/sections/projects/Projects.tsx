@@ -33,19 +33,20 @@ const projects = [
     link: "https://github.com/pradipchaudhary/docsnepal",
   },
   {
-    title: "nepcoin",
-    description:
-      "NepCoin: a decentralized digital token prototype built using blockchain concepts — focused on learning crypto fundamentals.",
-    tags: ["Blockchain", "Crypto", "Learning"],
-    link: "https://github.com/pradipchaudhary/nepcoin",
-  },
-  {
     title: "jobfindingai",
     description:
       "JobFindingAI: an AI-powered platform that helps users find jobs based on their resume, skills, and interests.",
     tags: ["AI", "Next.js", "OpenAI"],
     link: "https://github.com/pradipchaudhary/jobfindingai",
   },
+  {
+    title: "nepcoin",
+    description:
+      "NepCoin: a decentralized digital token prototype built using blockchain concepts — focused on learning crypto fundamentals.",
+    tags: ["Blockchain", "Crypto", "Learning"],
+    link: "https://github.com/pradipchaudhary/nepcoin",
+  },
+
 ];
 
 const Projects = () => {
