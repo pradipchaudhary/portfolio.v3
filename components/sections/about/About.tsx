@@ -28,7 +28,7 @@ const About = () => {
               alt="Pradip Chaudhary"
               width={52}
               height={52}
-              className="transform hover:scale-110 transition-transform duration-300"
+              className=""
             />
             <span className="text-[2.25rem] text-gray-700 font-thin hover:text-gray-900 transition-colors duration-300">
               Namaste
