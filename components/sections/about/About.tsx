@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import PlainLink from "@/components/common/PlainLink";
 import AnimatedSignature from "@/components/ui/signaturePath";
-import AnimatedPradipSignature from "@/components/ui/signaturePath";
 
 const About = () => {
   return (
@@ -14,10 +13,7 @@ const About = () => {
       className="max-w-3xl mx-auto pt-0 mb-10 text-gray-800"
     >
       {/* === INTRO HEADER === */}
-      <div
-        className="flex flex-col items-start mb-7"
-
-      >
+      <div className="flex flex-col items-start mb-7">
         {/* Namaste Image & Text */}
         <div className="relative flex items-center mb-7 ml-[10px] p-2.5 transform -rotate-1 transition-all duration-300">
           {/* Background Effect */}
@@ -30,7 +26,6 @@ const About = () => {
               alt="Pradip Chaudhary"
               width={52}
               height={52}
-              className=""
             />
             <span className="text-[2.25rem] text-gray-700 font-thin hover:text-gray-900 transition-colors duration-300">
               Namaste
@@ -60,9 +55,7 @@ const About = () => {
       </div>
 
       {/* === DESCRIPTION === */}
-      <div
-        className="space-y-6 text-base leading-relaxed text-gray-700"
-      >
+      <div className="space-y-6 text-base leading-relaxed text-gray-700">
         <p>
           I’m passionate about transforming ideas into elegant web solutions — combining{" "}
           <span className="font-medium text-gray-900">clean design</span> with{" "}
@@ -77,10 +70,32 @@ const About = () => {
           that deliver real-world value and insights.
         </p>
       </div>
-      <div>
+
+      {/* Animated Signature */}
+      <div className="my-8">
         <AnimatedSignature />
-        <AnimatedPradipSignature />
       </div>
+
+      {/* === BUTTONS === */}
+      <div className="flex flex-wrap gap-3 mt-6">
+        {/* Hire Me */}
+        <a
+          href="mailto:pradip@example.com" // Replace with your email
+          className="px-4 py-2 bg-black text-white font-medium text-sm rounded-md hover:bg-gray-800 transition-colors duration-200"
+        >
+          Hire Me
+        </a>
+
+        {/* Download CV */}
+        <a
+          href="/Pradip-Chaudhary-CV.pdf" // Replace with your CV path
+          download
+          className="px-4 py-2 border border-gray-300 text-gray-800 font-medium text-sm rounded-md hover:bg-gray-100 transition-colors duration-200"
+        >
+          Download CV
+        </a>
+      </div>
+
     </section>
   );
 };
