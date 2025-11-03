@@ -4,13 +4,15 @@ import React from "react";
 import Image from "next/image";
 import PlainLink from "@/components/common/PlainLink";
 import AnimatedSignature from "@/components/ui/signaturePath";
+import { FaDownload } from "react-icons/fa6";
+
 
 const About = () => {
   return (
     <section
       id="about"
       aria-label="About Pradip Chaudhary"
-      className="max-w-3xl mx-auto pt-0 mb-10 text-gray-800"
+      className="max-w-3xl mx-auto mb-10 text-gray-800 pt-20 "
     >
       {/* === INTRO HEADER === */}
       <div className="flex flex-col items-start mb-7">
@@ -38,20 +40,104 @@ const About = () => {
         </div>
 
         {/* Developer Intro */}
-        <p className="text-base md:text-base leading-relaxed text-gray-700">
+        <p className="text-base md:text-base leading-relaxed text-gray-700 mt-2">
           Hi 👋, I’m{" "}
-          <span className="font-semibold text-gray-900">Pradip Chaudhary</span>, a{" "}
-          <PlainLink href="https://react.dev/">React Developer</PlainLink> passionate about creating
-          performant, responsive, and user-friendly web applications.
+          {/* <span className="font-semibold text-gray-900">Pradip Chaudhary</span>, a{" "} */}
+          <a
+            href="https://react.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+          >
+            React Developer
+            {/* Elegant thin underline */}
+            <svg
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              viewBox="0 0 120 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                fill="none"
+              />
+            </svg>
+          </a>{" "}
+          passionate about creating performant, responsive, and user-friendly web applications.
         </p>
 
         <p className="text-base md:text-base leading-relaxed text-gray-600 mt-4 max-w-2xl">
           I enjoy exploring modern technologies such as{" "}
-          <PlainLink href="https://nextjs.org/">Next.js</PlainLink>,{" "}
-          <PlainLink href="https://www.typescriptlang.org/">TypeScript</PlainLink>, and{" "}
-          <PlainLink href="https://tailwindcss.com/">Tailwind CSS</PlainLink> to build clean,
-          scalable, and accessible digital products.
+          <a
+            href="https://nextjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+          >
+            Next.js
+            <svg
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              viewBox="0 0 120 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                fill="none"
+              />
+            </svg>
+          </a>
+          ,{" "}
+          <a
+            href="https://www.typescriptlang.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+          >
+            TypeScript
+            <svg
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              viewBox="0 0 120 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                fill="none"
+              />
+            </svg>
+          </a>
+          , and{" "}
+          <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+          >
+            Tailwind CSS
+            <svg
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              viewBox="0 0 120 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                fill="none"
+              />
+            </svg>
+          </a>{" "}
+          to build clean, scalable, and accessible digital products.
         </p>
+
       </div>
 
       {/* === DESCRIPTION === */}
@@ -65,36 +151,92 @@ const About = () => {
 
         <p>
           Beyond coding, I explore{" "}
-          <PlainLink href="https://moz.com/beginners-guide-to-seo">SEO</PlainLink>,{" "}
-          <PlainLink href="https://scrapy.org/">Web Scraping</PlainLink>, and data-driven projects
-          that deliver real-world value and insights.
+          <a
+            href="https://moz.com/beginners-guide-to-seo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+          >
+            SEO
+            <svg
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              viewBox="0 0 120 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                fill="none"
+              />
+            </svg>
+          </a>
+          ,{" "}
+          <a
+            href="https://scrapy.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+          >
+            Web Scraping
+            <svg
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              viewBox="0 0 120 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                fill="none"
+              />
+            </svg>
+          </a>
+          , and data-driven projects that deliver real-world value and insights.
         </p>
       </div>
 
-      {/* Animated Signature */}
-      <div className="my-8">
-        <AnimatedSignature />
+
+
+
+
+      {/* === Signature, Name & Buttons Section === */}
+      <div className="mt-12 flex flex-col items-start space-y-4">
+
+
+        {/* === Action Buttons === */}
+        <div className="flex flex-wrap gap-3 mt-4">
+          {/* Hire Me Button */}
+          <a
+            href="mailto:pradip@example.com"
+            className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium tracking-wide shadow-md hover:bg-blue-700 hover:shadow-lg active:scale-[0.98] transition-all duration-200"
+          >
+            Hire Me
+          </a>
+
+          {/* Resume Button */}
+          <a
+            href="/Pradip-Chaudhary-CV.pdf"
+            download
+            className="inline-flex bg-white/90 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.05)] items-center justify-center gap-2 px-5 py-2  text-gray-800 text-sm font-medium tracking-wide hover:bg-white-100  active:scale-[0.98] transition-all duration-200"
+          >
+            Resume
+            <FaDownload className="text-gray-600 text-sm" />
+          </a>
+        </div>
+
+
+        {/* Animated Signature */}
+        <div className="mt-6">
+          <AnimatedSignature />
+        </div>
+
+
       </div>
 
-      {/* === BUTTONS === */}
-      <div className="flex flex-wrap gap-3 mt-6">
-        {/* Hire Me */}
-        <a
-          href="mailto:pradip@example.com" // Replace with your email
-          className="px-4 py-2 bg-black text-white font-medium text-sm rounded-md hover:bg-gray-800 transition-colors duration-200"
-        >
-          Hire Me
-        </a>
 
-        {/* Download CV */}
-        <a
-          href="/Pradip-Chaudhary-CV.pdf" // Replace with your CV path
-          download
-          className="px-4 py-2 border border-gray-300 text-gray-800 font-medium text-sm rounded-md hover:bg-gray-100 transition-colors duration-200"
-        >
-          Download CV
-        </a>
-      </div>
 
     </section>
   );
