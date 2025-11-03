@@ -14,7 +14,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
           {/* Header  */}
           <Sidebar />
 
-          <main className=" w-full pt-20 pl-5">
+          <main className=" w-full pl-5">
             {children}
           </main>
         </div>

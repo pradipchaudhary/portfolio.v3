@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Check, Github, Linkedin, Facebook, Instagram } from "lucide-react";
 
 const Sidebar = () => {
+
   return (
     <aside className="sm:w-full md:w-1/2 lg:w-1/2 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:min-h-screen lg:flex-col lg:justify-between lg:py-20 lg:pb-8 px-6 bg-red-50">
 
