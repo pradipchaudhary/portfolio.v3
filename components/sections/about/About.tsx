@@ -3,6 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import PlainLink from "@/components/common/PlainLink";
+import AnimatedSignature from "@/components/ui/signaturePath";
+import AnimatedPradipSignature from "@/components/ui/signaturePath";
 
 const About = () => {
   return (
@@ -74,6 +76,10 @@ const About = () => {
           <PlainLink href="https://scrapy.org/">Web Scraping</PlainLink>, and data-driven projects
           that deliver real-world value and insights.
         </p>
+      </div>
+      <div>
+        <AnimatedSignature />
+        <AnimatedPradipSignature />
       </div>
     </section>
   );
