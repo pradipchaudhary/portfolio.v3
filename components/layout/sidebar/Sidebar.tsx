@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Check, Github, Linkedin, Facebook, Instagram } from "lucide-react";
-import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
 

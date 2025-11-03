@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import PlainLink from "@/components/common/PlainLink";
 import AnimatedSignature from "@/components/ui/signaturePath";
 import { FaDownload } from "react-icons/fa6";
 
