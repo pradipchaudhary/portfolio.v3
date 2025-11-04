@@ -210,7 +210,7 @@ const About = () => {
           {/* Hire Me Button */}
           <a
             href="mailto:pradip@example.com"
-            className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium tracking-wide shadow-md hover:bg-blue-700 hover:shadow-lg active:scale-[0.98] transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-lg bg-gray-600 text-white text-sm font-medium tracking-wide shadow-md hover:bg-gray-700 hover:shadow-lg active:scale-[0.98] transition-all duration-200"
           >
             Hire Me
           </a>
@@ -219,7 +219,7 @@ const About = () => {
           <a
             href="/Pradip-Chaudhary-CV.pdf"
             download
-            className="inline-flex bg-white/90 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.05)] items-center justify-center gap-2 px-5 py-2  text-gray-800 text-sm font-medium tracking-wide hover:bg-white-100  active:scale-[0.98] transition-all duration-200"
+            className="inline-flex bg-red-50 border border-sm border-red-100 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.05)] items-center justify-center gap-2 px-5 py-2  text-gray-800 text-sm font-medium tracking-wide hover:bg-white-100  active:scale-[0.98] transition-all duration-200"
           >
             Resume
             <FaDownload className="text-gray-600 text-sm" />
@@ -228,8 +228,10 @@ const About = () => {
 
 
         {/* Animated Signature */}
-        <div className="mt-6">
-          <AnimatedSignature />
+        <div className="mt-4">
+          {/* <AnimatedSignature color="#2563eb" />   // Blue */}
+          {/* <AnimatedSignature color="#dc2626" />   // Red */}
+          <AnimatedSignature color="#222222" />
         </div>
 
 
