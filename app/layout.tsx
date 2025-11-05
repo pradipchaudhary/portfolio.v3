@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     },
     category: "Technology",
     verification: {
-        google: "HiE84E4kBt1bJ-0_dnIXM7FzBGG5xkrRyD58d45O9Hc", // add if available
+        google: "google-site-verification=HiE84E4kBt1bJ-0_dnIXM7FzBGG5xkrRyD58d45O9Hc", // add if available
     },
 };
 // google-site-verification=HiE84E4kBt1bJ-0_dnIXM7FzBGG5xkrRyD58d45O9Hc
