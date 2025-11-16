@@ -1,29 +1,29 @@
-'use client';
+"use client";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-import { useEffect, useState } from 'react';
+export default function LoadingScreen() {
+    const [show, setShow] = useState(true);
 
-export default function Loading() {
-    const [opacity, setOpacity] = useState(0);
-
+    // Hide after 5 seconds
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setOpacity(1);
-        }, 1000); // Start fade in after preloader fades out
-
+        const timer = setTimeout(() => setShow(false), 5000);
         return () => clearTimeout(timer);
     }, []);
 
+    if (!show) return null;
+
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-background">
-            <div
-                className="text-center transition-opacity duration-1000 ease-out"
-                style={{ opacity }}
+        <div className="flex items-center justify-center min-h-screen bg-gray-50">
+            <motion.h1
+                className="text-4xl font-bold tracking-tight text-gray-800"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1 }}
             >
-                <div className="flex flex-col items-center gap-4">
-                    <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin" />
-                    <p className="text-lg text-muted-foreground">Loading...</p>
-                </div>
-            </div>
+                Pradip
+            </motion.h1>
         </div>
     );
 }

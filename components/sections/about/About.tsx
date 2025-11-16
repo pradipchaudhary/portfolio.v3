@@ -51,7 +51,7 @@ const About = () => {
             React Developer
             {/* Elegant thin underline */}
             <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
               viewBox="0 0 120 10"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -77,7 +77,7 @@ const About = () => {
           >
             Next.js
             <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
               viewBox="0 0 120 10"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -99,7 +99,7 @@ const About = () => {
           >
             TypeScript
             <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
               viewBox="0 0 120 10"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -121,7 +121,7 @@ const About = () => {
           >
             Tailwind CSS
             <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
               viewBox="0 0 120 10"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -158,7 +158,7 @@ const About = () => {
           >
             SEO
             <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
               viewBox="0 0 120 10"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -180,7 +180,7 @@ const About = () => {
           >
             Web Scraping
             <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-800"
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
               viewBox="0 0 120 10"
               xmlns="http://www.w3.org/2000/svg"
             >
