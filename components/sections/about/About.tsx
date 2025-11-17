@@ -229,8 +229,8 @@ const About = () => {
 
         {/* Animated Signature */}
         <div className="mt-4">
-          {/* <AnimatedSignature color="#2563eb" />   // Blue */}
-          {/* <AnimatedSignature color="#dc2626" />   // Red */}
+          {/* <AnimatedSignature color="#2563eb" /> */}
+          {/* <AnimatedSignature color="#dc2626" /> */}
           <AnimatedSignature color="#222222" />
         </div>
 
