@@ -4,6 +4,9 @@ import React from "react";
 import Image from "next/image";
 import AnimatedSignature from "@/components/ui/signaturePath";
 import { FaDownload } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+
 
 
 const About = () => {
@@ -207,31 +210,33 @@ const About = () => {
 
         {/* === Action Buttons === */}
         <div className="flex flex-wrap gap-3 mt-4">
-          {/* Hire Me Button */}
-          <a
-            href="mailto:pradip@example.com"
-            className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-lg bg-gray-600 text-white text-sm font-medium tracking-wide shadow-md hover:bg-gray-700 hover:shadow-lg active:scale-[0.98] transition-all duration-200"
-          >
-            Hire Me
-          </a>
-
-          {/* Resume Button */}
+          {/* Resume Button (Now First) */}
           <a
             href="/Pradip-Chaudhary-CV.pdf"
             download
-            className="inline-flex bg-red-50 border border-sm border-red-100 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.05)] items-center justify-center gap-2 px-5 py-2  text-gray-800 text-sm font-medium tracking-wide hover:bg-white-100  active:scale-[0.98] transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-lg bg-gray-600 text-white text-sm font-medium tracking-wide shadow-md hover:bg-gray-700 hover:shadow-lg active:scale-[0.98] transition-all duration-200"
           >
+
             Resume
-            <FaDownload className="text-gray-600 text-sm" />
+            <FaDownload className="text-gray-200 text-sm" />
+          </a>
+
+          {/* Hire Me Button (Now Second) */}
+          <a
+            href="mailto:pradip@example.com"
+            className="inline-flex bg-red-50 border border-sm border-red-100 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.05)] items-center justify-center gap-2 px-5 py-2 text-gray-800 text-sm font-medium tracking-wide hover:bg-white-100 active:scale-[0.98] transition-all duration-200"
+          >
+            Hire Me
           </a>
         </div>
 
 
         {/* Animated Signature */}
         <div className="mt-4">
-          {/* <AnimatedSignature color="#2563eb" /> */}
+
+          <AnimatedSignature color="#2563eb" />
           {/* <AnimatedSignature color="#dc2626" /> */}
-          <AnimatedSignature color="#222222" />
+          {/* <AnimatedSignature color="#222222" /> */}
         </div>
 
 

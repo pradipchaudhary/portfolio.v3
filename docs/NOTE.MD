@@ -59,11 +59,11 @@ A curated list of **beautiful, modern, clean, and high-quality** developer/desig
 
 ## ✅ To-Do
 
+* [ ] Add Loading Screen with name animation (“Pradip ✦ fade in/out”)
 * [ ] Add cookie settings (GDPR-friendly, customizable preferences)
 * [ ] Improve dark/light theme toggle
 * [ ] Add animations for page transitions
 * [ ] Add SEO improvements (OpenGraph, Twitter Cards, better meta tags)
-* [ ] Add Loading Screen with name animation (“Pradip ✦ fade in/out”)
 * [ ] Integrate Blog section using MDX
 
 ---

@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Check, Github, Linkedin, Facebook, Instagram } from "lucide-react";
 
+
+
 const Sidebar = () => {
   const pathname = usePathname();
   const [hash, setHash] = useState("");
@@ -53,7 +55,7 @@ const Sidebar = () => {
         </div>
 
         <h1 className="mt-4 text-xl font-semibold text-gray-900">Pradip Chaudhary</h1>
-        <p className="text-sm text-gray-500">@pradipchaudhary</p>
+        <p className="text-sm text-gray-500 -mt-1 mb-1">@pradipchaudhary</p>
 
         <p className="mt-2 text-sm text-gray-600 max-w-[300px]">
           💻 Full Stack Developer <br /> Building modern web experiences.
@@ -114,6 +116,7 @@ const Sidebar = () => {
           </Link>
           <Link href="https://www.instagram.com/itspradipchaudhary/" target="_blank" className="text-gray-500 hover:text-gray-900">
             <Instagram className="w-5 h-5" />
+
           </Link>
         </div>
       </footer>
