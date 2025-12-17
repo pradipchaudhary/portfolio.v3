@@ -4,8 +4,6 @@ import React from "react";
 import Image from "next/image";
 import AnimatedSignature from "@/components/ui/signaturePath";
 import { FaDownload } from "react-icons/fa6";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 
 
@@ -37,8 +35,8 @@ const About = () => {
           </div>
 
           {/* Decorative Pin Effect */}
-          <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-gradient-to-br from-red-400 to-red-500 rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.2)] ring-1 ring-red-400/20"></div>
-          <div className="absolute -bottom-1 -left-1 w-2.5 h-2.5 bg-gradient-to-br from-red-400 to-red-500 rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.2)] ring-1 ring-red-400/20"></div>
+          <div className="pin-dot -top-1 -right-1"></div>
+          <div className="pin-dot -bottom-1 -left-1"></div>
         </div>
 
         {/* Developer Intro */}

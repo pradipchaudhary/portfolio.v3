@@ -12,11 +12,11 @@
     --background: #fdfdfd;
     --foreground: #0f0f0f;
     --text: #555555;
-    --accent: #fee2e2;
+    --accent: #2563eb;
     /* Tailwind bg-red-100 */
-    --accent-strong: #ef4444;
+    --accent-strong: #1d4ed8;
     /* Tailwind red-500 for hover */
-    --accent-hover: #dc2626;
+    --accent-hover: #1d4ed8;
     /* Tailwind red-600 for deeper hover */
     --border: #e5e5e5;
     --radius: 0.75rem;
@@ -29,10 +29,11 @@
         --background: #0f0f0f;
         --foreground: #f9f9f9;
         --text: #bdbdbd;
-        --accent: #7f1d1d;
+        --accent: #2563eb;
         /* dark red-900 */
-        --accent-strong: #ef4444;
-        --accent-hover: #f87171;
+        --accent-strong: #1d4ed8;
+        /* Tailwind red-500 for hover */
+        --accent-hover: #1d4ed8;
         --border: #222;
     }
 }
@@ -122,12 +123,12 @@ textarea {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(239, 68, 68, 0.3);
+    background-color: rgba(71, 68, 239, 0.3);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(239, 68, 68, 0.5);
+    background-color: rgba(68, 79, 239, 0.5);
 }
 
 /* === Accent Background Utility === */
@@ -137,4 +138,11 @@ textarea {
 
 .text-accent {
     color: var(--accent-strong);
+}
+
+.pin-dot {
+    @apply absolute w-2.5 h-2.5 rounded-full ring-1;
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    ring-color: var(--accent);
 }
