@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import AnimatedSignature from "@/components/ui/signaturePath";
-import { FaDownload } from "react-icons/fa6";
+import ResumeDownload from "@/components/ui/ResumeDownload";
+import Nameste from "@/components/ui/Namaste";
+import Signature from "@/components/ui/Signature";
+
 
 
 const About = () => {
@@ -16,27 +17,7 @@ const About = () => {
       {/* === INTRO HEADER === */}
       <div className="flex flex-col items-start mb-7">
         {/* Namaste Image & Text */}
-        <div className="relative flex items-center mb-7 ml-[10px] p-2.5 transform -rotate-1 transition-all duration-300">
-          {/* Background Effect */}
-          <div className="absolute inset-0 bg-white/90 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.08)] transform rotate-1 hover:rotate-0 transition-all duration-300"></div>
-
-          {/* Content */}
-          <div className="relative flex items-center gap-2">
-            <Image
-              src="/namaste.png"
-              alt="Pradip Chaudhary"
-              width={52}
-              height={52}
-            />
-            <span className="text-[2.25rem] text-gray-700 font-thin hover:text-gray-900 transition-colors duration-300">
-              Namaste
-            </span>
-          </div>
-
-          {/* Decorative Pin Effect */}
-          <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-gradient-to-br from-red-400 to-red-500 rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.2)] ring-1 ring-red-400/20"></div>
-          <div className="absolute -bottom-1 -left-1 w-2.5 h-2.5 bg-gradient-to-br from-red-400 to-red-500 rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.2)] ring-1 ring-red-400/20"></div>
-        </div>
+        <Nameste />
 
         {/* Developer Intro */}
         <p className="text-base md:text-base leading-relaxed text-gray-700 mt-2">
@@ -200,45 +181,8 @@ const About = () => {
 
 
 
-
-      {/* === Signature, Name & Buttons Section === */}
-      <div className="mt-12 flex flex-col items-start space-y-4">
-
-
-        {/* === Action Buttons === */}
-        <div className="flex flex-wrap gap-3 mt-4">
-          {/* Hire Me Button */}
-          <a
-            href="mailto:pradip@example.com"
-            className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-lg bg-gray-600 text-white text-sm font-medium tracking-wide shadow-md hover:bg-gray-700 hover:shadow-lg active:scale-[0.98] transition-all duration-200"
-          >
-            Hire Me
-          </a>
-
-          {/* Resume Button */}
-          <a
-            href="/Pradip-Chaudhary-CV.pdf"
-            download
-            className="inline-flex bg-red-50 border border-sm border-red-100 rounded-lg shadow-[0_3px_10px_rgba(0,0,0,0.05)] items-center justify-center gap-2 px-5 py-2  text-gray-800 text-sm font-medium tracking-wide hover:bg-white-100  active:scale-[0.98] transition-all duration-200"
-          >
-            Resume
-            <FaDownload className="text-gray-600 text-sm" />
-          </a>
-        </div>
-
-
-        {/* Animated Signature */}
-        <div className="mt-4">
-          {/* <AnimatedSignature color="#2563eb" /> */}
-          {/* <AnimatedSignature color="#dc2626" /> */}
-          <AnimatedSignature color="#222222" />
-        </div>
-
-
-      </div>
-
-
-
+      <ResumeDownload />
+      <Signature />
     </section>
   );
 };

@@ -12,11 +12,11 @@ const formatTitle = (t: string) =>
 
 const projects = [
   {
-    title: "100-javascript-projects",
+    title: "docsnepal",
     description:
-      "A curated collection of 100 practical JavaScript projects for learners — utilities, games, DOM practice and small apps.",
-    tags: ["JavaScript", "Learning", "Projects"],
-    link: "https://github.com/pradipchaudhary/100-javascript-projects",
+      "DocsNepal: a document generator for Nepali legal and official documents (PDF/docx) — templates and API utilities.",
+    tags: ["TypeScript", "PDF", "Docx"],
+    link: "https://github.com/pradipchaudhary/docsnepal",
   },
   {
     title: "portfolio.v3",
@@ -26,11 +26,11 @@ const projects = [
     link: "https://github.com/pradipchaudhary/portfolio.v3",
   },
   {
-    title: "docsnepal",
+    title: "100-javascript-projects",
     description:
-      "DocsNepal: a document generator for Nepali legal and official documents (PDF/docx) — templates and API utilities.",
-    tags: ["TypeScript", "PDF", "Docx"],
-    link: "https://github.com/pradipchaudhary/docsnepal",
+      "A curated collection of 100 practical JavaScript projects for learners — utilities, games, DOM practice and small apps.",
+    tags: ["JavaScript", "Learning", "Projects"],
+    link: "https://github.com/pradipchaudhary/100-javascript-projects",
   },
   {
     title: "jobfindingai",
