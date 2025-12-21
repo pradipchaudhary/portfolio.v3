@@ -68,14 +68,14 @@ const Sidebar = () => {
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-14 h-[1px] bg-gradient-to-r from-gray-200 via-red-400 to-gray-200 rounded-full"></div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center">
             {navItems.map((item, i) => {
               const active = isActive(item.id);
               return (
                 <Link
                   key={i}
                   href={item.href}
-                  className={`group inline-flex items-center text-[13px] transition-colors duration-200 ${active ? "text-gray-900 font-semibold" : "text-gray-500 hover:text-gray-900"
+                  className={`group inline-flex items-center text-[13px] transition-colors duration-200 ${active ? "text-gray-900 font-semibold" : "text-gray-500 hover:text-gray-900 pl-1"
                     }`}
                 >
                   <span
