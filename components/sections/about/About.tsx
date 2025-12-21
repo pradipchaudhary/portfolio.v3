@@ -27,7 +27,7 @@ const About = () => {
             href="https://react.dev/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
           >
             React Developer
             {/* Elegant thin underline */}
@@ -54,7 +54,7 @@ const About = () => {
             href="https://nextjs.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
           >
             Next.js
             <svg
@@ -76,7 +76,7 @@ const About = () => {
             href="https://www.typescriptlang.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
           >
             TypeScript
             <svg
@@ -98,7 +98,7 @@ const About = () => {
             href="https://tailwindcss.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
           >
             Tailwind CSS
             <svg
@@ -135,7 +135,7 @@ const About = () => {
             href="https://moz.com/beginners-guide-to-seo"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
           >
             SEO
             <svg
@@ -157,7 +157,7 @@ const About = () => {
             href="https://scrapy.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block font-bold text-gray-900 transition-all duration-300"
+            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
           >
             Web Scraping
             <svg

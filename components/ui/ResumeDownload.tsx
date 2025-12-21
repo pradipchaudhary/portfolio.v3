@@ -9,7 +9,7 @@ const ResumeDownload = () => {
           href="/resume/Pradip-Chaudhary-Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative inline-block font-bold text-gray-900 transition-all duration-300 p-1"
+          className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300 p-1"
         >
           resume
           {/* Decorative underline */}
