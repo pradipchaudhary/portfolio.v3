@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Check, Github, Linkedin, Facebook, Instagram, Youtube } from "lucide-react";
+import { Check, Github, Linkedin, Instagram, Youtube } from "lucide-react";
 
 
 
