@@ -98,6 +98,7 @@ Feel free to use or modify it for your own portfolio, with attribution.
 * 🌐 **Portfolio:** [pradipchaudhary.com.np](https://www.pradipchaudhary.com.np/)
 * 💼 **LinkedIn:** [linkedin.com/in/pradipchaudhary](https://linkedin.com/in/pradipchaudhary)
 * 💻 **GitHub:** [github.com/pradipchaudhary](https://github.com/pradipchaudhary)
+* ▶️ **YouTube:** [youtube.com/@pradipchaudhary_codes](https://www.youtube.com/@pradipchaudhary_codes)
 
 ---
 
