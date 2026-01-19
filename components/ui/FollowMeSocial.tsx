@@ -5,11 +5,14 @@ import SocialIconStack from "./AvatarStack";
 
 export default function FollowMeSocial() {
   return (
-    <section className="relative flex flex-col items-center gap-3 rounded-xl
+    <section className="relative flex flex-col items-center gap-2 rounded-xl
       bg-black/[0.03] px-6 py-6 dark:bg-white/[0.04]">
 
       {/* Follow Me Text */}
-      <p className="text-sm font-medium tracking-wide text-gray-700 dark:text-gray-500">
+      <p
+        className="text-sm font-medium tracking-wide text-gray-500 rotate-[-10deg]"
+        style={{ fontFamily: "'Patrick Hand', cursive" }}
+      >
         Follow Me
       </p>
 
@@ -17,9 +20,9 @@ export default function FollowMeSocial() {
       <Image
         src="/images/curved-arrow.png"
         alt="Follow arrow"
-        width={120}
-        height={120}
-        className="opacity-80 dark:opacity-70"
+        width={100}
+        height={100}
+        className="opacity-30 brightness-110 dark:opacity-20 ml-10"
         priority
       />
 
