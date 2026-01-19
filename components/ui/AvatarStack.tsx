@@ -46,7 +46,7 @@ export default function SocialIconStack() {
   return (
     <div className="relative inline-block">
       {/* Social Icons */}
-      <div className="flex items-center pr-4">
+      <div className="flex items-center">
         {socials.map((social, index) => (
           <a
             key={index}
@@ -54,40 +54,30 @@ export default function SocialIconStack() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={social.name}
-            className="
-              group relative -mr-3
-              flex h-10 w-10 items-center justify-center rounded-full
-              border border-black/10
-              bg-black/[0.04]
-              shadow-[0_1px_2px_rgba(0,0,0,0.06)]
+            className={`
+              group relative
+              flex h-11 w-11 items-center justify-center rounded-full
+              border border-black/2
+              bg-white/[0.02]
+              shadow-md
               transition-all duration-300
-              hover:z-30 hover:scale-105
-              dark:border-white/15 dark:bg-white/[0.08]
-            "
+              hover:z-30 hover:scale-110
+              ${index !== 0 ? "-ml-4" : ""}
+            `}
           >
             <social.Icon
               className="
                 h-5 w-5
-                text-gray-700
+                text-gray-400
                 transition-colors duration-300
                 group-hover:text-black
-                dark:text-gray-300
-                dark:group-hover:text-white
               "
             />
           </a>
         ))}
       </div>
 
-      {/* Decorative Line */}
-      <div
-        className="
-          absolute -bottom-1.5 left-[-16px]
-          h-px w-[calc(100%+32px)]
-          bg-gradient-to-r from-black/20 via-black/20 to-transparent
-          dark:from-white/20 dark:via-white/20
-        "
-      />
+
     </div>
   );
 }
