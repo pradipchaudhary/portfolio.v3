@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import FollowMeSocial from "@/components/ui/FollowMeSocial";
+import { Check } from "lucide-react";
 
 
 
