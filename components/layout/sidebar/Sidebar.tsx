@@ -5,6 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Check, Github, Linkedin, Instagram, Youtube } from "lucide-react";
+import AvatarStack from "@/components/ui/AvatarStack";
+import FollowMeSocial from "@/components/ui/FollowMeSocial";
 
 
 
@@ -97,29 +99,8 @@ const Sidebar = () => {
         </nav>
       </header>
 
-      {/* === FOOTER === */}
-      <footer className="mt-10 text-center">
-        <div className="relative pb-1 mb-4">
-          <h2 className="text-xs font-medium text-gray-500 uppercase tracking-wider">Follow Me</h2>
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-[1px] bg-gradient-to-r from-gray-200 via-red-400 to-gray-200 rounded-full"></div>
-        </div>
 
-        <div className="flex justify-center gap-3">
-          <Link href="https://github.com/pradipchaudhary" target="_blank" className="text-gray-500 hover:text-gray-900">
-            <Github className="w-5 h-5" />
-          </Link>
-          <Link href="https://linkedin.com/in/pradipchaudhary" target="_blank" className="text-gray-500 hover:text-gray-900">
-            <Linkedin className="w-5 h-5" />
-          </Link>
-          <Link href="https://www.youtube.com/@pradipchaudhary_codes" target="_blank" className="text-gray-500 hover:text-gray-900">
-            <Youtube className="w-5 h-5" />
-          </Link>
-          <Link href="https://www.instagram.com/itspradipchaudhary/" target="_blank" className="text-gray-500 hover:text-gray-900">
-            <Instagram className="w-5 h-5" />
-
-          </Link>
-        </div>
-      </footer>
+      <FollowMeSocial />
 
     </aside>
   );
