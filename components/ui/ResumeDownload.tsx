@@ -6,7 +6,7 @@ const ResumeDownload = () => {
       <p className="py-8 text-gray-800 ">
         Review my{" "}
         <a
-          href="/resume/Pradip-Chaudhary-Resume.pdf"
+          href="/resume/pradip_chaudhary_resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300 p-1"
