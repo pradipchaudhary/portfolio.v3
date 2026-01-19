@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Check, Github, Linkedin, Instagram, Youtube } from "lucide-react";
-import AvatarStack from "@/components/ui/AvatarStack";
 import FollowMeSocial from "@/components/ui/FollowMeSocial";
 
 
