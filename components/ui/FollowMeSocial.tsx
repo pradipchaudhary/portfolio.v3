@@ -5,8 +5,7 @@ import SocialIconStack from "./AvatarStack";
 
 export default function FollowMeSocial() {
   return (
-    <section className="relative flex flex-col items-center gap-2 rounded-xl
-      bg-black/[0.03] px-6 py-6 dark:bg-white/[0.04]">
+    <section className="relative flex flex-col items-center gap-2 rounded-xl px-6 py-6">
 
       {/* Follow Me Text */}
       <p
