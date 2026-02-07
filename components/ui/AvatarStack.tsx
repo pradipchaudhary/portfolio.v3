@@ -32,12 +32,12 @@ const socials: Social[] = [
   },
   {
     name: "Twitter",
-    href: "https://twitter.com",
+    href: "https://x.com/itspradipchy",
     Icon: Twitter,
   },
   {
     name: "YouTube",
-    href: "https://youtube.com",
+    href: "https://www.youtube.com/@iampradipchaudhary",
     Icon: Youtube,
   },
 ];
