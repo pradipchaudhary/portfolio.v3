@@ -16,7 +16,7 @@ const projects = [
     description:
       "DocsNepal: a document generator for Nepali legal and official documents (PDF/docx) — templates and API utilities.",
     tags: ["TypeScript", "PDF", "Docx"],
-    link: "https://github.com/pradipchaudhary/docsnepal",
+    link: "https://docsnepal.vercel.app/",
   },
   {
     title: "portfolio.v3",
