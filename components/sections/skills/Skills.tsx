@@ -135,30 +135,35 @@ const Skills = () => {
       <div className="flex flex-wrap gap-2">
         {skills.map((skill, index) => (
           <div key={index} className="relative group">
-            {/* Skill Tag without border */}
+            {/* Skill Tag */}
             <span className="inline-flex items-center gap-1 text-gray-600 hover:text-gray-900 cursor-pointer transition-all duration-150 ease-in-out italic px-2 py-1 text-sm">
               <Hash className="w-3 h-3" />
               {skill.name}
             </span>
 
-            {/* Tooltip: icon + name + topics with dotted border */}
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-200 pointer-events-none z-50">
-              <div className="bg-white text-gray-900 text-xs rounded-lg p-2 shadow-md w-48 hover:shadow-lg transition-shadow border border-gray-200">
-                <div className="flex items-center gap-1 mb-1">
+            {/* Tooltip Box */}
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 pointer-events-none z-50">
+              <div className="bg-gradient-to-r from-white/90 to-gray-100/90 border border-gray-300 rounded-xl p-3 w-60 shadow-lg hover:shadow-2xl transition-shadow">
+
+                {/* Skill Header */}
+                <div className={`flex items-center gap-2 mb-2 text-gray-400`}>
                   {skill.icon}
-                  <span className="font-semibold text-sm">{skill.name}</span>
+                  <span className="font-bold text-sm text-gray-700">{skill.name}</span>
                 </div>
-                <div className="flex flex-wrap gap-1">
+
+                {/* Skill Topics */}
+                <div className="flex flex-wrap gap-2">
                   {skill.topics.map((topic, i) => (
                     <span
                       key={i}
-                      className="inline-flex items-center gap-0.5 px-1 py-0.5 rounded-full border border-dotted border-gray-500 text-[10px] text-gray-800 font-semibold"
+                      className="inline-flex items-center gap-0.5 text-[10px] text-gray-800 font-semibold hover:text-gray-900 transition-colors duration-150"
                     >
                       <Hash className="w-2 h-2" />
                       {topic.replace(/\s/g, "")}
                     </span>
                   ))}
                 </div>
+
               </div>
             </div>
           </div>
