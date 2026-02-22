@@ -110,7 +110,7 @@ const Projects = () => {
       {/* See More Button */}
       <div className="flex justify-center mt-6">
         <Link
-          href="/#"
+          href="/projects"
           className="flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md font-medium text-gray-900 transition-colors duration-200 hover:text-gray-700"
         >
           See More
