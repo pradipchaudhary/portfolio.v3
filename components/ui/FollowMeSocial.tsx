@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import SocialIconStack from "./AvatarStack";
 import SocialIcons from "./SocialIcons";
 
 export default function FollowMeSocial() {
@@ -27,7 +26,6 @@ export default function FollowMeSocial() {
       />
 
       {/* Social Icons */}
-      {/* <SocialIconStack /> */}
       <SocialIcons />
     </section>
   );
