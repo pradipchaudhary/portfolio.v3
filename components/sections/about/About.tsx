@@ -4,7 +4,6 @@ import React from "react";
 import ResumeDownload from "@/components/ui/ResumeDownload";
 import Nameste from "@/components/ui/Namaste";
 import Signature from "@/components/ui/Signature";
-import SocialIcons from "@/components/ui/SocialIcons";
 import SkillsStack from "@/components/ui/SkillsStack";
 
 
