@@ -20,6 +20,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
+    manifest: "/site.webmanifest",
     title:
         "Pradip Chaudhary | Full Stack Developer from Nepal | React, Next.js, Node.js, TypeScript & GraphQL Expert",
     description:
