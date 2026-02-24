@@ -39,8 +39,8 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="sm:w-full md:w-1/2 lg:w-1/2 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:min-h-screen lg:flex-col lg:justify-between lg:py-20 lg:pb-8 px-6 bg-red-50">
-
+    <aside className="sm:w-full md:w-1/2 lg:w-1/2 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:min-h-screen lg:flex-col lg:justify-between lg:py-20 lg:pb-8 px-6">
+      {/* // lg:pb-8 for some breathing room at the bottom */}
       {/* === TOP SECTION === */}
       <header className="flex flex-col items-center text-center">
         <div className="relative w-28 h-28">
