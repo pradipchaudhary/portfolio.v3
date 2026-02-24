@@ -9,7 +9,7 @@ export default function FollowMeSocial() {
 
       {/* Follow Me Text */}
       <p
-        className="text-sm font-medium tracking-wide text-gray-500 rotate-[-10deg]"
+        className="text-sm font-medium tracking-wide text-gray-500 rotate-[-20deg] ml-20 mb-2 opacity-50"
         style={{ fontFamily: "'Patrick Hand', cursive" }}
       >
         Follow Me
@@ -21,7 +21,7 @@ export default function FollowMeSocial() {
         alt="Follow arrow"
         width={100}
         height={100}
-        className="opacity-30 brightness-110 dark:opacity-20 ml-10"
+        className="opacity-40 brightness-110 dark:opacity-40 ml-20"
         priority
       />
 
