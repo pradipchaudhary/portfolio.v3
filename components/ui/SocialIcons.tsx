@@ -22,25 +22,25 @@ type SocialLink = {
 const socialLinks: SocialLink[] = [
   {
     name: "Facebook",
-    href: "https://facebook.com/pradipchaudhary",
+    href: "https://www.facebook.com/itspradipchaudhary/",
     icon: <FaFacebookF size={15} />,
     hoverBg: "hover:bg-blue-500",
   },
   {
     name: "Instagram",
-    href: "https://instagram.com/pradipchaudhary",
+    href: "https://www.instagram.com/itspradipchaudhary/",
     icon: <FaInstagram size={15} />,
     hoverBg: "hover:bg-pink-500",
   },
   {
     name: "Twitter",
-    href: "https://twitter.com/pradipchaudhary",
+    href: "https://x.com/itspradipchy",
     icon: <FaXTwitter size={15} />,
     hoverBg: "hover:bg-sky-500",
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/pradipchaudhary",
+    href: "https://www.linkedin.com/in/pradipchaudhary/",
     icon: <FaLinkedinIn size={15} />,
     hoverBg: "hover:bg-blue-600",
   },
@@ -52,7 +52,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: "YouTube",
-    href: "https://youtube.com/pradipchaudhary",
+    href: "https://www.youtube.com/@iampradipchaudhary",
     icon: <FaYoutube size={15} />,
     hoverBg: "hover:bg-red-500",
   },
@@ -73,7 +73,7 @@ export default function SocialIcons() {
 
   return (
     <div className="flex items-center gap-5">
-      <div className="flex -space-x-6 relative">
+      <div className="flex -space-x-6 relative ">
         {visibleLinks.map((item, index) => {
           const isHovered = hoveredIndex === index;
 
