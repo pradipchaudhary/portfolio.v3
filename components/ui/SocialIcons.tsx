@@ -58,12 +58,7 @@ const socialLinks: SocialLink[] = [
     icon: <FaGithub size={15} />,
     hoverBg: "hover:bg-gray-800",
   },
-  // {
-  //   name: "YouTube",
-  //   href: "https://www.youtube.com/@iampradipchaudhary",
-  //   icon: <FaYoutube size={15} />,
-  //   hoverBg: "hover:bg-red-500",
-  // },
+
   // {
   //   name: "Website",
   //   href: "https://pradipchaudhary.com",
@@ -91,7 +86,7 @@ export default function SocialIcons() {
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}
               animate={{
-                y: isHovered ? -12 : 0,
+                y: isHovered ? -18 : 0,      // ⬆ more lift
                 scale: isHovered ? 1.12 : 1, // subtle premium zoom
                 zIndex: isHovered ? 100 : index,
               }}
