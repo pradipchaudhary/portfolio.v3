@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import {
   FaFacebookF,
@@ -39,10 +40,17 @@ const socialLinks: SocialLink[] = [
     hoverBg: "hover:bg-sky-500",
   },
   {
+    name: "YouTube",
+    href: "https://www.youtube.com/@iampradipchaudhary",
+    icon: <FaYoutube size={15} />,
+    hoverBg: "hover:bg-red-500",
+  },
+
+  {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/pradipchaudhary/",
     icon: <FaLinkedinIn size={15} />,
-    hoverBg: "hover:bg-blue-600",
+    hoverBg: "hover:bg-[#0077B5]",
   },
   {
     name: "GitHub",
@@ -50,57 +58,68 @@ const socialLinks: SocialLink[] = [
     icon: <FaGithub size={15} />,
     hoverBg: "hover:bg-gray-800",
   },
-  {
-    name: "YouTube",
-    href: "https://www.youtube.com/@iampradipchaudhary",
-    icon: <FaYoutube size={15} />,
-    hoverBg: "hover:bg-red-500",
-  },
-  {
-    name: "Website",
-    href: "https://pradipchaudhary.com",
-    icon: <FaGlobe size={15} />,
-    hoverBg: "hover:bg-green-500",
-  },
+  // {
+  //   name: "YouTube",
+  //   href: "https://www.youtube.com/@iampradipchaudhary",
+  //   icon: <FaYoutube size={15} />,
+  //   hoverBg: "hover:bg-red-500",
+  // },
+  // {
+  //   name: "Website",
+  //   href: "https://pradipchaudhary.com",
+  //   icon: <FaGlobe size={15} />,
+  //   hoverBg: "hover:bg-green-500",
+  // },
 ];
 
 const MAX_VISIBLE = 6;
 
 export default function SocialIcons() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   const visibleLinks = socialLinks.slice(0, MAX_VISIBLE);
 
   return (
     <div className="flex items-center gap-5">
-      <div className="flex -space-x-6 relative ">
+      <div className="flex -space-x-6 relative">
         {visibleLinks.map((item, index) => {
           const isHovered = hoveredIndex === index;
 
           return (
-            <Link
+            <motion.div
               key={item.name}
-              href={item.href}
-              target="_blank"
-              aria-label={item.name}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              style={{
-                zIndex: isHovered ? 100 : index, // 🔥 hovered always on top
+              layout
+              onHoverStart={() => setHoveredIndex(index)}
+              onHoverEnd={() => setHoveredIndex(null)}
+              animate={{
+                y: isHovered ? -12 : 0,
+                scale: isHovered ? 1.12 : 1, // subtle premium zoom
+                zIndex: isHovered ? 100 : index,
               }}
-              className={`
-                relative inline-flex h-11 w-11 items-center justify-center
-                rounded-full bg-white
-                border border-neutral-200
-                shadow-md
-                text-neutral-700
-                transition-all duration-300
-                hover:text-white hover:scale-125
-                ${item.hoverBg}
-              `}
+              transition={{
+                type: "spring",
+                stiffness: 350,
+                damping: 22,
+              }}
+              className="relative"
             >
-              {item.icon}
-            </Link>
+              <Link
+                href={item.href}
+                target="_blank"
+                aria-label={item.name}
+                className={`
+                  inline-flex h-11 w-11 items-center justify-center
+                  rounded-full bg-white
+                  border border-neutral-200
+                  shadow-md
+                  text-neutral-700
+                  transition-colors duration-300
+                  hover:text-white
+                  ${item.hoverBg}
+                `}
+              >
+                {item.icon}
+              </Link>
+            </motion.div>
           );
         })}
       </div>
