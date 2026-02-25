@@ -146,3 +146,105 @@ textarea {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     ring-color: var(--accent);
 }
+
+
+
+/* sidebar follow me animation css */
+/* TEXT ENTER */
+@keyframes followTextIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-12px) rotate(-20deg);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: translateY(0) rotate(-20deg);
+    }
+}
+
+/* SVG DRAW */
+@keyframes drawPath {
+    from {
+        stroke-dashoffset: 1;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* SOFT INFINITE PULSE */
+@keyframes sectionPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
+}
+
+.animate-follow-text {
+    animation: followTextIn 0.8s ease forwards;
+}
+
+.animate-draw-path {
+    animation: drawPath 1.4s ease forwards;
+}
+
+.animate-section-pulse {
+    animation: sectionPulse 3s ease-in-out infinite;
+}
+
+
+/* Arrow draw animation */
+@keyframes arrowDraw {
+    0% {
+        stroke-dashoffset: 1;
+    }
+
+    60% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Floating motion */
+@keyframes arrowFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(45deg);
+    }
+
+    50% {
+        transform: translateY(-6px) rotate(45deg);
+    }
+}
+
+/* Glow pulse */
+@keyframes arrowGlow {
+
+    0%,
+    100% {
+        stroke: #7f7f7f;
+    }
+
+    50% {
+        stroke: #a3a3a3;
+    }
+}
+
+.animate-arrow-path {
+    animation: arrowDraw 2s ease forwards, arrowGlow 2s ease-in-out;
+}
+
+.animate-arrow-container {
+    animation: arrowFloat 3s ease-in-out infinite;
+}

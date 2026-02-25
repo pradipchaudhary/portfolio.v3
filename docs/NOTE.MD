@@ -89,5 +89,8 @@ A curated list of **beautiful, modern, clean, and high-quality** developer/desig
 
 
 
+
+
+
 'Here are some of the projects I've worked on. Each project showcases my skills and experience in software development, problem-solving, and innovation.'
 
