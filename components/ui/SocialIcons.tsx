@@ -10,7 +10,6 @@ import {
   FaXTwitter,
   FaGithub,
   FaYoutube,
-  FaGlobe,
 } from "react-icons/fa6";
 
 type SocialLink = {
@@ -57,14 +56,7 @@ const socialLinks: SocialLink[] = [
     href: "https://github.com/pradipchaudhary",
     icon: <FaGithub size={15} />,
     hoverBg: "hover:bg-gray-800",
-  },
-
-  // {
-  //   name: "Website",
-  //   href: "https://pradipchaudhary.com",
-  //   icon: <FaGlobe size={15} />,
-  //   hoverBg: "hover:bg-green-500",
-  // },
+  }
 ];
 
 const MAX_VISIBLE = 6;
