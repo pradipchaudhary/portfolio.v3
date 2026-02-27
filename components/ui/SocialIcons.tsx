@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
-  FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaXTwitter,
@@ -20,12 +19,7 @@ type SocialLink = {
 };
 
 const socialLinks: SocialLink[] = [
-  {
-    name: "Facebook",
-    href: "https://www.facebook.com/itspradipchaudhary/",
-    icon: <FaFacebookF size={18} />,
-    hoverBg: "hover:bg-blue-500",
-  },
+
   {
     name: "Instagram",
     href: "https://www.instagram.com/itspradipchaudhary/",
