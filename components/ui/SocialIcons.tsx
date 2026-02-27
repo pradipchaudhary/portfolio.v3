@@ -23,38 +23,38 @@ const socialLinks: SocialLink[] = [
   {
     name: "Facebook",
     href: "https://www.facebook.com/itspradipchaudhary/",
-    icon: <FaFacebookF size={15} />,
+    icon: <FaFacebookF size={18} />,
     hoverBg: "hover:bg-blue-500",
   },
   {
     name: "Instagram",
     href: "https://www.instagram.com/itspradipchaudhary/",
-    icon: <FaInstagram size={15} />,
+    icon: <FaInstagram size={18} />,
     hoverBg: "hover:bg-pink-500",
   },
   {
     name: "Twitter",
     href: "https://x.com/itspradipchy",
-    icon: <FaXTwitter size={15} />,
+    icon: <FaXTwitter size={18} />,
     hoverBg: "hover:bg-sky-500",
   },
   {
     name: "YouTube",
     href: "https://www.youtube.com/@iampradipchaudhary",
-    icon: <FaYoutube size={15} />,
+    icon: <FaYoutube size={18} />,
     hoverBg: "hover:bg-red-500",
   },
 
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/pradipchaudhary/",
-    icon: <FaLinkedinIn size={15} />,
+    icon: <FaLinkedinIn size={18} />,
     hoverBg: "hover:bg-[#0077B5]",
   },
   {
     name: "GitHub",
     href: "https://github.com/pradipchaudhary",
-    icon: <FaGithub size={15} />,
+    icon: <FaGithub size={18} />,
     hoverBg: "hover:bg-gray-800",
   }
 ];
