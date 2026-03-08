@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import Navbar from "./Navbar";
 import FollowMeSocial from "@/components/ui/FollowMeSocial";
-import { motion } from "framer-motion";
+
 import ProfileImage from "@/components/ui/ProfileImage";
 import Username from "@/components/ui/Username";
 
