@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { Check } from "lucide-react";
 import Navbar from "./Navbar";
 import FollowMeSocial from "@/components/ui/FollowMeSocial";
+
+import ProfileImage from "@/components/ui/ProfileImage";
+import Username from "@/components/ui/Username";
 
 const Sidebar = () => {
   return (
@@ -20,33 +20,10 @@ const Sidebar = () => {
       {/* ===== TOP SECTION ===== */}
       <header className="flex flex-col items-center text-center space-y-4">
         {/* Profile Image */}
-        <div className="relative w-28 h-28">
-          <Image
-            src="/logo.png"
-            alt="Pradip Chaudhary"
-            fill
-            priority
-            className="rounded-full border border-gray-300 shadow-sm object-cover"
-          />
-
-          {/* Verified Icon */}
-          <div className="absolute bottom-1 right-1 bg-white rounded-full p-1 border border-gray-200 shadow-md">
-            <Check className="w-4 h-4 text-green-500" />
-          </div>
-        </div>
+        <ProfileImage src="/logo.png" alt="Pradip Chaudhary" />
 
         {/* Name + Username */}
-        <Link
-          href="#"
-          className="hover:opacity-80 transition "
-        >
-          <h1 className="text-xl font-semibold text-gray-900 -mt-2">
-            Pradip Chaudhary
-          </h1>
-          <p className="text-sm text-gray-500 font-sans -mt-2">
-            @pradipchaudhary
-          </p>
-        </Link>
+        <Username username="pradipchaudhary" name="Pradip Chaudhary" />
 
         {/* Bio */}
         <p className="text-sm text-gray-500 max-w-[300px] leading-relaxed">

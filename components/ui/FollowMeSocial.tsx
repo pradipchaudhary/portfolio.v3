@@ -20,14 +20,14 @@ export default function FollowMeSocial() {
 
   return (
     <section className="relative flex flex-col items-center gap-2 rounded-xl px-6 py-6 sm:mt-16">
-      {/* Added sm:mt-16 → pushes down only on small devices */}
-
       {/* Follow Me Text */}
       <motion.p
         initial={{ opacity: 0, y: -20, rotate: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className={`absolute -top-14 left-1/2 -translate-x-1/2 text-base font-semibold tracking-wide text-gray-600 text-center ${caveat.className}`}
+        className={`absolute text-base font-semibold tracking-wide text-gray-600 text-center ${caveat.className}
+  top-0 left-[60%] -translate-x-1/2
+  md:-top-14 md:left-1/2`}
       >
         Follow Me
       </motion.p>
@@ -37,7 +37,8 @@ export default function FollowMeSocial() {
         initial={{ opacity: 0, scale: 0.8, rotate: 25 }}
         animate={{ opacity: 1, scale: 1, rotate: 45 }}
         transition={{ delay: 1, duration: 0.6 }}
-        className="absolute -top-10 left-1/2 -translate-x-1/2"
+        className="absolute top-6 left-[60%] -translate-x-1/2
+  md:-top-10 md:left-1/2"
       >
         <svg
           width="70"
@@ -79,9 +80,9 @@ export default function FollowMeSocial() {
 
       {/* Social Icons */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 0.6 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.4, duration: 0.6, ease: "easeOut" }}
         className="mt-10"
       >
         <SocialIcons />

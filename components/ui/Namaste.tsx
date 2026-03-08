@@ -20,8 +20,8 @@ const Nameste = () => {
       </div>
 
       {/* Decorative Pin Effect */}
-      <div className="pin-dot -top-1 -right-1"></div>
-      <div className="pin-dot -bottom-1 -left-1"></div>
+      <div className="pin-dot top-1 right-1"></div>
+      <div className="pin-dot bottom-1 left-1"></div>
     </div>
   )
 }
