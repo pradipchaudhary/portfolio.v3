@@ -1,8 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { Check } from "lucide-react";
 import Navbar from "./Navbar";
 import FollowMeSocial from "@/components/ui/FollowMeSocial";
 

@@ -5,13 +5,18 @@ export default function Username({ name, username }: { name: string; username: s
   return (
     <motion.div
       initial={{ rotate: -1 }}
-      whileHover={{ rotate: 0 }}
-      transition={{ type: "spring", stiffness: 200, damping: 20 }}
+      animate={{ rotate: [-1, 1, -1] }}   // shake effect
+      transition={{
+        duration: 0.4,
+        repeat: 3, // runs 4 times total
+        ease: "easeInOut",
+      }}
+      whileHover={{
+        rotate: 0,
+        transition: { type: "spring", stiffness: 200, damping: 20 }
+      }}
     >
-      <Link
-        href="#"
-        className="hover:opacity-80 transition "
-      >
+      <Link href="#" className="hover:opacity-80 transition">
         <h1 className="text-xl font-semibold text-gray-900 -mt-4">
           {name}
         </h1>
