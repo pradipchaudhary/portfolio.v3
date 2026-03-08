@@ -119,11 +119,15 @@ textarea {
     color: var(--accent-strong);
 }
 
+
 .pin-dot {
     @apply absolute w-2.5 h-2.5 rounded-full ring-1;
-    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    ring-color: var(--accent);
+    background-color: #dbdbdb;
+    /* dark gray/blackish */
+    --tw-ring-color: #c7c7c7;
+    /* slightly darker ring for subtle contrast */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    /* subtle shadow for depth */
 }
 
 /* === Sidebar Follow Me Animations === */

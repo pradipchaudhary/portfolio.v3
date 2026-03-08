@@ -130,8 +130,30 @@ const About = () => {
           is to make the web simpler, faster, and more enjoyable for everyone.
         </p>
 
-        <p>
+        <p className="text-gray-700">
           Beyond coding, I explore{" "}
+          <a
+            href="https://openai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
+          >
+            AI
+            <svg
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
+              viewBox="0 0 120 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                fill="none"
+              />
+            </svg>
+          </a>
+          ,{" "}
           <a
             href="https://moz.com/beginners-guide-to-seo"
             target="_blank"
