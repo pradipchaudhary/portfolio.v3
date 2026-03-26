@@ -23,14 +23,14 @@ const Nameste = () => {
       </div>
 
       {/* Top Pin Dot */}
-      <div className="absolute -top-1 right-1 sm:right-1">
+      <div className="absolute top-[5px] right-1 sm:right-1">
         <div className="w-2 h-2 bg-red-500 rounded-full shadow-md relative">
           <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/80 to-transparent"></div>
         </div>
       </div>
 
       {/* Bottom Pin Dot */}
-      <div className="absolute -bottom-1 left-1 sm:left-1">
+      <div className="absolute bottom-[5px] left-1 sm:left-1">
         <div className="w-2 h-2 bg-red-500 rounded-full shadow-md relative">
           <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/80 to-transparent"></div>
         </div>
