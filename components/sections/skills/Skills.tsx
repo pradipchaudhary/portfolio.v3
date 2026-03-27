@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Hash, Code, Atom, Server, Database, Zap, GitBranch } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Skills with trending and in-demand topics
 const skills = [
@@ -127,46 +128,93 @@ const skills = [
   },
 ];
 
+
+
 const Skills = () => {
+  const [active, setActive] = useState<number | null>(null);
+
   return (
-    <section id="skills" className="max-w-3xl mx-auto py-12">
-      <h2 className="text-3xl font-bold text-gray-900 mb-6 tracking-tight">Skills</h2>
+    <section id="skills" className="max-w-3xl mx-auto py-16">
+      <h2 className="text-2xl font-medium text-gray-900 mb-10 tracking-tight">
+        Skills
+      </h2>
 
-      <div className="flex flex-wrap gap-2">
-        {skills.map((skill, index) => (
-          <div key={index} className="relative group">
+      <div className="flex flex-wrap gap-4">
+        {skills.map((skill, index: number) => (
+          <motion.div
+            key={index}
+            className="relative"
+            onMouseEnter={() => setActive(index)}
+            onMouseLeave={() => setActive(null)}
+          >
             {/* Skill Tag */}
-            <span className="inline-flex items-center gap-1 text-gray-600 hover:text-gray-900 cursor-pointer transition-all duration-150 ease-in-out italic px-2 py-1 text-sm">
-              <Hash className="w-3 h-3" />
+            <motion.span
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.96 }}
+              className="group inline-flex items-center gap-1.5 text-sm cursor-pointer
+              text-gray-500 hover:text-gray-900 transition-colors duration-200"
+            >
+              <Hash className="w-3 h-3 opacity-50 group-hover:opacity-100 transition" />
               {skill.name}
-            </span>
+            </motion.span>
 
-            {/* Tooltip Box */}
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 pointer-events-none z-50">
-              <div className="bg-gradient-to-r from-white/90 to-gray-100/90 border border-gray-300 rounded-xl p-3 w-60 shadow-lg hover:shadow-2xl transition-shadow">
+            {/* Tooltip */}
+            <AnimatePresence>
+              {active === index && (
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 22 }}
+                  className="absolute left-1/2 -translate-x-1/2 bottom-full mb-6 z-50 pointer-events-none"
+                >
+                  <motion.div
+                    initial={{ scale: 0.96 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0.96 }}
+                    transition={{ duration: 0.2 }}
+                    className="min-w-[220px] rounded-lg border border-gray-200/80 px-4 py-3 bg-white/70 backdrop-blur-md"
+                  >
 
-                {/* Skill Header */}
-                <div className={`flex items-center gap-2 mb-2 text-gray-400`}>
-                  {skill.icon}
-                  <span className="font-bold text-sm text-gray-700">{skill.name}</span>
-                </div>
+                    {/* Header */}
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="opacity-80">{skill.icon}</div>
+                      <span className="text-sm font-medium text-gray-900">
+                        {skill.name}
+                      </span>
+                    </div>
 
-                {/* Skill Topics */}
-                <div className="flex flex-wrap gap-2">
-                  {skill.topics.map((topic, i) => (
-                    <span
-                      key={i}
-                      className="inline-flex items-center gap-0.5 text-[10px] text-gray-800 font-semibold hover:text-gray-900 transition-colors duration-150"
+                    {/* Topics List */}
+                    <motion.ul
+                      initial="hidden"
+                      animate="visible"
+                      variants={{
+                        visible: {
+                          transition: { staggerChildren: 0.04 },
+                        },
+                      }}
+                      className="space-y-1"
                     >
-                      <Hash className="w-2 h-2" />
-                      {topic.replace(/\s/g, "")}
-                    </span>
-                  ))}
-                </div>
+                      {skill.topics.map((topic, i: number) => (
+                        <motion.li
+                          key={i}
+                          variants={{
+                            hidden: { opacity: 0, x: -6 },
+                            visible: { opacity: 1, x: 0 },
+                          }}
+                          className="text-[12px] text-gray-600 tracking-tight"
+                        >
+                          {topic}
+                        </motion.li>
+                      ))}
+                    </motion.ul>
 
-              </div>
-            </div>
-          </div>
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+          </motion.div>
         ))}
       </div>
     </section>
