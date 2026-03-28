@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 import FollowMeSocial from "@/components/ui/FollowMeSocial";
 
@@ -26,10 +27,14 @@ const Sidebar = () => {
         <Username username="pradipchaudhary" name="Pradip Chaudhary" />
 
         {/* Bio */}
-        <p className="text-sm text-gray-500 max-w-[300px] leading-relaxed">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
+          className="text-sm text-gray-500 max-w-[300px] leading-relaxed">
           Full Stack Developer <br />
           Building modern web experiences.
-        </p>
+        </motion.p>
 
         {/* Navbar */}
         <Navbar />

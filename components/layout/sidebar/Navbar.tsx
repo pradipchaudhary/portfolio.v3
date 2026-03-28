@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+
 
 const ACTIVE_COLOR = "#4285f4";
 
@@ -50,7 +52,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="mt-6 px-8 w-full">
+    <motion.nav
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.2, duration: 0.6, ease: "easeOut" }}
+      className="mt-6 px-8 w-full">
       {/* Menu Title */}
       <div className="relative pb-1 mb-4">
         <h2 className="text-xs font-medium text-gray-500 uppercase tracking-wider text-center font-mono">
@@ -96,7 +102,7 @@ const Navbar = () => {
           );
         })}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
