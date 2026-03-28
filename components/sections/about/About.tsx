@@ -1,28 +1,53 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import ResumeDownload from "@/components/ui/ResumeDownload";
 import Nameste from "@/components/ui/Namaste";
 import Signature from "@/components/ui/Signature";
 
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25, // more delay between items
+      delayChildren: 0.2,    // initial delay
+    },
+  },
+};
 
+const item = {
+  hidden: { opacity: 0, y: 25 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,        // slower animation
+      ease: "easeOut",      // smooth easing
+    },
+  },
+};
 
 const About = () => {
   return (
-    <section
+    <motion.section
       id="about"
       aria-label="About Pradip Chaudhary"
-      className="max-w-3xl mx-auto mb-10 text-gray-800 pt-20 "
+      className="max-w-3xl mx-auto mb-10 text-gray-800 pt-20"
+      variants={container}
+      initial="hidden"
+      animate="visible"
     >
       {/* === INTRO HEADER === */}
-      <div className="flex flex-col items-start mb-7">
-        {/* Namaste Image & Text */}
+      <motion.div variants={item} className="flex flex-col items-start mb-7">
         <Nameste />
 
-        {/* Developer Intro */}
-        <p className="text-base md:text-base leading-relaxed text-gray-700 mt-2">
+        <motion.p
+          variants={item}
+          className="text-base md:text-base leading-relaxed text-gray-700 mt-2"
+        >
           Hi 👋, I’m{" "}
-          {/* <span className="font-semibold text-gray-900">Pradip Chaudhary</span>, a{" "} */}
           <a
             href="https://react.dev/"
             target="_blank"
@@ -30,7 +55,6 @@ const About = () => {
             className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
           >
             React Developer
-            {/* Elegant thin underline */}
             <svg
               className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
               viewBox="0 0 120 10"
@@ -46,9 +70,12 @@ const About = () => {
             </svg>
           </a>{" "}
           passionate about creating performant, responsive, and user-friendly web applications.
-        </p>
+        </motion.p>
 
-        <p className="text-base md:text-base leading-relaxed text-gray-600 mt-4 max-w-2xl">
+        <motion.p
+          variants={item}
+          className="text-base md:text-base leading-relaxed text-gray-600 mt-4 max-w-2xl"
+        >
           I enjoy exploring modern technologies such as{" "}
           <a
             href="https://nextjs.org/"
@@ -116,20 +143,18 @@ const About = () => {
             </svg>
           </a>{" "}
           to build clean, scalable, and accessible digital products.
-        </p>
-
-      </div>
+        </motion.p>
+      </motion.div>
 
       {/* === DESCRIPTION === */}
-      <div className="space-y-6 text-base leading-relaxed text-gray-700">
-        <p>
+      <motion.div variants={item} className="space-y-6 text-base leading-relaxed text-gray-700">
+        <motion.p variants={item}>
           I’m passionate about transforming ideas into elegant web solutions — combining{" "}
           <span className="font-medium text-gray-900">clean design</span> with{" "}
-          <span className="font-medium text-gray-900">efficient, functional code</span>. My goal
-          is to make the web simpler, faster, and more enjoyable for everyone.
-        </p>
+          <span className="font-medium text-gray-900">efficient, functional code</span>.
+        </motion.p>
 
-        <p className="text-gray-700">
+        <motion.p variants={item} className="text-gray-700">
           Beyond coding, I explore{" "}
           <a
             href="https://openai.com/"
@@ -138,74 +163,20 @@ const About = () => {
             className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
           >
             AI
-            <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
-              viewBox="0 0 120 10"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                fill="none"
-              />
-            </svg>
           </a>
-          ,{" "}
-          <a
-            href="https://moz.com/beginners-guide-to-seo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
-          >
-            SEO
-            <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
-              viewBox="0 0 120 10"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                fill="none"
-              />
-            </svg>
-          </a>
-          ,{" "}
-          <a
-            href="https://scrapy.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
-          >
-            Web Scraping
-            <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
-              viewBox="0 0 120 10"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                fill="none"
-              />
-            </svg>
-          </a>
-          , and data-driven projects that deliver real-world value and insights.
-        </p>
-      </div>
+          , SEO, Web Scraping, and data-driven projects that deliver real-world value.
+        </motion.p>
+      </motion.div>
 
+      {/* === ACTIONS === */}
+      <motion.div variants={item}>
+        <ResumeDownload />
+      </motion.div>
 
-
-
-      <ResumeDownload />
-      <Signature />
-    </section>
+      <motion.div variants={item}>
+        <Signature />
+      </motion.div>
+    </motion.section>
   );
 };
 
