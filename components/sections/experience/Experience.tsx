@@ -1,6 +1,21 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
+
+// Main container animation only
+const container = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: 1.4, // slight delay after About
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
 
 const experiences = [
   {
@@ -31,9 +46,13 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section
+    <motion.section
       id="experience"
       className="max-w-3xl mx-auto py-6"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
     >
       {/* Main Section Title */}
       <h2
@@ -66,7 +85,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
