@@ -110,7 +110,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <head>
                 {/* JSON-LD Structured Data for SEO */}
                 <script
@@ -118,7 +118,7 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />
             </head>
-            <body className={inter.className}>
+            <body className={inter.className} suppressHydrationWarning>
                 <Suspense fallback={<Loading />}>
                     <HomeLayout>
                         {children}

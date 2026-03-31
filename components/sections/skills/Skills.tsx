@@ -26,54 +26,68 @@ import { FaAmazon, FaCss3, FaWordpress } from "react-icons/fa";
 import { DiPhp } from "react-icons/di";
 import { FaSass } from "react-icons/fa6";
 
-// Skills array organized by category with brand colors
+// Main container animation only
+const container = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: 0.2, // slight delay after About
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+// Skills array with standardized icon sizes (w-7 h-7)
 const skills = [
   // Frontend
   {
     name: "JavaScript",
-    icon: <SiJavascript className="w-5 h-5 text-yellow-500" />,
+    icon: <SiJavascript className="w-7 h-7 text-yellow-500" />,
     description: "Core language for building dynamic web apps.",
     topics: ["Promises", "Async/Await", "Functional Programming", "ES6+", "DOM Manipulation", "Event Loop", "Modules", "Fetch API", "Error Handling"],
   },
   {
     name: "TypeScript",
-    icon: <SiTypescript className="w-5 h-5 text-blue-600" />,
+    icon: <SiTypescript className="w-7 h-7 text-blue-600" />,
     description: "Typed JavaScript for scalability and safety.",
     topics: ["Types", "Interfaces", "Generics", "Utility Types", "Type Guards", "TS Config", "Advanced Typing"],
   },
   {
     name: "React",
-    icon: <SiReact className="w-5 h-5 text-cyan-500" />,
+    icon: <SiReact className="w-7 h-7 text-cyan-500" />,
     description: "Component-based UI library for building web apps.",
     topics: ["Hooks", "Context", "Routing", "State Management", "React Query", "Suspense", "React 18 Features", "Performance Optimization"],
   },
   {
     name: "Next.js",
-    icon: <SiNextdotjs className="w-5 h-5 text-black" />,
+    icon: <SiNextdotjs className="w-7 h-7 text-black" />,
     description: "Fullstack React framework for production apps.",
     topics: ["SSR", "SSG", "ISR", "API Routes", "Middleware", "NextAuth", "Image Optimization", "SEO Best Practices"],
   },
   {
     name: "Tailwind CSS",
-    icon: <SiTailwindcss className="w-5 h-5 text-sky-400" />,
+    icon: <SiTailwindcss className="w-7 h-7 text-sky-400" />,
     description: "Utility-first CSS framework for rapid UI development.",
     topics: ["Utilities", "Responsive Design", "Flex/Grid", "Animations", "Dark Mode", "Custom Themes", "Transitions", "Pro Plugins"],
   },
   {
     name: "CSS3",
-    icon: <FaCss3 className="w-5 h-5 text-blue-500" />,
+    icon: <FaCss3 className="w-7 h-7 text-blue-500" />,
     description: "Styling web pages and layouts.",
     topics: ["Flexbox", "Grid", "Animations", "Transitions", "Responsive Design", "Variables", "Pseudo-classes", "Media Queries"],
   },
   {
     name: "HTML5",
-    icon: <SiHtml5 className="w-5 h-5 text-orange-500" />,
+    icon: <SiHtml5 className="w-7 h-7 text-orange-500" />,
     description: "Markup language for structuring web content.",
     topics: ["Tags", "Forms", "Semantic HTML", "Accessibility", "SEO", "Media Elements", "Canvas", "Web Components"],
   },
   {
     name: "Sass",
-    icon: <FaSass className="w-5 h-5 text-pink-300" />,
+    icon: <FaSass className="w-7 h-7 text-pink-300" />,
     description: "CSS preprocessor for enhanced styling capabilities.",
     topics: ["Variables", "Mixins", "Nesting", "Partials", "Inheritance", "Functions", "Loops", "Responsive Design"],
   },
@@ -81,25 +95,25 @@ const skills = [
   // Backend
   {
     name: "Node.js",
-    icon: <SiNodedotjs className="w-5 h-5 text-green-600" />,
+    icon: <SiNodedotjs className="w-7 h-7 text-green-600" />,
     description: "Backend runtime for building scalable applications.",
     topics: ["Express", "REST APIs", "GraphQL APIs", "Event Loop", "Streams", "File System", "JWT Auth", "WebSockets", "Error Handling"],
   },
   {
     name: "Express.js",
-    icon: <SiExpress className="w-5 h-5 text-gray-800" />,
+    icon: <SiExpress className="w-7 h-7 text-gray-800" />,
     description: "Minimalist backend framework for Node.js.",
     topics: ["Middleware", "Routing", "Error Handling", "JWT Auth", "REST APIs", "CORS", "Validation", "Express Generator"],
   },
   {
     name: "PHP",
-    icon: <DiPhp className="w-5 h-5 text-purple-600" />,
+    icon: <DiPhp className="w-7 h-7 text-purple-600" />,
     description: "Server-side scripting language for web development.",
     topics: ["OOP", "Laravel", "Composer", "MVC", "Routing", "Blade Templates", "Eloquent ORM", "Authentication", "REST API"],
   },
   {
     name: "WordPress",
-    icon: <FaWordpress className="w-5 h-5 text-blue-700" />,
+    icon: <FaWordpress className="w-7 h-7 text-blue-700" />,
     description: "Content management system for building websites.",
     topics: ["Themes", "Plugins", "Custom Post Types", "Gutenberg", "REST API", "WooCommerce", "Security", "SEO"],
   },
@@ -107,19 +121,19 @@ const skills = [
   // Databases
   {
     name: "MongoDB",
-    icon: <SiMongodb className="w-5 h-5 text-green-700" />,
+    icon: <SiMongodb className="w-7 h-7 text-green-700" />,
     description: "NoSQL database for flexible and scalable data storage.",
     topics: ["Collections", "Queries", "Indexes", "Aggregation", "Transactions", "Mongoose", "Data Modeling", "Replication", "Sharding"],
   },
   {
     name: "MySQL",
-    icon: <SiMysql className="w-5 h-5 text-blue-600" />,
+    icon: <SiMysql className="w-7 h-7 text-blue-600" />,
     description: "Relational database for structured data.",
     topics: ["Tables", "Joins", "Stored Procedures", "Indexes", "Transactions", "Normalization", "Triggers", "Views", "Performance Tuning"],
   },
   {
     name: "PostgreSQL",
-    icon: <SiPostgresql className="w-5 h-5 text-indigo-600" />,
+    icon: <SiPostgresql className="w-7 h-7 text-indigo-600" />,
     description: "Advanced SQL database for large-scale applications.",
     topics: ["Schemas", "Indexes", "Transactions", "Views", "Stored Procedures", "Full-Text Search", "JSON Support", "PostGIS"],
   },
@@ -127,21 +141,21 @@ const skills = [
   // State Management
   {
     name: "Redux",
-    icon: <SiRedux className="w-5 h-5 text-purple-500" />,
+    icon: <SiRedux className="w-7 h-7 text-purple-500" />,
     description: "State management for React applications.",
     topics: ["Store", "Reducers", "Actions", "Redux Toolkit", "Middleware", "Async Thunks", "State Normalization", "React-Redux Hooks"],
   },
 
-  // DevOps / CI-CD / Containerization
+  // DevOps / CI-CD
   {
     name: "Docker",
-    icon: <SiDocker className="w-5 h-5 text-blue-500" />,
+    icon: <SiDocker className="w-7 h-7 text-blue-500" />,
     description: "Containerization for consistent development and deployment.",
     topics: ["Containers", "Images", "Volumes", "Docker Compose", "Networking", "Dockerfile", "Container Orchestration", "Deployment"],
   },
   {
     name: "CI/CD",
-    icon: <Workflow className="w-5 h-5 text-green-400" />,
+    icon: <Workflow className="w-7 h-7 text-green-400" />,
     description: "Continuous Integration and Continuous Deployment practices.",
     topics: ["Pipeline", "GitHub Actions", "GitLab CI", "Jenkins", "Deployment", "Testing Automation", "Build Scripts", "Monitoring"],
   },
@@ -149,13 +163,13 @@ const skills = [
   // Cloud
   {
     name: "AWS",
-    icon: <FaAmazon className="w-5 h-5 text-orange-400" />,
+    icon: <FaAmazon className="w-7 h-7 text-orange-400" />,
     description: "Cloud computing and infrastructure services.",
     topics: ["S3", "Lambda", "EC2", "CloudFront", "RDS", "DynamoDB", "API Gateway", "IAM", "Serverless"],
   },
   {
     name: "Firebase",
-    icon: <SiFirebase className="w-5 h-5 text-yellow-400" />,
+    icon: <SiFirebase className="w-7 h-7 text-yellow-400" />,
     description: "Backend-as-a-service for web and mobile apps.",
     topics: ["Auth", "Firestore", "Hosting", "Functions", "Realtime DB", "Cloud Messaging", "Storage", "Security Rules"],
   },
@@ -163,24 +177,23 @@ const skills = [
   // API / AI
   {
     name: "GraphQL",
-    icon: <SiGraphql className="w-5 h-5 text-pink-500" />,
+    icon: <SiGraphql className="w-7 h-7 text-pink-500" />,
     description: "Flexible API query language for fetching data.",
     topics: ["Queries", "Mutations", "Resolvers", "Apollo Client", "Subscriptions", "Schema Design", "Performance Optimization"],
   },
   {
     name: "Git",
-    icon: <SiGit className="w-5 h-5 text-orange-500" />,
+    icon: <SiGit className="w-7 h-7 text-orange-500" />,
     description: "Version control system for source code management.",
     topics: ["Commit", "Branching", "Merge", "Rebase", "GitHub", "GitLab", "Version Control Workflow", "Pull Requests", "CI/CD Integration"],
   },
   {
     name: "OpenAI / AI",
-    icon: <SiOpenai className="w-5 h-5 text-purple-600" />,
+    icon: <SiOpenai className="w-7 h-7 text-purple-600" />,
     description: "Artificial Intelligence tools and APIs.",
     topics: ["API Integration", "ChatGPT", "Embeddings", "Fine-tuning", "Prompt Engineering", "Generative AI", "Automation"],
   },
 ];
-
 
 const tooltipVariants = {
   hidden: { opacity: 0, y: -10 },
@@ -191,7 +204,13 @@ const Skills = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="max-w-4xl mx-auto py-16 relative">
+    <motion.section
+      className="max-w-4xl mx-auto py-16 relative"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+    >
       <h2 className="text-2xl font-bold text-gray-900 mb-10 tracking-tight">Skills</h2>
 
       <div className="flex flex-wrap gap-4">
@@ -218,7 +237,7 @@ const Skills = () => {
                   transition={{ duration: 0.2 }}
                   className="absolute bottom-full left-0 -translate-x-1/2 mb-3 w-72 z-50"
                 >
-                  <div className="relative bg-white border border-gray-200 rounded-xl px-4 py-3 backdrop-blur-md">
+                  <div className="relative bg-white border border-gray-200 rounded-xl px-4 py-4 backdrop-blur-md  pb-10">
                     {/* Arrow pointing down on left side */}
                     <div
                       className="absolute bottom-[-6px] left-10 w-3 h-3 rotate-45 bg-white border-r border-b border-gray-200"
@@ -226,24 +245,26 @@ const Skills = () => {
                     />
 
                     {/* Icon + Name + Description */}
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="p-2 rounded-full bg-gray-100 shadow-sm">
+                    <div className="flex items-center gap-3 mb-3 border-b border-gray-200 pb-2">
+
+                      <div>
                         {skill.icon}
                       </div>
+
                       <div className="flex-1">
                         <h3 className="text-md font-semibold text-gray-900">
                           {skill.name}
                         </h3>
-                        <p className="text-[12px] text-gray-500">
+                        <p className="text-[12px] text-gray-500 -mt-0.5 leading-tight">
                           {skill.description}
                         </p>
                       </div>
                     </div>
 
                     {/* Topics */}
-                    <div className="flex flex-wrap gap-1.5 mt-2">
+                    <div className="flex flex-wrap gap-1.5 mt-6">
                       {skill.topics.map((topic, i) => (
-                        <span key={i} className="text-[13px] italic cursor-pointer  px-2 text-gray-500 hover:text-blue-700">
+                        <span key={i} className="leading-5 mb-2  text-gray-700 hover:text-blue-700 cursor-pointer  rounded-md text-xs italic bg-gray-50  mr-2 px-1">
                           #{topic}
                         </span>
                       ))}
@@ -255,7 +276,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
