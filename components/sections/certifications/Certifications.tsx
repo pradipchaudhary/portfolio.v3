@@ -2,6 +2,21 @@
 
 import React from "react";
 import { Hash } from "lucide-react";
+import { motion } from "framer-motion";
+
+// Main container animation only
+const container = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: 0.2, // slight delay after About
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
 
 const certifications = [
   {
@@ -43,9 +58,13 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <section
+    <motion.section
       id="certifications"
       className="max-w-3xl mx-auto pt-10 pb-10"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
     >
       {/* Section Title */}
       <h2
@@ -90,7 +109,7 @@ const Certifications = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
