@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import { Suspense } from "react";
-import Loading from "./loading";
 import HomeLayout from "@/components/layout/HomeLayout";
+import AppWrapper from "@/components/ui/AppWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -119,11 +118,11 @@ export default function RootLayout({
                 />
             </head>
             <body className={inter.className} suppressHydrationWarning>
-                <Suspense fallback={<Loading />}>
+                <AppWrapper>
                     <HomeLayout>
                         {children}
                     </HomeLayout>
-                </Suspense>
+                </AppWrapper>
 
             </body>
         </html>
