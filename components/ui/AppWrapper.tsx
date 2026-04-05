@@ -10,8 +10,8 @@ export default function AppWrapper({
 }: {
   children: React.ReactNode
 }) {
-  const [isLoading, setIsLoading] = useState<boolean>(true)
-  const [isFirstVisit, setIsFirstVisit] = useState<boolean>(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [isFirstVisit, setIsFirstVisit] = useState(false)
 
   useEffect(() => {
     try {
@@ -26,16 +26,15 @@ export default function AppWrapper({
         }, LOADING_DURATION)
 
         return () => clearTimeout(timer)
-      } else {
-        setIsLoading(false)
       }
-    } catch (error) {
-      // Fallback for SSR or restricted environments
+
+      setIsLoading(false)
+    } catch {
+      // SSR / restricted env fallback
       setIsLoading(false)
     }
   }, [])
 
-  // Optional: Smooth fade-out instead of instant remove
   if (isLoading && isFirstVisit) {
     return (
       <div className="animate-fadeIn">
