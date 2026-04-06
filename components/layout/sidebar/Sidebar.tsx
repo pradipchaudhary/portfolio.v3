@@ -15,7 +15,7 @@ const Sidebar = () => {
         lg:sticky lg:top-0
         lg:h-screen
         flex flex-col justify-between
-        px-6 py-10 lg:py-16
+        px-6 py-10 lg:pt-16 lg:pb-4
       "
     >
       {/* ===== TOP SECTION ===== */}

@@ -25,7 +25,7 @@ export default function FollowMeSocial() {
         initial={{ opacity: 0, y: -20, rotate: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className={`absolute text-base font-semibold tracking-wide text-gray-600 text-center ${caveat.className}
+        className={`absolute text-base font-semibold tracking-wide text-gray-600 text-center animate-blinker ${caveat.className}
   top-0 left-[60%] -translate-x-1/2
   md:-top-14 md:left-1/2`}
       >
@@ -37,7 +37,7 @@ export default function FollowMeSocial() {
         initial={{ opacity: 0, scale: 0.8, rotate: 25 }}
         animate={{ opacity: 1, scale: 1, rotate: 45 }}
         transition={{ delay: 1, duration: 0.6 }}
-        className="absolute top-6 left-[60%] -translate-x-1/2
+        className="absolute top-6 left-[60%] -translate-x-1/2 animate-blinker
   md:-top-10 md:left-1/2"
       >
         <svg
