@@ -36,6 +36,16 @@ export default {
                     xl: '4rem',
                 },
             },
+            // Keyframes for fade-in animation
+            keyframes: {
+                blinker: {
+                "0%, 100%": { opacity: "1" },
+                "50%": { opacity: "0.75" },
+                },
+            },
+            animation: {
+                blinker: "blinker 0.8s ease-in-out infinite alternate",
+            },
         },
     },
     plugins: [],
