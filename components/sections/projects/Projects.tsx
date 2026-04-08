@@ -46,7 +46,7 @@ const projects = [
     description:
       "A curated collection of 100 practical JavaScript projects for learners — utilities, games, DOM practice and small apps.",
     tags: ["JavaScript", "Learning", "Projects"],
-    link: "https://github.com/pradipchaudhary/100-javascript-projects",
+    link: "https://100plusjs.vercel.app/",
   },
   {
     title: "jobfindingai",
