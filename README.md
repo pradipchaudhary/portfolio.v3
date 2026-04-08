@@ -52,7 +52,6 @@ portfolio.v3/
 
 
 
-
 ## 🛠️ Technology Stack
 
 | Category | Tools / Frameworks |
