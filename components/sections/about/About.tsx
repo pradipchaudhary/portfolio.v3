@@ -164,7 +164,7 @@ const About = () => {
           >
             AI
           </a>
-          , SEO, Web Scraping, and data-driven projects that deliver real-world value.
+          , <strong>SEO</strong>, <strong>Web Scraping</strong>, and data-driven projects that deliver real-world value.
         </motion.p>
       </motion.div>
 
