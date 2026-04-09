@@ -71,7 +71,7 @@ const upcomingIdeas = [
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen">
-      <div className="max-w-5xl mx-auto px-2 py-16">
+      <div className=" py-16">
 
         {/* Header */}
         <div className="mb-14">

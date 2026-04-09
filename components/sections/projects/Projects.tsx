@@ -61,7 +61,7 @@ const Projects = () => {
   return (
     <motion.section
       id="projects"
-      className="max-w-4xl mx-auto py-10"
+      className="py-10"
       variants={container}
       initial="hidden"
       whileInView="visible"
