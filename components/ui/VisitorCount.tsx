@@ -14,6 +14,6 @@ export default function VisitorCounter() {
   if (!count) return null;
 
   return (
-    <p className="text-sm text-gray-500 italic py-1">{"You're the "}{count.toLocaleString()}th visitor 🚀</p>
+    <p className="text-sm text-gray-500 italic py-1">{"You're the "}<span className="text-black">{count.toLocaleString()}<sup>th</sup></span> visitor</p>
   );
 }

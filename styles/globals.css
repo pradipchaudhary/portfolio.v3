@@ -203,7 +203,7 @@ textarea {
 }
 
 .animate-arrow-container {
-    animation: arrowFloat 3s ease-in-out infinite;
+    animation: arrowFloat 3s ease-in-out infinite smooth-fill 10s linear infinite;
 }
 
 /* border animation */
@@ -224,6 +224,12 @@ textarea {
 }
 
 
+/* Signature Style */
+.signature-path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawSignature 3s ease forwards;
+}
 
 
 /* namaste icon animation */
