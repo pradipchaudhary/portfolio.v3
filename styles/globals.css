@@ -229,41 +229,124 @@ textarea {
     animation: arrowFloat 3s ease-in-out infinite;
 }
 
+/* border animation */
+@keyframes border-move {
+    0% {
+        transform: rotate(0deg);
+    }
 
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
-/* Namaste border animation */
 @layer utilities {
-    .animated-border {
-        @apply relative overflow-hidden rounded-lg;
+    .animate-border-move {
+        animation: border-move 6s linear infinite;
+    }
+}
+
+
+@keyframes smooth-fill {
+    0% {
+        fill: #2563eb;
     }
 
-    .animated-border::before {
-        content: "";
-        position: absolute;
-        top: -25%;
-        left: -25%;
-        width: 150%;
-        height: 150%;
-        background: conic-gradient(rgba(239, 68, 68, 0.4) 0deg,
-                rgba(249, 115, 22, 0.4) 120deg,
-                rgba(236, 72, 153, 0.4) 240deg,
-                transparent 300deg);
-        animation: border-spin 4s linear infinite;
+    /* deep blue */
+    5% {
+        fill: #1d4ed8;
     }
 
-    .animated-border::after {
-        content: "";
-        position: absolute;
-        inset: 1.5px;
-        /* controls border thickness */
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 0.5rem;
-        /* match rounded-lg */
+    10% {
+        fill: #1e40af;
     }
 
-    @keyframes border-spin {
-        100% {
-            transform: rotate(360deg);
-        }
+    15% {
+        fill: #0ea5e9;
+    }
+
+    /* cyan blue */
+    20% {
+        fill: #0369a1;
+    }
+
+    25% {
+        fill: #14b8a6;
+    }
+
+    /* teal */
+    30% {
+        fill: #0f766e;
+    }
+
+    35% {
+        fill: #22c55e;
+    }
+
+    /* green */
+    40% {
+        fill: #15803d;
+    }
+
+    45% {
+        fill: #84cc16;
+    }
+
+    /* lime */
+    50% {
+        fill: #a16207;
+    }
+
+    /* amber dark */
+    55% {
+        fill: #f97316;
+    }
+
+    /* orange */
+    60% {
+        fill: #ea580c;
+    }
+
+    65% {
+        fill: #be123c;
+    }
+
+    /* rose dark */
+    70% {
+        fill: #e11d48;
+    }
+
+    75% {
+        fill: #9333ea;
+    }
+
+    /* purple */
+    80% {
+        fill: #6d28d9;
+    }
+
+    85% {
+        fill: #4c1d95;
+    }
+
+    90% {
+        fill: #1f2937;
+    }
+
+    /* dark slate */
+    95% {
+        fill: #334155;
+    }
+
+    100% {
+        fill: #2563eb;
+    }
+
+    /* loop */
+}
+
+@layer utilities {
+    .animate-fill {
+        animation: smooth-fill 10s linear infinite;
     }
 }
