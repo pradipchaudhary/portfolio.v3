@@ -205,13 +205,14 @@ const Skills = () => {
 
   return (
     <motion.section
-      className="max-w-4xl mx-auto py-16 relative"
+      id="skills"
+      className="py-18 relative"
       variants={container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <h2 className="text-2xl font-bold text-gray-900 mb-10 tracking-tight">Skills</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-6 tracking-tight">Skills</h2>
 
       <div className="flex flex-wrap gap-4">
         {skills.map((skill, index) => (

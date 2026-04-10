@@ -48,7 +48,7 @@ const Experience = () => {
   return (
     <motion.section
       id="experience"
-      className="max-w-3xl mx-auto py-6"
+      className="py-18"
       variants={container}
       initial="hidden"
       whileInView="visible"
