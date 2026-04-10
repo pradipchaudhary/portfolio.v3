@@ -1,5 +1,6 @@
 "use client";
 
+import VisitorCounter from "@/components/ui/VisitorCount";
 import React from "react";
 
 const Footer = () => {
@@ -8,6 +9,7 @@ const Footer = () => {
       <p className="text-sm text-gray-500 italic">
         Built with ❤️ by Pradip Chaudhary
       </p>
+      <VisitorCounter />
     </footer>
   );
 };

@@ -120,15 +120,6 @@ textarea {
 }
 
 
-.pin-dot {
-    @apply absolute w-2.5 h-2.5 rounded-full ring-1;
-    background-color: #dbdbdb;
-    /* dark gray/blackish */
-    --tw-ring-color: #c7c7c7;
-    /* slightly darker ring for subtle contrast */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    /* subtle shadow for depth */
-}
 
 /* === Sidebar Follow Me Animations === */
 /* Text Enter */
@@ -155,18 +146,7 @@ textarea {
     }
 }
 
-/* Soft Infinite Pulse */
-@keyframes sectionPulse {
 
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.75;
-    }
-}
 
 .animate-follow-text {
     animation: followTextIn 0.8s ease forwards;
@@ -176,9 +156,6 @@ textarea {
     animation: drawPath 1.4s ease forwards;
 }
 
-.animate-section-pulse {
-    animation: sectionPulse 3s ease-in-out infinite;
-}
 
 /* Arrow Draw Animation */
 @keyframes arrowDraw {
@@ -247,6 +224,9 @@ textarea {
 }
 
 
+
+
+/* namaste icon animation */
 @keyframes smooth-fill {
     0% {
         fill: #2563eb;
