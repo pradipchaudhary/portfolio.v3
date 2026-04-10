@@ -120,15 +120,6 @@ textarea {
 }
 
 
-.pin-dot {
-    @apply absolute w-2.5 h-2.5 rounded-full ring-1;
-    background-color: #dbdbdb;
-    /* dark gray/blackish */
-    --tw-ring-color: #c7c7c7;
-    /* slightly darker ring for subtle contrast */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    /* subtle shadow for depth */
-}
 
 /* === Sidebar Follow Me Animations === */
 /* Text Enter */
@@ -155,18 +146,7 @@ textarea {
     }
 }
 
-/* Soft Infinite Pulse */
-@keyframes sectionPulse {
 
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.75;
-    }
-}
 
 .animate-follow-text {
     animation: followTextIn 0.8s ease forwards;
@@ -176,9 +156,6 @@ textarea {
     animation: drawPath 1.4s ease forwards;
 }
 
-.animate-section-pulse {
-    animation: sectionPulse 3s ease-in-out infinite;
-}
 
 /* Arrow Draw Animation */
 @keyframes arrowDraw {
@@ -227,4 +204,129 @@ textarea {
 
 .animate-arrow-container {
     animation: arrowFloat 3s ease-in-out infinite;
+}
+
+/* border animation */
+@keyframes border-move {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@layer utilities {
+    .animate-border-move {
+        animation: border-move 6s linear infinite;
+    }
+}
+
+
+
+
+/* namaste icon animation */
+@keyframes smooth-fill {
+    0% {
+        fill: #2563eb;
+    }
+
+    /* deep blue */
+    5% {
+        fill: #1d4ed8;
+    }
+
+    10% {
+        fill: #1e40af;
+    }
+
+    15% {
+        fill: #0ea5e9;
+    }
+
+    /* cyan blue */
+    20% {
+        fill: #0369a1;
+    }
+
+    25% {
+        fill: #14b8a6;
+    }
+
+    /* teal */
+    30% {
+        fill: #0f766e;
+    }
+
+    35% {
+        fill: #22c55e;
+    }
+
+    /* green */
+    40% {
+        fill: #15803d;
+    }
+
+    45% {
+        fill: #84cc16;
+    }
+
+    /* lime */
+    50% {
+        fill: #a16207;
+    }
+
+    /* amber dark */
+    55% {
+        fill: #f97316;
+    }
+
+    /* orange */
+    60% {
+        fill: #ea580c;
+    }
+
+    65% {
+        fill: #be123c;
+    }
+
+    /* rose dark */
+    70% {
+        fill: #e11d48;
+    }
+
+    75% {
+        fill: #9333ea;
+    }
+
+    /* purple */
+    80% {
+        fill: #6d28d9;
+    }
+
+    85% {
+        fill: #4c1d95;
+    }
+
+    90% {
+        fill: #1f2937;
+    }
+
+    /* dark slate */
+    95% {
+        fill: #334155;
+    }
+
+    100% {
+        fill: #2563eb;
+    }
+
+    /* loop */
+}
+
+@layer utilities {
+    .animate-fill {
+        animation: smooth-fill 10s linear infinite;
+    }
 }

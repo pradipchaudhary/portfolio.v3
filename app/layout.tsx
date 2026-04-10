@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import HomeLayout from "@/components/layout/HomeLayout";
 import AppWrapper from "@/components/ui/AppWrapper";
+import CustomCursor from "@/components/ui/CustomCursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -118,6 +119,7 @@ export default function RootLayout({
                 />
             </head>
             <body className={inter.className} suppressHydrationWarning>
+                <CustomCursor />
                 <AppWrapper>
                     <HomeLayout>
                         {children}
