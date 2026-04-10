@@ -228,3 +228,42 @@ textarea {
 .animate-arrow-container {
     animation: arrowFloat 3s ease-in-out infinite;
 }
+
+
+
+/* Namaste border animation */
+@layer utilities {
+    .animated-border {
+        @apply relative overflow-hidden rounded-lg;
+    }
+
+    .animated-border::before {
+        content: "";
+        position: absolute;
+        top: -25%;
+        left: -25%;
+        width: 150%;
+        height: 150%;
+        background: conic-gradient(rgba(239, 68, 68, 0.4) 0deg,
+                rgba(249, 115, 22, 0.4) 120deg,
+                rgba(236, 72, 153, 0.4) 240deg,
+                transparent 300deg);
+        animation: border-spin 4s linear infinite;
+    }
+
+    .animated-border::after {
+        content: "";
+        position: absolute;
+        inset: 1.5px;
+        /* controls border thickness */
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 0.5rem;
+        /* match rounded-lg */
+    }
+
+    @keyframes border-spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
