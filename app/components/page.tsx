@@ -18,7 +18,7 @@ export default function ComponentsPage() {
         </p>
 
         <p className="mt-3 text-sm text-gray-500">
-          I'm currently designing and engineering a set of production-ready
+          I&apos;m currently designing and engineering a set of production-ready
           components. This section will be available soon.
         </p>
       </div>
