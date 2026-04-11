@@ -336,3 +336,69 @@ textarea {
         animation: smooth-fill 10s linear infinite;
     }
 }
+
+
+/* Base SVG stroke style */
+.sig-path {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2px;
+    opacity: 0;
+
+    /* smoother shadow */
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0));
+}
+
+/* Individual path configs */
+.sig-main {
+    stroke-dasharray: 2789.8208;
+    stroke-dashoffset: 2789.8208;
+    animation: draw-main 5s ease forwards, reveal 0.3s ease forwards;
+    animation-delay: 2s;
+}
+
+.sig-line {
+    stroke-dasharray: 384.9056;
+    stroke-dashoffset: 384.9056;
+    animation: draw-line 1.5s ease forwards, reveal 0.3s ease forwards;
+    animation-delay: 3s;
+}
+
+.sig-dot1 {
+    stroke-dasharray: 21.8541;
+    stroke-dashoffset: 21.8541;
+    animation: draw-dot 0.5s ease forwards, reveal 0.2s ease forwards;
+    animation-delay: 3.5s;
+}
+
+.sig-dot2 {
+    stroke-dasharray: 21.6221;
+    stroke-dashoffset: 21.6221;
+    animation: draw-dot 0.5s ease forwards, reveal 0.2s ease forwards;
+    animation-delay: 3.7s;
+}
+
+/* Animations */
+@keyframes draw-main {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-line {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-dot {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+    }
+}
