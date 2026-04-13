@@ -27,19 +27,6 @@ import { FaAmazon, FaCss3, FaWordpress } from "react-icons/fa";
 import { DiPhp } from "react-icons/di";
 import { FaSass } from "react-icons/fa6";
 
-// Main container animation only
-const container = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      delay: 0.2, // slight delay after About
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
-};
 
 // Skills array with standardized icon sizes (w-7 h-7)
 const skills = [
