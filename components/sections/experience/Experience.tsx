@@ -11,7 +11,7 @@ const container = {
     y: 0,
     transition: {
       duration: 0.4,
-      delay: 1.2, // slight delay after About
+      delay: 0.6, // slight delay after About
       ease: [0.22, 1, 0.36, 1],
     },
   },

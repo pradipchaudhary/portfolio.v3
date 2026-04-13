@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/components/layout/footer/Footer";
 import About from "@/components/sections/about/About";
 import Certifications from "@/components/sections/certifications/Certifications";
 import Experience from "@/components/sections/experience/Experience";
@@ -26,7 +25,7 @@ export default function HomePage() {
             <Skills />
             <Certifications />
             {/* === FOOTER === */}
-            <Footer />
+
         </>
     );
 }
