@@ -1,6 +1,7 @@
 import React from "react";
 import Background from "../ui/Background";
 import Sidebar from "./sidebar/Sidebar";
+import Footer from "./footer/Footer";
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return <>
@@ -16,6 +17,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
 
           <main className=" w-full pl-5">
             {children}
+            <Footer />
           </main>
         </div>
       </div>
