@@ -29,21 +29,21 @@ const projects = [
     description:
       "A curated collection of 100 practical JavaScript projects for learners — utilities, games and DOM practice apps.",
     tags: ["JavaScript", "Learning"],
-    link: "https://github.com/pradipchaudhary/100-javascript-projects",
+    link: "https://100plusjs.vercel.app/",
   },
   {
     title: "jobfindingai",
     description:
       "AI-powered platform that helps users find jobs based on resume, skills and interests.",
     tags: ["AI", "Next.js"],
-    link: "https://github.com/pradipchaudhary/jobfindingai",
+    link: "https://jobfindingai.vercel.app/",
   },
   {
     title: "nepcoin",
     description:
       "A decentralized digital token prototype built using blockchain concepts.",
     tags: ["Blockchain", "Crypto"],
-    link: "https://github.com/pradipchaudhary/nepcoin",
+    link: "https://nepcoin.vercel.app/",
   },
 ];
 
