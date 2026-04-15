@@ -51,10 +51,10 @@ export default function Username({
         }}
       >
         <Link href="#" className="hover:opacity-80 transition">
-          <h1 className="text-xl font-semibold text-gray-900 -mt-4">
+          <h1 className="text-xl font-semibold text-gray-900 -mt-4 dark:text-zinc-50">
             {name}
           </h1>
-          <p className="text-sm text-gray-500 font-sans -mt-2">
+          <p className="text-sm text-gray-500 dark:text-zinc-500 font-sans -mt-2">
             @{username}
           </p>
         </Link>

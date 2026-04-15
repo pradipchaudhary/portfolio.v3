@@ -4,6 +4,7 @@ import About from "@/components/sections/about/About";
 import Certifications from "@/components/sections/certifications/Certifications";
 import Experience from "@/components/sections/experience/Experience";
 import Projects from "@/components/sections/projects/Projects";
+import QuoteSection from "@/components/sections/quote/Quote";
 import Skills from "@/components/sections/skills/Skills";
 
 
@@ -24,6 +25,7 @@ export default function HomePage() {
             <Experience />
             <Skills />
             <Certifications />
+            <QuoteSection />
             {/* === FOOTER === */}
 
         </>

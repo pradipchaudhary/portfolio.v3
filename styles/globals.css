@@ -1,40 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* ============================================================
    🌐 Global Theme Styles — Portfolio v3 by Pradip Chaudhary
    Clean · Minimal · Professional · Red Accent
 ============================================================ */
 
-/* === Root Theme Variables === */
+@variant dark (&:where(.dark, .dark *));
+
 :root {
-    --background: #fdfdfd;
-    --foreground: #0f0f0f;
-    --text: #555555;
-    --accent: #2563eb;
-    --accent-strong: #1d4ed8;
-    --accent-hover: #1d4ed8;
-    --border: #e5e5e5;
-    --radius: 0.75rem;
-    --transition: all 0.25s ease-in-out;
+    --background: #ffffff;
+    --foreground: #09090b;
 }
 
-/* === Dark Mode Support (Optional) === */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0f0f0f;
-        --foreground: #f9f9f9;
-        --text: #bdbdbd;
-        --accent: #2563eb;
-        --accent-strong: #1d4ed8;
-        --accent-hover: #1d4ed8;
-        --border: #222;
-    }
+.dark {
+    --background: #171717;
+    --foreground: #ffffff;
+    --accent: #4285f4;
+}
+
+@theme {
+    --font-sans: var(--font-inter);
+    --font-mono: var(--font-jetbrains-mono);
+    --font-caveat: var(--font-caveat);
 }
 
 /* === Global Body Styles === */
 body {
+    background-color: var(--background);
     color: var(--foreground);
     font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
         "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -48,6 +40,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* === Universal Reset === */
@@ -63,11 +56,49 @@ video {
     height: auto;
 }
 
-/* === Selection Color === */
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e4e4e7;
+    border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #27272a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d4d4d8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+}
+
+/* Selection color */
 ::selection {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.dark ::selection {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+}
+
+
+/* === Selection Color === */
+/* ::selection {
     background: var(--accent-strong);
     color: #fff;
-}
+} */
 
 /* === Smooth Scroll === */
 html {
@@ -96,28 +127,6 @@ textarea {
     transition: var(--transition);
 }
 
-/* === Scrollbar Styling === */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #fed2a3;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #fcb97d;
-}
-
-/* === Accent Utilities === */
-.bg-accent {
-    background-color: var(--accent);
-}
-
-.text-accent {
-    color: var(--accent-strong);
-}
 
 
 
@@ -334,71 +343,5 @@ textarea {
 @layer utilities {
     .animate-fill {
         animation: smooth-fill 10s linear infinite;
-    }
-}
-
-
-/* Base SVG stroke style */
-.sig-path {
-    /* fill: none;
-    stroke: #583afd;
-    stroke-width: 2px;
-    opacity: 0; */
-
-    /* smoother shadow */
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0));
-}
-
-/* Individual path configs */
-.sig-main {
-    stroke-dasharray: 2789.8208;
-    stroke-dashoffset: 2789.8208;
-    animation: draw-main 5s ease forwards, reveal 0.3s ease forwards;
-    animation-delay: 2s;
-}
-
-.sig-line {
-    stroke-dasharray: 384.9056;
-    stroke-dashoffset: 384.9056;
-    animation: draw-line 1.5s ease forwards, reveal 0.3s ease forwards;
-    animation-delay: 3s;
-}
-
-.sig-dot1 {
-    stroke-dasharray: 21.8541;
-    stroke-dashoffset: 21.8541;
-    animation: draw-dot 0.5s ease forwards, reveal 0.2s ease forwards;
-    animation-delay: 3.5s;
-}
-
-.sig-dot2 {
-    stroke-dasharray: 21.6221;
-    stroke-dashoffset: 21.6221;
-    animation: draw-dot 0.5s ease forwards, reveal 0.2s ease forwards;
-    animation-delay: 3.7s;
-}
-
-/* Animations */
-@keyframes draw-main {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes draw-line {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes draw-dot {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes reveal {
-    to {
-        opacity: 1;
     }
 }

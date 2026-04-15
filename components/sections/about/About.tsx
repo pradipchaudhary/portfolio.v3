@@ -11,8 +11,8 @@ const container = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.25, // more delay between items
-      delayChildren: 0.2,    // initial delay
+      staggerChildren: 0.25,
+      delayChildren: 0.2,
     },
   },
 };
@@ -23,8 +23,8 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,        // slower animation
-      ease: "easeOut",      // smooth easing
+      duration: 0.5,
+      ease: "easeOut",
     },
   },
 };
@@ -34,7 +34,8 @@ const About = () => {
     <motion.section
       id="about"
       aria-label="About Pradip Chaudhary"
-      className="max-w-3xl mx-auto mb-10 text-gray-800 pt-20"
+      className="max-w-3xl mx-auto mb-10 pt-20
+      text-gray-800 dark:text-gray-200"
       variants={container}
       initial="hidden"
       animate="visible"
@@ -45,18 +46,23 @@ const About = () => {
 
         <motion.p
           variants={item}
-          className="text-base md:text-base leading-relaxed text-gray-700 mt-2"
+          className="text-base leading-relaxed 
+          text-gray-700 dark:text-gray-300 mt-2"
         >
           Hi 👋, I’m{" "}
           <a
             href="https://react.dev/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
+            className="relative inline-block font-bold 
+            text-gray-900 dark:text-white
+            hover:text-black dark:hover:text-gray-200
+            transition-all duration-300"
           >
             React Developer
             <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] 
+              text-gray-400 dark:text-gray-500"
               viewBox="0 0 120 10"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -74,18 +80,23 @@ const About = () => {
 
         <motion.p
           variants={item}
-          className="text-base md:text-base leading-relaxed text-gray-600 mt-4 max-w-2xl"
+          className="text-base leading-relaxed 
+          text-gray-600 dark:text-gray-400 mt-4 max-w-2xl"
         >
           I enjoy exploring modern technologies such as{" "}
           <a
             href="https://nextjs.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
+            className="relative inline-block font-bold 
+            text-gray-900 dark:text-white
+            hover:text-black dark:hover:text-gray-200
+            transition-all duration-300"
           >
             Next.js
             <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] 
+              text-gray-400 dark:text-gray-500"
               viewBox="0 0 120 10"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -103,11 +114,15 @@ const About = () => {
             href="https://www.typescriptlang.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
+            className="relative inline-block font-bold 
+            text-gray-900 dark:text-white
+            hover:text-black dark:hover:text-gray-200
+            transition-all duration-300"
           >
             TypeScript
             <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] 
+              text-gray-400 dark:text-gray-500"
               viewBox="0 0 120 10"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -125,11 +140,15 @@ const About = () => {
             href="https://tailwindcss.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
+            className="relative inline-block font-bold 
+            text-gray-900 dark:text-white
+            hover:text-black dark:hover:text-gray-200
+            transition-all duration-300"
           >
             Tailwind CSS
             <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] text-gray-400"
+              className="absolute -bottom-[2px] left-0 w-full h-[10px] 
+              text-gray-400 dark:text-gray-500"
               viewBox="0 0 120 10"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -147,20 +166,31 @@ const About = () => {
       </motion.div>
 
       {/* === DESCRIPTION === */}
-      <motion.div variants={item} className="space-y-6 text-base leading-relaxed text-gray-700">
+      <motion.div
+        variants={item}
+        className="space-y-6 text-base leading-relaxed 
+        text-gray-700 dark:text-gray-300"
+      >
         <motion.p variants={item}>
           I’m passionate about transforming ideas into elegant web solutions — combining{" "}
-          <span className="font-medium text-gray-900">clean design</span> with{" "}
-          <span className="font-medium text-gray-900">efficient, functional code</span>.
+          <span className="font-medium text-gray-900 dark:text-white">
+            clean design
+          </span>{" "}
+          with{" "}
+          <span className="font-medium text-gray-900 dark:text-white">
+            efficient, functional code
+          </span>.
         </motion.p>
 
-        <motion.p variants={item} className="text-gray-700">
+        <motion.p variants={item}>
           Beyond coding, I explore{" "}
           <a
             href="https://openai.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-block font-bold hover:text-gray-900 transition-all duration-300"
+            className="font-bold 
+            text-gray-900 dark:text-white
+            hover:text-black dark:hover:text-gray-200"
           >
             AI
           </a>

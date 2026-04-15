@@ -20,7 +20,7 @@ const container = {
     y: 0,
     transition: {
       duration: 0.6,
-      delay: 0.8, // slight delay after About
+      delay: 0.8,
       ease: [0.22, 1, 0.36, 1],
     },
   },
@@ -61,13 +61,14 @@ const Projects = () => {
   return (
     <motion.section
       id="projects"
-      className="py-10"
+      className="py-10 text-gray-900 dark:text-gray-100"
       variants={container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 tracking-tight">
+      <h2 className="text-3xl font-bold tracking-tight mb-8
+      text-gray-900 dark:text-white">
         Projects
       </h2>
 
@@ -79,11 +80,16 @@ const Projects = () => {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative border border-slate-200 rounded-xl p-5 bg-white transition-all duration-300 cursor-pointer overflow-hidden"
+            className="group relative rounded-xl p-5 cursor-pointer overflow-hidden
+            border border-slate-200 dark:border-slate-800
+            bg-white dark:bg-neutral-900
+            transition-all duration-300"
           >
             {/* Hover Gradient */}
             <div
-              className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition duration-500 group-hover:opacity-100 bg-gradient-to-r from-orange-50 to-orange-100"
+              className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition duration-500 group-hover:opacity-100
+              bg-gradient-to-r from-orange-50 to-orange-100
+              dark:from-neutral-800 dark:to-neutral-700"
               style={{
                 maskImage:
                   "radial-gradient(300px at 150px 20px, white, transparent)",
@@ -91,16 +97,24 @@ const Projects = () => {
             />
 
             {/* Glow Lines */}
-            <span className="absolute w-[40%] -bottom-px right-px h-px bg-gradient-to-r from-orange-400/0 via-orange-400/40 to-orange-400/0"></span>
-            <span className="absolute w-px -left-px top-[50%] h-[40%] bg-gradient-to-b from-orange-400/0 via-orange-400/40 to-orange-400/0"></span>
+            <span className="absolute w-[40%] -bottom-px right-px h-px
+            bg-gradient-to-r from-orange-400/0 via-orange-400/40 to-orange-400/0
+            dark:via-orange-300/20"></span>
+
+            <span className="absolute w-px -left-px top-[50%] h-[40%]
+            bg-gradient-to-b from-orange-400/0 via-orange-400/40 to-orange-400/0
+            dark:via-orange-300/20"></span>
 
             {/* Content */}
             <div className="relative z-10 flex flex-col h-full justify-between">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold mb-2
+                text-gray-900 dark:text-white">
                   {formatTitle(project.title)}
                 </h3>
-                <p className="text-sm text-gray-700 leading-6">
+
+                <p className="text-sm leading-6
+                text-gray-700 dark:text-gray-400">
                   {project.description}
                 </p>
               </div>
@@ -109,7 +123,9 @@ const Projects = () => {
                 {project.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="text-xs italic text-gray-500 transition-colors duration-200 group-hover:text-gray-700 px-1.5"
+                    className="text-xs italic px-1.5 transition-colors duration-200
+                    text-gray-500 dark:text-gray-400
+                    group-hover:text-gray-700 dark:group-hover:text-gray-200"
                   >
                     {tag}
                   </span>
@@ -124,7 +140,10 @@ const Projects = () => {
       <div className="flex justify-center mt-6">
         <Link
           href="/projects"
-          className="flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md font-medium text-gray-900 transition-colors duration-200 hover:text-gray-700"
+          className="flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md font-medium
+          text-gray-900 dark:text-gray-100
+          hover:text-gray-700 dark:hover:text-white
+          transition-colors duration-200"
         >
           See More
           <svg

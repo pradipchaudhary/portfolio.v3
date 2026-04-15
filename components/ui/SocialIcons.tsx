@@ -95,6 +95,9 @@ export default function SocialIcons() {
                   text-neutral-700
                   transition-colors duration-300
                   hover:text-white
+                  dark:bg-zinc-900
+                  dark:border-zinc-800
+                  
                   ${item.hoverBg}
                 `}
               >

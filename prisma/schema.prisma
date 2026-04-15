@@ -4,6 +4,8 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
+
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -26,6 +28,6 @@ model Project {
 }
 
 model Visitor {
-  id    Int @id @default(1)
+  id    Int @id
   count Int @default(0)
 }
