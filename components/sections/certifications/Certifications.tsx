@@ -12,7 +12,7 @@ const container = {
     y: 0,
     transition: {
       duration: 0.6,
-      delay: 0.2, // slight delay after About
+      delay: 0.2,
       ease: [0.22, 1, 0.36, 1],
     },
   },
@@ -60,47 +60,34 @@ const Certifications = () => {
   return (
     <motion.section
       id="certifications"
-      className="max-w-3xl mx-auto pt-10 pb-10"
+      className="max-w-3xl mx-auto pt-10 pb-10 text-gray-900 dark:text-gray-100"
       variants={container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
       {/* Section Title */}
-      <h2
-        className="text-3xl font-bold text-gray-900 mb-6 tracking-tight"
-      >
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6 tracking-tight">
         Certifications
       </h2>
 
-      <div
-        className="space-y-8"
-      >
+      <div className="space-y-8">
         {certifications.map((cert, idx) => (
-          <div
-            key={idx}
-            className="group transition-transform duration-300 "
-          >
+          <div key={idx} className="group transition-transform duration-300">
             {/* Year */}
-            <h3
-              className="text-lg font-semibold text-gray-900 mb-2"
-            >
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
               {cert.year}
             </h3>
 
             {/* Certification Items */}
-            <ul
-              className="space-y-1"
-            >
+            <ul className="space-y-1">
               {cert.items.map((item, i) => (
-                <li
-                  key={i}
-                  className="flex items-start group"
-                >
+                <li key={i} className="flex items-start group">
                   <div className="transition-transform duration-200">
-                    <Hash className="w-3.5 h-3.5 text-gray-500 mt-[3px] flex-shrink-0 italic" />
+                    <Hash className="w-3.5 h-3.5 text-gray-500 dark:text-gray-400 mt-[3px] flex-shrink-0 italic" />
                   </div>
-                  <span className="ml-1 text-gray-700 italic text-sm group-hover:text-gray-900 transition-colors duration-200">
+
+                  <span className="ml-1 text-gray-700 dark:text-gray-300 italic text-sm group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-200">
                     {item}
                   </span>
                 </li>

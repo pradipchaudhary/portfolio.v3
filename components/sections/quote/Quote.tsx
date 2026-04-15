@@ -22,7 +22,7 @@ export default function QuoteRotator() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % quotes.length);
-    }, 5000); // changes every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -32,11 +32,10 @@ export default function QuoteRotator() {
   return (
     <section className="w-full">
       <div className="mt-8">
-
         <div className="relative flex flex-col gap-0">
 
           {/* subtle line */}
-          <div className="w-12 h-px bg-gray-300 mb-2" />
+          <div className="w-12 h-px bg-gray-300 dark:bg-gray-700 mb-2" />
 
           {/* Animated quote */}
           <div className="min-h-[90px]">
@@ -47,7 +46,7 @@ export default function QuoteRotator() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="text-xl md:text-2xl font-medium text-gray-900 leading-snug tracking-tight max-w-3xl"
+                className="text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-100 leading-snug tracking-tight max-w-3xl"
               >
                 “{quote.text}”
               </motion.blockquote>
@@ -62,9 +61,12 @@ export default function QuoteRotator() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="text-sm text-gray-500"
+              className="text-sm text-gray-500 dark:text-gray-400"
             >
-              — <span className="text-gray-700 font-medium">{quote.author}</span>
+              —{" "}
+              <span className="text-gray-700 dark:text-gray-300 font-medium">
+                {quote.author}
+              </span>
             </motion.p>
           </AnimatePresence>
 

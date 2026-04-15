@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import HomeLayout from "@/components/layout/HomeLayout";
 import AppWrapper from "@/components/ui/AppWrapper";
-import CustomCursor from "@/components/ui/CustomCursor";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -126,7 +125,6 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <CustomCursor />
                     <AppWrapper>
                         <HomeLayout>
                             {children}
