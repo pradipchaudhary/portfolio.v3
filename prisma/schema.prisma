@@ -26,6 +26,6 @@ model Project {
 }
 
 model Visitor {
-  id    Int @id @default(1)
+  id    Int @id
   count Int @default(0)
 }

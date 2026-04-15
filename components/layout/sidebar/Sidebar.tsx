@@ -6,6 +6,7 @@ import FollowMeSocial from "@/components/ui/FollowMeSocial";
 
 import ProfileImage from "@/components/ui/ProfileImage";
 import Username from "@/components/ui/Username";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 const Sidebar = () => {
   return (
@@ -38,6 +39,7 @@ const Sidebar = () => {
 
         {/* Navbar */}
         <Navbar />
+        <ThemeToggle />
       </header>
 
       {/* ===== SOCIAL SECTION ===== */}
