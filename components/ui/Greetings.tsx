@@ -17,9 +17,9 @@ export default function Greetings() {
         <motion.div
           initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
           animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
-          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.8 }}
         >
-          <Namaste className="fill-current text-foreground" />
+          <Namaste className="h-13 w-13 fill-current text-foreground text-gray-700 dark:text-zinc-500" />
         </motion.div>
 
         <span className="text-[2.25rem] text-gray-700 font-thin dark:text-zinc-500 transition-colors duration-300 animate-fill">
@@ -30,14 +30,14 @@ export default function Greetings() {
       {/* Top Pin Dot */}
       <div className="absolute top-[5px] right-1 sm:right-1">
         <div className="w-2 h-2 bg-red-500 rounded-full shadow-md relative dark:bg-zinc-400 dark:shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/80 to-transparent dark:from-white/10"></div>
+          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/20 to-transparent dark:from-white/10"></div>
         </div>
       </div>
 
       {/* Bottom Pin Dot */}
       <div className="absolute bottom-[5px] left-1 sm:left-1">
         <div className="w-2 h-2 bg-red-500 rounded-full shadow-md relative dark:bg-zinc-400 dark:shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/80 to-transparent dark:from-white/10"></div>
+          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/20 to-transparent dark:from-white/10"></div>
         </div>
       </div>
 

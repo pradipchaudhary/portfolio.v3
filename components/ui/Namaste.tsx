@@ -8,8 +8,8 @@ export default function Namaste({ className }: SignatureProps) {
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="42.000000pt"
-      height="42.000000pt"
+      width="40.000000pt"
+      height="40.000000pt"
       viewBox="0 0 200.000000 200.000000"
       preserveAspectRatio="xMidYMid meet"
       className={className}
