@@ -30,9 +30,9 @@ export default function ProfileImage({
       transition={{ duration: 1, ease: "easeOut" }}
     >
       {/* Animated Border */}
-      <div className="absolute inset-0 rounded-full overflow-hidden">
+      {/* <div className="absolute inset-0 rounded-full overflow-hidden">
         <div className="w-full h-full border-2 border-t-2 border-b-2 border-gradient-to-r from-blue-200 via-blue-300 to-blue-200 rounded-full animate-[slide_3s_linear_infinite]" />
-      </div>
+      </div> */}
 
       {/* Profile Image */}
       <Image
@@ -48,7 +48,7 @@ export default function ProfileImage({
             height,
           })}
         priority
-        className="rounded-full border-2 border-gray-200 shadow-md object-cover"
+        className="rounded-full object-cover border-[3px] border-white dark:border-zinc-900 shadow-md"
       />
     </motion.div>
   );
