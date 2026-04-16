@@ -16,6 +16,14 @@ datasource db {
 }
 
 
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+}
+
 model Project {
   id          Int       @id @default(autoincrement())
   title       String

@@ -17,14 +17,14 @@ export function ThemeToggle() {
 
   return (
     <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="p-2.5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800/80 text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all shadow-sm hover:scale-110 active:scale-95 group"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      className="fixed top-4 right-4 p-2 rounded-full bg-foreground/10 hover:bg-foreground/20 cursor-pointer transition-colors"
       aria-label="Toggle theme"
     >
-      {theme === 'dark' ? (
-        <Sun className="w-4 h-4 group-hover:rotate-45 transition-transform" />
+      {theme === "light" ? (
+        <Moon className="w-5 h-5" />
       ) : (
-        <Moon className="w-4 h-4 group-hover:-rotate-12 transition-transform" />
+        <Sun className="w-5 h-5" />
       )}
     </button>
   );
