@@ -5,11 +5,11 @@
    Clean · Minimal · Professional · Red Accent
 ============================================================ */
 
-@variant dark (&:where(.dark, .dark *));
 
 :root {
     --background: #ffffff;
     --foreground: #09090b;
+    /* foreground */
 }
 
 .dark {
@@ -18,11 +18,16 @@
     --accent: #4285f4;
 }
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
     --font-sans: var(--font-inter);
     --font-mono: var(--font-jetbrains-mono);
     --font-caveat: var(--font-caveat);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
 }
+
 
 /* === Global Body Styles === */
 body {

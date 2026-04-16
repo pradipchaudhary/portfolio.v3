@@ -72,6 +72,7 @@ const Projects = () => {
         Projects
       </h2>
 
+
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
@@ -81,10 +82,11 @@ const Projects = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="group relative rounded-xl p-5 cursor-pointer overflow-hidden
-            border border-slate-200 dark:border-slate-800
+            border border-slate-200 dark:border-slate-900
             bg-white dark:bg-neutral-900
             transition-all duration-300"
           >
+            {/* className="group relative bg-foreground/[0.02] border border-foreground/[0.05] rounded-2xl p-8 hover:bg-foreground/[0.04] transition-all duration-500 flex flex-col justify-between" */}
             {/* Hover Gradient */}
             <div
               className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition duration-500 group-hover:opacity-100

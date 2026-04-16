@@ -14,14 +14,12 @@ export default function VisitorCounter() {
   if (!count) return null;
 
   return (
-    <p className="text-xs text-gray-500 dark:text-gray-400 leading-none">
-      <span className="text-gray-400 dark:text-gray-500">Visitor</span>
-
-      <span className="mx-2 text-gray-300 dark:text-gray-600">•</span>
-
-      <span className="text-gray-900 dark:text-gray-100 font-medium">
-        {count.toLocaleString()}
+    <div className="flex items-center gap-1.5 tabular-nums">
+      <span className="relative flex h-2 w-2">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
       </span>
-    </p>
+      <span>{count.toLocaleString()} visitors</span>
+    </div>
   );
 }
