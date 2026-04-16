@@ -44,8 +44,9 @@ export default function Footer() {
         <div className="flex flex-col gap-7 pt-7">
 
           {/* DESCRIPTION */}
-          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
+          <p className="text-sm text-foreground/60 leading-relaxed max-w-xl">
             Built with a focus on clarity, performance, and structured UI systems.
+            Exploring the intersection of design and robust architecture.
           </p>
 
           {/* TECH LINE */}
@@ -70,6 +71,12 @@ export default function Footer() {
               Minimal interface · Intentional design · Real execution
             </p>
 
+          </div>
+
+          <div className="text-center sm:text-left">
+            <p className="text-[11px] text-gray-400 dark:text-gray-500">
+              © {new Date().getFullYear()} Pradip Chaudhary · Portfolio v3.0
+            </p>
           </div>
 
         </div>
