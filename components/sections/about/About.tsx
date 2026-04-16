@@ -3,8 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ResumeDownload from "@/components/ui/ResumeDownload";
-import Nameste from "@/components/ui/Namaste";
 import Signature from "@/components/ui/Signature";
+import Greetings from "@/components/ui/Greetings";
 
 const container = {
   hidden: { opacity: 0 },
@@ -42,8 +42,8 @@ const About = () => {
     >
       {/* === INTRO HEADER === */}
       <motion.div variants={item} className="flex flex-col items-start mb-7">
-        <Nameste />
-
+        {/* Gretting  */}
+        <Greetings />
         <motion.p
           variants={item}
           className="text-base leading-relaxed 
