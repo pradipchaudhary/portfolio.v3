@@ -55,11 +55,10 @@ const Navbar = () => {
       className="mt-6 px-8 w-full"
     >
       {/* Menu Title */}
-      <div className="relative pb-1 mb-4">
-        <h2 className="text-xs font-medium text-gray-500 uppercase tracking-wider text-center font-mono">
-          Menu
-        </h2>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-14 h-[1px] bg-gradient-to-r from-gray-200 via-red-400 to-gray-200 rounded-full" />
+      <div className="flex items-center gap-4 w-full px-2 mb-2">
+        <div className="h-[1px] flex-1 bg-foreground/5 dark:bg-foreground/10" />
+        <span className="text-xs font-medium uppercase tracking-[0.3em] font-extrabold text-foreground/30 ">Explore</span>
+        <div className="h-[1px] flex-1 bg-foreground/5 dark:bg-foreground/10" />
       </div>
 
       {/* Nav Items */}

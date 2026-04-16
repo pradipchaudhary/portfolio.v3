@@ -29,10 +29,6 @@ export default function ProfileImage({
       animate={{ opacity: 1, scale: 1, rotate: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      {/* Animated Border */}
-      {/* <div className="absolute inset-0 rounded-full overflow-hidden">
-        <div className="w-full h-full border-2 border-t-2 border-b-2 border-gradient-to-r from-blue-200 via-blue-300 to-blue-200 rounded-full animate-[slide_3s_linear_infinite]" />
-      </div> */}
 
       {/* Profile Image */}
       <Image
@@ -48,8 +44,19 @@ export default function ProfileImage({
             height,
           })}
         priority
-        className="rounded-full object-cover border-[3px] border-white dark:border-zinc-900 shadow-md"
+        className="rounded-full object-cover border-[3px] border-white dark:border-zinc-900 shadow-md dark:shadow-[0_15px_50px_-10px_rgba(0,0,0,0.4)] "
       />
+      {/* Active Status Dot with Tooltip & Ping */}
+      <div className="absolute bottom-4 right-0 group/status">
+        <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-75" />
+        <div className="relative w-5 h-5 bg-emerald-500 border-4 border-background dark:border-zinc-900 rounded-full shadow-lg cursor-help transition-transform hover:scale-110" />
+
+        {/* Tooltip */}
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1.5 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-[11px] font-bold whitespace-nowrap opacity-0 group-hover/status:opacity-100 transition-opacity pointer-events-none shadow-xl">
+          Interested in working together?
+          <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-zinc-900 dark:border-t-zinc-100" />
+        </div>
+      </div>
     </motion.div>
   );
 }
