@@ -70,15 +70,18 @@ const upcomingIdeas = [
 
 export default function ProjectsPage() {
   return (
-    <main className="">
+    <main>
       <div className="py-18">
 
         {/* Header */}
         <div className="mb-14">
-          <h1 className="text-4xl font-bold text-gray-900 tracking-tight">
+          <h1 className="text-4xl font-bold tracking-tight
+            text-gray-900 dark:text-white">
             Projects
           </h1>
-          <p className="mt-4 text-gray-600 max-w-2xl leading-7">
+
+          <p className="mt-4 max-w-2xl leading-7
+            text-gray-600 dark:text-gray-400">
             A collection of production systems, learning builds and experimental
             applications focused on scalable full-stack architecture and clean UI engineering.
           </p>
@@ -92,13 +95,21 @@ export default function ProjectsPage() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group border border-slate-200 rounded-xl p-6 transition-all duration-300 hover:shadow-sm"
+              className="
+                group rounded-xl p-6 transition-all duration-300
+                border border-slate-200 dark:border-zinc-800
+                bg-white dark:bg-zinc-900/40
+                hover:shadow-sm hover:border-slate-300
+                dark:hover:border-zinc-700 dark:hover:bg-zinc-900
+              "
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl font-semibold mb-3
+                text-gray-900 dark:text-gray-100">
                 {formatTitle(project.title)}
               </h3>
 
-              <p className="text-gray-700 text-sm leading-6 mb-4">
+              <p className="text-sm leading-6 mb-4
+                text-gray-700 dark:text-gray-400">
                 {project.description}
               </p>
 
@@ -106,7 +117,11 @@ export default function ProjectsPage() {
                 {project.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="text-xs italic text-gray-500 transition-colors duration-200 group-hover:text-gray-700 px-1.5"
+                    className="
+                      text-xs italic px-1.5 transition-colors duration-200
+                      text-gray-500 dark:text-gray-500
+                      group-hover:text-gray-700 dark:group-hover:text-gray-300
+                    "
                   >
                     {tag}
                   </span>
@@ -119,10 +134,13 @@ export default function ProjectsPage() {
         {/* Upcoming Section */}
         <section className="mt-24">
           <div className="mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 tracking-tight">
+            <h2 className="text-3xl font-bold tracking-tight
+              text-gray-900 dark:text-white">
               Upcoming Project Ideas
             </h2>
-            <p className="mt-3 text-gray-600 leading-7 max-w-2xl">
+
+            <p className="mt-3 max-w-2xl leading-7
+              text-gray-600 dark:text-gray-400">
               Planned scalable platforms currently under research and architecture design phase.
             </p>
           </div>
@@ -131,13 +149,18 @@ export default function ProjectsPage() {
             {upcomingIdeas.map((idea, index) => (
               <div
                 key={index}
-                className="border-l-4 border-orange-500 pl-6 py-2"
+                className="
+                  border-l-4 pl-6 py-2
+                  border-orange-500 dark:border-orange-400
+                "
               >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold mb-2
+                  text-gray-900 dark:text-gray-100">
                   {idea.title}
                 </h3>
 
-                <p className="text-sm text-gray-600 leading-6 mb-3 max-w-3xl">
+                <p className="text-sm leading-6 mb-3 max-w-3xl
+                  text-gray-600 dark:text-gray-400">
                   {idea.description}
                 </p>
 
@@ -145,7 +168,11 @@ export default function ProjectsPage() {
                   {idea.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="text-xs px-2 py-1 bg-orange-50 text-orange-600 rounded-md"
+                      className="
+                        text-xs px-2 py-1 rounded-md
+                        bg-orange-50 text-orange-600
+                        dark:bg-orange-500/10 dark:text-orange-300
+                      "
                     >
                       {tag}
                     </span>
