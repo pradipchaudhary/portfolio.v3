@@ -45,7 +45,7 @@ const About = () => {
         {/* Gretting  */}
         <div className="">
           <div className="relative group inline-block">
-            <div className="absolute -inset-4 bg-red-500/5 rounded-full blur-2xl opacity-100" />
+            <div className="absolute -inset-4 bg-red-500/5 rounded-full blur-3xl opacity-100" />
             <div className="relative opacity-60 ">
               <Greetings />
 
@@ -214,12 +214,7 @@ const About = () => {
 
       {/* Signature */}
       <div className="pt-6">
-        <div className="relative group inline-block">
-          <div className="absolute -inset-4 bg-red-500/5 rounded-full blur-3xl opacity-100" />
-          <div className="relative opacity-60 ">
-            <Signature />
-          </div>
-        </div>
+        <Signature />
       </div>
     </motion.section>
   );
