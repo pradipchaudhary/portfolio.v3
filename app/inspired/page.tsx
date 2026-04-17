@@ -24,7 +24,6 @@ const sections: Section[] = [
       { name: "Hrithik", url: "https://devhrithik.vercel.app/" },
     ],
   },
-
   {
     title: "Additional High-Quality Portfolios",
     items: [
@@ -36,18 +35,15 @@ const sections: Section[] = [
       { name: "Alex Carpenter", url: "https://alexcarpenter.me/" },
     ],
   },
-
   {
     title: "Minimal & Clean Aesthetic Inspiration",
     items: [
       { name: "Vercel Design", url: "https://vercel.com/design" },
       { name: "Linear", url: "https://linear.app/" },
-      // { name: "Superlist", url: "https://superlist.com/" },
       { name: "Arc", url: "https://arc.net/" },
       { name: "Framer", url: "https://framer.com/" },
     ],
   },
-
   {
     title: "Motion & Animation Inspiration",
     items: [
@@ -61,15 +57,16 @@ const sections: Section[] = [
 export default function InspirationPage() {
   return (
     <main className="py-18">
-      <div className="">
-
+      <div>
         {/* Header */}
         <header className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 tracking-tight">
+          <h1 className="text-4xl font-bold tracking-tight
+            text-gray-900 dark:text-white">
             Inspired By
           </h1>
 
-          <p className="mt-4 text-gray-600 max-w-2xl leading-7">
+          <p className="mt-4 max-w-2xl leading-7
+            text-gray-600 dark:text-gray-400">
             A curated list of beautiful, modern, clean, and high-quality developer and designer portfolios that influence my UI, animations, and design direction.
           </p>
         </header>
@@ -78,7 +75,8 @@ export default function InspirationPage() {
         <div className="space-y-12">
           {sections.map((section) => (
             <section key={section.title}>
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">
+              <h2 className="text-lg font-semibold mb-4
+                text-gray-900 dark:text-gray-200">
                 {section.title}
               </h2>
 
@@ -89,22 +87,35 @@ export default function InspirationPage() {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-sm group"
+                    className="group flex items-center gap-1 text-sm"
                   >
-                    <span className="text-gray-700 group-hover:text-black transition">
+                    <span
+                      className="
+                        text-gray-700 dark:text-gray-400
+                        group-hover:text-black dark:group-hover:text-white
+                        transition-colors duration-200
+                      "
+                    >
                       {item.name}
                     </span>
 
-                    {/* <span className="text-gray-400 group-hover:text-gray-600 transition -mt-6 w-1 h-1">
+                    {/* subtle arrow */}
+                    <span
+                      className="
+                        text-gray-400 dark:text-gray-500
+                        group-hover:text-gray-600 dark:group-hover:text-gray-300
+                        transition-all duration-200
+                        translate-x-0 group-hover:translate-x-0.5
+                      "
+                    >
                       ↗
-                    </span> */}
+                    </span>
                   </a>
                 ))}
               </div>
             </section>
           ))}
         </div>
-
       </div>
     </main>
   );
