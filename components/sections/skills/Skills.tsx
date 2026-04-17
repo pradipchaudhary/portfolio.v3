@@ -206,13 +206,13 @@ const Skills = () => {
   return (
     <motion.section
       id="skills"
-      className="py-18 relative"
+      className="py-18 relative text-gray-900 dark:text-gray-100"
       variants={container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <h2 className="text-3xl font-bold text-gray-900 mb-6 tracking-tight">Skills</h2>
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">Skills</h2>
 
       <div className="flex flex-wrap gap-4">
         {skills.map((skill, index) => (
@@ -223,7 +223,7 @@ const Skills = () => {
             onMouseLeave={() => setHoveredIndex(null)}
           >
 
-            <span className="inline-flex items-center gap-1.5 text-sm cursor-pointer text-gray-600 hover:text-blue-700 italic">
+            <span className="inline-flex items-center gap-1.5 text-sm cursor-pointer text-gray-600 dark:text-gray-400 hover:text-blue-700 italic">
               #{skill.name}
             </span>
 
