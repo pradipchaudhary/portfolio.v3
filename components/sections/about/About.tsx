@@ -43,7 +43,16 @@ const About = () => {
       {/* === INTRO HEADER === */}
       <motion.div variants={item} className="flex flex-col items-start mb-7">
         {/* Gretting  */}
-        <Greetings />
+        <div className="">
+          <div className="relative group inline-block">
+            <div className="absolute -inset-4 bg-red-500/5 rounded-full blur-2xl opacity-100" />
+            <div className="relative opacity-60 ">
+              <Greetings />
+
+            </div>
+          </div>
+        </div>
+        {/* <Greetings /> */}
         <motion.p
           variants={item}
           className="text-base leading-relaxed 
@@ -203,9 +212,15 @@ const About = () => {
         <ResumeDownload />
       </motion.div>
 
-      <motion.div variants={item}>
-        <Signature />
-      </motion.div>
+      {/* Signature */}
+      <div className="pt-6">
+        <div className="relative group inline-block">
+          <div className="absolute -inset-4 bg-red-500/5 rounded-full blur-3xl opacity-100" />
+          <div className="relative opacity-60 ">
+            <Signature />
+          </div>
+        </div>
+      </div>
     </motion.section>
   );
 };

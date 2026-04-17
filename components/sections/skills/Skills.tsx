@@ -206,7 +206,7 @@ const Skills = () => {
   return (
     <motion.section
       id="skills"
-      className="py-18 relative text-gray-900 dark:text-gray-100"
+      className="py-18 relative text-foreground dark:text-gray-100"
       variants={container}
       initial="hidden"
       whileInView="visible"
@@ -236,12 +236,13 @@ const Skills = () => {
                   exit="hidden"
                   variants={tooltipVariants}
                   transition={{ duration: 0.2 }}
-                  className="absolute bottom-full left-0 -translate-x-1/2 mb-3 w-72 z-50"
+                  className="absolute bottom-full left-0  mb-3 w-72 z-50"
                 >
-                  <div className="relative bg-white border border-gray-200 rounded-xl px-4 py-4 backdrop-blur-md  pb-10">
+                  <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.12)] border border-neutral-100 dark:border-neutral-800 backdrop-blur-xl relative px-4 py-4 pb-10">
                     {/* Arrow pointing down on left side */}
+
                     <div
-                      className="absolute bottom-[-6px] left-10 w-3 h-3 rotate-45 bg-white border-r border-b border-gray-200"
+                      className="absolute -bottom-1.5 left-6 w-3 h-3 bg-white dark:bg-neutral-900 border-b border-r border-neutral-100 dark:border-neutral-800 rotate-45"
                     // style={{ left: "10px" }} // fixed to left side
                     />
 
@@ -253,7 +254,7 @@ const Skills = () => {
                       </div>
 
                       <div className="flex-1">
-                        <h3 className="text-md font-semibold text-gray-900">
+                        <h3 className="text-md font-semibold text-foreground">
                           {skill.name}
                         </h3>
                         <p className="text-[12px] text-gray-500 -mt-0.5 leading-tight">
@@ -265,7 +266,7 @@ const Skills = () => {
                     {/* Topics */}
                     <div className="flex flex-wrap gap-1.5 mt-6">
                       {skill.topics.map((topic, i) => (
-                        <span key={i} className="leading-5 mb-2  text-gray-700 hover:text-blue-700 cursor-pointer  rounded-md text-xs italic bg-gray-50  mr-2 px-1">
+                        <span key={i} className="leading-5 mb-2  bg-foreground/[0.03] text-foreground/60 hover:text-blue-700 cursor-pointer  rounded-md text-xs italic  mr-2 px-1">
                           #{topic}
                         </span>
                       ))}
