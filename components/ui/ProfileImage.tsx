@@ -48,8 +48,8 @@ export default function ProfileImage({
       />
       {/* Active Status Dot with Tooltip & Ping */}
       <div className="absolute bottom-4 right-0 group/status">
-        <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-75" />
-        <div className="relative w-5 h-5 bg-emerald-500 border-4 border-background dark:border-zinc-900 rounded-full shadow-lg cursor-help transition-transform hover:scale-110" />
+        <span className="absolute inset-0 rounded-full bg-emerald-500 animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite] opacity-75" />
+        <div className="relative w-3.5 h-3.5 bg-emerald-500 border-2 border-background dark:border-zinc-900 rounded-full shadow-lg cursor-help transition-transform hover:scale-110" />
 
         {/* Tooltip */}
         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-1.5 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-[11px] font-bold whitespace-nowrap opacity-0 group-hover/status:opacity-100 transition-opacity pointer-events-none shadow-xl">

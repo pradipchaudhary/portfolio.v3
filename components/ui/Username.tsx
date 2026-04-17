@@ -60,13 +60,13 @@ export default function Username({
         }}
       >
 
-        <div className="hover:opacity-80 transition">
+        <div className="hover:opacity-80 transition mt-1">
           <h1 className="text-xl font-semibold text-gray-900 -mt-4 dark:text-zinc-50">
             {name}
           </h1>
           <div
             onClick={copyEmail}
-            className="flex items-center justify-center gap-1 text-sm text-foreground/50 dark:text-foreground/40 px-2 font-sans py-0.5  cursor-pointer transition-all group/email"
+            className="flex items-center justify-center gap-1 text-sm text-foreground/50 dark:text-foreground/40 px-2 font-sans py-  cursor-pointer transition-all group/email"
           >
             <span className="truncate max-w-[155px] decoration-foreground/20">{email}</span>
             {copied ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3 opacity-30 group-hover/email:opacity-100" />}
