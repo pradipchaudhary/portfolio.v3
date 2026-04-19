@@ -18,6 +18,7 @@
     --background: #09090b;
     --foreground: #fafafa;
     --muted: #18181b;
+    --accent: #4285f4;
 }
 
 /* Ensure Tailwind v4 knows about the dark class strategy */
@@ -56,7 +57,6 @@ body {
     height: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    scroll-behavior: smooth;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 

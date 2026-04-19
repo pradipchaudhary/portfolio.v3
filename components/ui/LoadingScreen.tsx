@@ -36,7 +36,7 @@ export default function LoadingScreen({
 
   return (
     <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background transition-colors duration-700">
-      <div className="flex flex-col items-center gap-12">
+      <div className="flex flex-col items-center gap-12 text-foreground/90">
 
         {/* Logo */}
         <motion.div
@@ -50,11 +50,11 @@ export default function LoadingScreen({
             animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
             transition={{ duration: 2, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
           >
-            <Namaste className="w-56 h-56 sm:w-72 sm:h-72 fill-current text-foreground" />
+            <Namaste className="w-80 h-80 sm:w-72 sm:h-72 fill-current text-foreground" />
           </motion.div>
         </motion.div>
 
-        {/* Text + Percentage */}
+        {/* Text  */}
         <div className="h-20 flex flex-col items-center justify-center gap-2">
           <motion.h1
             initial={{ opacity: 0, y: 20, letterSpacing: "1em" }}
@@ -69,27 +69,35 @@ export default function LoadingScreen({
             Namaste
           </motion.h1>
 
-          {/* Percentage */}
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2.2 }}
-            className="text-sm text-foreground/50 tracking-widest"
-          >
-            {Math.floor(progress)}%
-          </motion.span>
+
+        </div>
+      </div>
+      {/* Percentage */}
+      {/* <motion.span
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+        className="text-sm text-foreground/50 tracking-widest mt-20 "
+      >
+
+
+      </motion.span> */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 bg-accent/50 overflow-hidden text-center">
+        {/* Percentage */}
+        <h1 className="text-foreground/50 tracking-tight text-sm font-thin">
+          {Math.floor(progress)}%
+        </h1>
+        {/* Progress Bar */}
+        <div className="w-40 h-[1px] bg-accent/10 overflow-hidden mt-2">
+          <motion.div
+            className="h-full bg-foreground/20"
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 3.5, ease: "linear" }}
+          />
         </div>
       </div>
 
-      {/* Progress Bar */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-48 h-[1px] bg-foreground/5 overflow-hidden">
-        <motion.div
-          className="h-full bg-foreground/20"
-          initial={{ width: "0%" }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 4.5, ease: "linear" }}
-        />
-      </div>
     </div>
   );
 }
