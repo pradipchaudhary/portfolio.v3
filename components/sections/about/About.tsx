@@ -76,12 +76,13 @@ const About = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
+                d="M0 8C20 2 40 12 60 6C80 0 100 10 120 4"
                 stroke="currentColor"
                 strokeWidth="1.4"
                 strokeLinecap="round"
                 fill="none"
               />
+              {/* M3 7C20 2 50 10 70 4C90 -2 110 8 118 3 */}
             </svg>
           </a>{" "}
           passionate about creating performant, responsive, and user-friendly web applications.
