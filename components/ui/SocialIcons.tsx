@@ -90,7 +90,7 @@ export default function SocialIcons() {
                 className={`
                   inline-flex h-11 w-11 items-center justify-center
                   rounded-full bg-white
-                  dark:bg-zinc-900/95
+                  dark:bg-zinc-900
                   border border-neutral-200
                   shadow-md
                   text-neutral-700
@@ -98,6 +98,7 @@ export default function SocialIcons() {
                   hover:text-white
                   dark:border-zinc-800
                   dark:text-zinc-600
+                  dark:shadow-[0_4px_20px_rgb(0,0,0,0.2)]
                   
                   ${item.hoverBg}
                 `}
