@@ -1,5 +1,7 @@
 import { prisma } from "@/lib/prisma";
 
+export const runtime = "nodejs";
+
 export async function GET() {
   try {
     const visitor = await prisma.visitor.upsert({

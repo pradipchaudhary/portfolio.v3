@@ -247,7 +247,7 @@ const Skills = () => {
                     />
 
                     {/* Icon + Name + Description */}
-                    <div className="flex items-center gap-3 mb-3 border-b border-gray-200 pb-2">
+                    <div className="flex items-center gap-3 mb-3 border-b border-neutral-100 dark:border-neutral-800 pb-2">
 
                       <div>
                         {skill.icon}

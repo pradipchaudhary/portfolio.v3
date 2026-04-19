@@ -1,26 +1,30 @@
-import { PrismaClient } from '@prisma/client';
+// prisma/seed.ts
+import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcrypt";
+
 const prisma = new PrismaClient();
 
 async function main() {
-  await prisma.project.createMany({
-    data: [
-      {
-        title: 'NepCoin Tracker',
-        slug: 'nepcoin-tracker',
-        description: 'Crypto prices in NPR with clean charts.',
-        url: 'https://nepcoin.example.com',
-        tags: ['nextjs', 'tailwind', 'prisma']
-      },
-      {
-        title: 'DocsNepal',
-        slug: 'docsnepal',
-        description: 'All Nepali documents in one searchable place.',
-        url: 'https://docsnepal.example.com',
-        tags: ['nextjs', 'postgres', 'neon']
-      }
-    ],
-    skipDuplicates: true
+  const email = "admin@portfolio.com";
+  const password = await bcrypt.hash("admin123", 10);
+
+  await prisma.user.upsert({
+    where: { email },
+    update: {},
+    create: {
+      email,
+      password,
+      role: "ADMIN",
+    },
   });
 
+  console.log("✅ Admin user seeded successfully");
 }
-main().finally(() => prisma.$disconnect());
+
+main()
+  .then(() => prisma.$disconnect())
+  .catch(async (e) => {
+    console.error(e);
+    await prisma.$disconnect();
+    process.exit(1);
+  });
