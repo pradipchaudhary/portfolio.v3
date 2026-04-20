@@ -2,26 +2,33 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { verifyToken } from "./lib/jwt";
 
-export async function proxy(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
 
-  const isAdminRoute = req.nextUrl.pathname.startsWith("/admin");
+  const isDashboardRoute = req.nextUrl.pathname.startsWith(
+    "/dashboard"
+  );
 
-  if (!isAdminRoute) return NextResponse.next();
+  if (!isDashboardRoute) {
+    return NextResponse.next();
+  }
 
   if (!token) {
-    return NextResponse.redirect(new URL("/admin/login", req.url));
+    return NextResponse.redirect(
+      new URL("/login", req.url)
+    );
   }
 
-  const payload = await verifyToken(token);
-
-  if (!payload) {
-    return NextResponse.redirect(new URL("/admin/login", req.url));
+  try {
+    verifyToken(token);
+    return NextResponse.next();
+  } catch {
+    return NextResponse.redirect(
+      new URL("/login", req.url)
+    );
   }
-
-  return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/dashboard/:path*"],
 };

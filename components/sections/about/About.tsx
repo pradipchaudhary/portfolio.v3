@@ -214,9 +214,10 @@ const About = () => {
       </motion.div>
 
       {/* Signature */}
-      <div className="pt-6">
+      <motion.div variants={item} className="pt-6">
         <Signature />
-      </div>
+      </motion.div>
+
     </motion.section>
   );
 };

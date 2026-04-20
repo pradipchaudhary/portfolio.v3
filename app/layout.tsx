@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import HomeLayout from "@/components/layout/HomeLayout";
 import AppWrapper from "@/components/ui/AppWrapper";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+
+import JsonLd from "@/lib/seo/JsonLd";
+import { personSchema } from "@/lib/seo/structuredData";
+import MainLayout from "@/components/layout/MainLayout";
+
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 // ==============================
 // 🌐 ADVANCED SEO METADATA
@@ -79,30 +83,7 @@ export const metadata: Metadata = {
         google: "google-site-verification=HiE84E4kBt1bJ-0_dnIXM7FzBGG5xkrRyD58d45O9Hc", // add if available
     },
 };
-// google-site-verification=HiE84E4kBt1bJ-0_dnIXM7FzBGG5xkrRyD58d45O9Hc
-// ==============================
-// 🌍 STRUCTURED DATA (JSON-LD)
-// ==============================
-export const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Pradip Chaudhary",
-    url: "https://www.pradipchaudhary.com.np",
-    image: "https://www.pradipchaudhary.com.np/og-image.jpg",
-    jobTitle: "Full Stack Developer",
-    worksFor: {
-        "@type": "Organization",
-        name: "Freelance / Open Source",
-    },
-    sameAs: [
-        "https://github.com/pradipchaudhary",
-        "https://linkedin.com/in/pradipchaudhary",
-        "https://x.com/pradipchaudhary",
-        "https://www.pradipchaudhary.com.np",
-    ],
-    description:
-        "Pradip Chaudhary is a Full Stack Developer from Nepal specializing in React, Next.js, Node.js, and TypeScript — building scalable, SEO-optimized web applications.",
-};
+
 
 export default function RootLayout({
     children,
@@ -111,14 +92,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <head>
-                {/* JSON-LD Structured Data for SEO */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-                />
-            </head>
+
             <body className={inter.className} suppressHydrationWarning>
+                <JsonLd data={personSchema} />
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
@@ -126,9 +102,9 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     <AppWrapper>
-                        <HomeLayout>
+                        <MainLayout>
                             {children}
-                        </HomeLayout>
+                        </MainLayout>
                     </AppWrapper>
                 </ThemeProvider>
             </body>

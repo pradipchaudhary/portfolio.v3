@@ -6,7 +6,7 @@ import Experience from "@/components/sections/experience/Experience";
 import Projects from "@/components/sections/projects/Projects";
 import QuoteSection from "@/components/sections/quote/Quote";
 import Skills from "@/components/sections/skills/Skills";
-import LoadingScreen from "@/components/ui/LoadingScreen";
+import LoadingScreen from "@/components/layout/LoadingScreen";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 

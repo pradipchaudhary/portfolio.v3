@@ -1,19 +1,19 @@
-import { SignJWT, jwtVerify } from "jose";
+import jwt from "jsonwebtoken";
 
-const secret = new TextEncoder().encode(process.env.JWT_SECRET);
+const secret = process.env.JWT_SECRET as string;
 
-export async function signToken(payload: any) {
-  return await new SignJWT(payload)
-    .setProtectedHeader({ alg: "HS256" })
-    .setExpirationTime("7d")
-    .sign(secret);
+if (!secret) {
+  throw new Error("JWT_SECRET is not defined in environment variables");
 }
 
-export async function verifyToken(token: string) {
+export function signToken(payload: any) {
+  return jwt.sign(payload, secret, { expiresIn: "7d" });
+}
+
+export function verifyToken(token: string) {
   try {
-    const { payload } = await jwtVerify(token, secret);
-    return payload;
-  } catch {
+    return jwt.verify(token, secret);
+  } catch (error) {
     return null;
   }
 }
