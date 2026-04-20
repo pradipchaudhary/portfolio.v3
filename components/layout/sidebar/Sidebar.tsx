@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 import FollowMeSocial from "@/components/ui/FollowMeSocial";
-
 import ProfileImage from "@/components/ui/ProfileImage";
 import Username from "@/components/ui/Username";
 
@@ -11,40 +10,38 @@ const Sidebar = () => {
   return (
     <aside
       className="
-        w-full md:w-1/2 lg:w-1/2
+        w-full lg:w-1/2
         lg:sticky lg:top-0
-        lg:h-screen
+        lg:h-dvh
         flex flex-col justify-between
-        px-6 py-10 lg:pt-16 lg:pb-4
+        px-6 py-10 lg:pt-16 lg:pb-6
       "
     >
       {/* ===== TOP SECTION ===== */}
-      <header className="flex flex-col items-center text-center space-y-4">
-        {/* Profile Image */}
+      <div className="flex flex-col items-center text-center space-y-4">
+
         <ProfileImage src="/logo.png" alt="Pradip Chaudhary" />
 
-        {/* Name + Username */}
         <Username username="pradipchaudhary" name="Pradip Chaudhary" />
 
-        {/* Bio */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
-          className="text-sm text-gray-500 dark:text-zinc-500 max-w-[300px] leading-relaxed">
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+          className="text-sm text-gray-500 dark:text-zinc-500 max-w-[320px] leading-relaxed"
+        >
           Full Stack Developer <br />
-          Building modern web experiences.
+          Building modern, scalable web experiences.
         </motion.p>
 
-        {/* Navbar */}
         <Navbar />
-      </header>
+      </div>
 
       {/* ===== SOCIAL SECTION ===== */}
-      <div className="mt-10 lg:mt-0 ml-[-38px]">
+      <div className="mt-10 lg:mt-0 flex justify-center lg:justify-start">
         <FollowMeSocial />
       </div>
-    </aside >
+    </aside>
   );
 };
 

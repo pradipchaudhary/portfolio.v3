@@ -1,0 +1,34 @@
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+  --muted: #f9fafb;
+  --accent: #4285f4;
+}
+
+.dark {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --muted: #18181b;
+  --accent: #4285f4;
+}
+
+/* Ensure Tailwind v4 knows about the dark class strategy */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --font-handwriting: var(--font-handwriting);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground transition-colors duration-700 antialiased;
+  }
+}
+
+/* Smooth transitions for theme-dependent elements */
+* {
+  @apply transition-colors duration-500;
+}
