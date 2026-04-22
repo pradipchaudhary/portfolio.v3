@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Workflow } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "motion/react";
 import {
   SiJavascript,
   SiReact,
@@ -27,17 +27,21 @@ import { DiPhp } from "react-icons/di";
 import { FaSass } from "react-icons/fa6";
 
 // Main container animation only
-const container = {
+const container: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-      delay: 0.2, // slight delay after About
+      delay: 0.2,
       ease: [0.22, 1, 0.36, 1],
     },
   },
+};
+const tooltipVariants: Variants = {
+  hidden: { opacity: 0, y: -10 },
+  visible: { opacity: 1, y: 0 },
 };
 
 // Skills array with standardized icon sizes (w-7 h-7)
@@ -195,10 +199,7 @@ const skills = [
   },
 ];
 
-const tooltipVariants = {
-  hidden: { opacity: 0, y: -10 },
-  visible: { opacity: 1, y: 0 },
-};
+
 
 const Skills = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
