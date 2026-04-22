@@ -1,222 +1,163 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "motion/react";
 import ResumeDownload from "@/components/ui/ResumeDownload";
 import Signature from "@/components/ui/Signature";
 import Greetings from "@/components/ui/Greetings";
 
-const container = {
+/* =========================
+   ANIMATION VARIANTS
+========================= */
+
+const container: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.25,
-      delayChildren: 0.2,
+      staggerChildren: 0.2,
+      delayChildren: 0.15,
     },
   },
 };
 
-const item = {
-  hidden: { opacity: 0, y: 25 },
+const item: Variants = {
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
-      ease: "easeOut",
+      duration: 0.45,
+      ease: [0.25, 0.1, 0.25, 1], // 👈 FIXED (cubic-bezier)
     },
   },
 };
+
+/* =========================
+   LINK COMPONENT (DRY FIX)
+========================= */
+
+const HighlightLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        relative inline-block font-bold
+        text-[var(--foreground)]
+        hover:text-[var(--accent)]
+        transition-colors duration-300
+      "
+    >
+      {children}
+
+      {/* underline */}
+      <svg
+        className="absolute -bottom-[2px] left-0 w-full h-[10px] text-[var(--foreground)]/40"
+        viewBox="0 0 120 10"
+        fill="none"
+      >
+        <path
+          d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+        />
+      </svg>
+    </a>
+  );
+};
+
+/* =========================
+   MAIN COMPONENT
+========================= */
 
 const About = () => {
   return (
     <motion.section
       id="about"
       aria-label="About Pradip Chaudhary"
-      className="max-w-3xl mx-auto mb-10 pt-20
-      text-gray-800 dark:text-gray-200"
+      className="
+        max-w-3xl mx-auto mb-10 pt-20
+        text-[var(--foreground)]
+      "
       variants={container}
       initial="hidden"
       animate="visible"
     >
-      {/* === INTRO HEADER === */}
+      {/* ================= INTRO ================= */}
       <motion.div variants={item} className="flex flex-col items-start mb-7">
-        {/* Gretting  */}
-        <div className="">
-          <div className="relative group inline-block">
-            <div className="absolute -inset-4 bg-red-500/5 rounded-full blur-3xl opacity-100" />
-            <div className="relative opacity-60 ">
-              <Greetings />
 
-            </div>
+        {/* Greeting */}
+        <div className="relative group inline-block">
+          {/* <div className="absolute -inset-4 bg-[var(--accent)]/5 rounded-full blur-3xl" /> */}
+          <div className="relative opacity-80">
+            <Greetings />
           </div>
         </div>
-        {/* <Greetings /> */}
+
+        {/* INTRO TEXT */}
         <motion.p
           variants={item}
-          className="text-base leading-relaxed 
-          text-gray-700 dark:text-gray-300 mt-2"
+          className="text-base leading-relaxed text-[var(--foreground)]/80 mt-2"
         >
           Hi 👋, I’m{" "}
-          <a
-            href="https://react.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative inline-block font-bold 
-            text-gray-900 dark:text-white
-            hover:text-black dark:hover:text-gray-200
-            transition-all duration-300"
-          >
+          <HighlightLink href="https://react.dev/">
             React Developer
-            <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] 
-              text-gray-400 dark:text-gray-500"
-              viewBox="0 0 120 10"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 8C20 2 40 12 60 6C80 0 100 10 120 4"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                fill="none"
-              />
-              {/* M3 7C20 2 50 10 70 4C90 -2 110 8 118 3 */}
-            </svg>
-          </a>{" "}
+          </HighlightLink>{" "}
           passionate about creating performant, responsive, and user-friendly web applications.
         </motion.p>
 
         <motion.p
           variants={item}
-          className="text-base leading-relaxed 
-          text-gray-600 dark:text-gray-400 mt-4 max-w-2xl"
+          className="text-base leading-relaxed text-[var(--foreground)]/70 mt-4 max-w-2xl"
         >
           I enjoy exploring modern technologies such as{" "}
-          <a
-            href="https://nextjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative inline-block font-bold 
-            text-gray-900 dark:text-white
-            hover:text-black dark:hover:text-gray-200
-            transition-all duration-300"
-          >
-            Next.js
-            <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] 
-              text-gray-400 dark:text-gray-500"
-              viewBox="0 0 120 10"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                fill="none"
-              />
-            </svg>
-          </a>
-          ,{" "}
-          <a
-            href="https://www.typescriptlang.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative inline-block font-bold 
-            text-gray-900 dark:text-white
-            hover:text-black dark:hover:text-gray-200
-            transition-all duration-300"
-          >
-            TypeScript
-            <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] 
-              text-gray-400 dark:text-gray-500"
-              viewBox="0 0 120 10"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                fill="none"
-              />
-            </svg>
-          </a>
-          , and{" "}
-          <a
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative inline-block font-bold 
-            text-gray-900 dark:text-white
-            hover:text-black dark:hover:text-gray-200
-            transition-all duration-300"
-          >
-            Tailwind CSS
-            <svg
-              className="absolute -bottom-[2px] left-0 w-full h-[10px] 
-              text-gray-400 dark:text-gray-500"
-              viewBox="0 0 120 10"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                fill="none"
-              />
-            </svg>
-          </a>{" "}
+          <HighlightLink href="https://nextjs.org/">Next.js</HighlightLink>,{" "}
+          <HighlightLink href="https://www.typescriptlang.org/">TypeScript</HighlightLink>, and{" "}
+          <HighlightLink href="https://tailwindcss.com/">Tailwind CSS</HighlightLink>{" "}
           to build clean, scalable, and accessible digital products.
         </motion.p>
       </motion.div>
 
-      {/* === DESCRIPTION === */}
-      <motion.div
-        variants={item}
-        className="space-y-6 text-base leading-relaxed 
-        text-gray-700 dark:text-gray-300"
-      >
-        <motion.p variants={item}>
+      {/* ================= DESCRIPTION ================= */}
+      <motion.div variants={item} className="space-y-6 text-base leading-relaxed">
+
+        <motion.p variants={item} className="text-[var(--foreground)]/80">
           I’m passionate about transforming ideas into elegant web solutions — combining{" "}
-          <span className="font-medium text-gray-900 dark:text-white">
+          <span className="font-medium text-[var(--foreground)]">
             clean design
           </span>{" "}
           with{" "}
-          <span className="font-medium text-gray-900 dark:text-white">
+          <span className="font-medium text-[var(--foreground)]">
             efficient, functional code
           </span>.
         </motion.p>
 
-        <motion.p variants={item}>
+        <motion.p variants={item} className="text-[var(--foreground)]/80">
           Beyond coding, I explore{" "}
-          <a
-            href="https://openai.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold 
-            text-gray-900 dark:text-white
-            hover:text-black dark:hover:text-gray-200"
-          >
-            AI
-          </a>
-          , <strong>SEO</strong>, <strong>Web Scraping</strong>, and data-driven projects that deliver real-world value.
+          <HighlightLink href="https://openai.com/">AI</HighlightLink>,{" "}
+          <span className="font-semibold">SEO</span>,{" "}
+          <span className="font-semibold">Web Scraping</span>, and data-driven projects that deliver real-world value.
         </motion.p>
+
       </motion.div>
 
-      {/* === ACTIONS === */}
+      {/* ================= ACTIONS ================= */}
       <motion.div variants={item}>
         <ResumeDownload />
       </motion.div>
 
-      {/* Signature */}
-      <div className="pt-6">
+      {/* ================= SIGNATURE ================= */}
+      <motion.div variants={item} className="pt-6">
         <Signature />
-      </div>
+      </motion.div>
     </motion.section>
   );
 };

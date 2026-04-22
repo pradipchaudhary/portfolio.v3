@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./tokens.css";
 
 /* ============================================================
    🌐 Global Theme Styles — Portfolio v3 by Pradip Chaudhary
@@ -7,227 +8,25 @@
 
 
 
-:root {
-    --background: #ffffff;
-    --foreground: #111827;
-    --muted: #f9fafb;
-    --accent: #4285f4;
-}
-
-.dark {
-    --background: #09090b;
-    --foreground: #fafafa;
-    --muted: #18181b;
-}
-
-/* Ensure Tailwind v4 knows about the dark class strategy */
-@custom-variant dark (&:where(.dark, .dark *));
-
-@theme {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-muted: var(--muted);
-    --font-handwriting: var(--font-handwriting);
-}
-
-@layer base {
-    body {
-        @apply bg-background text-foreground transition-colors duration-700 antialiased;
-    }
-}
-
-/* Smooth transitions for theme-dependent elements */
-* {
-    @apply transition-colors duration-500;
-}
-
 /* === Global Body Styles === */
 body {
-    background-color: var(--background);
-    color: var(--foreground);
-    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 16px;
-    line-height: 1.75;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    scroll-behavior: smooth;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* === Universal Reset === */
 * {
-    box-sizing: border-box;
-}
-
-img,
-svg,
-video {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #e4e4e7;
-    border-radius: 10px;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-    background: #27272a;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #d4d4d8;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-    background: #3f3f46;
-}
-
-/* Selection color */
-::selection {
-    background-color: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
-}
-
-.dark ::selection {
-    background-color: rgba(59, 130, 246, 0.2);
-    color: #60a5fa;
-}
-
-
-/* === Selection Color === */
-/* ::selection {
-    background: var(--accent-strong);
-    color: #fff;
-} */
-
-/* === Smooth Scroll === */
-html {
-    scroll-behavior: smooth;
-}
-
-/* === Gradient Text Helper === */
-.text-gradient {
-    @apply bg-gradient-to-r from-[#fee2e2] via-[#fca5a5] to-[#ef4444] bg-clip-text text-transparent;
-}
-
-/* === Layout Helpers === */
-.container {
-    @apply max-w-5xl mx-auto px-4 md:px-6 lg:px-8;
-}
-
-.section {
-    @apply py-16 md:py-24;
-}
-
-/* === Interactive Elements Transition === */
-button,
-a,
-input,
-textarea {
-    transition: var(--transition);
-}
-
-
-
-
-/* === Sidebar Follow Me Animations === */
-/* Text Enter */
-@keyframes followTextIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-12px) rotate(-20deg);
-    }
-
-    100% {
-        opacity: 0.6;
-        transform: translateY(0) rotate(-20deg);
-    }
-}
-
-/* SVG Draw */
-@keyframes drawPath {
-    from {
-        stroke-dashoffset: 1;
-    }
-
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-
-
-.animate-follow-text {
-    animation: followTextIn 0.8s ease forwards;
-}
-
-.animate-draw-path {
-    animation: drawPath 1.4s ease forwards;
-}
-
-
-/* Arrow Draw Animation */
-@keyframes arrowDraw {
-    0% {
-        stroke-dashoffset: 1;
-    }
-
-    60% {
-        stroke-dashoffset: 0;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-/* Floating Motion */
-@keyframes arrowFloat {
-
-    0%,
-    100% {
-        transform: translateY(0px) rotate(45deg);
-    }
-
-    50% {
-        transform: translateY(-6px) rotate(45deg);
-    }
-}
-
-/* Glow Pulse */
-@keyframes arrowGlow {
-
-    0%,
-    100% {
-        stroke: #7f7f7f;
-    }
-
-    50% {
-        stroke: #a3a3a3;
-    }
-}
-
-.animate-arrow-path {
-    animation: arrowDraw 2s ease forwards, arrowGlow 2s ease-in-out;
-}
-
-.animate-arrow-container {
-    animation: arrowFloat 3s ease-in-out infinite smooth-fill 10s linear infinite;
+  box-sizing: border-box;
 }

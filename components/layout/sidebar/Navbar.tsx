@@ -1,97 +1,88 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const ACTIVE_COLOR = "#4285f4";
 
 const navItems = [
-  { label: "home", href: "/", id: "home" },
-  { label: "projects", href: "/projects", id: "projects" },
-  { label: "experience", href: "/experience", id: "experience" },
-  { label: "blog", href: "/blog", id: "blog" },
-  { label: "inspired", href: "/inspired", id: "inspired" },
-  { label: "skills", href: "/skills", id: "skills" },
-  { label: "components", href: "/components", id: "components" },
-  { label: "resume", href: "/resume", id: "resume" },
+  { label: "home", href: "/" },
+  { label: "projects", href: "/projects" },
+  { label: "experience", href: "/experience" },
+  { label: "blog", href: "/blog" },
+  { label: "inspired", href: "/inspired" },
+  { label: "skills", href: "/skills" },
+  { label: "components", href: "/components" },
+  { label: "resume", href: "/resume" },
 ];
 
 const Navbar = () => {
   const pathname = usePathname();
-  const [hash, setHash] = useState("");
 
-  // ✅ Precompute nav IDs (avoid recalculating on every render)
-  const navIds = useMemo(() => navItems.map((item) => item.id), []);
-
-  // ✅ Sync hash (optimized + safe)
-  useEffect(() => {
-    const updateHash = () => setHash(window.location.hash);
-
-    updateHash(); // initial
-    window.addEventListener("hashchange", updateHash);
-
-    return () => window.removeEventListener("hashchange", updateHash);
-  }, []);
-
-  // ✅ Cleaner active logic
-  const isActive = (id: string) => {
-    if (hash) {
-      const hashId = hash.slice(1); // faster than replace
-      if (navIds.includes(hashId)) return id === hashId;
-    }
-
-    if (pathname === `/${id}`) return true;
-
-    return id === "home" && pathname === "/" && !hash;
-  };
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <motion.nav
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1.2, duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: 1.1, ease: "easeOut" }}
       className="mt-6 px-8 w-full"
+      style={{ ["--active" as any]: ACTIVE_COLOR }}
     >
-      {/* Menu Title */}
-      <div className="flex items-center gap-4 w-full px-2 mb-2">
-        <div className="h-[1px] flex-1 bg-foreground/5 dark:bg-foreground/10" />
-        <span className="text-xs font-medium uppercase tracking-[0.3em] font-extrabold text-foreground/30 ">Explore</span>
-        <div className="h-[1px] flex-1 bg-foreground/5 dark:bg-foreground/10" />
+      {/* HEADER */}
+      <div className="flex items-center gap-4 w-full px-2 mb-3">
+        <div className="h-px flex-1 bg-foreground/10" />
+        <span className="text-xs uppercase tracking-[0.3em] font-semibold text-foreground/30">
+          Explore
+        </span>
+        <div className="h-px flex-1 bg-foreground/10" />
       </div>
 
-      {/* Nav Items */}
-      <div className="flex flex-wrap justify-center">
+      {/* NAV */}
+      <div className="flex flex-wrap justify-center gap-x-1 gap-y-1">
         {navItems.map((item) => {
-          const active = isActive(item.id);
-          const activeStyle = active ? { color: ACTIVE_COLOR } : undefined;
+          const active = isActive(item.href);
 
           return (
             <Link
-              key={item.id} // ✅ better key
+              key={item.href}
               href={item.href}
               aria-current={active ? "page" : undefined}
-              className={`group inline-flex items-center text-[13px] transition-colors duration-200 ${active
-                ? "font-semibold"
-                : "text-gray-500 hover:text-gray-900 pl-1"
-                }`}
-              style={activeStyle}
+              className={`
+                group inline-flex items-center text-[13px]
+                transition-colors duration-200
+                hover:text-[color:var(--active)]
+              `}
+              style={{
+                color: active ? ACTIVE_COLOR : "#6b7280",
+              }}
             >
+              {/* HASH */}
               <span
-                className={`mr-[0.3px] font-mono ${active
-                  ? ""
-                  : "text-gray-400 group-hover:text-gray-500"
-                  }`}
-                style={activeStyle}
+                className={`
+                  font-mono
+                  transition-colors duration-200
+                  group-hover:text-[color:var(--active)]
+                `}
+                style={{
+                  color: active ? ACTIVE_COLOR : undefined,
+                }}
               >
                 #
               </span>
 
+              {/* LABEL */}
               <span
-                className={`italic tracking-tight ${active ? "" : "group-hover:text-gray-700"
-                  }`}
-                style={activeStyle}
+                className={`
+                  italic tracking-tight
+                  transition-colors duration-200
+                  group-hover:text-[color:var(--active)]
+                `}
+                style={{
+                  color: active ? ACTIVE_COLOR : undefined,
+                }}
               >
                 {item.label}
               </span>

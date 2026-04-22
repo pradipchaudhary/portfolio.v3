@@ -1,7 +1,7 @@
-// import { prisma } from "@/lib/db";
 import { comparePassword } from "@/lib/auth";
 import { signToken } from "@/lib/jwt";
 import { prisma } from "@/lib/prisma";
+import { cookies } from "next/headers";
 
 export async function POST(req: Request) {
   const body = await req.json();
@@ -12,13 +12,19 @@ export async function POST(req: Request) {
   });
 
   if (!user) {
-    return new Response("Invalid credentials", { status: 401 });
+    return Response.json(
+      { success: false, message: "Invalid credentials" },
+      { status: 401 }
+    );
   }
 
   const isValid = await comparePassword(password, user.password);
 
   if (!isValid) {
-    return new Response("Invalid credentials", { status: 401 });
+    return Response.json(
+      { success: false, message: "Invalid credentials" },
+      { status: 401 }
+    );
   }
 
   const token = await signToken({
@@ -26,10 +32,19 @@ export async function POST(req: Request) {
     role: user.role,
   });
 
-  return new Response("Login success", {
-    status: 200,
-    headers: {
-      "Set-Cookie": `token=${token}; HttpOnly; Path=/; Max-Age=604800; SameSite=Strict`,
-    },
+  // ✅ FIXED
+  const cookieStore = await cookies();
+
+  cookieStore.set("token", token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    maxAge: 60 * 60 * 24 * 7,
+    path: "/",
+    sameSite: "strict",
+  });
+
+  return Response.json({
+    success: true,
+    message: "Login successful",
   });
 }

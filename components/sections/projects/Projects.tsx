@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "motion/react";
 
-// Format title utility
+/* =========================
+   UTIL
+========================= */
+
 const formatTitle = (t: string) =>
   t
     .replace(/[-_.]/g, " ")
@@ -12,19 +14,27 @@ const formatTitle = (t: string) =>
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 
-// Main container animation only
-const container = {
+/* =========================
+   ANIMATION
+========================= */
+
+const container: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-      delay: 0.8,
+      delay: 0.6,
       ease: [0.22, 1, 0.36, 1],
+      staggerChildren: 0.1,
     },
   },
 };
+
+/* =========================
+   DATA
+========================= */
 
 const projects = [
   {
@@ -37,122 +47,138 @@ const projects = [
   {
     title: "portfolio.v3",
     description:
-      "This portfolio site (built with Next.js & Tailwind) showcasing my work, skills and blog — the code for this website.",
+      "Portfolio site built with Next.js & Tailwind showcasing work, skills and blog.",
     tags: ["Next.js", "TailwindCSS", "TypeScript"],
     link: "https://github.com/pradipchaudhary/portfolio.v3",
   },
   {
     title: "100-javascript-projects",
     description:
-      "A curated collection of 100 practical JavaScript projects for learners — utilities, games, DOM practice and small apps.",
+      "A curated collection of 100 practical JavaScript projects for learning and practice.",
     tags: ["JavaScript", "Learning", "Projects"],
     link: "https://100plusjs.vercel.app/",
   },
   {
     title: "jobfindingai",
     description:
-      "JobFindingAI: an AI-powered platform that helps users find jobs based on their resume, skills, and interests.",
+      "AI-powered job finder using resume, skills and preferences.",
     tags: ["AI", "Next.js", "OpenAI"],
     link: "https://github.com/pradipchaudhary/jobfindingai",
   },
 ];
 
+/* =========================
+   UI: TAG
+========================= */
+
+const Tag = ({ label }: { label: string }) => (
+  <span className="text-xs italic px-1.5 text-[var(--foreground)]/50 group-hover:text-[var(--foreground)]/80 transition-colors">
+    {label}
+  </span>
+);
+
+/* =========================
+   UI: CARD
+========================= */
+
+const ProjectCard = ({
+  project,
+}: {
+  project: (typeof projects)[number];
+}) => {
+  return (
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        group relative rounded-xl p-5 overflow-hidden
+        border border-[var(--foreground)]/10
+        bg-[var(--background)]
+        transition-all duration-300
+      "
+    >
+      {/* hover glow */}
+      <div
+        className="
+          pointer-events-none absolute inset-0 opacity-0
+          group-hover:opacity-100 transition duration-500
+          bg-gradient-to-r from-orange-50 to-orange-100
+          dark:from-neutral-900 dark:to-neutral-800
+        "
+        style={{
+          maskImage:
+            "radial-gradient(300px at 150px 20px, white, transparent)",
+        }}
+      />
+
+      {/* glow line bottom */}
+      <span className="absolute w-[40%] -bottom-px right-0 h-px bg-[var(--accent)]/30" />
+
+      {/* content */}
+      <div className="relative z-10 flex flex-col h-full justify-between">
+        <div>
+          <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">
+            {formatTitle(project.title)}
+          </h3>
+
+          <p className="text-sm leading-6 text-[var(--foreground)]/70">
+            {project.description}
+          </p>
+        </div>
+
+        {/* tags */}
+        <div className="mt-4 flex flex-wrap gap-1">
+          {project.tags.map((tag) => (
+            <Tag key={tag} label={tag} />
+          ))}
+        </div>
+      </div>
+    </a>
+  );
+};
+
+/* =========================
+   MAIN COMPONENT
+========================= */
+
 const Projects = () => {
   return (
     <motion.section
       id="projects"
-      className="py-10 text-gray-900 dark:text-gray-100"
+      className="py-10 text-[var(--foreground)]"
       variants={container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <h2 className="text-3xl font-bold tracking-tight mb-8
-      text-gray-900 dark:text-white">
+      <h2 className="text-3xl font-bold tracking-tight mb-8 text-[var(--foreground)]">
         Projects
       </h2>
 
-
-      {/* Projects Grid */}
+      {/* GRID */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((project, index) => (
-          <a
-            key={index}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative rounded-xl p-5 cursor-pointer overflow-hidden
-            border border-slate-200 dark:border-slate-900
-            bg-white dark:bg-neutral-900
-            transition-all duration-300"
-          >
-            {/* className="group relative bg-foreground/[0.02] border border-foreground/[0.05] rounded-2xl p-8 hover:bg-foreground/[0.04] transition-all duration-500 flex flex-col justify-between" */}
-            {/* Hover Gradient */}
-            <div
-              className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition duration-500 group-hover:opacity-100
-              bg-gradient-to-r from-orange-50 to-orange-100
-              dark:from-neutral-800 dark:to-neutral-700"
-              style={{
-                maskImage:
-                  "radial-gradient(300px at 150px 20px, white, transparent)",
-              }}
-            />
-
-            {/* Glow Lines */}
-            <span className="absolute w-[40%] -bottom-px right-px h-px
-            bg-gradient-to-r from-orange-400/0 via-orange-400/40 to-orange-400/0
-            dark:via-orange-300/20"></span>
-
-            <span className="absolute w-px -left-px top-[50%] h-[40%]
-            bg-gradient-to-b from-orange-400/0 via-orange-400/40 to-orange-400/0
-            dark:via-orange-300/20"></span>
-
-            {/* Content */}
-            <div className="relative z-10 flex flex-col h-full justify-between">
-              <div>
-                <h3 className="text-lg font-semibold mb-2
-                text-gray-900 dark:text-white">
-                  {formatTitle(project.title)}
-                </h3>
-
-                <p className="text-sm leading-6
-                text-gray-700 dark:text-gray-400">
-                  {project.description}
-                </p>
-              </div>
-
-              <div className="mt-4 flex flex-wrap">
-                {project.tags.map((tag, i) => (
-                  <span
-                    key={i}
-                    className="text-xs italic px-1.5 transition-colors duration-200
-                    text-gray-500 dark:text-gray-400
-                    group-hover:text-gray-700 dark:group-hover:text-gray-200"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </a>
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
         ))}
       </div>
 
-      {/* See More */}
-      <div className="flex justify-center mt-6">
+      {/* SEE MORE */}
+      <div className="flex justify-center mt-8">
         <Link
           href="/projects"
-          className="flex items-center text-sm my-4 mx-auto px-4 py-2 rounded-md font-medium
-          text-gray-900 dark:text-gray-100
-          hover:text-gray-700 dark:hover:text-white
-          transition-colors duration-200"
+          className="
+            flex items-center gap-1 text-sm font-medium
+            text-[var(--foreground)]
+            hover:text-[var(--accent)]
+            transition-colors
+          "
         >
           See More
           <svg
-            className="h-4 w-4 ml-1"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
+            className="h-4 w-4"
             viewBox="0 0 24 24"
+            fill="none"
             stroke="currentColor"
           >
             <path

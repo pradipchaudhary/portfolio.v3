@@ -1,25 +1,39 @@
-import { prisma } from "@/lib/prisma";
+// app/api/visitor/route.ts
+import { NextRequest, NextResponse } from "next/server";
+import { getClientIP } from "@/lib/get-ip";
+import { ratelimit } from "@/lib/rate-limit";
+import { handleVisitor } from "@/lib/visitor";
 
-export const runtime = "nodejs";
-
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
-    const visitor = await prisma.visitor.upsert({
-      where: { id: 1 },
-      update: {
-        count: { increment: 1 },
-      },
-      create: {
-        id: 1,
-        count: 1,
-      },
-    });
+    const ip = getClientIP(req);
 
-    return Response.json({ count: visitor.count });
+    // Rate limit
+    const { success } = await ratelimit.limit(ip);
+
+    if (!success) {
+      return NextResponse.json(
+        { error: "Too many requests" },
+        { status: 429 }
+      );
+    }
+
+    // Visitor count
+    const count = await handleVisitor(ip);
+
+    return NextResponse.json(
+      { count },
+      {
+        headers: {
+          "Cache-Control": "no-store",
+        },
+      }
+    );
   } catch (error) {
-    console.error("Visitor API Error:", error);
-    return Response.json(
-      { error: "Internal Server Error" },
+    console.error("Visitor API error:", error);
+
+    return NextResponse.json(
+      { count: 0 },
       { status: 500 }
     );
   }
