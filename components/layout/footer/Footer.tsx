@@ -87,7 +87,7 @@ export default function Footer() {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
 
-            <div className="text-xs text-gray-500 dark:text-gray-400">
+            <div className="text-xs text-gray-500 dark:text-gray-400 ml-2">
               <VisitorCounter />
             </div>
 
