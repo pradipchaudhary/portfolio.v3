@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion, Variants } from "motion/react";
+import { Project } from "@/types";
 
 /* =========================
    UTIL
@@ -25,45 +26,90 @@ const container: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      delay: 0.6,
+      delay: 0.3,
       ease: [0.22, 1, 0.36, 1],
       staggerChildren: 0.1,
     },
   },
 };
 
+const item: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 /* =========================
    DATA
 ========================= */
 
-const projects = [
+export const projects: Project[] = [
   {
-    title: "docsnepal",
+    id: "proj_docsnepal",
+    title: "DocsNepal",
+    slug: "docsnepal",
     description:
       "DocsNepal: a document generator for Nepali legal and official documents (PDF/docx) — templates and API utilities.",
-    tags: ["TypeScript", "PDF", "Docx"],
+    content: null,
     link: "https://docsnepal.vercel.app/",
+    github: null,
+    image: null,
+    tags: ["TypeScript", "PDF", "Docx"],
+    featured: true,
+    published: true,
+    order: 1,
+    createdAt: new Date("2024-01-01"),
+    updatedAt: new Date("2024-01-01"),
   },
   {
-    title: "portfolio.v3",
+    id: "proj_portfolio_v3",
+    title: "Portfolio v3",
+    slug: "portfolio-v3",
     description:
       "Portfolio site built with Next.js & Tailwind showcasing work, skills and blog.",
+    content: null,
+    link: null,
+    github: "https://github.com/pradipchaudhary/portfolio.v3",
+    image: null,
     tags: ["Next.js", "TailwindCSS", "TypeScript"],
-    link: "https://github.com/pradipchaudhary/portfolio.v3",
+    featured: true,
+    published: true,
+    order: 2,
+    createdAt: new Date("2024-01-02"),
+    updatedAt: new Date("2024-01-02"),
   },
   {
-    title: "100-javascript-projects",
+    id: "proj_100_js",
+    title: "100 JavaScript Projects",
+    slug: "100-javascript-projects",
     description:
       "A curated collection of 100 practical JavaScript projects for learning and practice.",
-    tags: ["JavaScript", "Learning", "Projects"],
+    content: null,
     link: "https://100plusjs.vercel.app/",
+    github: null,
+    image: null,
+    tags: ["JavaScript", "Learning", "Projects"],
+    featured: false,
+    published: true,
+    order: 3,
+    createdAt: new Date("2024-01-03"),
+    updatedAt: new Date("2024-01-03"),
   },
   {
-    title: "jobfindingai",
+    id: "proj_jobfindingai",
+    title: "JobFindingAI",
+    slug: "jobfindingai",
     description:
       "AI-powered job finder using resume, skills and preferences.",
+    content: null,
+    link: null,
+    github: "https://github.com/pradipchaudhary/jobfindingai",
+    image: null,
     tags: ["AI", "Next.js", "OpenAI"],
-    link: "https://github.com/pradipchaudhary/jobfindingai",
+    featured: true,
+    published: true,
+    order: 4,
+    createdAt: new Date("2024-01-04"),
+    updatedAt: new Date("2024-01-04"),
   },
 ];
 
@@ -81,22 +127,27 @@ const Tag = ({ label }: { label: string }) => (
    UI: CARD
 ========================= */
 
-const ProjectCard = ({
-  project,
-}: {
-  project: (typeof projects)[number];
-}) => {
+const ProjectCard = ({ project }: { project: Project }) => {
+  const href = project.link || project.github || null;
+  const isClickable = Boolean(href);
+
   return (
-    <a
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="
-        group relative rounded-xl p-5 overflow-hidden
-        border border-[var(--foreground)]/10
-        bg-[var(--background)]
-        transition-all duration-300
-      "
+    <motion.a
+      variants={item}
+      {...(href
+        ? {
+          href,
+          target: "_blank",
+          rel: "noopener noreferrer",
+        }
+        : {})}
+      className={`
+    group relative rounded-xl p-5 overflow-hidden
+    border border-[var(--foreground)]/10
+    bg-[var(--background)]
+    transition-all duration-300
+    ${!href ? "opacity-60 pointer-events-none" : ""}
+  `}
     >
       {/* hover glow */}
       <div
@@ -112,13 +163,13 @@ const ProjectCard = ({
         }}
       />
 
-      {/* glow line bottom */}
+      {/* glow line */}
       <span className="absolute w-[40%] -bottom-px right-0 h-px bg-[var(--accent)]/30" />
 
       {/* content */}
       <div className="relative z-10 flex flex-col h-full justify-between">
         <div>
-          <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">
+          <h3 className="text-lg font-semibold mb-2">
             {formatTitle(project.title)}
           </h3>
 
@@ -134,7 +185,7 @@ const ProjectCard = ({
           ))}
         </div>
       </div>
-    </a>
+    </motion.a>
   );
 };
 
@@ -152,14 +203,14 @@ const Projects = () => {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <h2 className="text-3xl font-bold tracking-tight mb-8 text-[var(--foreground)]">
+      <h2 className="text-3xl font-bold tracking-tight mb-8">
         Projects
       </h2>
 
       {/* GRID */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
 
@@ -169,7 +220,6 @@ const Projects = () => {
           href="/projects"
           className="
             flex items-center gap-1 text-sm font-medium
-            text-[var(--foreground)]
             hover:text-[var(--accent)]
             transition-colors
           "

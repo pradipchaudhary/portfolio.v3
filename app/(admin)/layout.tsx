@@ -25,7 +25,7 @@ const menuItems = [
   { icon: Users, label: 'Personal Info', href: '/personal-info' },
   { icon: Code2, label: 'Skills', href: '/skills' },
   { icon: History, label: 'Experience', href: '/experience' },
-  { icon: Briefcase, label: 'Projects', href: '/projects' },
+  { icon: Briefcase, label: 'Projects', href: '/admin/projects' },
   { icon: Award, label: 'Certifications', href: '/certifications' },
   { icon: Newspaper, label: 'Blog', href: '/blog' },
   { icon: BarChart2, label: 'Meta Data', href: '/meta-data' },

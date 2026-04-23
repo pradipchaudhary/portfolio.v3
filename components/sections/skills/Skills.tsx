@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Workflow } from "lucide-react";
 import { motion, AnimatePresence, Variants } from "motion/react";
 import {

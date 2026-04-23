@@ -1,11 +1,11 @@
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  tags: string[];
-  link?: string | null;
-  github?: string | null;
-}
+// export interface Project {
+//   id: string;
+//   title: string;
+//   description: string;
+//   tags: string[];
+//   link?: string | null;
+//   github?: string | null;
+// }
 
 export interface Skill {
   id: string;
@@ -27,3 +27,25 @@ export interface Certification {
   issuer: string;
   year: string;
 }
+
+
+export type Project = {
+  id: string;
+  title: string;
+  slug: string;
+  description: string;
+  content?: string | null;
+
+  link?: string | null;
+  github?: string | null;
+  image?: string | null;
+
+  tags: string[];
+
+  featured: boolean;
+  published: boolean;
+  order: number;
+
+  createdAt: Date;
+  updatedAt: Date;
+};

@@ -10,6 +10,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  // url      = env("DATABASE_URL")
 }
 
 model User {
@@ -22,4 +23,23 @@ model User {
 
 enum Role {
   ADMIN
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  description String
+  content     String? // detailed markdown/html
+  link        String?
+  github      String?
+  image       String?
+  tags        String[] // simple array (fast & practical)
+
+  featured  Boolean @default(false)
+  published Boolean @default(true)
+  order     Int     @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
