@@ -14,8 +14,17 @@ export async function comparePassword(
 }
 
 export async function requireAdmin() {
-  const token = cookies().get("token")?.value;
+  const cookieStore = await cookies(); // ✅ FIX
+
+  const token = cookieStore.get("token")?.value;
 
   if (!token) throw new Error("Unauthorized");
 
-  return await verifyToken(token);
+  const payload = await verifyToken(token);
+
+  if (!payload || payload.role !== "admin") {
+    throw new Error("Forbidden");
+  }
+
+  return payload;
+}

@@ -4,27 +4,31 @@ import { verifyToken } from "./lib/jwt";
 
 export async function proxy(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
+  const loginUrl = new URL("/login", req.url);
 
-  // const isAdminRoute = req.nextUrl.pathname.startsWith(
-  //   "/admin"
-  // );
-
-  // if (!isAdminRoute) {
-  //   return NextResponse.next();
-  // }
-
+  // No token → redirect
   if (!token) {
-    return NextResponse.redirect(
-      new URL("/login", req.url)
-    );
+    return NextResponse.redirect(loginUrl);
   }
 
-   try {
-    await verifyToken(token);
+  try {
+    const payload = await verifyToken(token);
+
+    // Role check (important for CMS)
+    if (!payload || payload.role !== "admin") {
+      return NextResponse.redirect(loginUrl);
+    }
+
     return NextResponse.next();
-  } catch {
-    const res = NextResponse.redirect(new URL("/login", req.url));
-    res.cookies.delete("token");
+  } catch (err) {
+    const res = NextResponse.redirect(loginUrl);
+
+    // Proper cookie invalidation
+    res.cookies.set("token", "", {
+      path: "/",
+      expires: new Date(0),
+    });
+
     return res;
   }
 }
