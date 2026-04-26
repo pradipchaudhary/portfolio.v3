@@ -1,3 +1,4 @@
+'use client'
 export default function Admin() {
   return (
     <div className="mt-16 text-gray-900 dark:text-gray-100">

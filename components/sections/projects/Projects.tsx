@@ -143,8 +143,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
         : {})}
       className={`
     group relative rounded-xl p-5 overflow-hidden
-    border border-[var(--foreground)]/10
-  bg-gray-50/60 dark:bg-white/5
+    border border-[var(--foreground)]/5
+  bg-gray-50/60 dark:bg-white/[0.02]
     transition-all duration-300
     ${!href ? "opacity-60 pointer-events-none" : ""}
   `}
@@ -152,21 +152,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
       {/* hover glow */}
       <div
         className="
-  pointer-events-none absolute inset-0 rounded-2xl
+    pointer-events-none absolute inset-0 rounded-2xl
 
-  opacity-0 scale-95
-  group-hover:opacity-100 group-hover:scale-100
+    opacity-0 scale-95
+    group-hover:opacity-100 group-hover:scale-100
 
-  transition-all duration-500 ease-out
+    transition-all duration-500 ease-out
 
-  /* LIGHT THEME */
-  bg-[radial-gradient(600px_circle_at_var(--x,50%)_var(--y,30%),rgba(0,0,0,0.06),transparent_60%)]
-
-  /* DARK THEME */
-  dark:bg-[radial-gradient(600px_circle_at_var(--x,50%)_var(--y,30%),rgba(255,255,255,0.08),transparent_65%)]
-"
+    bg-[radial-gradient(600px_circle_at_center,rgba(0,0,0,0.06),transparent_60%)]
+    dark:bg-[radial-gradient(600px_circle_at_center,rgba(255,255,255,0.08),transparent_65%)]
+  "
       />
-
       {/* glow line */}
       <span className="absolute w-[40%] -bottom-px right-0 h-px bg-[var(--accent)]/30" />
 
