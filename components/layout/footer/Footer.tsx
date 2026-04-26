@@ -1,10 +1,7 @@
 "use client";
 
-import Namaste from "@/components/shared/Namaste";
 import VisitorCounter from "@/components/shared/VisitorCount";
-import Signature from "@/components/ui/Signature";
 import { useAnimation, motion } from "motion/react";
-// import { motion, useAnimation } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 
 export default function Footer() {
@@ -68,7 +65,6 @@ export default function Footer() {
       >
 
         <div className="flex flex-col gap-7 pt-7">
-          <Signature />
           <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed max-w-xl">
             Built with clarity, performance, and scalable UI architecture.
             Exploring the intersection of design systems and engineering precision.
@@ -91,7 +87,7 @@ export default function Footer() {
               <VisitorCounter />
             </div>
 
-            <p className="text-xs text-gray-400 dark:text-gray-500 tracking-wide">
+            <p className="text-xs text-gray-400 dark:text-gray-500 tracking-wide italic">
               Minimal interface · Intentional design · Real execution
             </p>
 

@@ -31,7 +31,7 @@ export default function Login() {
       const data = await res.json();
 
       if (res.ok) {
-        router.push("/admin");
+        router.push("/dashboard");
         // router.refresh();
       } else {
         alert(data.error || "Login failed");
@@ -48,7 +48,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center px-4 text-foreground">
 
       {/* Card */}
-      <div className="w-full max-w-sm rounded-2xl border border-foreground/[0.05] bg-background/90 backdrop-blur-md p-8 shadow-sm">
+      <div className="w-full max-w-sm rounded-2xl border border-foreground/[0.05] bg-background/70 backdrop-blur-md p-8 shadow-sm">
 
         {/* Header */}
         <div className="mb-6 text-center">
@@ -106,7 +106,7 @@ export default function Login() {
           Protected Admin Access
         </p>
         <div>
-          <Link href="/" className="text-xs text-primary hover:underline block text-center mt-2">
+          <Link href="/" className="text-xs text-gray-400 dark:text-gray-500 underline block text-center mt-2">
             Back to Portfolio
           </Link>
         </div>

@@ -1,0 +1,81 @@
+Download CV
+Pradip Chaudhary
+Software Engieer
+I build accessible, pixel-perfect digital experiences for the web.
+
+Intro
+My Work
+Blog
+🙏 I'm an
+Undergraduate software
+engineer who loves to write code.
+I'm an enthusiastic React Developer dedicated to crafting intuitive and dynamic web applications. With expertise in modern web technologies, I excel in transforming complex concepts into seamless digital solutions.
+
+As a Full-Time React Developer, my expertise lies in creating seamless and responsive UIs and designs into engaging web experiences. Currently, I'm diving deep into Next.js and TypeScript , leveraging my skills in UI/UX Design and SEO, along with Web Scraping, to deliver high-performance solutions that meet client needs.
+
+My proficiency in modern web technologies, including Bulma, Bootstrap, and Tailwind CSS ensures that I craft applications that are not only functional but also visually stunning.
+
+Let’s build something extraordinary together! 🚀
+
+Download CV
+Experience
+Full Stack Developer
+Freelancer
+May 2021 - Present
+#Developed and deployed full-stack applications for clients worldwide.
+#Built and customized WordPress themes and plugins for various businesses.
+#Worked with React.js, Next.js, Node.js, and MongoDB to develop web applications.
+#Integrated third-party APIs and payment gateways for e-commerce solutions.
+#Collaborated with clients to understand project requirements and deliver tailored solutions.
+Full Stack Developer
+Sarathi Technosoft Pvt. Ltd
+Aug 2021 - Apr 2024
+#Implemented RESTful APIs and integrated with third-party services.
+#Optimized front-end performance and enhanced user experience across devices.
+#Collaborated with cross-functional teams to design and implement new features.
+#Built and maintained dynamic web applications using React, Node.js, and MongoDB or MySQL.
+Web Developer
+Softbenz Infosys•Software Company
+Sep 2020 - Jul 2021
+#Developed single-page applications (SPAs) using React.js and Redux.
+#Created responsive and accessible UI components with Tailwind CSS.
+#Integrated REST APIs to fetch data dynamically and ensure a smooth UX.
+#Worked with the design team to implement user-friendly and visually appealing designs.
+Junior Frontend Developer
+Purwanchal Digital Media Technologies Pvt. Ltd.
+Feb 2016 - May 2021
+#Developed responsive websites with HTML5, CSS3, and JavaScript.
+#Collaborated with senior developers to implement features using PHP.
+#Optimized websites for performance, SEO, and accessibility standards.
+#Maintained and updated websites, ensuring they were secure and up to date.
+Skills
+JavaScript
+TypeScript
+React.js
+Node.js
+PHP
+MySQL
+PostgreSQL
+Next.js
+Prisma
+WordPress
+MongoDB
+Git
+Docker
+OpenAI
+Certifications
+2024
+#Completed the 'Complete Full Stack Web Development – MERN Stack' course at Deerwalk Training Center.
+#Graduated from the 'Full Stack Next.js Bootcamp' organized by Jobsnipper.
+#Successfully completed the 'Custom WordPress Theme Development Bootcamp' hosted by Jobsnipper.
+2020
+#Achieved top 15% ranking in the JavaScript LinkedIn Assessment.
+#Ranked in the top 5% of participants in the PHP LinkedIn Assessment.
+#Scored 92/100 in the JavaScript Code Verification on HackerRank.
+2018
+#HTML and CSS Certification from TemplateMonster.com
+2017
+#Earned 'JavaScript Expert' status with a score of 212 on Pluralsight IQ.
+#Achieved 'CSS Expert' verification with a score of 218 on Pluralsight IQ.
+2016
+#Diploma in Computer Engineering, accredited by CTEVT (Council for Technical Education and Vocational Training).

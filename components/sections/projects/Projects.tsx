@@ -144,7 +144,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       className={`
     group relative rounded-xl p-5 overflow-hidden
     border border-[var(--foreground)]/10
-    bg-[var(--background)]
+  bg-gray-50/60 dark:bg-white/5
     transition-all duration-300
     ${!href ? "opacity-60 pointer-events-none" : ""}
   `}
@@ -152,15 +152,19 @@ const ProjectCard = ({ project }: { project: Project }) => {
       {/* hover glow */}
       <div
         className="
-          pointer-events-none absolute inset-0 opacity-0
-          group-hover:opacity-100 transition duration-500
-          bg-gradient-to-r from-orange-50 to-orange-100
-          dark:from-neutral-900 dark:to-neutral-800
-        "
-        style={{
-          maskImage:
-            "radial-gradient(300px at 150px 20px, white, transparent)",
-        }}
+  pointer-events-none absolute inset-0 rounded-2xl
+
+  opacity-0 scale-95
+  group-hover:opacity-100 group-hover:scale-100
+
+  transition-all duration-500 ease-out
+
+  /* LIGHT THEME */
+  bg-[radial-gradient(600px_circle_at_var(--x,50%)_var(--y,30%),rgba(0,0,0,0.06),transparent_60%)]
+
+  /* DARK THEME */
+  dark:bg-[radial-gradient(600px_circle_at_var(--x,50%)_var(--y,30%),rgba(255,255,255,0.08),transparent_65%)]
+"
       />
 
       {/* glow line */}
@@ -215,7 +219,7 @@ const Projects = () => {
       </div>
 
       {/* SEE MORE */}
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-10">
         <Link
           href="/projects"
           className="
