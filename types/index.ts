@@ -19,3 +19,4 @@ export type Project = {
   createdAt: Date;
   updatedAt: Date;
 };
+

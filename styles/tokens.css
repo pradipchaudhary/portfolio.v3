@@ -5,7 +5,9 @@
 
   --card: #ffffff;
   --muted: #f5f7fb;
-  --border: #e6eaf0;
+  /* --border: #e6eaf0; */
+  --border: 220 13% 91%;
+  /* light gray */
 
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
@@ -30,7 +32,9 @@
   /* slightly raised from black */
   --muted: #111111;
   /* section separation */
-  --border: #1a1a1a;
+  /* --border: #1a1a1a; */
+  --border: 215 14% 18%;
+  /* soft dark border */
   /* subtle grid lines */
 
   /* ACCENT (modern blue optimized for black UI) */
