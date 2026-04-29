@@ -19,24 +19,24 @@ import { usePathname } from "next/navigation";
 import LogoutButton from "../shared/LogoutButton";
 
 export const menuItems = [
-  { icon: LayoutDashboard, label: "Dashboard", href: "/admin" },
-  { icon: User, label: "Profile", href: "/admin/profile" },
-  { icon: Search, label: "Meta SEO", href: "/admin/meta" },
-  { icon: LinkIcon, label: "Social Links", href: "/admin/social" },
-  { icon: Briefcase, label: "Projects", href: "/admin/projects" },
-  { icon: Sparkles, label: "Skills", href: "/admin/skills" },
-  { icon: History, label: "Experience", href: "/admin/experience" },
-  { icon: Newspaper, label: "Blog", href: "/admin/blog" },
-  { icon: Users, label: "Users & Comments", href: "/admin/users" },
-  { icon: BarChart2, label: "Analytics", href: "/admin/analytics" },
-  { icon: Settings, label: "Settings", href: "/admin/settings" },
+  { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
+  { icon: User, label: "Profile", href: "/dashboard/profile" },
+  { icon: Search, label: "Meta SEO", href: "/dashboard/meta" },
+  { icon: LinkIcon, label: "Social Links", href: "/dashboard/social" },
+  { icon: Briefcase, label: "Projects", href: "/dashboard/projects" },
+  { icon: Sparkles, label: "Skills", href: "/dashboard/skills" },
+  { icon: History, label: "Experience", href: "/dashboard/experience" },
+  { icon: Newspaper, label: "Blog", href: "/dashboard/blog" },
+  { icon: Users, label: "Users & Comments", href: "/dashboard/users" },
+  { icon: BarChart2, label: "Analytics", href: "/dashboard/analytics" },
+  { icon: Settings, label: "Settings", href: "/dashboard/settings" },
 ];
 
 export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-full md:w-2/5 lg:w-1/3 lg:sticky lg:top-0 lg:h-screen flex flex-col justify-between px-6 py-10 border-r border-border">
+    <aside className="w-full md:w-2/5 lg:w-[330px] lg:sticky lg:top-0 lg:h-screen flex flex-col justify-between px-6 py-10 border-r border-neutral-200 dark:border-neutral-800">
 
       {/* LOGO */}
       <div className="flex items-center space-x-3 px-2">
@@ -55,7 +55,7 @@ export default function Sidebar() {
         {/* CORE */}
         <div className="px-2">
           <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.2em] mb-4">
-            Core
+            v3.0.0
           </p>
 
           <nav className="space-y-1">
@@ -128,7 +128,7 @@ export default function Sidebar() {
       </div>
 
       {/* FOOTER */}
-      <div className="pt-6 border-t border-border">
+      <div className="pt-6 border-t border-neutral-200 dark:border-neutral-800">
         <LogoutButton />
       </div>
     </aside>
