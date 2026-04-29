@@ -31,7 +31,7 @@ export default function Login() {
       const data = await res.json();
 
       if (res.ok) {
-        router.push("/admin");
+        router.push("/dashboard");
         // router.refresh();
       } else {
         alert(data.error || "Login failed");
