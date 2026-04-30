@@ -20,3 +20,8 @@ export type Project = {
   updatedAt: Date;
 };
 
+export type ProjectStats ={
+  total: number;
+  featured: number;
+  published: number;
+}

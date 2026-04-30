@@ -43,3 +43,22 @@ model Project {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model SocialLink {
+  id String @id @default(cuid())
+
+  name String // e.g. "GitHub", "LinkedIn"
+  href String // Full URL (validated in API)
+  icon String // Icon key (lucide-react / custom mapping)
+
+  color      String? // Base color (hex)
+  hoverColor String? // Hover color (hex)
+
+  order    Int     @default(0)
+  isActive Boolean @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([isActive, order])
+}
