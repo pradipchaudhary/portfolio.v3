@@ -36,7 +36,6 @@ export type SocialLinkSumAggregateOutputType = {
 
 export type SocialLinkMinAggregateOutputType = {
   id: string | null
-  platform: $Enums.PlatformType | null
   name: string | null
   href: string | null
   icon: string | null
@@ -50,7 +49,6 @@ export type SocialLinkMinAggregateOutputType = {
 
 export type SocialLinkMaxAggregateOutputType = {
   id: string | null
-  platform: $Enums.PlatformType | null
   name: string | null
   href: string | null
   icon: string | null
@@ -64,7 +62,6 @@ export type SocialLinkMaxAggregateOutputType = {
 
 export type SocialLinkCountAggregateOutputType = {
   id: number
-  platform: number
   name: number
   href: number
   icon: number
@@ -88,7 +85,6 @@ export type SocialLinkSumAggregateInputType = {
 
 export type SocialLinkMinAggregateInputType = {
   id?: true
-  platform?: true
   name?: true
   href?: true
   icon?: true
@@ -102,7 +98,6 @@ export type SocialLinkMinAggregateInputType = {
 
 export type SocialLinkMaxAggregateInputType = {
   id?: true
-  platform?: true
   name?: true
   href?: true
   icon?: true
@@ -116,7 +111,6 @@ export type SocialLinkMaxAggregateInputType = {
 
 export type SocialLinkCountAggregateInputType = {
   id?: true
-  platform?: true
   name?: true
   href?: true
   icon?: true
@@ -217,7 +211,6 @@ export type SocialLinkGroupByArgs<ExtArgs extends runtime.Types.Extensions.Inter
 
 export type SocialLinkGroupByOutputType = {
   id: string
-  platform: $Enums.PlatformType
   name: string
   href: string
   icon: string
@@ -254,7 +247,6 @@ export type SocialLinkWhereInput = {
   OR?: Prisma.SocialLinkWhereInput[]
   NOT?: Prisma.SocialLinkWhereInput | Prisma.SocialLinkWhereInput[]
   id?: Prisma.StringFilter<"SocialLink"> | string
-  platform?: Prisma.EnumPlatformTypeFilter<"SocialLink"> | $Enums.PlatformType
   name?: Prisma.StringFilter<"SocialLink"> | string
   href?: Prisma.StringFilter<"SocialLink"> | string
   icon?: Prisma.StringFilter<"SocialLink"> | string
@@ -268,7 +260,6 @@ export type SocialLinkWhereInput = {
 
 export type SocialLinkOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  platform?: Prisma.SortOrder
   name?: Prisma.SortOrder
   href?: Prisma.SortOrder
   icon?: Prisma.SortOrder
@@ -285,7 +276,6 @@ export type SocialLinkWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.SocialLinkWhereInput | Prisma.SocialLinkWhereInput[]
   OR?: Prisma.SocialLinkWhereInput[]
   NOT?: Prisma.SocialLinkWhereInput | Prisma.SocialLinkWhereInput[]
-  platform?: Prisma.EnumPlatformTypeFilter<"SocialLink"> | $Enums.PlatformType
   name?: Prisma.StringFilter<"SocialLink"> | string
   href?: Prisma.StringFilter<"SocialLink"> | string
   icon?: Prisma.StringFilter<"SocialLink"> | string
@@ -299,7 +289,6 @@ export type SocialLinkWhereUniqueInput = Prisma.AtLeast<{
 
 export type SocialLinkOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  platform?: Prisma.SortOrder
   name?: Prisma.SortOrder
   href?: Prisma.SortOrder
   icon?: Prisma.SortOrder
@@ -321,7 +310,6 @@ export type SocialLinkScalarWhereWithAggregatesInput = {
   OR?: Prisma.SocialLinkScalarWhereWithAggregatesInput[]
   NOT?: Prisma.SocialLinkScalarWhereWithAggregatesInput | Prisma.SocialLinkScalarWhereWithAggregatesInput[]
   id?: Prisma.StringWithAggregatesFilter<"SocialLink"> | string
-  platform?: Prisma.EnumPlatformTypeWithAggregatesFilter<"SocialLink"> | $Enums.PlatformType
   name?: Prisma.StringWithAggregatesFilter<"SocialLink"> | string
   href?: Prisma.StringWithAggregatesFilter<"SocialLink"> | string
   icon?: Prisma.StringWithAggregatesFilter<"SocialLink"> | string
@@ -335,7 +323,6 @@ export type SocialLinkScalarWhereWithAggregatesInput = {
 
 export type SocialLinkCreateInput = {
   id?: string
-  platform?: $Enums.PlatformType
   name: string
   href: string
   icon: string
@@ -349,7 +336,6 @@ export type SocialLinkCreateInput = {
 
 export type SocialLinkUncheckedCreateInput = {
   id?: string
-  platform?: $Enums.PlatformType
   name: string
   href: string
   icon: string
@@ -363,7 +349,6 @@ export type SocialLinkUncheckedCreateInput = {
 
 export type SocialLinkUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  platform?: Prisma.EnumPlatformTypeFieldUpdateOperationsInput | $Enums.PlatformType
   name?: Prisma.StringFieldUpdateOperationsInput | string
   href?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.StringFieldUpdateOperationsInput | string
@@ -377,7 +362,6 @@ export type SocialLinkUpdateInput = {
 
 export type SocialLinkUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  platform?: Prisma.EnumPlatformTypeFieldUpdateOperationsInput | $Enums.PlatformType
   name?: Prisma.StringFieldUpdateOperationsInput | string
   href?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.StringFieldUpdateOperationsInput | string
@@ -391,7 +375,6 @@ export type SocialLinkUncheckedUpdateInput = {
 
 export type SocialLinkCreateManyInput = {
   id?: string
-  platform?: $Enums.PlatformType
   name: string
   href: string
   icon: string
@@ -405,7 +388,6 @@ export type SocialLinkCreateManyInput = {
 
 export type SocialLinkUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  platform?: Prisma.EnumPlatformTypeFieldUpdateOperationsInput | $Enums.PlatformType
   name?: Prisma.StringFieldUpdateOperationsInput | string
   href?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.StringFieldUpdateOperationsInput | string
@@ -419,7 +401,6 @@ export type SocialLinkUpdateManyMutationInput = {
 
 export type SocialLinkUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  platform?: Prisma.EnumPlatformTypeFieldUpdateOperationsInput | $Enums.PlatformType
   name?: Prisma.StringFieldUpdateOperationsInput | string
   href?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.StringFieldUpdateOperationsInput | string
@@ -433,7 +414,6 @@ export type SocialLinkUncheckedUpdateManyInput = {
 
 export type SocialLinkCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  platform?: Prisma.SortOrder
   name?: Prisma.SortOrder
   href?: Prisma.SortOrder
   icon?: Prisma.SortOrder
@@ -451,7 +431,6 @@ export type SocialLinkAvgOrderByAggregateInput = {
 
 export type SocialLinkMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  platform?: Prisma.SortOrder
   name?: Prisma.SortOrder
   href?: Prisma.SortOrder
   icon?: Prisma.SortOrder
@@ -465,7 +444,6 @@ export type SocialLinkMaxOrderByAggregateInput = {
 
 export type SocialLinkMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  platform?: Prisma.SortOrder
   name?: Prisma.SortOrder
   href?: Prisma.SortOrder
   icon?: Prisma.SortOrder
@@ -481,15 +459,10 @@ export type SocialLinkSumOrderByAggregateInput = {
   order?: Prisma.SortOrder
 }
 
-export type EnumPlatformTypeFieldUpdateOperationsInput = {
-  set?: $Enums.PlatformType
-}
-
 
 
 export type SocialLinkSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  platform?: boolean
   name?: boolean
   href?: boolean
   icon?: boolean
@@ -503,7 +476,6 @@ export type SocialLinkSelect<ExtArgs extends runtime.Types.Extensions.InternalAr
 
 export type SocialLinkSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  platform?: boolean
   name?: boolean
   href?: boolean
   icon?: boolean
@@ -517,7 +489,6 @@ export type SocialLinkSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Ex
 
 export type SocialLinkSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  platform?: boolean
   name?: boolean
   href?: boolean
   icon?: boolean
@@ -531,7 +502,6 @@ export type SocialLinkSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Ex
 
 export type SocialLinkSelectScalar = {
   id?: boolean
-  platform?: boolean
   name?: boolean
   href?: boolean
   icon?: boolean
@@ -543,14 +513,13 @@ export type SocialLinkSelectScalar = {
   updatedAt?: boolean
 }
 
-export type SocialLinkOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "platform" | "name" | "href" | "icon" | "color" | "hoverColor" | "order" | "isActive" | "createdAt" | "updatedAt", ExtArgs["result"]["socialLink"]>
+export type SocialLinkOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "href" | "icon" | "color" | "hoverColor" | "order" | "isActive" | "createdAt" | "updatedAt", ExtArgs["result"]["socialLink"]>
 
 export type $SocialLinkPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "SocialLink"
   objects: {}
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    platform: $Enums.PlatformType
     name: string
     href: string
     icon: string
@@ -984,7 +953,6 @@ export interface Prisma__SocialLinkClient<T, Null = never, ExtArgs extends runti
  */
 export interface SocialLinkFieldRefs {
   readonly id: Prisma.FieldRef<"SocialLink", 'String'>
-  readonly platform: Prisma.FieldRef<"SocialLink", 'PlatformType'>
   readonly name: Prisma.FieldRef<"SocialLink", 'String'>
   readonly href: Prisma.FieldRef<"SocialLink", 'String'>
   readonly icon: Prisma.FieldRef<"SocialLink", 'String'>

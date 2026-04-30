@@ -700,7 +700,6 @@ export type ProjectScalarFieldEnum = (typeof ProjectScalarFieldEnum)[keyof typeo
 
 export const SocialLinkScalarFieldEnum = {
   id: 'id',
-  platform: 'platform',
   name: 'name',
   href: 'href',
   icon: 'icon',
@@ -805,20 +804,6 @@ export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'In
  * Reference to a field of type 'Int[]'
  */
 export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
-    
-
-
-/**
- * Reference to a field of type 'PlatformType'
- */
-export type EnumPlatformTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'PlatformType'>
-    
-
-
-/**
- * Reference to a field of type 'PlatformType[]'
- */
-export type ListEnumPlatformTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'PlatformType[]'>
     
 
 

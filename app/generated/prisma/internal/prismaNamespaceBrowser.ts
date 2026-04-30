@@ -105,7 +105,6 @@ export type ProjectScalarFieldEnum = (typeof ProjectScalarFieldEnum)[keyof typeo
 
 export const SocialLinkScalarFieldEnum = {
   id: 'id',
-  platform: 'platform',
   name: 'name',
   href: 'href',
   icon: 'icon',
