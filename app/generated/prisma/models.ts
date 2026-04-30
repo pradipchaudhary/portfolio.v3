@@ -10,4 +10,5 @@
  */
 export type * from './models/User'
 export type * from './models/Project'
+export type * from './models/SocialLink'
 export type * from './commonInputTypes'

@@ -15,3 +15,17 @@ export const Role = {
 } as const
 
 export type Role = (typeof Role)[keyof typeof Role]
+
+
+export const PlatformType = {
+  GITHUB: 'GITHUB',
+  LINKEDIN: 'LINKEDIN',
+  TWITTER: 'TWITTER',
+  INSTAGRAM: 'INSTAGRAM',
+  FACEBOOK: 'FACEBOOK',
+  YOUTUBE: 'YOUTUBE',
+  DRIBBBLE: 'DRIBBBLE',
+  CUSTOM: 'CUSTOM'
+} as const
+
+export type PlatformType = (typeof PlatformType)[keyof typeof PlatformType]

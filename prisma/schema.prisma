@@ -43,3 +43,31 @@ model Project {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+enum PlatformType {
+  GITHUB
+  LINKEDIN
+  TWITTER
+  INSTAGRAM
+  FACEBOOK
+  YOUTUBE
+  DRIBBBLE
+  CUSTOM
+}
+
+model SocialLink {
+  id         String       @id @default(cuid())
+  platform   PlatformType @default(CUSTOM)
+  name       String // Display label: e.g., "Follow me on GitHub"
+  href       String // Full URL validation handled at API level
+  icon       String // Icon key for Lucide-react or FontAwesome
+  color      String? // Optional Hex code: e.g., "#0077B5" for LinkedIn
+  hoverColor String? // Hover state hex code
+  order      Int          @default(0)
+  isActive   Boolean      @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([isActive, order]) // Optimized for fetching the sorted list
+}
