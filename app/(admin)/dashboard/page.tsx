@@ -30,10 +30,10 @@ export default function DashboardPage() {
           ].map((item, i) => (
             <div
               key={i}
-              className="group p-6 rounded-2xl border border-neutral-200 dark:border-neutral-800
-              bg-white dark:bg-neutral-900
+              className="group p-6 rounded-2xl border border-neutral-200/50 dark:border-neutral-800/50
+              bg-white/50 dark:bg-neutral-900/50
               transition-all duration-300
-              hover:-translate-y-1 hover:shadow-sm"
+               hover:shadow-sm"
             >
               <p className="text-sm text-neutral-500">
                 {item.label}

@@ -22,7 +22,7 @@ export const menuItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
   { icon: User, label: "Profile", href: "/dashboard/profile" },
   { icon: Search, label: "Meta SEO", href: "/dashboard/meta" },
-  { icon: LinkIcon, label: "Social Links", href: "/dashboard/social" },
+  { icon: LinkIcon, label: "Social Links", href: "/dashboard/socials" },
   { icon: Briefcase, label: "Projects", href: "/dashboard/projects" },
   { icon: Sparkles, label: "Skills", href: "/dashboard/skills" },
   { icon: History, label: "Experience", href: "/dashboard/experience" },
@@ -36,10 +36,10 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-full md:w-2/5 lg:w-[330px] lg:sticky lg:top-0 lg:h-screen flex flex-col justify-between px-6 py-10 border-r border-neutral-200 dark:border-neutral-800">
+    <aside className="w-full md:w-2/5 lg:w-[330px] lg:sticky lg:top-0 lg:h-screen flex flex-col justify-between px-6 py-10 border-r border-neutral-200/20 dark:border-neutral-800/20">
 
       {/* LOGO */}
-      <div className="flex items-center space-x-3 px-2">
+      <div className="flex items-center space-x-3 px-2 mt-6">
         <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
           <Zap className="w-5 h-5 text-primary-foreground" />
         </div>
@@ -54,7 +54,7 @@ export default function Sidebar() {
 
         {/* CORE */}
         <div className="px-2">
-          <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.2em] mb-4">
+          <p className="text-[10px] font-semibold text-muted-foreground/90 uppercase mb-4 text-right">
             v3.0.0
           </p>
 
@@ -128,7 +128,7 @@ export default function Sidebar() {
       </div>
 
       {/* FOOTER */}
-      <div className="pt-6 border-t border-neutral-200 dark:border-neutral-800">
+      <div className="pt-6 border-t border-neutral-200/20 dark:border-neutral-800/20">
         <LogoutButton />
       </div>
     </aside>
