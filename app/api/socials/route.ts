@@ -17,15 +17,23 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    const { name, url, icon, color, hoverColor, order, isActive } = body;
+    const {
+      name,
+      href, // ✅ FIXED (was url)
+      icon,
+      color,
+      hoverColor,
+      order,
+      isActive,
+    } = body;
 
     const social = await prisma.socialLink.create({
       data: {
         name,
-        href: url,
-        icon, // ✅ REQUIRED FIX
-        color,
-        hoverColor,
+        href, // ✅ correct
+        icon,
+        color: color || null,
+        hoverColor: hoverColor || null,
         order: order ?? 0,
         isActive: isActive ?? true,
       },
