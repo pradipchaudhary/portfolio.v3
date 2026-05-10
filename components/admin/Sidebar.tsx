@@ -54,7 +54,7 @@ export default function Sidebar() {
 
         {/* CORE */}
         <div className="px-2">
-          <p className="text-[10px] font-semibold text-muted-foreground/90 uppercase mb-4 text-right">
+          <p className="text-[10px] font-semibold text-neutral-500 uppercase mb-4 text-right">
             v3.0.0
           </p>
 
