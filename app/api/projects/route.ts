@@ -1,10 +1,15 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
+import slugify from "slugify";
 
 
 // Get all projects
 export async function GET(){
-  const projects = await prisma.project.findMany();
+  const projects = await prisma.project.findMany({
+    orderBy: {
+      order: "asc",
+    },
+  });
 
   return NextResponse.json(projects)
 }
@@ -17,7 +22,6 @@ export async function POST(req: Request) {
 
     const {
       title,
-      slug,
       description,
       content,
       link,
@@ -32,7 +36,7 @@ export async function POST(req: Request) {
     const project = await prisma.project.create({
       data: {
         title,
-        slug,
+        slug:slugify(title, { lower: true }),
         description,
         content,
         link,
