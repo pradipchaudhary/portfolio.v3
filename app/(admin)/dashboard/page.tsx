@@ -5,7 +5,7 @@ export default function DashboardPage() {
     <div className="mt-16 text-neutral-900 dark:text-neutral-100">
 
       {/* Top Bar */}
-      <header className="sticky top-0 z-50 backdrop-blur border-b border-neutral-200 dark:border-neutral-800">
+      <header className="sticky top-0 z-50 backdrop-blur border-b border-neutral-200/20 dark:border-neutral-800/20">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <h1 className="text-lg font-semibold tracking-tight">
             Portfolio Admin
