@@ -16,6 +16,7 @@
     "@upstash/redis": "^1.37.0",
     "bcryptjs": "^3.0.3",
     "cloudinary": "^2.10.0",
+    "clsx": "^2.1.1",
     "dotenv": "^17.4.2",
     "jsonwebtoken": "^9.0.3",
     "lucide-react": "^1.8.0",
