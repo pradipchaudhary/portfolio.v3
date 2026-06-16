@@ -11,8 +11,10 @@ const ResumeDownload = () => {
           rel="noopener noreferrer"
           className="relative inline-block font-bold p-1
           text-gray-900 dark:text-white
-          hover:text-black dark:hover:text-gray-200
-          transition-all duration-300"
+          hover:text-[var(--accent)]
+        transition-colors duration-300
+          "
+
         >
           resume
 

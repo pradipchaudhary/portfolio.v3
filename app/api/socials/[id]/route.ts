@@ -20,3 +20,24 @@ export async function PUT(req: Request, context: any) {
 
   return NextResponse.json(updated);
 }
+
+export async function DELETE(
+  req: Request,
+  { params }: { params: { id: string } }
+) {
+  try {
+    const id = params.id;
+
+    // delete from DB here
+    await prisma.socialLink.delete({
+      where: { id },
+    });
+
+    return NextResponse.json({ message: "Deleted" }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Delete failed" },
+      { status: 500 }
+    );
+  }
+}
