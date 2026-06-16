@@ -104,13 +104,25 @@ export default function SocialAdmin() {
   // DELETE
   // =========================
   const remove = async (id: string) => {
-    if (!confirm("Delete this social link?")) return;
+    const confirmDelete = confirm("Delete this social link?");
+    if (!confirmDelete) return;
 
-    await fetch(`/api/socials/${id}`, {
-      method: "DELETE",
-    });
+    try {
+      const res = await fetch(`/api/socials/${id}`, {
+        method: "DELETE",
+      });
 
-    load();
+      if (!res.ok) {
+        throw new Error("Failed to delete");
+      }
+
+      // Optimistic UI update (better UX)
+      setSocials((prev) => prev.filter((item) => item.id !== id));
+
+    } catch (error) {
+      console.error(error);
+      alert("Delete failed");
+    }
   };
 
   // =========================
