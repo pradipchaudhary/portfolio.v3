@@ -30,7 +30,7 @@ const Sidebar = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
           className="text-sm text-gray-500 dark:text-zinc-500 max-w-[320px] leading-relaxed"
         >
-          Full Stack Developer <br />
+          Full Stack Engineer <br />
           Building modern, scalable web experiences.
         </motion.p>
 
