@@ -1,17 +1,31 @@
 
 # 🌐 Portfolio v3 – Modern Full Stack Developer Portfolio
 
+Portfolio v3 is the third generation of my personal developer portfolio, designed to showcase my technical expertise, engineering projects, professional experience, and continuous learning journey in modern web development.
+
 ![Portfolio Banner](https://www.pradipchaudhary.com.np/banner.jpg)
 
-This repository contains the source code for my personal website, [pradipchaudhary.com.np](https://www.pradipchaudhary.com.np). The site serves as a digital portfolio to showcase my work, technical skills, and professional background as a Full Stack Developer with a focus on modern frontend development.
+Built with a strong focus on performance, accessibility, SEO, and user experience, this portfolio reflects the standards I apply when developing production-ready applications. The website serves as a central hub where recruiters, hiring managers, clients, and fellow developers can explore my work, technical skills, open-source contributions, and software engineering approach.
 
 ---
 
 ## 👨‍💻 About Me
 
-I'm **Pradip Chaudhary**, an aspiring Software Engineer with a passion for building high-performance, user-centric web applications. With a strong foundation in **React**, **TypeScript**, and modern UI frameworks, I enjoy solving real-world problems through thoughtful design and clean code.
+Hi, I'm Pradip Chaudhary — a Full Stack Developer and aspiring Software Engineer passionate about building scalable, high-performance web applications.
 
-I am committed to continuous learning, performance-oriented engineering, and delivering impactful user experiences. This website is a reflection of those values.
+
+My primary expertise includes:
+
+- ⚛️ React.js & Next.js
+- 📘 TypeScript & JavaScript
+- 🎨 Tailwind CSS & Modern UI Development
+- 🚀 Node.js & Express.js
+- 🗄️ MongoDB & Database Design
+- 🔍 SEO & Web Performance Optimization
+- ☁️ Deployment, CI/CD & Modern Development Workflows
+
+
+I enjoy transforming complex problems into intuitive digital experiences through clean architecture, maintainable code, and thoughtful design. My goal is to build software that is not only functional but also fast, accessible, and impactful.
 
 ---
 
