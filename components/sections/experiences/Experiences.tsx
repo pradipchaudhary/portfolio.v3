@@ -26,7 +26,7 @@ const container: Variants = {
 const experiences: ExperienceType[] = [
   // your data
   {
-    role: "Full Stack Developer",
+    role: "Software Engineer",
     company: "Freelancer",
     period: "May 2021 - Present",
     description:
@@ -73,7 +73,7 @@ const Experience = () => {
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="flex flex-col group p-3 rounded-xl transition-all duration-300 hover:bg-gray-50/60 dark:hover:bg-white/5"
+            className="flex flex-col group py-3 transition-all duration-300 "
           >
             <div className="flex flex-col md:flex-row md:justify-between md:items-center">
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-gray-800 dark:group-hover:text-gray-200">

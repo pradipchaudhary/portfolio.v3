@@ -93,7 +93,7 @@ export default function Footer() {
 
           </div>
 
-          <p className="text-[11px] text-center sm:text-left text-gray-400 dark:text-gray-500">
+          <p className="text-[11px] text-center sm:text-center text-gray-400 dark:text-gray-500">
             © {year} Pradip Chaudhary · Portfolio v3.0
           </p>
 
