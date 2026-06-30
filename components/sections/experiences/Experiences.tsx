@@ -26,7 +26,7 @@ const container: Variants = {
 const experiences: ExperienceType[] = [
   // your data
   {
-    role: "Full Stack Developer",
+    role: "Software Engineer",
     company: "Freelancer",
     period: "May 2021 - Present",
     description:
