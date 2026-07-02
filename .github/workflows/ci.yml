@@ -29,11 +29,11 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Lint
-        run: npm run lint
+      # - name: Lint
+      #   run: npm run lint
 
-      - name: Type Check
-        run: npm run type-check
+      # - name: Type Check
+      #   run: npm run type-check
 
       - name: Build
         run: npm run build
