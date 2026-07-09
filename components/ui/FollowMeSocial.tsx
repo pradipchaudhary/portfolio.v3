@@ -58,7 +58,7 @@ export default function FollowMeSocial() {
         initial={{ opacity: 0, y: -10, rotate: -10 }}
         animate={{ opacity: 1, y: 0, rotate: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-        className={`absolute -top-8 md:-top-14 left-1/2 -translate-x-1/2 text-base font-bold text-gray-600 dark:text-gray-600 ${caveat.className}`}
+        className={`absolute -top-8 md:-top-14 left-1/2 -translate-x-1/2 font-bold text-xl text-gray-600 dark:text-gray-600 ${caveat.className}`}
       >
         Follow Me
       </motion.p>
