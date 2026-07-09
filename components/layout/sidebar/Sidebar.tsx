@@ -38,7 +38,7 @@ const Sidebar = () => {
       </div>
 
       {/* ===== SOCIAL SECTION ===== */}
-      <div className="mt-10 lg:mt-0 flex flex-col items-center text-center space-y-4">
+      <div className="mt-12 lg:mt-0 flex flex-col items-center text-center space-y-4">
         <FollowMeSocial />
       </div>
     </aside>
