@@ -8,7 +8,7 @@ export default function LandingLayout({ children }: { children: React.ReactNode 
         {/* Header  */}
         <Sidebar />
 
-        <main className=" w-full pl-5">
+        <main className=" w-full pl-5 py-20 -ml-2">
           {children}
           <Footer />
         </main>

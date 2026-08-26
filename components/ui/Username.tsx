@@ -2,7 +2,6 @@
 
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { Check, Copy } from "lucide-react";
 
 export default function Username({
@@ -39,7 +38,7 @@ export default function Username({
         rotate: [-1, 1, -1],
         transition: {
           duration: 0.4,
-          repeat: 3,
+          repeat: 2,
           ease: "easeInOut",
         },
       });
