@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import React from "react";
 
 /* =========================
@@ -146,22 +147,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
   );
 };
 
-const SectionHeader = ({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) => (
-  <div className="max-w-2xl">
-    <h2 className="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">
-      {title}
-    </h2>
-    <p className="mt-3 text-gray-600 dark:text-gray-400 leading-relaxed">
-      {description}
-    </p>
-  </div>
-);
 
 /* =========================
    Main Page
@@ -169,60 +154,58 @@ const SectionHeader = ({
 
 export default function ProjectsPage() {
   return (
-    <main className="py-20">
-      <div className="space-y-24">
+    <div className="space-y-24">
 
-        {/* Projects */}
-        <section className="space-y-10">
-          <SectionHeader
-            title="Projects"
-            description="A collection of production systems, learning builds and experimental applications focused on scalable full-stack architecture and clean UI engineering."
-          />
+      {/* Projects */}
+      <section className="space-y-10">
+        <SectionHeader
+          title="Projects"
+          description="A collection of production systems, learning builds and experimental applications focused on scalable full-stack architecture and clean UI engineering."
+        />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
-          </div>
-        </section>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
+      </section>
 
-        {/* Upcoming */}
-        <section className="space-y-10">
-          <SectionHeader
-            title="Upcoming Ideas"
-            description="Concepts currently under research and architectural planning."
-          />
+      {/* Upcoming */}
+      <section className="space-y-10">
+        <SectionHeader
+          title="Upcoming Ideas"
+          description="Concepts currently under research and architectural planning."
+        />
 
-          <div className="space-y-6">
-            {upcomingIdeas.map((idea) => (
-              <div
-                key={idea.title}
-                className="
+        <div className="space-y-6">
+          {upcomingIdeas.map((idea) => (
+            <div
+              key={idea.title}
+              className="
                   border border-gray-200 dark:border-zinc-800
                   rounded-xl p-5
                   bg-white/60 dark:bg-zinc-900/50
                   backdrop-blur
                 "
-              >
-                <h3 className="text-lg font-medium text-gray-900 dark:text-white">
-                  {idea.title}
-                </h3>
+            >
+              <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+                {idea.title}
+              </h3>
 
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  {idea.description}
-                </p>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                {idea.description}
+              </p>
 
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {idea.tags.map((tag) => (
-                    <Tag key={tag} label={tag} />
-                  ))}
-                </div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {idea.tags.map((tag) => (
+                  <Tag key={tag} label={tag} />
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      </div>
-    </main>
+    </div>
   );
 }

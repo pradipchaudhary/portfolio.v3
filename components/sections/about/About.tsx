@@ -84,7 +84,7 @@ const About = () => {
       id="about"
       aria-label="About Pradip Chaudhary"
       className="
-        max-w-3xl mx-auto mb-10 pt-20
+        max-w-3xl mx-auto mb-10
         text-[var(--foreground)]
       "
       variants={container}

@@ -1,15 +1,10 @@
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export default function ComponentsPage() {
   return (
-    <section className="py-18">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-zinc-50 tracking-tight">
-          Components
-        </h1>
-        <p className="mt-4 text-zinc-500 dark:text-zinc-400 max-w-2xl leading-7">
-          A collection of reusable UI components and design patterns for building consistent and scalable user interfaces.
-        </p>
-      </header>
+    <section className="">
+
+      <SectionHeader title="Components" description="A collection of reusable UI components and design patterns for building consistent and scalable user interfaces." />
 
       {/* Coming Soon Box */}
       <div className="border border-dashed border-gray-300 dark:border-zinc-800 rounded-xl p-10 bg-gray-50 mt-16 dark:bg-zinc-900/50 backdrop-blur-sm">
