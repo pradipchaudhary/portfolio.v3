@@ -1,3 +1,5 @@
+// apps/web/app/loading.tsx
+
 export default function Loading() {
   return (
     <main className="fixed inset-0 z-50 flex min-h-screen items-center justify-center bg-white dark:bg-zinc-950">

@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import JsonLd from "@/lib/seo/JsonLd";
 import { personSchema } from "@/lib/seo/structuredData";
 import MainLayout from "@/components/layout/MainLayout";
+import Loading from "@/components/ui/Loading";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const caveat = Caveat({
