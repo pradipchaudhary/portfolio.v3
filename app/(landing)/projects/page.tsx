@@ -1,7 +1,8 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import React from "react";
+import Tag from "@/components/ui/Tag";
+import { formatTitle } from "@/lib/utils";
 
 /* =========================
    Types
@@ -13,13 +14,6 @@ type Project = {
   link?: string;
 };
 
-/* =========================
-   Utils
-========================= */
-const formatTitle = (title: string): string =>
-  title
-    .replace(/[-_.]/g, " ")
-    .replace(/\b\w/g, (char) => char.toUpperCase());
 
 /* =========================
    Data
@@ -87,30 +81,23 @@ const upcomingIdeas: Project[] = [
    UI Components
 ========================= */
 
-const Tag = ({ label }: { label: string }) => (
-  <span
-    className="
-      text-xs font-medium px-2.5 py-1 rounded-full
-      bg-gray-100 text-gray-600
-      dark:bg-zinc-800 dark:text-zinc-400
-    "
-  >
-    {label}
-  </span>
-);
+// const Tag = ({ label }: { label: string }) => (
+//   <span className="text-[11px] font-medium tracking-wide  text-gray-500 dark:text-zinc-400">
+//     {label}
+//   </span>
+// );
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const content = (
     <div
       className="
-        relative group rounded-2xl p-6
-        border border-gray-200 dark:border-zinc-800
-        bg-white/70 dark:bg-zinc-900/60
-        backdrop-blur-xl
-        transition-all duration-300 ease-out
-
-        hover:shadow-xl
-        hover:border-gray-300 dark:hover:border-zinc-700
+        group relative
+        rounded-xl
+        border border-gray-200/80 dark:border-zinc-800
+        bg-white dark:bg-zinc-950
+        p-5
+        transition-colors duration-200
+        hover:border-gray-400 dark:hover:border-zinc-600
       "
     >
       {/* subtle gradient glow */}

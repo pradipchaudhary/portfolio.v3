@@ -28,7 +28,7 @@ const Sidebar = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-          className="text-sm text-gray-500 dark:text-zinc-500 max-w-[320px] leading-relaxed"
+          className="text-sm text-gray-500 dark:text-zinc-500 max-w-[320px]"
         >
           Frontend Engineer <br />
           Building modern, scalable web experiences.

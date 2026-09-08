@@ -142,7 +142,8 @@ const About = () => {
 
         <motion.p variants={item} className="text-[var(--foreground)]/80">
           Beyond coding, I explore{" "}
-          <HighlightLink href="https://openai.com/">AI</HighlightLink>,{" "}
+          {/* <HighlightLink href="https://openai.com/">AI</HighlightLink>,{" "} */}
+          <span className="font-semibold">AI</span>,{" "}
           <span className="font-semibold">SEO</span>,{" "}
           <span className="font-semibold">Web Scraping</span>, and data-driven projects that deliver real-world value.
         </motion.p>

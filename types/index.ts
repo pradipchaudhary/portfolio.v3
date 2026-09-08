@@ -1,4 +1,3 @@
-
 export type Project = {
   id: string;
   title: string;
@@ -20,8 +19,8 @@ export type Project = {
   updatedAt: Date;
 };
 
-export type ProjectStats ={
+export type ProjectStats = {
   total: number;
   featured: number;
   published: number;
-}
+};

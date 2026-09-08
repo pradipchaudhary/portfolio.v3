@@ -9,12 +9,6 @@ const ACTIVE_COLOR = "#4285f4";
 const navItems = [
   { label: "home", href: "/" },
   { label: "projects", href: "/projects" },
-  // { label: "experience", href: "/experience" },
-  { label: "blog", href: "/blog" },
-  { label: "inspired", href: "/inspired" },
-  // { label: "skills", href: "/skills" },
-  { label: "components", href: "/components" },
-  { label: "resume", href: "/resume" },
 ];
 
 const Navbar = () => {

@@ -1,33 +1,12 @@
-"use client";
-
-import Link from "next/link";
-import { motion, Variants } from "motion/react";
-import { Project } from "@/types";
-import { formatTitle } from "@/lib/utils";
 import Tag from "@/components/ui/Tag";
-import ProjectCard from "./ProjectCard";
+import { formatTitle } from "@/lib/utils";
+import { Project } from "@/types";
+import { motion, Variants } from "motion/react";
 
-
-/* =========================
-   ANIMATION
-========================= */
-
-const container: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      delay: 0.3,
-      ease: [0.22, 1, 0.36, 1],
-      staggerChildren: 0.1,
-    },
-  },
+const item: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
 };
-
-
-
 /* =========================
    DATA
 ========================= */
@@ -102,64 +81,64 @@ export const projects: Project[] = [
     updatedAt: new Date("2024-01-04"),
   },
 ];
-
-
-
-
-
-/* =========================
-   MAIN COMPONENT
-========================= */
-
-const Projects = () => {
-  return (
-    <motion.section
-      id="projects"
-      className="py-10 text-[var(--foreground)]"
-      variants={container}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+export default function ProjectCard({ project }: { project: Project }) {
+   const href = project.link || project.github || null;
+  const isClickable = Boolean(href);
+  
+  return(
+    <motion.a
+      variants={item}
+      {...(href
+        ? {
+          href,
+          target: "_blank",
+          rel: "noopener noreferrer",
+        }
+        : {})}
+      className={`
+    group relative rounded-xl p-5 overflow-hidden
+    border border-[var(--foreground)]/5
+  bg-gray-50/60 dark:bg-white/[0.02]
+    transition-all duration-300
+    ${!href ? "opacity-60 pointer-events-none" : ""}
+  `}
     >
-      <h2 className="text-3xl font-bold tracking-tight mb-8">
-        Projects
-      </h2>
+      {/* hover glow */}
+      <div
+        className="
+    pointer-events-none absolute inset-0 rounded-2xl
 
-      {/* GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+    opacity-0 scale-95
+    group-hover:opacity-100 group-hover:scale-100
+
+    transition-all duration-500 ease-out
+
+    bg-[radial-gradient(600px_circle_at_center,rgba(0,0,0,0.06),transparent_60%)]
+    dark:bg-[radial-gradient(600px_circle_at_center,rgba(255,255,255,0.08),transparent_65%)]
+  "
+      />
+      {/* glow line */}
+      <span className="absolute w-[40%] -bottom-px right-0 h-px bg-[var(--accent)]/30" />
+
+      {/* content */}
+      <div className="relative z-10 flex flex-col h-full justify-between">
+        <div>
+          <h3 className="text-lg font-semibold mb-2">
+            {formatTitle(project.title)}
+          </h3>
+
+          <p className="text-sm leading-6 text-[var(--foreground)]/70">
+            {project.description}
+          </p>
+        </div>
+
+        {/* tags */}
+        <div className="mt-4 flex flex-wrap gap-1">
+          {project.tags.map((tag) => (
+            <Tag key={tag} label={tag} />
+          ))}
+        </div>
       </div>
-
-      {/* SEE MORE */}
-      <div className="flex justify-center mt-10">
-        <Link
-          href="/projects"
-          className="
-            flex items-center gap-1 text-sm font-medium
-            hover:text-[var(--accent)]
-            transition-colors
-          "
-        >
-          See More
-          <svg
-            className="h-4 w-4"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </Link>
-      </div>
-    </motion.section>
-  );
-};
-
-export default Projects;
+    </motion.a>
+  )
+}
