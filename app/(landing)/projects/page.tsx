@@ -63,18 +63,8 @@ const upcomingIdeas: Project[] = [
       "Central hub aggregating government notices, tenders, and updates.",
     tags: ["Scraping", "Next.js", "MongoDB"],
   },
-  {
-    title: "EV Nepal Live",
-    description:
-      "Live EV ecosystem dashboard for stations, pricing, and market insights.",
-    tags: ["API", "Node.js"],
-  },
-  {
-    title: "Book Chautari 2.0",
-    description:
-      "Interactive reading platform with community-driven discussions and reviews.",
-    tags: ["Full Stack", "Community"],
-  },
+  
+  
 ];
 
 /* =========================
