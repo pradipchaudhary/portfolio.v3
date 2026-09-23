@@ -1,54 +1,19 @@
 :root {
   --background: #ffffff;
-
   --foreground: #0a0f1c;
-
-  --card: #ffffff;
   --muted: #f5f7fb;
-  /* --border: #e6eaf0; */
-  --border: 220 13% 91%;
-  /* light gray */
-
+  --border: rgba(255, 255, 255, 0.1);
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
-  --accent-soft: rgba(37, 99, 235, 0.10);
-
-  --muted-foreground: #667085;
-
-  --success: #16a34a;
-  --warning: #f59e0b;
-  --danger: #ef4444;
 }
 
 .dark {
-  /* TRUE PURE BLACK BASE */
   --background: #000000;
-
-  /* MAIN TEXT (soft white, not harsh pure white) */
   --foreground: #e5e5e5;
-
-  /* SURFACES (VERY IMPORTANT for usability on pure black) */
-  --card: #0a0a0a;
-  /* slightly raised from black */
   --muted: #111111;
-  /* section separation */
-  /* --border: #1a1a1a; */
-  --border: 215 14% 18%;
-  /* soft dark border */
-  /* subtle grid lines */
-
-  /* ACCENT (modern blue optimized for black UI) */
+  --border: rgba(255, 255, 255, 0.1);
   --accent: #3b82f6;
   --accent-hover: #60a5fa;
-  --accent-soft: rgba(59, 130, 246, 0.16);
-
-  /* SECONDARY TEXT */
-  --muted-foreground: #9ca3af;
-
-  /* STATUS COLORS (optimized visibility on black) */
-  --success: #22c55e;
-  --warning: #fbbf24;
-  --danger: #fb7185;
 }
 
 /* Ensure Tailwind v4 knows about the dark class strategy */
@@ -58,6 +23,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
   --font-handwriting: var(--font-handwriting);
 }
 
