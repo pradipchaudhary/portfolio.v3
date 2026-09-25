@@ -42,3 +42,32 @@ export const fadeUp: Variants = {
     },
   },
 };
+
+// Namaste hand animation
+export const GreetingHandAnimation: Variants = {
+  hidden: {
+    clipPath: "inset(100% 0% 0% 0%)",
+  },
+
+  visible: {
+    clipPath: "inset(0% 0% 0% 0%)",
+    transition: {
+      duration: 1.5,
+      ease: [0.22, 1, 0.36, 1],
+      delay: 0.8,
+    },
+  },
+};
+
+// Namaste text animation
+export const letter: Variants = {
+  hidden: { opacity: 0, y: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
+    },
+  },
+};

@@ -1,27 +1,8 @@
 "use client";
 
-import React from "react";
+import Section from "@/components/layout/Section";
+import { ExperienceType } from "@/types";
 import { motion, Variants } from "framer-motion";
-
-type ExperienceType = {
-  role: string;
-  company: string;
-  period: string;
-  description: string;
-};
-
-const container: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.4,
-      delay: 0.6,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  },
-};
 
 const experiences: ExperienceType[] = [
   // your data
@@ -57,14 +38,7 @@ const experiences: ExperienceType[] = [
 
 const Experience = () => {
   return (
-    <motion.section
-      id="experience"
-      className="py-18 text-gray-900 dark:text-gray-100"
-      variants={container}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-    >
+    <Section id="experience" ariaLabel="Experience Section">
       <h2 className="text-3xl font-bold tracking-tight mb-5 text-gray-900 dark:text-white">
         Experience
       </h2>
@@ -95,7 +69,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
-    </motion.section>
+    </Section>
   );
 };
 

@@ -27,6 +27,8 @@
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --font-handwriting: var(--font-handwriting);
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
 }
 
 @layer base {

@@ -1,8 +1,11 @@
 "use client";
 
+import { item } from "@/lib/animations";
+import { motion } from "motion/react";
+
 const ResumeDownload = () => {
   return (
-    <div>
+    <motion.div variants={item}>
       <p className="py-8 text-gray-800 dark:text-gray-300">
         Review my{" "}
         <a
@@ -14,29 +17,25 @@ const ResumeDownload = () => {
           hover:text-[var(--accent)]
         transition-colors duration-300
           "
-
         >
-          resume
-
+          <span>resume</span>
           {/* Decorative underline */}
           <svg
-            className="absolute -bottom-[2px] left-0 w-full h-[10px] 
-            text-gray-400 dark:text-gray-500"
+            className="absolute -bottom-[2px] left-0 w-full h-[10px] text-[var(--accent)]"
             viewBox="0 0 120 10"
-            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
           >
             <path
-              d="M3 7C20 2 50 10 70 4C90 -2 110 8 118 3"
+              d="M3 7C20 2 50 10 70 4C90 4 110 10 118 5"
               stroke="currentColor"
-              strokeWidth="1.4"
+              strokeWidth="1.1"
               strokeLinecap="round"
-              fill="none"
             />
           </svg>
         </a>{" "}
         for hiring consideration.
       </p>
-    </div>
+    </motion.div>
   );
 };
 

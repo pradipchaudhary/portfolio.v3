@@ -24,3 +24,10 @@ export type ProjectStats = {
   featured: number;
   published: number;
 };
+
+export type ExperienceType = {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+};

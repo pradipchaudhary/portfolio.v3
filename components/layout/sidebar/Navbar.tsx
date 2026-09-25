@@ -1,21 +1,47 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import { navigation } from "@/data/navigation";
 
 const ACTIVE_COLOR = "#4285f4";
 
-const navItems = [
-  { label: "home", href: "/" },
-  { label: "projects", href: "/projects" },
-];
-
 const Navbar = () => {
-  const pathname = usePathname();
+  const [activeId, setActiveId] = useState<string>("home");
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  useEffect(() => {
+    const sectionIds = navigation.map((item) => item.href.replace("#", ""));
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Pick the entry most visible in the viewport
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible.length > 0) {
+          setActiveId(visible[0].target.id);
+        }
+      },
+      {
+        // Triggers when section is roughly in the middle of the viewport
+        rootMargin: "-40% 0px -40% 0px",
+        threshold: 0,
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const isActive = (href: string) => href.replace("#", "") === activeId;
 
   return (
     <motion.nav
@@ -36,7 +62,7 @@ const Navbar = () => {
 
       {/* NAV */}
       <div className="flex flex-wrap justify-center gap-x-1 gap-y-1">
-        {navItems.map((item) => {
+        {navigation.map((item) => {
           const active = isActive(item.href);
 
           return (
@@ -44,39 +70,18 @@ const Navbar = () => {
               key={item.href}
               href={item.href}
               aria-current={active ? "page" : undefined}
-              className={`
-                group inline-flex items-center text-[13px]
-                transition-colors duration-200
-                hover:text-[color:var(--active)]
-              `}
-              style={{
-                color: active ? ACTIVE_COLOR : "#6b7280",
-              }}
+              className="group inline-flex items-center text-[13px] transition-colors duration-200 hover:text-[color:var(--active)]"
+              style={{ color: active ? ACTIVE_COLOR : "#6b7280" }}
             >
-              {/* HASH */}
               <span
-                className={`
-                  font-mono
-                  transition-colors duration-200
-                  group-hover:text-[color:var(--active)]
-                `}
-                style={{
-                  color: active ? ACTIVE_COLOR : undefined,
-                }}
+                className="font-mono transition-colors duration-200 group-hover:text-[color:var(--active)]"
+                style={{ color: active ? ACTIVE_COLOR : undefined }}
               >
                 #
               </span>
-
-              {/* LABEL */}
               <span
-                className={`
-                  italic tracking-tight
-                  transition-colors duration-200
-                  group-hover:text-[color:var(--active)]
-                `}
-                style={{
-                  color: active ? ACTIVE_COLOR : undefined,
-                }}
+                className="italic tracking-tight transition-colors duration-200 group-hover:text-[color:var(--active)]"
+                style={{ color: active ? ACTIVE_COLOR : undefined }}
               >
                 {item.label}
               </span>
