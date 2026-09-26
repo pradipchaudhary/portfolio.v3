@@ -1,7 +1,7 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import Tag from "@/components/ui/Tag";
+import Tag from "@/components/sections/projects/Tag";
 import { formatTitle } from "@/lib/utils";
 
 /* =========================
@@ -13,7 +13,6 @@ type Project = {
   tags: string[];
   link?: string;
 };
-
 
 /* =========================
    Data
@@ -63,8 +62,6 @@ const upcomingIdeas: Project[] = [
       "Central hub aggregating government notices, tenders, and updates.",
     tags: ["Scraping", "Next.js", "MongoDB"],
   },
-  
-  
 ];
 
 /* =========================
@@ -124,7 +121,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
   );
 };
 
-
 /* =========================
    Main Page
 ========================= */
@@ -132,7 +128,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
 export default function ProjectsPage() {
   return (
     <div className="space-y-24">
-
       {/* Projects */}
       <section className="space-y-10">
         <SectionHeader
@@ -182,7 +177,6 @@ export default function ProjectsPage() {
           ))}
         </div>
       </section>
-
     </div>
   );
 }

@@ -1,7 +1,7 @@
 // reusable Section component
 
 import { motion } from "motion/react";
-import { container } from "@/lib/animations";
+import { container, maincontainer } from "@/lib/animations";
 import Container from "./Container";
 
 // Section Props
@@ -22,7 +22,7 @@ export default function Section({
     <motion.section
       id={id}
       aria-label={ariaLabel}
-      className={`${className}`}
+      className={`${className} mb-20`}
       variants={container}
       initial="hidden"
       whileInView="visible"

@@ -15,6 +15,20 @@ export const container: Variants = {
   },
 };
 
+export const maincontainer: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: 0.3,
+      ease: [0.22, 1, 0.36, 1],
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 export const item: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -70,4 +84,17 @@ export const letter: Variants = {
       ease: "easeOut",
     },
   },
+};
+
+export const tooltipVariants: Variants = {
+  hidden: { opacity: 0, y: -10 },
+  visible: { opacity: 1, y: 0 },
+};
+
+// Project
+
+// Projects Item
+export const projectsitem: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
 };

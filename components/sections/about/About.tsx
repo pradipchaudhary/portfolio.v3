@@ -18,7 +18,7 @@ const About = () => {
       {/* ================= INTRO ================= */}
       <motion.div variants={item} className="flex flex-col items-start mb-7">
         {/* Greeting */}
-        <div className="relative group inline-block">
+        <div className="relative group block sm:block text-center sm:text-left">
           <div className="relative opacity-80">
             <Greetings />
           </div>
@@ -35,7 +35,7 @@ const About = () => {
           web applications.
         </motion.p>
 
-        <motion.p variants={item} className="mt-4">
+        <motion.p variants={item} className="mt-4 text-base leading-relaxed">
           I enjoy exploring modern technologies such as{" "}
           <HighlightLink href="https://nextjs.org/">Next.js</HighlightLink>,{" "}
           <HighlightLink href="https://www.typescriptlang.org/">
@@ -67,7 +67,7 @@ const About = () => {
           .
         </motion.p>
 
-        <motion.p variants={item}>
+        <motion.p variants={item} className="text-base leading-relaxed">
           Beyond coding, I explore <span className="font-semibold">AI</span>,{" "}
           <span className="font-semibold">SEO</span>,{" "}
           <span className="font-semibold">Web Scraping</span>, and data-driven
