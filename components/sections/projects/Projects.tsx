@@ -5,7 +5,6 @@ import { motion } from "motion/react";
 import ProjectCard from "./ProjectCard";
 import { maincontainer } from "@/lib/animations";
 import { projects } from "@/data/projects";
-import Section from "@/components/layout/Section";
 
 /* =========================
    MAIN COMPONENT

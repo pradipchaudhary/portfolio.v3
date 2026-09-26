@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       className={`
     group relative rounded-xl p-5 overflow-hidden
     border border-[var(--foreground)]/5
-  bg-gray-50/60 dark:bg-white/[0.02]
+    bg-gray-50/60 dark:bg-white/[0.02]  hover:bg-gray-100/70 dark:hover:bg-white/[0.04]
     transition-all duration-300
     ${!href ? "opacity-60 pointer-events-none" : ""}
   `}
