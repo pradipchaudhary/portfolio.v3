@@ -2,7 +2,7 @@
 
 Portfolio v3 is the third generation of my personal developer portfolio, designed to showcase my technical expertise, engineering projects, professional experience, and continuous learning journey in modern web development.
 
-![Portfolio Banner](https://www.pradipchaudhary.com.np/screenshot.png)
+![Portfolio Banner](https://www.pradipchaudhary.com.np/images/screenshot.png)
 
 Built with a strong focus on performance, accessibility, SEO, and user experience, this portfolio reflects the standards I apply when developing production-ready applications. The website serves as a central hub where recruiters, hiring managers, clients, and fellow developers can explore my work, technical skills, open-source contributions, and software engineering approach.
 
