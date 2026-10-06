@@ -19,7 +19,6 @@ const Sidebar = () => {
     >
       {/* ===== TOP SECTION ===== */}
       <div className="flex flex-col items-center text-center space-y-4">
-
         <ProfileImage src="/logo.png" alt="Pradip Chaudhary" />
 
         <Username username="pradipchaudhary" name="Pradip Chaudhary" />

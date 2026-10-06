@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import Namaste from "../shared/Namaste";
 import { GreetingHandAnimation, letter } from "@/lib/animations";
+import NamasteDrawText from "./NamasteDrawText";
 
 export default function Greetings() {
   const text = "Namaste";
@@ -15,15 +16,16 @@ export default function Greetings() {
           initial="hidden"
           animate="visible"
         >
-          <Namaste className="h-13 w-13 fill-current text-foreground" />
+          <Namaste className="h-15 w-15 fill-current text-foreground" />
         </motion.div>
 
-        <motion.h1
+        {/* <motion.h1
           className="text-[2.25rem] text-gray-700 font-thin dark:text-zinc-300 transition-colors duration-300 animate-fill"
           aria-label={text}
         >
           {text}
-        </motion.h1>
+        </motion.h1> */}
+        <NamasteDrawText />
       </div>
     </div>
   );

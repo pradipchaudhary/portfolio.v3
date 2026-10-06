@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: "Portfolio v3",
     slug: "portfolio-v3",
     description:
-      "Portfolio site built with Next.js & Tailwind showcasing work, skills and blog.",
+      "A high-performance portfolio designed to showcase my projects and professional experience to potential recruiters.",
     content: null,
     link: null,
     github: "https://www.pradipchaudhary.com.np",

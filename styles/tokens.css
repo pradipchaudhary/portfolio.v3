@@ -1,17 +1,17 @@
 :root {
   --background: #ffffff;
-  --foreground: #0a0f1c;
+  --foreground: #4c4c4d;
   --muted: #f5f7fb;
-  --border: rgba(255, 255, 255, 0.1);
+  --border: rgba(46, 46, 46, 0.8);
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
 }
 
 .dark {
   --background: #000000;
-  --foreground: #e5e5e5;
+  --foreground: #969696;
   --muted: #111111;
-  --border: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.3);
   --accent: #3b82f6;
   --accent-hover: #60a5fa;
 }

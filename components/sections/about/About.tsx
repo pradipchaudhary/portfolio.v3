@@ -2,11 +2,11 @@
 
 import { motion } from "motion/react";
 import ResumeDownload from "@/components/ui/ResumeDownload";
-import Signature from "@/components/ui/Signature";
 import Greetings from "@/components/ui/Greetings";
 import { item } from "@/lib/animations";
 import Section from "@/components/layout/Section";
 import HighlightLink from "./HighlightLink";
+import SignatureText from "@/components/ui/SignatureText";
 
 /* =========================
    MAIN COMPONENT
@@ -26,7 +26,7 @@ const About = () => {
 
         {/* INTRO TEXT */}
         <motion.p variants={item} className="mt-2 text-base leading-relaxed">
-          Hi 👋, I’m{" "}
+          Hi, I’m{" "}
           <HighlightLink href="https://react.dev/">
             {" "}
             React Developer{" "}
@@ -77,11 +77,7 @@ const About = () => {
 
       {/* ================= ACTIONS ================= */}
       <ResumeDownload />
-
-      {/* <ResumeReview /> */}
-
-      {/* ================= SIGNATURE ================= */}
-      <Signature />
+      <SignatureText />
     </Section>
   );
 };

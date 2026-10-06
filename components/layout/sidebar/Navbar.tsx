@@ -80,7 +80,7 @@ const Navbar = () => {
                 #
               </span>
               <span
-                className="italic tracking-tight transition-colors duration-200 group-hover:text-[color:var(--active)]"
+                className="italic tracking-tight transition-colors duration-200 group-hover:text-[color:var(--active)] ml-[-2px]"
                 style={{ color: active ? ACTIVE_COLOR : undefined }}
               >
                 {item.label}
