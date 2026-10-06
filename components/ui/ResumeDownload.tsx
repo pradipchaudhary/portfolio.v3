@@ -17,9 +17,7 @@ const ResumeDownload = () => {
         transition-colors duration-300
           "
         >
-          <span className="underline decoration-[var(--accent)] decoration-2 underline-offset-4">
-            resume
-          </span>
+          <span>resume</span>
         </a>{" "}
         or let's chat.
       </p>

@@ -1,9 +1,8 @@
-
 # 🌐 Portfolio v3 – Modern Full Stack Developer Portfolio
 
 Portfolio v3 is the third generation of my personal developer portfolio, designed to showcase my technical expertise, engineering projects, professional experience, and continuous learning journey in modern web development.
 
-![Portfolio Banner](https://www.pradipchaudhary.com.np/banner.jpg)
+![Portfolio Banner](https://www.pradipchaudhary.com.np/screenshot.png)
 
 Built with a strong focus on performance, accessibility, SEO, and user experience, this portfolio reflects the standards I apply when developing production-ready applications. The website serves as a central hub where recruiters, hiring managers, clients, and fellow developers can explore my work, technical skills, open-source contributions, and software engineering approach.
 
@@ -12,7 +11,6 @@ Built with a strong focus on performance, accessibility, SEO, and user experienc
 ## 👨‍💻 About Me
 
 Hi, I'm Pradip Chaudhary — a Full Stack Developer and aspiring Software Engineer passionate about building scalable, high-performance web applications.
-
 
 My primary expertise includes:
 
@@ -23,7 +21,6 @@ My primary expertise includes:
 - 🗄️ MongoDB & Database Design
 - 🔍 SEO & Web Performance Optimization
 - ☁️ Deployment, CI/CD & Modern Development Workflows
-
 
 I enjoy transforming complex problems into intuitive digital experiences through clean architecture, maintainable code, and thoughtful design. My goal is to build software that is not only functional but also fast, accessible, and impactful.
 
@@ -60,22 +57,20 @@ portfolio.v3/
 ├── package.json         # Project metadata and dependencies
 ├── tsconfig.json        # TypeScript configuration
 └── README.md            # Project documentation
-````
+```
 
 ---
 
-
-
 ## 🛠️ Technology Stack
 
-| Category | Tools / Frameworks |
+| Category             | Tools / Frameworks                 |
 | :------------------- | :--------------------------------- |
-| **Frontend** | React.js, TypeScript, Tailwind CSS |
-| **State Management** | React Hooks |
-| **Animation** | Framer Motion |
-| **Icons** | Heroicons, FontAwesome |
-| **Deployment** | **Vercel** |
-| **Version Control** | Git, GitHub |
+| **Frontend**         | React.js, TypeScript, Tailwind CSS |
+| **State Management** | React Hooks                        |
+| **Animation**        | Framer Motion                      |
+| **Icons**            | Heroicons, FontAwesome             |
+| **Deployment**       | **Vercel**                         |
+| **Version Control**  | Git, GitHub                        |
 
 ---
 
@@ -83,11 +78,11 @@ portfolio.v3/
 
 This portfolio is built with performance and discoverability in mind:
 
-* Semantic HTML5 and accessible components
-* Optimized images and static assets
-* Structured metadata for social sharing and search indexing
-* Responsive design for all devices
-* Clean URL routing and lazy-loaded components
+- Semantic HTML5 and accessible components
+- Optimized images and static assets
+- Structured metadata for social sharing and search indexing
+- Responsive design for all devices
+- Clean URL routing and lazy-loaded components
 
 ---
 
@@ -108,10 +103,10 @@ Feel free to use or modify it for your own portfolio, with attribution.
 
 ## 🤝 Let's Connect
 
-* 🌐 **Portfolio:** [pradipchaudhary.com.np](https://www.pradipchaudhary.com.np/)
-* 💼 **LinkedIn:** [linkedin.com/in/pradipchaudhary](https://linkedin.com/in/pradipchaudhary)
-* 💻 **GitHub:** [github.com/pradipchaudhary](https://github.com/pradipchaudhary)
-* ▶️ **YouTube:** [youtube.com/@pradipchaudhary_codes](https://www.youtube.com/@pradipchaudhary_codes)
+- 🌐 **Portfolio:** [pradipchaudhary.com.np](https://www.pradipchaudhary.com.np/)
+- 💼 **LinkedIn:** [linkedin.com/in/pradipchaudhary](https://linkedin.com/in/pradipchaudhary)
+- 💻 **GitHub:** [github.com/pradipchaudhary](https://github.com/pradipchaudhary)
+- ▶️ **YouTube:** [youtube.com/@pradipchaudhary_codes](https://www.youtube.com/@pradipchaudhary_codes)
 
 ---
 
@@ -126,12 +121,11 @@ If you encounter any issues or have ideas for new features, please open an [issu
 
 Thanks to the open-source community for the tools and frameworks that make modern web development exciting, including:
 
-* React & TypeScript
-* Tailwind CSS
-* Framer Motion
-* Vercel
-* FontAwesome & Heroicons
-* Neon
-
+- React & TypeScript
+- Tailwind CSS
+- Framer Motion
+- Vercel
+- FontAwesome & Heroicons
+- Neon
 
 > Built with ❤️ by [Pradip Chaudhary](https://github.com/pradipchaudhary)
