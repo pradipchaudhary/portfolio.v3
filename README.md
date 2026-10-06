@@ -1,4 +1,4 @@
-# 🌐 Portfolio v3 – Modern Full Stack Developer Portfolio
+# 🌐 Modern Full Stack Developer Portfolio (portfolio.v3)
 
 Portfolio v3 is the third generation of my personal developer portfolio, designed to showcase my technical expertise, engineering projects, professional experience, and continuous learning journey in modern web development.
 
