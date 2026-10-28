@@ -14,16 +14,16 @@ interface ProfileImageProps {
 export default function ProfileImage({
   src,
   alt,
-  width = 112,
-  height = 112,
+  width = 100,
+  height = 100,
   fill = true,
 }: ProfileImageProps) {
   return (
     <motion.div
       className="relative"
       style={{
-        width: fill ? "112px" : width,
-        height: fill ? "112px" : height,
+        width: fill ? "100px" : width,
+        height: fill ? "100px" : height,
       }}
       initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
       animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -36,7 +36,7 @@ export default function ProfileImage({
         {...(fill
           ? {
               fill: true,
-              sizes: "(max-width: 640px) 80px, (max-width: 768px) 96px, 112px",
+              sizes: "(max-width: 640px) 80px, (max-width: 768px) 96px, 100px",
             }
           : {
               width,
