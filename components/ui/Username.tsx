@@ -3,6 +3,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Check, Copy } from "lucide-react";
+import Link from "next/link";
 
 export default function Username({
   name,
@@ -55,10 +56,13 @@ export default function Username({
           transition: { type: "spring", stiffness: 200, damping: 20 },
         }}
       >
-        <div className="hover:opacity-80 transition mt-1">
-          <h1 className="text-xl font-semibold text-gray-900 -mt-4 dark:text-zinc-50">
+        <div className="hover:opacity-80 transition">
+          <Link
+            href="/"
+            className="text-xl font-semibold text-gray-900 -mt-4 dark:text-zinc-50"
+          >
             {name}
-          </h1>
+          </Link>
           <div
             onClick={copyEmail}
             className="flex items-center justify-center gap-1 text-sm text-foreground/50 dark:text-foreground/40 px-2 font-sans py-  cursor-pointer transition-all group/email"
